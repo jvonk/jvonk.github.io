@@ -4,7 +4,7 @@ import SwipeableViews from 'react-swipeable-views';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import './style.css';
+import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MyAwesomeReactComponent from './MyAwesomeReactComponent';
 import AppBarExampleIcon from './appbar';

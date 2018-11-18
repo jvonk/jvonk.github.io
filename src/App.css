@@ -1,31 +1,9 @@
-html {
-  font-family: Roboto,sans-serif;
-  text-size-adjust: 100%;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-
 img:not(#link) {
   max-width:500px;
   width:100%;
   display: block;
   margin: 0 auto;
 }
-/*a {
-  text-decoration: none;  
-}
-a:link {
-  color: #4078c0;
-  text-decoration: none;
-}
-a:visited {
-  color: #4078c0;
-}
-a:hover {
-  text-decoration: underline;
-}*/
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
