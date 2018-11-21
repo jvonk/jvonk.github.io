@@ -16,13 +16,17 @@
 title: Johan Vonk's Website
 email: johan.d.s.vonk@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  My personal website created using Github Pages, Markdown, and Jekyll
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://matterdark.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
 github_username:  matterdark
+github_url:  "https://github.com/matterdark"
+khan_url: "https://www.khanacademy.org/profile/vonkj"
+is_project_page: true
+khan_username: vonkj
 github: [metadata]
+repository: matterdark/matterdark.github.io
 
 
 # Build settings
