@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+This is me: 
+<img src="https://lh3.googleusercontent.com/2NH_P0l-y0nnt2ipHLugwwl2302BEL7cSal178CYyQqSFW2U0p4_2v7hbvIkb6uc73mMVntCh0lsaMABCcfjiOKKjoLN2OGSDKYVuOag1DwgOP8G-1eIdTB5aLwavGKKGnFtvIQDyISZIMsMNy30u-3iEPsfpG-tgBOLVQTF4Rb8Iq3ZbxcFYoKgbQNrvrqC2UF1VBx1yOALE8SWMENbuX4pqVlWBZYfIoeocCVNO2bpLGvh7j2kR2SEybWrJ-JnUCsHVrBJQq28j29qqre4c8Ka_sa6dpnsYkNhbbGa9zxu7WinvzlBHW_3E5p14O1_ByWOzE4VCTwGTMKho_YkioQXfr07kanGazfsUeSXGuovH_0agoJj4Haw1U4Es3dzvgyzXTuEUNw91hpTGIqkzBsbYk9r9opMFeXjEj0YQ6vQjJBRzSQUAXGMkHuDSjWd2A45ADoS2IZ5QhDiyqQIlAuZUevCDyuUAcanR184BJXwJpR8m-14PwFyOqBM_UW7O-r3Kc7j6AIaCwpbIY5YgJ_G2Cp_2MnbPHxKkYG6V-WKM_Qe4iyBlKfxK6H5wZYFNkyWa3whmhCbpd0o-7Lv9F0_2LRFZD42_3Cs6cAL4VCwmbyN7VYpH04OIl87cjzActSVEdhtH-OOgEtIe6YuguD14YIjelG9jBKg=w1404-h2106-no" alt="deny everything" />
+[stuff](http://www.google.com)
+I enjoy many things such as ....
