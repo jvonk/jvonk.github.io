@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-21T23:01:06+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-11-21T20:33:52+00:00</published><updated>2018-11-21T20:33:52+00:00</updated><id>http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-23T22:46:17+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-11-21T20:33:52+00:00</published><updated>2018-11-21T20:33:52+00:00</updated><id>http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/11/21/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -10,4 +10,126 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Your Ride Is Here</title><link href="http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html" rel="alternate" type="text/html" title="Your Ride Is Here" /><published>2018-09-26T00:00:00+00:00</published><updated>2018-09-26T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/26/your-ride-is-here</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html">&lt;p&gt;&lt;a href=&quot;#code&quot;&gt;Skip to code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.&lt;/p&gt;
+
+&lt;p&gt;Both the name of the group and the name of the comet are converted into a number in the following manner: the final number is just the product of all the letters in the name, where “A” is 1 and “Z” is 26. For instance, the group “USACO” would be 21 * 19 * 1 * 3 * 15 = 17955. If the group’s number mod 47 is the same as the comet’s number mod 47, then you need to tell the group to get ready! (Remember that “a mod b” is the remainder left over after dividing a by b; 34 mod 10 is 4.)&lt;/p&gt;
+
+&lt;p&gt;Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing “GO” if they match and “STAY” if not. The names of the groups and the comets will be a string of capital letters with no spaces or punctuation, up to 6 characters long.&lt;/p&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Input&lt;/th&gt;
+      &lt;th&gt;Output&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;COMETQ HVNGAT&lt;/td&gt;
+      &lt;td&gt;GO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ABSTAR USACO&lt;/td&gt;
+      &lt;td&gt;STAY&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;program-name-ride&quot;&gt;PROGRAM NAME: ride&lt;/h3&gt;
+
+&lt;p&gt;This means that you fill in your header with:&lt;br /&gt;
+PROG: ride&lt;br /&gt;
+&lt;strong&gt;WARNING:&lt;/strong&gt; You must have ‘ride’ in this field or the wrong test data (or no test data) will be used.&lt;/p&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Line 1:&lt;/p&gt;
+
+&lt;p&gt;An upper case character string of length 1..6 that is the name of the comet.&lt;/p&gt;
+
+&lt;p&gt;Line 2:&lt;/p&gt;
+
+&lt;p&gt;An upper case character string of length 1..6 that is the name of the group.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The input file has a newline at the end of each line but does not have a “return”. Sometimes, programmers code for the Windows paradigm of “return” followed by “newline”; don’t do that! Use simple input routines like “readln” (for Pascal) and, for C/C++, “fscanf” and “fid»string”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE 2&lt;/strong&gt;: Because of the extra characters, be sure to leave enough room for a ‘newline’ (also notated as ‘\n’) and an end of string character (‘\0’) if your language uses it (as C and C++ do). This means you need eight characters of room instead of six.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-ridein&quot;&gt;SAMPLE INPUT (file ride.in)&lt;/h3&gt;
+
+&lt;p&gt;COMETQ
+HVNGAT&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing either the word “GO” or the word “STAY”.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-rideout&quot;&gt;SAMPLE OUTPUT (file ride.out)&lt;/h3&gt;
+
+&lt;p&gt;GO&lt;/p&gt;
+
+&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;Converting the letters to numbers:&lt;/p&gt;
+
+&lt;p&gt;Copy to clipboard&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;C&lt;/th&gt;
+      &lt;th&gt;O&lt;/th&gt;
+      &lt;th&gt;M&lt;/th&gt;
+      &lt;th&gt;E&lt;/th&gt;
+      &lt;th&gt;T&lt;/th&gt;
+      &lt;th&gt;Q&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;H&lt;/th&gt;
+      &lt;th&gt;V&lt;/th&gt;
+      &lt;th&gt;N&lt;/th&gt;
+      &lt;th&gt;G&lt;/th&gt;
+      &lt;th&gt;A&lt;/th&gt;
+      &lt;th&gt;T&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;then calculate the product mod 47:&lt;/p&gt;
+
+&lt;p&gt;3 * 15 * 13 * 5 * 20 * 17 = 994500 mod 47 = 27&lt;/p&gt;
+
+&lt;p&gt;8 * 22 * 14 * 7 *  1 * 20 = 344960 mod 47 = 27&lt;/p&gt;
+
+&lt;p&gt;Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.&lt;/p&gt;
+
+&lt;object id=&quot;code&quot; type=&quot;text/plain&quot; style=&quot;width: 1000px; height: 400px;&quot; data=&quot;https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter%201/ride/ride.java&quot;&gt;&lt;/object&gt;</content><author><name></name></author><summary type="html">Skip to code</summary></entry></feed>

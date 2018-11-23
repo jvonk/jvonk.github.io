@@ -21,12 +21,14 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://matterdark.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  matterdark
-github_url:  "https://github.com/matterdark"
+github_url:  "https://github.com/matterdark/matterdark.github.io"
+linkedin_url:  "https://www.linkedin.com/in/johan-vonk-337778171"
+
 khan_url: "https://www.khanacademy.org/profile/vonkj"
-is_project_page: true
 khan_username: vonkj
-github: [metadata]
+github.is_project_page: true
 repository: matterdark/matterdark.github.io
+skip-to-content: false
 
 
 # Build settings

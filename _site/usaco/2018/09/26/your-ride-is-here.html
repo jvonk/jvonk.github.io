@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Your Ride Is Here | Johan Vonk’s Website</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Your Ride Is Here" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Skip to code" />
+<meta property="og:description" content="Skip to code" />
+<link rel="canonical" href="http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html" />
+<meta property="og:url" content="http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html" />
+<meta property="og:site_name" content="Johan Vonk’s Website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-26T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Skip to code","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html","headline":"Your Ride Is Here","dateModified":"2018-09-26T00:00:00+00:00","datePublished":"2018-09-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/09/26/your-ride-is-here.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    
+    <header class="page-header" role="banner">
+      
+      <h1 class="project-name">USACO: Your Ride Is Here</h1>
+        
+        
+        <a href="https://github.com/matterdark/USACO/blob/master/Chapter%201/ride/ride.java" class="btn">Code on GitHub</a>
+        
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <p><a href="#code">Skip to code</a></p>
+
+<p>It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.</p>
+
+<p>Both the name of the group and the name of the comet are converted into a number in the following manner: the final number is just the product of all the letters in the name, where “A” is 1 and “Z” is 26. For instance, the group “USACO” would be 21 * 19 * 1 * 3 * 15 = 17955. If the group’s number mod 47 is the same as the comet’s number mod 47, then you need to tell the group to get ready! (Remember that “a mod b” is the remainder left over after dividing a by b; 34 mod 10 is 4.)</p>
+
+<p>Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing “GO” if they match and “STAY” if not. The names of the groups and the comets will be a string of capital letters with no spaces or punctuation, up to 6 characters long.</p>
+
+<p>Examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COMETQ HVNGAT</td>
+      <td>GO</td>
+    </tr>
+    <tr>
+      <td>ABSTAR USACO</td>
+      <td>STAY</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="program-name-ride">PROGRAM NAME: ride</h3>
+
+<p>This means that you fill in your header with:<br />
+PROG: ride<br />
+<strong>WARNING:</strong> You must have ‘ride’ in this field or the wrong test data (or no test data) will be used.</p>
+
+<h3 id="input-format">INPUT FORMAT</h3>
+
+<p>Line 1:</p>
+
+<p>An upper case character string of length 1..6 that is the name of the comet.</p>
+
+<p>Line 2:</p>
+
+<p>An upper case character string of length 1..6 that is the name of the group.</p>
+
+<p><strong>NOTE</strong>: The input file has a newline at the end of each line but does not have a “return”. Sometimes, programmers code for the Windows paradigm of “return” followed by “newline”; don’t do that! Use simple input routines like “readln” (for Pascal) and, for C/C++, “fscanf” and “fid»string”.</p>
+
+<p><strong>NOTE 2</strong>: Because of the extra characters, be sure to leave enough room for a ‘newline’ (also notated as ‘\n’) and an end of string character (‘\0’) if your language uses it (as C and C++ do). This means you need eight characters of room instead of six.</p>
+
+<h3 id="sample-input-file-ridein">SAMPLE INPUT (file ride.in)</h3>
+
+<p>COMETQ
+HVNGAT</p>
+
+<h3 id="output-format">OUTPUT FORMAT</h3>
+
+<p>A single line containing either the word “GO” or the word “STAY”.</p>
+
+<h3 id="sample-output-file-rideout">SAMPLE OUTPUT (file ride.out)</h3>
+
+<p>GO</p>
+
+<h3 id="output-explanation">OUTPUT EXPLANATION</h3>
+
+<p>Converting the letters to numbers:</p>
+
+<p>Copy to clipboard</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>C</th>
+      <th>O</th>
+      <th>M</th>
+      <th>E</th>
+      <th>T</th>
+      <th>Q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>15</td>
+      <td>13</td>
+      <td>5</td>
+      <td>20</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>H</th>
+      <th>V</th>
+      <th>N</th>
+      <th>G</th>
+      <th>A</th>
+      <th>T</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8</td>
+      <td>22</td>
+      <td>14</td>
+      <td>7</td>
+      <td>1</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>then calculate the product mod 47:</p>
+
+<p>3 * 15 * 13 * 5 * 20 * 17 = 994500 mod 47 = 27</p>
+
+<p>8 * 22 * 14 * 7 *  1 * 20 = 344960 mod 47 = 27</p>
+
+<p>Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.</p>
+
+<object id="code" type="text/plain" style="width: 1000px; height: 400px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter%201/ride/ride.java"></object>
+
+      
+      <footer class="site-footer">
+          
+          <span class="site-footer-owner"><a href="https://github.com/matterdark/USACO/blob/master/Chapter%201/ride/ride.java">USACO - ride</a> is created by <a href="http://github.com/matterdark">matterdark</a>.</span>
+          
+        </footer>      
+      
+    </main>
+  </body>
+</html>

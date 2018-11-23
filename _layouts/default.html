@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    {% if site.skip-to-content %}
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    {% endif %}
+    <header class="page-header" role="banner">
+      {% if page.title %}
+      <h1 class="project-name">{{ page.categories[0] }}: {{ page.title }}</h1>
+        {% if page.description %}
+        <h2 class="project-tagline">{{ page.description }}</h2>
+        {% endif %}
+        {% if page.link %}
+        <a href="{{ page.link }}" class="btn">Code on GitHub</a>
+        {% endif %}
+      {% else %}
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
+      <a href="{{ site.github_url }}" class="btn">View on GitHub</a>
+      <a href="{{ site.linkedin_url }}" class="btn"> LinkedIn</a>
+      <a href="{{ site.khan_url }}" class="btn"> Khan Academy</a>
+      {% endif %}
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      {% if page.link and page.short %}
+      <footer class="site-footer">
+          {% if page.categories %}
+          <span class="site-footer-owner"><a href="{{ page.link }}">{{ page.categories[0] }} - {{ page.short }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+          {% else %}
+          <span class="site-footer-owner"><a href="{{ page.link }}">{{ page.short }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+          {% endif %}
+        </footer>      
+      {% else %}
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+      </footer>
+      {% endif %}
+    </main>
+  </body>
+</html>
