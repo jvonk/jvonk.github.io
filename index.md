@@ -21,7 +21,7 @@ layout: default
         <a class="post-title" href="{{ site.url }}{{ post.url }}">
       <li>
         {%if post.short %} 
-        {{ post.short }} - {{ post.title }}
+        {{ post.short | upcase }} - {{ post.title }}
         {% else %}
         {{ post.title }}
         {% endif %}
