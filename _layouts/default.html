@@ -39,13 +39,13 @@
                         {% if cat=="USACO" %}
                             {% for chapter in (1..2) %}
                                 <div class="dropdown">
-                                    <button class="dropbtn">Chapter {{ chapter }}<i class="fa fa-caret-down"></i>
+                                    <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
                                         {% if chapter == 1 %}
                                             {% for section in (2..3) %}
                                                 <div class="dropdown">
-                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
+                                                    <button class="dropbtn">SECTION {{ section }}<i class="fa fa-caret-down"></i>
                                                     </button>
                                                     <div class="dropdown-content">
                                                         {% for post in site.categories[cat] %}
