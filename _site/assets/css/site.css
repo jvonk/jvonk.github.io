@@ -107,7 +107,7 @@ body {
     background-color: var(--dark-hover);
   }
 
-  .dropdown-content a:hover,.dropdown:hover .dropdown .dropbtn:hover,.dropdown:hover .dropdown:hover .dropdown-content a:hover,.dropdown:hover .dropdown:hover .dropdown:hover .dropdown-content a:hover {
+  .dropdown-content:hover a,.dropdown:hover .dropdown .dropbtn:hover,.dropdown:hover .dropdown:hover .dropdown-content a:hover,.dropdown:hover .dropdown:hover .dropdown:hover .dropdown-content a:hover {
     background-color: var(--light-hover);
   }
   

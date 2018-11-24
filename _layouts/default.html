@@ -43,7 +43,9 @@
                                     </button>
                                     <div class="dropdown-content">
                                         {% if chapter == 1 %}
+                                        <div class="navbar">
                                             {% for section in (2..4) %}
+
                                                 <div class="dropdown">
                                                     <button class="dropbtn">SECTION {{ section }}<i class="fa fa-caret-down"></i>
                                                     </button>
@@ -60,9 +62,12 @@
                                                         {% endfor %}
                                                     </div>
                                                 </div>
+
                                             {% endfor %}
+                                        </div>
                                             {% else %}
                                             {% for section in (1..0) %}
+                                            
                                                 <div class="dropdown">
                                                     <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
                                                     </button>
