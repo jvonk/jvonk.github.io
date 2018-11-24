@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang=" en-US ">
+
+<head>
+
+    
+    <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Milking Cows | Johan Vonk’s Website</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Milking Cows" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A square pattern of size N x N (1 &lt;= N &lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:" />
+<meta property="og:description" content="A square pattern of size N x N (1 &lt;= N &lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:" />
+<link rel="canonical" href="http://localhost:4000/usaco/2018/09/29/transform.html" />
+<meta property="og:url" content="http://localhost:4000/usaco/2018/09/29/transform.html" />
+<meta property="og:site_name" content="Johan Vonk’s Website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-29T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"A square pattern of size N x N (1 &lt;= N &lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/09/29/transform.html","headline":"Milking Cows","dateModified":"2018-09-29T00:00:00+00:00","datePublished":"2018-09-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/09/29/transform.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=eb6bceade726a148e80c0494eef1796c5fabb89b">
+    <style>
+    body {
+            font-family: 'Merriweather', serif;
+        }
+        h1 {
+            font-family: "Josefin Sans", sans-serif;
+        }
+        h2, h3, h4, h5 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+        }
+        
+        .realcontent  a:link, .realcontent  a:visited {
+  color: black;
+  text-decoration:none;
+  transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+    border-bottom: 3px solid #b4e7f8;
+    -webkit-box-shadow: inset 0 -4px 0 #b4e7f8;
+    box-shadow: inset 0 -4px 0 #b4e7f8;
+    
+}
+
+.realcontent  a:link:hover, .realcontent  a:link:active {
+    background: #b4e7f8;
+}</style>
+</head>
+
+<body>
+    <div id="nav"></div>
+     
+    <h2>USACO</h2>
+    <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; position: fixed; top: 0; width: 100%;">
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/29/transform.html">Milking Cows</a></li>
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/28/milk2.html">Milking Cows</a></li>
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/27/beads.html">Broken Necklace</a></li>
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/friday.html">Friday the 13th</a></li>
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/gift1.html">Greedy Gift Givers</a></li>
+        
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
+            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/ride.html">Your Ride Is Here</a></li>
+        
+    </ul>
+    
+    <div>
+
+        <header class="page-header" role="banner">
+            
+            <h1 class="project-name">USACO: Milking Cows</h1>
+             
+            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/transform/transform.java" class="btn">Code on GitHub</a>
+             
+        </header>
+
+        <main id="content" class="main-content" role="main">
+                <div class="realcontent">
+                        
+            <a id="skip-to-content" href="#code">Skip to code</a>
+             
+                    <p>A square pattern of size N x N (1 &lt;= N &lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:</p>
+
+<ol>
+  <li>90 Degree Rotation: The pattern was rotated clockwise 90 degrees.</li>
+  <li>180 Degree Rotation: The pattern was rotated clockwise 180 degrees.</li>
+  <li>270 Degree Rotation: The pattern was rotated clockwise 270 degrees.</li>
+  <li>Reflection: The pattern was reflected horizontally (turned into a mirror image of itself by reflecting around a vertical line in the middle of the image).</li>
+  <li>Combination: The pattern was reflected horizontally and then subjected to one of the rotations (#1-#3).</li>
+  <li>No Change: The original pattern was not changed.</li>
+  <li>Invalid Transformation: The new pattern was not obtained by any of the above methods.</li>
+</ol>
+
+<p>In the case that more than one transform could have been used, choose the one with the minimum number above.</p>
+
+<h3 id="program-name-transform">PROGRAM NAME: transform</h3>
+
+<h3 id="input-format">INPUT FORMAT</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Line 1:</strong></td>
+      <td>A single integer, N</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2..N+1:</strong></td>
+      <td>N lines of N characters (each either `@’ or `-‘); this is the square before transformation</td>
+    </tr>
+    <tr>
+      <td><strong>Line N+2..2*N+1:</strong></td>
+      <td>N lines of N characters (each either `@’ or `-‘); this is the square after transformation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-input-file-transformin">SAMPLE INPUT (file transform.in)</h3>
+
+<p>3
+@-@
+—
+@@-
+@-@
+@–
+–@</p>
+
+<h3 id="output-format">OUTPUT FORMAT</h3>
+
+<p>A single line containing the number from 1 through 7 (described above) that categorizes the transformation required to change from the `before’ representation to the `after’ representation.</p>
+
+<h3 id="sample-output-file-transformout">SAMPLE OUTPUT (file transform.out)</h3>
+
+<p>1</p>
+ 
+                </div>
+                
+            <div id="code">
+                <p><br></p>
+                <script src=http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/transform/transform.java></script>
+            </div>
+                        
+            
+                    <footer class="site-footer realcontent">
+                
+                <span class="site-footer-owner"><a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/transform/transform.java">USACO - transform</a>
+                    is created by <a href="http://github.com/matterdark">matterdark</a>.</span>
+                
+            </footer>
+        
+    </main>
+</body>
+
+</html>

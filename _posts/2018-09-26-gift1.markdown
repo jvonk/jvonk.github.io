@@ -1,0 +1,139 @@
+---
+layout: default
+title:  Greedy Gift Givers
+date:   2018-09-26 1:00:00 +0000
+categories: USACO
+short: gift1
+chapter: 1
+section: 2
+link: https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java
+---
+
+A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.
+
+The rules for gift-giving are potentially different than you might expect. Each person goes to the bank (or any other source of money) to get a certain amount of money to give and divides this money evenly among all those to whom he or she is giving a gift. No fractional money is available, so dividing 7 among 2 friends would be 3 each for the friends with 1 left over – that 1 left over goes into the giver's "account". All the participants' gift accounts start at 0 and are decreased by money given and increased by money received.
+
+In any group of friends, some people are more giving than others (or at least may have more acquaintances) and some people have more money than others.
+
+Given:
+
+*   a group of friends, no one of whom has a name longer than 14 characters,
+*   the money each person in the group spends on gifts, and
+*   a (sub)list of friends to whom each person gives gifts,
+
+determine how much money each person ends up with.
+
+### IMPORTANT NOTE
+
+The grader machine is a Linux machine that uses standard Unix conventions: end of line is a single character often known as '\\n'. This differs from Windows, which ends lines with two characters, '\\n' and '\\r'. Do not let your program get trapped by this!
+
+### PROGRAM NAME: gift1
+
+### INPUT FORMAT
+
+  
+<table border="0" style="border-collapse: collapse;">
+<tbody><tr><th>Line #</th><th>Contents</th></tr>
+<tr> <td align="center">1</td> <td> A single integer, NP </td></tr>
+<tr> <td align="center">2..NP+1</td> <td> Line <i>i</i>+1 contains the name
+of group member <i>i</i></td>
+</tr>
+<tr> <td valign="top" align="center">NP+2..end</td> <td>NP groups of lines organized like this:
+
+
+<table border="0">
+
+<tbody><tr><td>The first line of each group tells the person's name who
+will be giving gifts.
+</td></tr><tr><td>The second line in the group contains two numbers:
+	<ul>
+	<li>The amount of money (in the range 0..2000) to be divided
+        into gifts by the giver
+        </li><li>NG<sub>i</sub> (1 ≤ NG<sub>i</sub> ≤ NP), the
+        number of people to whom the giver will give gifts
+	</li></ul>
+</td></tr><tr><td> If NG<sub>i</sub> is nonzero, each of the next NG<sub>i</sub>
+lines lists the name of a recipient of a gift; recipients are not repeated
+in a single giver's list.
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+### SAMPLE INPUT (file gift1.in)
+
+5
+dave
+laura
+owen
+vick
+amr
+dave
+200 3
+laura
+owen
+vick
+owen
+500 1
+dave
+amr
+150 2
+vick
+owen
+laura
+0 2
+amr
+vick
+vick
+0 0
+
+### OUTPUT FORMAT
+
+The output is NP lines, each with the name of a person followed by a single blank followed by the net gain or loss (final\_money\_value - initial\_money\_value) for that person. The names should be printed in the same order they appear starting on line 2 of the input.
+
+All gifts are integers. Each person gives the same integer amount of money to each friend to whom any money is given, and gives as much as possible that meets this constraint. Any money not given is kept by the giver.
+
+### SAMPLE OUTPUT (file gift1.out)
+
+dave 302
+laura 66
+owen -359
+vick 141
+amr -150
+
+### OUTPUT EXPLANATION
+
+Five names: dave, laura, owen, vick, amr. Let's keep a table of the gives (money) each person 'has':<h3>Welcome to the real-time HTML editor!</h3>
+<p>Type HTML in the textarea above, and it will magically appear in the frame below.</p><table>
+<tbody><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
+
+<tr class="narrow"><td class="l">0</td>   <td class="l">0</td>    <td class="l">0</td>   <td class="l">0</td>   <td class="l">0</td></tr>
+
+<tr><td colspan="5">
+
+First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
+66 each, with 2 left over</td></tr>
+
+<tr><td class="l"><b>-200+2</b></td><td class="l"><b>+66</b></td>  <td class="l"><b>+66</b></td> <td class="l"><b>+66</b></td>  <td class="l">0</td></tr>
+<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
+<tr><td class="l"><b>-198</b></td><td class="l"><b>66</b></td>  <td class="l"><b>66</b></td> <td class="l"><b>66</b></td>  <td class="l">0</td></tr>
+
+<tr><td colspan="5" align="left">Second, 'owen' gives 500 to 'dave':</td></tr>
+
+<tr><td class="l">-198<b>+500</b></td>  <td class="l">66</td>  <td class="l">66<b>-500</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
+<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
+<tr><td class="l"><b>302</b></td>  <td class="l">66</td>  <td class="l"><b>-434</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
+
+<tr><td colspan="5" align="left">Third, 'amr' splits 150 between 'vick' and 'owen':
+
+</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-434<b>+75</b></td><td class="l">66<b>+75</b></td>  <td class="l"><b>-150</b></td></tr>
+<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
+<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l"><b>-359</b></td><td class="l"><b>141</b></td> <td class="l"><b>-150</b></td></tr>
+
+<tr><td colspan="5" align="left">Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:
+</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
+<tr><td colspan="5" align="left">Finally, 'vick' gives 0 to no one:
+</td></tr><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
+<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
+
+</tbody></table>

@@ -1,18 +1,328 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-23T22:49:56+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="https://matterdark.github.io//jekyll/update/2018/11/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-11-21T20:33:52+00:00</published><updated>2018-11-21T20:33:52+00:00</updated><id>https://matterdark.github.io//jekyll/update/2018/11/21/welcome-to-jekyll</id><content type="html" xml:base="https://matterdark.github.io//jekyll/update/2018/11/21/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-24T02:17:02+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Milking Cows</title><link href="http://localhost:4000/usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Milking Cows" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/29/transform</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;90 Degree Rotation: The pattern was rotated clockwise 90 degrees.&lt;/li&gt;
+  &lt;li&gt;180 Degree Rotation: The pattern was rotated clockwise 180 degrees.&lt;/li&gt;
+  &lt;li&gt;270 Degree Rotation: The pattern was rotated clockwise 270 degrees.&lt;/li&gt;
+  &lt;li&gt;Reflection: The pattern was reflected horizontally (turned into a mirror image of itself by reflecting around a vertical line in the middle of the image).&lt;/li&gt;
+  &lt;li&gt;Combination: The pattern was reflected horizontally and then subjected to one of the rotations (#1-#3).&lt;/li&gt;
+  &lt;li&gt;No Change: The original pattern was not changed.&lt;/li&gt;
+  &lt;li&gt;Invalid Transformation: The new pattern was not obtained by any of the above methods.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;In the case that more than one transform could have been used, choose the one with the minimum number above.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;program-name-transform&quot;&gt;PROGRAM NAME: transform&lt;/h3&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Your Ride Is Here</title><link href="https://matterdark.github.io//usaco/2018/09/26/your-ride-is-here.html" rel="alternate" type="text/html" title="Your Ride Is Here" /><published>2018-09-26T00:00:00+00:00</published><updated>2018-09-26T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/26/your-ride-is-here</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/26/your-ride-is-here.html">&lt;p&gt;&lt;a href=&quot;#code&quot;&gt;Skip to code&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
 
-&lt;p&gt;It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A single integer, N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N lines of N characters (each either `@’ or `-‘); this is the square before transformation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line N+2..2*N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N lines of N characters (each either `@’ or `-‘); this is the square after transformation&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-transformin&quot;&gt;SAMPLE INPUT (file transform.in)&lt;/h3&gt;
+
+&lt;p&gt;3
+@-@
+—
+@@-
+@-@
+@–
+–@&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the number from 1 through 7 (described above) that categorizes the transformation required to change from the `before’ representation to the `after’ representation.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-transformout&quot;&gt;SAMPLE OUTPUT (file transform.out)&lt;/h3&gt;
+
+&lt;p&gt;1&lt;/p&gt;</content><author><name></name></author><summary type="html">A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:</summary></entry><entry><title type="html">Milking Cows</title><link href="http://localhost:4000/usaco/2018/09/28/milk2.html" rel="alternate" type="text/html" title="Milking Cows" /><published>2018-09-28T00:00:00+00:00</published><updated>2018-09-28T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/28/milk2</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/28/milk2.html">&lt;p&gt;Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).&lt;/p&gt;
+
+&lt;p&gt;Your job is to write a program that will examine a list of beginning and ending times for N (1 &amp;lt;= N &amp;lt;= 5000) farmers milking N cows and compute (in seconds):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The longest time interval at least one cow was milked.&lt;/li&gt;
+  &lt;li&gt;The longest time interval (after milking starts) during which no cows were being milked.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;program-name-milk2&quot;&gt;PROGRAM NAME: milk2&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The single integer, N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two non-negative integers less than 1,000,000, respectively the starting and ending time in seconds after 0500&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-milk2in&quot;&gt;SAMPLE INPUT (file milk2.in)&lt;/h3&gt;
+
+&lt;p&gt;3
+300 1000
+700 1200
+1500 2100&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with two integers that represent the longest continuous time of milking and the longest idle time.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-milk2out&quot;&gt;SAMPLE OUTPUT (file milk2.out)&lt;/h3&gt;
+
+&lt;p&gt;900 300&lt;/p&gt;</content><author><name></name></author><summary type="html">Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).</summary></entry><entry><title type="html">Broken Necklace</title><link href="http://localhost:4000/usaco/2018/09/27/beads.html" rel="alternate" type="text/html" title="Broken Necklace" /><published>2018-09-27T00:00:00+00:00</published><updated>2018-09-27T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/27/beads</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/27/beads.html">&lt;p&gt;You have a necklace of N red, white, or blue beads (3&amp;lt;=N&amp;lt;=350) some of which are red, others blue, and others white, arranged at random. Here are two examples for n=29:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                1 2                               1 2
+            r b b r                           b r r b
+          r         b                       b         b
+         r           r                     b           r
+        r             r                   w             r
+       b               r                 w               w
+      b                 b               r                 r
+      b                 b               b                 b
+      b                 b               r                 b
+       r               r                 b               r
+        b             r                   r             r
+         b           r                     r           r
+           r       r                         r       b
+             r b r                             r r w
+            Figure A                         Figure B
+                        r red bead
+                        b blue bead
+                        w white bead
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The beads considered first and second in the text that follows have been marked in the picture.&lt;/p&gt;
+
+&lt;p&gt;The configuration in Figure A may be represented as a string of b’s and r’s, where b represents a blue bead and r represents a red one, as follows: brbrrrbbbrrrrrbrrbbrbbbbrrrrb .&lt;/p&gt;
+
+&lt;p&gt;Suppose you are to break the necklace at some point, lay it out straight, and then collect beads of the same color from one end until you reach a bead of a different color, and do the same for the other end (which might not be of the same color as the beads collected before this).&lt;/p&gt;
+
+&lt;p&gt;Determine the point where the necklace should be broken so that the most number of beads can be collected.&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;For example, for the necklace in Figure A, 8 beads can be collected, with the breaking point either between bead 9 and bead 10 or else between bead 24 and bead 25.&lt;/p&gt;
+
+&lt;p&gt;In some necklaces, white beads had been included as shown in Figure B above. When collecting beads, &lt;strong&gt;a white bead that is encountered may be treated as either red or blue and then painted with the desired color&lt;/strong&gt;. The string that represents this configuration can include any of the three symbols r, b and w.&lt;/p&gt;
+
+&lt;p&gt;Write a program to determine the largest number of beads that can be collected from a supplied necklace.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-beads&quot;&gt;PROGRAM NAME: beads&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Line 1:&lt;/p&gt;
+
+&lt;p&gt;N, the number of beads&lt;/p&gt;
+
+&lt;p&gt;Line 2:&lt;/p&gt;
+
+&lt;p&gt;a string of N characters, each of which is r, b, or w&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-beadsin&quot;&gt;SAMPLE INPUT (file beads.in)&lt;/h3&gt;
+
+&lt;p&gt;29
+wwwbbrwrbrbrrbrbrwrwwrbwrwrrb&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the maximum of number of beads that can be collected from the supplied necklace.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-beadsout&quot;&gt;SAMPLE OUTPUT (file beads.out)&lt;/h3&gt;
+
+&lt;p&gt;11&lt;/p&gt;
+
+&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;Consider two copies of the beads (kind of like being able to runaround the ends). The string of 11 is marked.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                Two necklace copies joined here
+                             v
+wwwbbrwrbrbrrbrbrwrwwrbwrwrrb|wwwbbrwrbrbrrbrbrwrwwrbwrwrrb
+                       ******|*****
+                       rrrrrb|bbbbb  &amp;lt;-- assignments
+                   5xr .....#|#####  6xb
+                        5+6 = 11 total
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">You have a necklace of N red, white, or blue beads (3&amp;lt;=N&amp;lt;=350) some of which are red, others blue, and others white, arranged at random. Here are two examples for n=29: 1 2 1 2 r b b r b r r b r b b b r r b r r r w r b r w w b b r r b b b b b b r b r r b r b r r r b r r r r r r b r b r r r w Figure A Figure B r red bead b blue bead w white bead The beads considered first and second in the text that follows have been marked in the picture.</summary></entry><entry><title type="html">Friday the 13th</title><link href="http://localhost:4000/usaco/2018/09/26/friday.html" rel="alternate" type="text/html" title="Friday the 13th" /><published>2018-09-26T02:00:00+00:00</published><updated>2018-09-26T02:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/26/friday</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/26/friday.html">&lt;p&gt;Is Friday the 13th really an unusual event?&lt;/p&gt;
+
+&lt;p&gt;That is, does the 13th of the month land on a Friday less often than on any other day of the week? To answer this question, write a program that will compute the frequency that the 13th of each month lands on Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday over a given period of N years. The time period to test will be from January 1, 1900 to December 31, 1900+N-1 for a given number of years, N. N is positive and will not exceed 400.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note that the start year is NINETEEN HUNDRED, not NINETEEN NINETY.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are few facts you need to know before you can solve this problem:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;January 1, 1900 was on a Monday.&lt;/li&gt;
+  &lt;li&gt;Thirty days has September, April, June, and November, all the rest have 31 except for February which has 28 except in leap years when it has 29.&lt;/li&gt;
+  &lt;li&gt;Every year evenly divisible by 4 is a leap year (1992 = 4*498 so 1992 will be a leap year, but the year 1990 is not a leap year)&lt;/li&gt;
+  &lt;li&gt;The rule above does not hold for century years. Century years divisible by 400 are leap years, all other are not. Thus, the century years 1700, 1800, 1900 and 2100 are not leap years, but 2000 is a leap year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do not use any built-in date functions in your computer language.&lt;/p&gt;
+
+&lt;p&gt;Don’t just precompute the answers, either, please.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-friday&quot;&gt;PROGRAM NAME: friday&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;One line with the integer N.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-fridayin&quot;&gt;SAMPLE INPUT (file friday.in)&lt;/h3&gt;
+
+&lt;p&gt;20&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Seven space separated integers on one line. These integers represent the number of times the 13th falls on Saturday, Sunday, Monday, Tuesday, …, Friday.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fridayout&quot;&gt;SAMPLE OUTPUT (file friday.out)&lt;/h3&gt;
+
+&lt;p&gt;36 33 34 33 35 35 34&lt;/p&gt;</content><author><name></name></author><summary type="html">Is Friday the 13th really an unusual event?</summary></entry><entry><title type="html">Greedy Gift Givers</title><link href="http://localhost:4000/usaco/2018/09/26/gift1.html" rel="alternate" type="text/html" title="Greedy Gift Givers" /><published>2018-09-26T01:00:00+00:00</published><updated>2018-09-26T01:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/26/gift1</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/26/gift1.html">&lt;p&gt;A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.&lt;/p&gt;
+
+&lt;p&gt;The rules for gift-giving are potentially different than you might expect. Each person goes to the bank (or any other source of money) to get a certain amount of money to give and divides this money evenly among all those to whom he or she is giving a gift. No fractional money is available, so dividing 7 among 2 friends would be 3 each for the friends with 1 left over – that 1 left over goes into the giver’s “account”. All the participants’ gift accounts start at 0 and are decreased by money given and increased by money received.&lt;/p&gt;
+
+&lt;p&gt;In any group of friends, some people are more giving than others (or at least may have more acquaintances) and some people have more money than others.&lt;/p&gt;
+
+&lt;p&gt;Given:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a group of friends, no one of whom has a name longer than 14 characters,&lt;/li&gt;
+  &lt;li&gt;the money each person in the group spends on gifts, and&lt;/li&gt;
+  &lt;li&gt;a (sub)list of friends to whom each person gives gifts,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;determine how much money each person ends up with.&lt;/p&gt;
+
+&lt;h3 id=&quot;important-note&quot;&gt;IMPORTANT NOTE&lt;/h3&gt;
+
+&lt;p&gt;The grader machine is a Linux machine that uses standard Unix conventions: end of line is a single character often known as ‘\n’. This differs from Windows, which ends lines with two characters, ‘\n’ and ‘\r’. Do not let your program get trapped by this!&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-gift1&quot;&gt;PROGRAM NAME: gift1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table border=&quot;0&quot; style=&quot;border-collapse: collapse;&quot;&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;Line #&lt;/th&gt;&lt;th&gt;Contents&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt; &lt;td align=&quot;center&quot;&gt;1&lt;/td&gt; &lt;td&gt; A single integer, NP &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt; &lt;td align=&quot;center&quot;&gt;2..NP+1&lt;/td&gt; &lt;td&gt; Line &lt;i&gt;i&lt;/i&gt;+1 contains the name
+of group member &lt;i&gt;i&lt;/i&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt; &lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;NP+2..end&lt;/td&gt; &lt;td&gt;NP groups of lines organized like this:
+
+
+&lt;table border=&quot;0&quot;&gt;
+
+&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;The first line of each group tells the person's name who
+will be giving gifts.
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;The second line in the group contains two numbers:
+	&lt;ul&gt;
+	&lt;li&gt;The amount of money (in the range 0..2000) to be divided
+        into gifts by the giver
+        &lt;/li&gt;&lt;li&gt;NG&lt;sub&gt;i&lt;/sub&gt; (1 ≤ NG&lt;sub&gt;i&lt;/sub&gt; ≤ NP), the
+        number of people to whom the giver will give gifts
+	&lt;/li&gt;&lt;/ul&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; If NG&lt;sub&gt;i&lt;/sub&gt; is nonzero, each of the next NG&lt;sub&gt;i&lt;/sub&gt;
+lines lists the name of a recipient of a gift; recipients are not repeated
+in a single giver's list.
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-gift1in&quot;&gt;SAMPLE INPUT (file gift1.in)&lt;/h3&gt;
+
+&lt;p&gt;5
+dave
+laura
+owen
+vick
+amr
+dave
+200 3
+laura
+owen
+vick
+owen
+500 1
+dave
+amr
+150 2
+vick
+owen
+laura
+0 2
+amr
+vick
+vick
+0 0&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output is NP lines, each with the name of a person followed by a single blank followed by the net gain or loss (final_money_value - initial_money_value) for that person. The names should be printed in the same order they appear starting on line 2 of the input.&lt;/p&gt;
+
+&lt;p&gt;All gifts are integers. Each person gives the same integer amount of money to each friend to whom any money is given, and gives as much as possible that meets this constraint. Any money not given is kept by the giver.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-gift1out&quot;&gt;SAMPLE OUTPUT (file gift1.out)&lt;/h3&gt;
+
+&lt;p&gt;dave 302
+laura 66
+owen -359
+vick 141
+amr -150&lt;/p&gt;
+
+&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;Five names: dave, laura, owen, vick, amr. Let’s keep a table of the gives (money) each person ‘has’:&amp;lt;h3&amp;gt;Welcome to the real-time HTML editor!&amp;lt;/h3&amp;gt;&lt;/p&gt;
+&lt;p&gt;Type HTML in the textarea above, and it will magically appear in the frame below.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;dave&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;laura&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;owen&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;vick&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;amr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr class=&quot;narrow&quot;&gt;&lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;    &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td colspan=&quot;5&quot;&gt;
+
+First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
+66 each, with 2 left over&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;-200+2&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;-198&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Second, 'owen' gives 500 to 'dave':&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;-198&lt;b&gt;+500&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;b&gt;-500&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;302&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-434&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Third, 'amr' splits 150 between 'vick' and 'owen':
+
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-434&lt;b&gt;+75&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;66&lt;b&gt;+75&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-150&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-359&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;141&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-150&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-359&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;141&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-150&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Finally, 'vick' gives 0 to no one:
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;dave&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;laura&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;owen&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;vick&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;amr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-359&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;141&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-150&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/tbody&gt;&lt;/table&gt;</content><author><name></name></author><summary type="html">A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</summary></entry><entry><title type="html">Your Ride Is Here</title><link href="http://localhost:4000/usaco/2018/09/26/ride.html" rel="alternate" type="text/html" title="Your Ride Is Here" /><published>2018-09-26T00:00:00+00:00</published><updated>2018-09-26T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/09/26/ride</id><content type="html" xml:base="http://localhost:4000/usaco/2018/09/26/ride.html">&lt;p&gt;It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.&lt;/p&gt;
 
 &lt;p&gt;Both the name of the group and the name of the comet are converted into a number in the following manner: the final number is just the product of all the letters in the name, where “A” is 1 and “Z” is 26. For instance, the group “USACO” would be 21 * 19 * 1 * 3 * 15 = 17955. If the group’s number mod 47 is the same as the comet’s number mod 47, then you need to tell the group to get ready! (Remember that “a mod b” is the remainder left over after dividing a by b; 34 mod 10 is 4.)&lt;/p&gt;
 
@@ -130,6 +440,4 @@ HVNGAT&lt;/p&gt;
 
 &lt;p&gt;8 * 22 * 14 * 7 *  1 * 20 = 344960 mod 47 = 27&lt;/p&gt;
 
-&lt;p&gt;Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.&lt;/p&gt;
-
-&lt;object id=&quot;code&quot; type=&quot;text/plain&quot; style=&quot;width: 1000px; height: 400px;&quot; data=&quot;https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter%201/ride/ride.java&quot;&gt;&lt;/object&gt;</content><author><name></name></author><summary type="html">Skip to code</summary></entry></feed>
+&lt;p&gt;Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.&lt;/p&gt;</content><author><name></name></author><summary type="html">It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.</summary></entry></feed>
