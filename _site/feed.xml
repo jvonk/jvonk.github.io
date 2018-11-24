@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T07:40:55+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T10:29:58+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Name That Number</title><link href="https://matterdark.github.io//usaco/2018/09/29/namenum.html" rel="alternate" type="text/html" title="Name That Number" /><published>2018-09-29T01:00:00+00:00</published><updated>2018-09-29T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/namenum</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/namenum.html">&lt;p&gt;Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”&lt;/p&gt;
+
+&lt;p&gt;Help the poor cowhands out by writing a program that will translate the brand serial number of a cow into possible names uniquely associated with that serial number. Since the cow hands all have cellular saddle phones these days, use the standard Touch-Tone(R) telephone keypad mapping to get from numbers to letters (except for “Q” and “Z”):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2: A,B,C     5: J,K,L    8: T,U,V
+3: D,E,F     6: M,N,O    9: W,X,Y
+4: G,H,I     7: P,R,S
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Acceptable names for cattle are provided to you in a file named “dict.txt”, which contains a list of fewer than 5,000 acceptable cattle names (all letters capitalized). Take a cow’s brand number and report which of all the possible words to which that number maps are in the given dictionary which is supplied as dict.txt in the grading environment (and is sorted into ascending order).&lt;/p&gt;
+
+&lt;p&gt;For instance, the brand number 4734 produces all the following names:&lt;/p&gt;
+
+&lt;p&gt;GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI
+GREG GREH GREI GRFG GRFH GRFI GSDG GSDH GSDI GSEG GSEH GSEI
+GSFG GSFH GSFI HPDG HPDH HPDI HPEG HPEH HPEI HPFG HPFH HPFI
+HRDG HRDH HRDI HREG HREH HREI HRFG HRFH HRFI HSDG HSDH HSDI
+HSEG HSEH HSEI HSFG HSFH HSFI IPDG IPDH IPDI IPEG IPEH IPEI
+IPFG IPFH IPFI IRDG IRDH IRDI IREG IREH IREI IRFG IRFH IRFI
+ISDG ISDH ISDI ISEG ISEH ISEI ISFG ISFH ISFI&lt;/p&gt;
+
+&lt;p&gt;As it happens, the only one of these 81 names that is in the list of valid names is “GREG”.&lt;/p&gt;
+
+&lt;p&gt;Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number or ``NONE’’ if there are no valid names. Serial numbers can be as many as a dozen digits long.&lt;/p&gt;
+
+&lt;h2 id=&quot;program-name-namenum&quot;&gt;PROGRAM NAME: namenum&lt;/h2&gt;
+
+&lt;h2 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;A single line with a number from 1 through 12 digits in length.&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-input-file-namenumin&quot;&gt;SAMPLE INPUT (file namenum.in)&lt;/h2&gt;
+&lt;p&gt;4734&lt;/p&gt;
+
+&lt;h2 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;A list of valid names that can be generated from the input, one per line, in ascending alphabetical order.&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-output-file-namenumout&quot;&gt;SAMPLE OUTPUT (file namenum.out)&lt;/h2&gt;
+&lt;p&gt;GREG&lt;/p&gt;</content><author><name></name></author><summary type="html">Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”</summary></entry><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;90 Degree Rotation: The pattern was rotated clockwise 90 degrees.&lt;/li&gt;

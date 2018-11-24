@@ -1,118 +1,169 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US " }}">
-
-<head>
-
-    {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-    </script> {% endif %}
-    <meta charset="UTF-8"> {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <style>
-    </style>
-
-    <div class="navbar">
-        <a href="{{site.url}}">Home</a>
-        {% for post in site.pages %} {% if post.title %}
-        <a href="{{ post.url }}">
-            {{ post.title }}
-        </a>
-        {% endif %} {% endfor %} {% for category in site.categories %} {% assign cat = category[0] %}
-        <div class="dropdown">
-            <button class="dropbtn">{{ cat | upcase }}</button>
-            <i class="fa fa-caret-down"></i>
-            <div class="dropdown-content">
-                {% if cat=="USACO" %} {% for chapter in (1..2) %}
-                <div class="dropdown"><button class="dropbtn">Chapter {{ chapter }}<i class="fa fa-caret-down"></i></button>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{'/assets/css/style.css' | relative_url}}">
+        <link rel="stylesheet" type="text/css" href="{{'/assets/css/site.css' | relative_url}}">
+        {% if site.google_analytics %}
+            <script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', '{{ site.google_analytics }}');
+            </script>
+        {% endif %}
+        <meta charset="UTF-8"> {% seo %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#157878">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="{{site.url}}">Home</a>
+            {% for post in site.pages %}
+                {% if post.title %}
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+            {% for category in site.categories %}
+                {% assign cat = category[0] %}
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        {{ cat | upcase }}</button>
+                    <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        {% if chapter == 1 %} {% for section in (2..3) %}
-                        <div class="dropdown"><button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-content">
-                                {% for post in site.categories[cat] %} {% if post.chapter==chapter and post.section==section %}
+                        {% if cat=="USACO" %}
+                            {% for chapter in (1..2) %}
+                                <div class="dropdown">
+                                    <button class="dropbtn">Chapter {{ chapter }}<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        {% if chapter == 1 %}
+                                            {% for section in (2..3) %}
+                                                <div class="dropdown">
+                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        {% for post in site.categories[cat] %}
+                                                            {% if post.chapter==chapter and post.section==section %}
+                                                                <a href="{{ post.url }}">
+                                                                    {% if post.short %}
+                                                                        {{post.short}} -
+                                                                    {% endif %}
+                                                                    {{post.title}}
+                                                                </a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                            {% else %}
+                                            {% for section in (1..0) %}
+                                                <div class="dropdown">
+                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        {% for post in site.categories[cat] %}
+                                                            {% if post.chapter==chapter and post.section==section %}
+                                                                <a href="{{ post.url }}">
+                                                                    {% if post.short %}
+                                                                        {{post.short}} -
+                                                                    {% endif %}
+                                                                    {{post.title}}
+                                                                </a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {% else %}
+                            {% for post in site.categories[cat] %}
                                 <a href="{{ post.url }}">
-                                    {% if post.short %} {{post.short}} - {% endif %} {{post.title}}
+                                    {% if post.short %}
+                                        {{post.short}} -
+                                    {% endif %}
+                                    {{post.title}}
                                 </a>
-                                {% endif %} {% endfor %}
-                            </div>
-                        </div>
-                        {% endfor %} {% else %} {% for section in (1..0) %}
-                        <div class="dropdown"><button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i></button>
-                            <div class="dropdown-content">
-                                {% for post in site.categories[cat] %} {% if post.chapter==chapter and post.section==section %}
-                                <a href="{{ post.url }}">
-                                    {% if post.short %} {{post.short}} - {% endif %} {{post.title}}
-                                </a>
-                                {% endif %} {% endfor %}
-                            </div>
-                        </div>
-                        {% endfor %} {% endif %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
-                {% endfor %} {% else %} {% for post in site.categories[cat] %}
-                <a href="{{ post.url }}">
-                    {% if post.short %} {{post.short}} - {% endif %} {{post.title}}
-                </a>
-                {% endfor %} {% endif %}
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</head>
-
-<body>
-
-    <header class="page-header" role="banner">
-        {% if page.title and page.categories %}
-        <h1 class="project-name">{{ page.categories[0] }}: {{ page.title }}</h1>
-        {% if page.description %}
-        <h2 class="project-tagline">{{ page.description }}</h2>
-        {% endif %} {% if page.link %}
-        <a href="{{ page.link }}" class="btn">Code on GitHub</a>
-        {% endif %} {% else %}
-        <h1 class="project-name">{{ site.title }}</h1>
-        <h2 class="project-tagline">{{ site.description }}</h2>
-        <a href="{{ site.github_url }}" class="btn">View on GitHub</a>
-        <a href="{{ site.linkedin_url }}" class="btn"> LinkedIn</a>
-        <a href="{{ site.khan_url }}" class="btn"> Khan Academy</a>
-        {% endif %}
-    </header>
-
-    <main id="content" class="main-content" role="main">
-        <div class="realcontent">
-            {% if page.link %}
-            <a id="skip-to-content" href="#code">Skip to code</a>
-            {% endif %} {{ content }}
-        </div>
-        {% if page.link %}
-        <div id="code">
-            <p></p>
-            <script src={{ "http://gist-it.appspot.com/" | append: page.link }}></script>
-        </div>
-        {% endif %} {% if page.link and page.short %}
-        <footer class="site-footer realcontent">
-            {% if page.categories %}
-            <span class="site-footer-owner"><a href="{{ page.link }}">{{ page.categories[0] }} - {{ page.short }}</a>
-                is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-            {% else %}
-            <span class="site-footer-owner"><a href="{{ page.link }}">{{ page.short }}</a> is created by <a href="{{ site.github.owner_url }}">{{
-                    site.github.owner_name }}</a>.</span>
+        <header class="page-header" role="banner">
+            {% if page.title and page.categories %}
+                <h1 class="project-name">
+                    {{ page.categories[0] }}: {{ page.title }}</h1>
+                {% if page.description %}
+                    <h2 class="project-tagline">
+                        {{ page.description }}</h2>
+                {% endif %}
+                {% if page.link %}
+                    <a href="{{ page.link }}" class="btn">Code on GitHub</a>
+                {% endif %}
+                {% else %}
+                <h1 class="project-name">
+                    {{ site.title }}</h1>
+                <h2 class="project-tagline">
+                    {{ site.description }}</h2>
+                <a href="{{ site.github_url }}" class="btn">View on GitHub</a>
+                <a href="{{ site.linkedin_url }}" class="btn">
+                    LinkedIn</a>
+                <a href="{{ site.khan_url }}" class="btn">
+                    Khan Academy</a>
             {% endif %}
-        </footer>
-        {% else %}
-        <footer class="site-footer realcontent">
-            <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}
-                </a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        </footer>
-        {% endif %}
-    </main>
-</body>
-
+        </header>
+        <main id="content" class="main-content" role="main">
+            <div class="realcontent">
+                {% if page.link %}
+                    <a id="skip-to-content" href="#code">Skip to code</a>
+                {% endif %}
+                {{ content }}
+            </div>
+            {% if page.link %}
+                <div id="code">
+                    <p></p>
+                    <script src="{{ 'http://gist-it.appspot.com/' | append: page.link }}"></script>
+                </div>
+            {% endif %}
+            {% if page.link and page.short %}
+                <footer class="site-footer realcontent">
+                    {% if page.categories %}
+                        <span class="site-footer-owner">
+                            <a href="{{ page.link }}">
+                                {{ page.categories[0] }} - {{ page.short }}</a>
+                            is created by
+                            <a href="{{ site.github.owner_url }}">
+                                {{ site.github.owner_name }}</a>.</span>
+                        {% else %}
+                        <span class="site-footer-owner">
+                            <a href="{{ page.link }}">
+                                {{ page.short }}</a>
+                            is created by
+                            <a href="{{ site.github.owner_url }}">
+                                {{
+site.github.owner_name }}</a>.</span>
+                    {% endif %}
+                </footer>
+                {% else %}
+                <footer class="site-footer realcontent">
+                    <span class="site-footer-owner">
+                        <a href="{{ site.github.repository_url }}">
+                            {{ site.github.repository_name }}
+                        </a>
+                        is created by
+                        <a href="{{ site.github.owner_url }}">
+                            {{ site.github.owner_name }}</a>.</span>
+                </footer>
+            {% endif %}
+        </main>
+    </body>
 </html>
