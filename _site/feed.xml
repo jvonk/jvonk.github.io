@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T06:51:33+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T07:34:19+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;90 Degree Rotation: The pattern was rotated clockwise 90 degrees.&lt;/li&gt;
@@ -35,13 +35,14 @@
 
 &lt;h3 id=&quot;sample-input-file-transformin&quot;&gt;SAMPLE INPUT (file transform.in)&lt;/h3&gt;
 
-&lt;p&gt;3
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
 @-@
-—
+---
 @@-
 @-@
-@–
-–@&lt;/p&gt;
+@--
+--@
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
 

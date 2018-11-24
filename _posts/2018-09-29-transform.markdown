@@ -33,6 +33,7 @@ In the case that more than one transform could have been used, choose the one wi
 
 ### SAMPLE INPUT (file transform.in)
 
+```
 3
 @-@
 ---
@@ -40,6 +41,7 @@ In the case that more than one transform could have been used, choose the one wi
 @-@
 @--
 --@
+```
 
 ### OUTPUT FORMAT
 
