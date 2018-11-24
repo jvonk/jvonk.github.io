@@ -11,88 +11,257 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give." />
 <meta property="og:description" content="A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/26/gift1.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/26/gift1.html" />
+<link rel="canonical" href="http://localhost:4000/usaco/2018/09/26/gift1.html" />
+<meta property="og:url" content="http://localhost:4000/usaco/2018/09/26/gift1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-26T01:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/26/gift1.html","headline":"Greedy Gift Givers","dateModified":"2018-09-26T01:00:00+00:00","datePublished":"2018-09-26T01:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/26/gift1.html"},"@context":"http://schema.org"}</script>
+{"description":"A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/09/26/gift1.html","headline":"Greedy Gift Givers","dateModified":"2018-09-26T01:00:00+00:00","datePublished":"2018-09-26T01:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/09/26/gift1.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=01bcd71ded1b28e4d4695b0e3280e5d0adb917eb">
+    <link rel="stylesheet" href="/assets/css/style.css?v=4e07e130676ec07554ef3428892e042909099d07">
     <style>
-    body {
+        body {
             font-family: 'Merriweather', serif;
         }
+
         h1 {
             font-family: "Josefin Sans", sans-serif;
         }
-        h2, h3, h4, h5 {
+
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: "Montserrat", sans-serif;
             font-weight: 600;
         }
-        
-        .realcontent  a:link, .realcontent  a:visited {
-  color: black;
-  text-decoration:none;
-  transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
-    border-bottom: 3px solid #b4e7f8;
-    -webkit-box-shadow: inset 0 -4px 0 #b4e7f8;
-    box-shadow: inset 0 -4px 0 #b4e7f8;
-    
-}
 
-.realcontent  a:link:hover, .realcontent  a:link:active {
-    background: #b4e7f8;
-}</style>
+        .realcontent a:link,
+        .realcontent a:visited {
+            color: black;
+            text-decoration: none;
+            transition: background .15s cubic-bezier(0.33, 0.66, 0.66, 1);
+            border-bottom: 3px solid #b4e7f8;
+            -webkit-box-shadow: inset 0 -4px 0 #b4e7f8;
+            box-shadow: inset 0 -4px 0 #b4e7f8;
+
+        }
+
+        .realcontent a:link:hover,
+        .realcontent a:link:active {
+            background: #b4e7f8;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown .dropbtn {
+            background-color: #333;
+        }
+
+        .dropdown:hover .dropdown .dropbtn:hover {
+            background-color: red;
+        }
+
+        .dropdown:hover .dropdown .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown-content {
+            display: block;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown-content a {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown .dropbtn {
+            background-color: #333;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown .dropbtn:hover {
+            background-color: red;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown:hover .dropdown-content {
+            display: block;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown:hover .dropdown-content a {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown:hover .dropdown:hover .dropdown:hover .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <div class="navbar">
+        <a href="http://localhost:4000">Home</a>
+           
+        <a href="/about/">
+            About
+        </a>
+                 
+        <div class="dropdown">
+            <button class="dropbtn">USACO</button>
+            <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+                 
+                <div class="dropdown"><button class="dropbtn">Chapter 1<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                         
+                        <div class="dropdown"><button class="dropbtn">Section 2<i class="fa fa-caret-down"></i></button>
+                            <div class="dropdown-content">
+                                     
+                                <a href="/usaco/2018/09/27/beads.html">
+                                     beads -  Broken Necklace
+                                </a>
+                                  
+                                <a href="/usaco/2018/09/26/friday.html">
+                                     friday -  Friday the 13th
+                                </a>
+                                  
+                                <a href="/usaco/2018/09/26/gift1.html">
+                                     gift1 -  Greedy Gift Givers
+                                </a>
+                                  
+                                <a href="/usaco/2018/09/26/ride.html">
+                                     ride -  Your Ride Is Here
+                                </a>
+                                 
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown"><button class="dropbtn">Section 3<i class="fa fa-caret-down"></i></button>
+                            <div class="dropdown-content">
+                                 
+                                <a href="/usaco/2018/09/29/transform.html">
+                                     transform -  Transformations
+                                </a>
+                                  
+                                <a href="/usaco/2018/09/28/milk2.html">
+                                     milk2 -  Milking Cows
+                                </a>
+                                         
+                            </div>
+                        </div>
+                         
+                    </div>
+                </div>
+                
+                <div class="dropdown"><button class="dropbtn">Chapter 2<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                          
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+        
+    </div>
 </head>
 
 <body>
-    <div id="nav"></div>
-     
-    <h2>USACO</h2>
-    <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; position: fixed; top: 0; width: 100%;">
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/29/transform.html">Milking Cows</a></li>
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/28/milk2.html">Milking Cows</a></li>
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/27/beads.html">Broken Necklace</a></li>
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/friday.html">Friday the 13th</a></li>
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/gift1.html">Greedy Gift Givers</a></li>
-        
-        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" onMouseOver="this.style.background='#111'"
-            onMouseOut="this.style.background='#333'"  href="/usaco/2018/09/26/ride.html">Your Ride Is Here</a></li>
-        
-    </ul>
-    
-    <div>
 
-        <header class="page-header" role="banner">
+    <header class="page-header" role="banner">
+        
+        <h1 class="project-name">USACO: Greedy Gift Givers</h1>
+         
+        <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java" class="btn">Code on GitHub</a>
+         
+    </header>
+
+    <main id="content" class="main-content" role="main">
+        <div class="realcontent">
             
-            <h1 class="project-name">USACO: Greedy Gift Givers</h1>
-             
-            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java" class="btn">Code on GitHub</a>
-             
-        </header>
-
-        <main id="content" class="main-content" role="main">
-                <div class="realcontent">
-                        
             <a id="skip-to-content" href="#code">Skip to code</a>
-             
-                    <p>A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</p>
+             <p>A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</p>
 
 <p>The rules for gift-giving are potentially different than you might expect. Each person goes to the bank (or any other source of money) to get a certain amount of money to give and divides this money evenly among all those to whom he or she is giving a gift. No fractional money is available, so dividing 7 among 2 friends would be 3 each for the friends with 1 left over – that 1 left over goes into the giver’s “account”. All the participants’ gift accounts start at 0 and are decreased by money given and increased by money received.</p>
 
@@ -221,21 +390,20 @@ First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
 <tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
 
 </tbody></table>
- 
-                </div>
-                
-            <div id="code">
-                <p><br></p>
-                <script src=http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java></script>
-            </div>
-                        
+
+        </div>
+        
+        <div id="code">
+            <p></p>
+            <script src=http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java></script>
+        </div>
+         
+        <footer class="site-footer realcontent">
             
-                    <footer class="site-footer realcontent">
-                
-                <span class="site-footer-owner"><a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java">USACO - gift1</a>
-                    is created by <a href="http://github.com/matterdark">matterdark</a>.</span>
-                
-            </footer>
+            <span class="site-footer-owner"><a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java">USACO - gift1</a>
+                is created by <a href="http://github.com/matterdark">matterdark</a>.</span>
+            
+        </footer>
         
     </main>
 </body>

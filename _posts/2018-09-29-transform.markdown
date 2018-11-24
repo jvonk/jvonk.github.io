@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Milking Cows
+title:  Transformations
 date:   2018-09-29 0:00:00 +0000
 categories: USACO
 short: transform
