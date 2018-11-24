@@ -103,7 +103,7 @@ body {
     color: var(--dark-text);
   }
   
-  .navbar a:hover,.dropdown:hover .dropdown:hover .dropdown .dropbtn:hover {
+  .navbar a:hover,.dropdown:hover .dropbtn:hover, .dropdown:hover .dropdown:hover .dropdown .dropbtn:hover {
     background-color: var(--dark-hover);
   }
 
