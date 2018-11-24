@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Milking Cows | Johan Vonk’s Website</title>
+<title>Dual Palindromes | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Milking Cows" />
+<meta property="og:title" content="Dual Palindromes" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<meta property="og:description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/28/milk2.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/28/milk2.html" />
+<meta name="description" content="A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome." />
+<meta property="og:description" content="A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-09-28T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-09-29T04:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/28/milk2.html","headline":"Milking Cows","dateModified":"2018-09-28T00:00:00+00:00","datePublished":"2018-09-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/28/milk2.html"},"@context":"http://schema.org"}</script>
+{"description":"A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/29/dualpal.html","headline":"Dual Palindromes","dateModified":"2018-09-29T04:00:00+00:00","datePublished":"2018-09-29T04:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/29/dualpal.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -250,10 +250,10 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Milking Cows</h1>
+                    USACO: Dual Palindromes</h1>
                 
                 
-                    <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java" class="btn">Code on GitHub</a>
+                    <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/dualpal/dualpal.java" class="btn">Code on GitHub</a>
                 
                 
         </header>
@@ -262,60 +262,51 @@
                 
                     <a id="skip-to-content" href="#code">Skip to code</a>
                 
-                <p>Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).</p>
+                <p>A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.</p>
 
-<p>Your job is to write a program that will examine a list of beginning and ending times for N (1 &lt;= N &lt;= 5000) farmers milking N cows and compute (in seconds):</p>
+<p>The number 21 (base 10) is not palindrome in base 10, but the number 21 (base 10) is, in fact, a palindrome in base 2 (10101).</p>
+
+<p>Write a program that reads two numbers (expressed in base 10):</p>
 
 <ul>
-  <li>The longest time interval at least one cow was milked.</li>
-  <li>The longest time interval (after milking starts) during which no cows were being milked.</li>
+  <li>N (1 &lt;= N &lt;= 15)</li>
+  <li>S (0 &lt; S &lt; 10000)</li>
 </ul>
 
-<h3 id="program-name-milk2">PROGRAM NAME: milk2</h3>
+<p>and then finds and prints (in base 10) the first N numbers strictly greater than S that are palindromic when written in two or more number bases (2 &lt;= base &lt;= 10).
+Solutions to this problem do not require manipulating integers larger than the standard 32 bits.</p>
 
-<h3 id="input-format">INPUT FORMAT</h3>
+<h2 id="program-name-dualpal">PROGRAM NAME: dualpal</h2>
 
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Line 1:</strong></td>
-      <td>The single integer, N</td>
-    </tr>
-    <tr>
-      <td><strong>Lines 2..N+1:</strong></td>
-      <td>Two non-negative integers less than 1,000,000, respectively the starting and ending time in seconds after 0500</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="input-format">INPUT FORMAT</h2>
+<p>A single line with space separated integers N and S.</p>
 
-<h3 id="sample-input-file-milk2in">SAMPLE INPUT (file milk2.in)</h3>
+<h2 id="sample-input-file-dualpalin">SAMPLE INPUT (file dualpal.in)</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 25
+</code></pre></div></div>
 
-<p>3
-300 1000
-700 1200
-1500 2100</p>
+<h2 id="output-format">OUTPUT FORMAT</h2>
+<p>N lines, each with a base 10 number that is palindromic when expressed in at least two of the bases 2..10. The numbers should be listed in order from smallest to largest.</p>
 
-<h3 id="output-format">OUTPUT FORMAT</h3>
-
-<p>A single line with two integers that represent the longest continuous time of milking and the longest idle time.</p>
-
-<h3 id="sample-output-file-milk2out">SAMPLE OUTPUT (file milk2.out)</h3>
-
-<p>900 300</p>
+<h2 id="sample-output-file-dualpalout">SAMPLE OUTPUT (file dualpal.out)</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>26
+27
+28
+</code></pre></div></div>
 
             </div>
             
                 <div id="code">
                     <p></p>
-                    <script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java"></script>
+                    <script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/dualpal/dualpal.java"></script>
                 </div>
             
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
-                            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java">
-                                USACO - milk2</a>
+                            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/dualpal/dualpal.java">
+                                USACO - dualpal</a>
                             is created by
                             <a href="http://github.com/matterdark">
                                 matterdark</a>.</span>

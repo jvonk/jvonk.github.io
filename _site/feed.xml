@@ -1,4 +1,193 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T10:34:15+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Name That Number</title><link href="https://matterdark.github.io//usaco/2018/09/29/namenum.html" rel="alternate" type="text/html" title="Name That Number" /><published>2018-09-29T01:00:00+00:00</published><updated>2018-09-29T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/namenum</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/namenum.html">&lt;p&gt;Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T14:30:46+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
+
+&lt;p&gt;The number 21 (base 10) is not palindrome in base 10, but the number 21 (base 10) is, in fact, a palindrome in base 2 (10101).&lt;/p&gt;
+
+&lt;p&gt;Write a program that reads two numbers (expressed in base 10):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;N (1 &amp;lt;= N &amp;lt;= 15)&lt;/li&gt;
+  &lt;li&gt;S (0 &amp;lt; S &amp;lt; 10000)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and then finds and prints (in base 10) the first N numbers strictly greater than S that are palindromic when written in two or more number bases (2 &amp;lt;= base &amp;lt;= 10).
+Solutions to this problem do not require manipulating integers larger than the standard 32 bits.&lt;/p&gt;
+
+&lt;h2 id=&quot;program-name-dualpal&quot;&gt;PROGRAM NAME: dualpal&lt;/h2&gt;
+
+&lt;h2 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;A single line with space separated integers N and S.&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-input-file-dualpalin&quot;&gt;SAMPLE INPUT (file dualpal.in)&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;N lines, each with a base 10 number that is palindromic when expressed in at least two of the bases 2..10. The numbers should be listed in order from smallest to largest.&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-output-file-dualpalout&quot;&gt;SAMPLE OUTPUT (file dualpal.out)&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;26
+27
+28
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.</summary></entry><entry><title type="html">Mixing Milk</title><link href="https://matterdark.github.io//usaco/2018/09/29/milk.html" rel="alternate" type="text/html" title="Mixing Milk" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/milk</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/milk.html">&lt;p&gt;The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.&lt;/p&gt;
+
+&lt;p&gt;Since milk packaging is such a difficult business in which to make money, it is important to keep the costs as low as possible. Help Merry Milk Makers purchase the farmers’ milk in the cheapest possible manner. The MMM company has an extraordinarily talented marketing department and knows precisely how much milk they need each day to package for their customers.&lt;/p&gt;
+
+&lt;p&gt;The company has contracts with several farmers from whom they may purchase milk, and each farmer has a (potentially) different price at which they sell milk to the packing plant. Of course, a herd of cows can only produce so much milk each day, so the farmers already know how much milk they will have available.&lt;/p&gt;
+
+&lt;p&gt;Each day, Merry Milk Makers can purchase an integer number of units of milk from each farmer, a number that is always less than or equal to the farmer’s limit (and might be the entire production from that farmer, none of the production, or any integer in between).&lt;/p&gt;
+
+&lt;p&gt;Given:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Merry Milk Makers’ daily requirement of milk&lt;/li&gt;
+  &lt;li&gt;The cost per unit for milk from each farmer&lt;/li&gt;
+  &lt;li&gt;The amount of milk available from each farmer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk.&lt;/p&gt;
+
+&lt;p&gt;Note: The total milk produced per day by the farmers will always be sufficient to meet the demands of the Merry Milk Makers even if the prices are high.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-milk&quot;&gt;PROGRAM NAME: milk&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Line 1:&lt;/td&gt;
+      &lt;td&gt;Two integers, N and M. The first value, N, (0 &amp;lt;= N &amp;lt;= 2,000,000) is the amount of milk that Merry Milk Makers wants per day. The second, M, (0 &amp;lt;= M &amp;lt;= 5,000) is the number of farmers that they may buy from.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lines 2 through M+1:&lt;/td&gt;
+      &lt;td&gt;The next M lines each contain two integers: Pi and Ai. Pi (0 &amp;lt;= Pi &amp;lt;= 1,000) is price in cents that farmer i charges. Ai (0 &amp;lt;= Ai &amp;lt;= 2,000,000) is the amount of milk that farmer i can sell to Merry Milk Makers per day.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-milkin&quot;&gt;SAMPLE INPUT (file milk.in)&lt;/h3&gt;
+
+&lt;p&gt;100 5
+5 20
+9 40
+3 10
+8 80
+6 30&lt;/p&gt;
+
+&lt;h3 id=&quot;input-explanation&quot;&gt;INPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;100 5 – MMM wants 100 units of milk from 5 farmers&lt;br /&gt;
+5 20 – Farmer 1 says, “I can sell you 20 units at 5 cents per unit”&lt;br /&gt;
+9 40 etc.&lt;br /&gt;
+3 10 – Farmer 3 says, “I can sell you 10 units at 3 cents per unit”&lt;br /&gt;
+8 80 etc.&lt;br /&gt;
+6 30 – Farmer 5 says, “I can sell you 30 units at 6 cents per unit”&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with a single integer that is the minimum cost that Merry Milk Makers must pay for one day’s milk.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-milkout&quot;&gt;SAMPLE OUTPUT (file milk.out)&lt;/h3&gt;
+
+&lt;p&gt;630&lt;/p&gt;
+
+&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;Here’s how the MMM company spent only 630 cents to purchase 100 units of milk:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Price per unit&lt;/th&gt;
+      &lt;th&gt;Units available&lt;/th&gt;
+      &lt;th&gt;Units bought&lt;/th&gt;
+      &lt;th&gt;Price * # units&lt;/th&gt;
+      &lt;th&gt;Total cost&lt;/th&gt;
+      &lt;th&gt;Notes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;5*20&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Bought no milk from farmer 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;3*10&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;8*40&lt;/td&gt;
+      &lt;td&gt;320&lt;/td&gt;
+      &lt;td&gt;Did not buy all 80 units!&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;6*30&lt;/td&gt;
+      &lt;td&gt;180&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;180&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;630&lt;/td&gt;
+      &lt;td&gt;Cheapest total cost&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.</summary></entry><entry><title type="html">Palindromic Squares</title><link href="https://matterdark.github.io//usaco/2018/09/29/palsquare.html" rel="alternate" type="text/html" title="Palindromic Squares" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/palsquare</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/palsquare.html">&lt;p&gt;Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome.&lt;/p&gt;
+
+&lt;p&gt;Given a number base B (2 &amp;lt;= B &amp;lt;= 20 base 10), print all the integers N (1 &amp;lt;= N &amp;lt;= 300 base 10) such that the square of N is palindromic when expressed in base B; also print the value of that palindromic square. Use the letters ‘A’, ‘B’, and so on to represent the digits 10, 11, and so on.&lt;/p&gt;
+
+&lt;p&gt;Print both the number and its square in base B.&lt;/p&gt;
+
+&lt;h2 id=&quot;program-name-palsquare&quot;&gt;PROGRAM NAME: palsquare&lt;/h2&gt;
+
+&lt;h2 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;A single line with B, the base (specified in base 10).&lt;/p&gt;
+
+&lt;p&gt;##SAMPLE INPUT (file palsquare.in)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h2&gt;
+&lt;p&gt;Lines with two integers represented in base B. The first integer is the number whose square is palindromic; the second integer is the square itself. NOTE WELL THAT BOTH INTEGERS ARE IN BASE B!&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-output-file-palsquareout&quot;&gt;SAMPLE OUTPUT (file palsquare.out)&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 1
+2 4
+3 9
+11 121
+22 484
+26 676
+101 10201
+111 12321
+121 14641
+202 40804
+212 44944
+264 69696
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome.</summary></entry><entry><title type="html">Name That Number</title><link href="https://matterdark.github.io//usaco/2018/09/29/namenum.html" rel="alternate" type="text/html" title="Name That Number" /><published>2018-09-29T01:00:00+00:00</published><updated>2018-09-29T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/namenum</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/namenum.html">&lt;p&gt;Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”&lt;/p&gt;
 
 &lt;p&gt;Help the poor cowhands out by writing a program that will translate the brand serial number of a cow into possible names uniquely associated with that serial number. Since the cow hands all have cellular saddle phones these days, use the standard Touch-Tone(R) telephone keypad mapping to get from numbers to letters (except for “Q” and “Z”):&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2: A,B,C     5: J,K,L    8: T,U,V
@@ -9,13 +198,12 @@
 
 &lt;p&gt;For instance, the brand number 4734 produces all the following names:&lt;/p&gt;
 
-&lt;p&gt;GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI
-GREG GREH GREI GRFG GRFH GRFI GSDG GSDH GSDI GSEG GSEH GSEI
-GSFG GSFH GSFI HPDG HPDH HPDI HPEG HPEH HPEI HPFG HPFH HPFI
-HRDG HRDH HRDI HREG HREH HREI HRFG HRFH HRFI HSDG HSDH HSDI
-HSEG HSEH HSEI HSFG HSFH HSFI IPDG IPDH IPDI IPEG IPEH IPEI
-IPFG IPFH IPFI IRDG IRDH IRDI IREG IREH IREI IRFG IRFH IRFI
-ISDG ISDH ISDI ISEG ISEH ISEI ISFG ISFH ISFI&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI GREG GREH GREI GRFG GRFH GRFI GSDG
+GSDH GSDI GSEG GSEH GSEI GSFG GSFH GSFI HPDG HPDH HPDI HPEG HPEH HPEI HPFG HPFH HPFI HRDG HRDH
+HRDI HREG HREH HREI HRFG HRFH HRFI HSDG HSDH HSDI HSEG HSEH HSEI HSFG HSFH HSFI IPDG IPDH IPDI
+IPEG IPEH IPEI IPFG IPFH IPFI IRDG IRDH IRDI IREG IREH IREI IRFG IRFH IRFI ISDG ISDH ISDI ISEG
+ISEH ISEI ISFG ISFH ISFI
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;As it happens, the only one of these 81 names that is in the list of valid names is “GREG”.&lt;/p&gt;
 
@@ -27,13 +215,15 @@ ISDG ISDH ISDI ISEG ISEH ISEI ISFG ISFH ISFI&lt;/p&gt;
 &lt;p&gt;A single line with a number from 1 through 12 digits in length.&lt;/p&gt;
 
 &lt;h2 id=&quot;sample-input-file-namenumin&quot;&gt;SAMPLE INPUT (file namenum.in)&lt;/h2&gt;
-&lt;p&gt;4734&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4734
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h2&gt;
 &lt;p&gt;A list of valid names that can be generated from the input, one per line, in ascending alphabetical order.&lt;/p&gt;
 
 &lt;h2 id=&quot;sample-output-file-namenumout&quot;&gt;SAMPLE OUTPUT (file namenum.out)&lt;/h2&gt;
-&lt;p&gt;GREG&lt;/p&gt;</content><author><name></name></author><summary type="html">Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”</summary></entry><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GREG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”</summary></entry><entry><title type="html">Transformations</title><link href="https://matterdark.github.io//usaco/2018/09/29/transform.html" rel="alternate" type="text/html" title="Transformations" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/transform</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/transform.html">&lt;p&gt;A square pattern of size N x N (1 &amp;lt;= N &amp;lt;= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;90 Degree Rotation: The pattern was rotated clockwise 90 degrees.&lt;/li&gt;
@@ -358,122 +548,4 @@ First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
 &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;dave&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;laura&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;owen&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;vick&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;amr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-359&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;141&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-150&lt;/td&gt;&lt;/tr&gt;
 
-&lt;/tbody&gt;&lt;/table&gt;</content><author><name></name></author><summary type="html">A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</summary></entry><entry><title type="html">Your Ride Is Here</title><link href="https://matterdark.github.io//usaco/2018/09/26/ride.html" rel="alternate" type="text/html" title="Your Ride Is Here" /><published>2018-09-26T00:00:00+00:00</published><updated>2018-09-26T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/26/ride</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/26/ride.html">&lt;p&gt;It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.&lt;/p&gt;
-
-&lt;p&gt;Both the name of the group and the name of the comet are converted into a number in the following manner: the final number is just the product of all the letters in the name, where “A” is 1 and “Z” is 26. For instance, the group “USACO” would be 21 * 19 * 1 * 3 * 15 = 17955. If the group’s number mod 47 is the same as the comet’s number mod 47, then you need to tell the group to get ready! (Remember that “a mod b” is the remainder left over after dividing a by b; 34 mod 10 is 4.)&lt;/p&gt;
-
-&lt;p&gt;Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing “GO” if they match and “STAY” if not. The names of the groups and the comets will be a string of capital letters with no spaces or punctuation, up to 6 characters long.&lt;/p&gt;
-
-&lt;p&gt;Examples:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Input&lt;/th&gt;
-      &lt;th&gt;Output&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;COMETQ HVNGAT&lt;/td&gt;
-      &lt;td&gt;GO&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ABSTAR USACO&lt;/td&gt;
-      &lt;td&gt;STAY&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;program-name-ride&quot;&gt;PROGRAM NAME: ride&lt;/h3&gt;
-
-&lt;p&gt;This means that you fill in your header with:&lt;br /&gt;
-PROG: ride&lt;br /&gt;
-&lt;strong&gt;WARNING:&lt;/strong&gt; You must have ‘ride’ in this field or the wrong test data (or no test data) will be used.&lt;/p&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Line 1:&lt;/p&gt;
-
-&lt;p&gt;An upper case character string of length 1..6 that is the name of the comet.&lt;/p&gt;
-
-&lt;p&gt;Line 2:&lt;/p&gt;
-
-&lt;p&gt;An upper case character string of length 1..6 that is the name of the group.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The input file has a newline at the end of each line but does not have a “return”. Sometimes, programmers code for the Windows paradigm of “return” followed by “newline”; don’t do that! Use simple input routines like “readln” (for Pascal) and, for C/C++, “fscanf” and “fid»string”.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NOTE 2&lt;/strong&gt;: Because of the extra characters, be sure to leave enough room for a ‘newline’ (also notated as ‘\n’) and an end of string character (‘\0’) if your language uses it (as C and C++ do). This means you need eight characters of room instead of six.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-ridein&quot;&gt;SAMPLE INPUT (file ride.in)&lt;/h3&gt;
-
-&lt;p&gt;COMETQ
-HVNGAT&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing either the word “GO” or the word “STAY”.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-rideout&quot;&gt;SAMPLE OUTPUT (file ride.out)&lt;/h3&gt;
-
-&lt;p&gt;GO&lt;/p&gt;
-
-&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;Converting the letters to numbers:&lt;/p&gt;
-
-&lt;p&gt;Copy to clipboard&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;C&lt;/th&gt;
-      &lt;th&gt;O&lt;/th&gt;
-      &lt;th&gt;M&lt;/th&gt;
-      &lt;th&gt;E&lt;/th&gt;
-      &lt;th&gt;T&lt;/th&gt;
-      &lt;th&gt;Q&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;15&lt;/td&gt;
-      &lt;td&gt;13&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;17&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;H&lt;/th&gt;
-      &lt;th&gt;V&lt;/th&gt;
-      &lt;th&gt;N&lt;/th&gt;
-      &lt;th&gt;G&lt;/th&gt;
-      &lt;th&gt;A&lt;/th&gt;
-      &lt;th&gt;T&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;22&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;then calculate the product mod 47:&lt;/p&gt;
-
-&lt;p&gt;3 * 15 * 13 * 5 * 20 * 17 = 994500 mod 47 = 27&lt;/p&gt;
-
-&lt;p&gt;8 * 22 * 14 * 7 *  1 * 20 = 344960 mod 47 = 27&lt;/p&gt;
-
-&lt;p&gt;Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.&lt;/p&gt;</content><author><name></name></author><summary type="html">It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.</summary></entry></feed>
+&lt;/tbody&gt;&lt;/table&gt;</content><author><name></name></author><summary type="html">A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</summary></entry></feed>

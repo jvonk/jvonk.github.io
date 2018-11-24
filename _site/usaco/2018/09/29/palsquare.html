@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Milking Cows | Johan Vonk’s Website</title>
+<title>Palindromic Squares | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Milking Cows" />
+<meta property="og:title" content="Palindromic Squares" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<meta property="og:description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/28/milk2.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/28/milk2.html" />
+<meta name="description" content="Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome." />
+<meta property="og:description" content="Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/29/palsquare.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/29/palsquare.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-09-28T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-09-29T03:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/28/milk2.html","headline":"Milking Cows","dateModified":"2018-09-28T00:00:00+00:00","datePublished":"2018-09-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/28/milk2.html"},"@context":"http://schema.org"}</script>
+{"description":"Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/29/palsquare.html","headline":"Palindromic Squares","dateModified":"2018-09-29T03:00:00+00:00","datePublished":"2018-09-29T03:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/29/palsquare.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -250,10 +250,10 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Milking Cows</h1>
+                    USACO: Palindromic Squares</h1>
                 
                 
-                    <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java" class="btn">Code on GitHub</a>
+                    <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/palsquare/palsquare.java" class="btn">Code on GitHub</a>
                 
                 
         </header>
@@ -262,60 +262,52 @@
                 
                     <a id="skip-to-content" href="#code">Skip to code</a>
                 
-                <p>Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).</p>
+                <p>Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome.</p>
 
-<p>Your job is to write a program that will examine a list of beginning and ending times for N (1 &lt;= N &lt;= 5000) farmers milking N cows and compute (in seconds):</p>
+<p>Given a number base B (2 &lt;= B &lt;= 20 base 10), print all the integers N (1 &lt;= N &lt;= 300 base 10) such that the square of N is palindromic when expressed in base B; also print the value of that palindromic square. Use the letters ‘A’, ‘B’, and so on to represent the digits 10, 11, and so on.</p>
 
-<ul>
-  <li>The longest time interval at least one cow was milked.</li>
-  <li>The longest time interval (after milking starts) during which no cows were being milked.</li>
-</ul>
+<p>Print both the number and its square in base B.</p>
 
-<h3 id="program-name-milk2">PROGRAM NAME: milk2</h3>
+<h2 id="program-name-palsquare">PROGRAM NAME: palsquare</h2>
 
-<h3 id="input-format">INPUT FORMAT</h3>
+<h2 id="input-format">INPUT FORMAT</h2>
+<p>A single line with B, the base (specified in base 10).</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Line 1:</strong></td>
-      <td>The single integer, N</td>
-    </tr>
-    <tr>
-      <td><strong>Lines 2..N+1:</strong></td>
-      <td>Two non-negative integers less than 1,000,000, respectively the starting and ending time in seconds after 0500</td>
-    </tr>
-  </tbody>
-</table>
+<p>##SAMPLE INPUT (file palsquare.in)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+</code></pre></div></div>
 
-<h3 id="sample-input-file-milk2in">SAMPLE INPUT (file milk2.in)</h3>
+<h2 id="output-format">OUTPUT FORMAT</h2>
+<p>Lines with two integers represented in base B. The first integer is the number whose square is palindromic; the second integer is the square itself. NOTE WELL THAT BOTH INTEGERS ARE IN BASE B!</p>
 
-<p>3
-300 1000
-700 1200
-1500 2100</p>
-
-<h3 id="output-format">OUTPUT FORMAT</h3>
-
-<p>A single line with two integers that represent the longest continuous time of milking and the longest idle time.</p>
-
-<h3 id="sample-output-file-milk2out">SAMPLE OUTPUT (file milk2.out)</h3>
-
-<p>900 300</p>
+<h2 id="sample-output-file-palsquareout">SAMPLE OUTPUT (file palsquare.out)</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 1
+2 4
+3 9
+11 121
+22 484
+26 676
+101 10201
+111 12321
+121 14641
+202 40804
+212 44944
+264 69696
+</code></pre></div></div>
 
             </div>
             
                 <div id="code">
                     <p></p>
-                    <script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java"></script>
+                    <script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/palsquare/palsquare.java"></script>
                 </div>
             
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
-                            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk2/milk2.java">
-                                USACO - milk2</a>
+                            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/palsquare/palsquare.java">
+                                USACO - palsquare</a>
                             is created by
                             <a href="http://github.com/matterdark">
                                 matterdark</a>.</span>

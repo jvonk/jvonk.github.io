@@ -43,7 +43,7 @@
                                     </button>
                                     <div class="dropdown-content">
                                         {% if chapter == 1 %}
-                                            {% for section in (2..3) %}
+                                            {% for section in (2..4) %}
                                                 <div class="dropdown">
                                                     <button class="dropbtn">SECTION {{ section }}<i class="fa fa-caret-down"></i>
                                                     </button>
@@ -52,7 +52,7 @@
                                                             {% if post.chapter==chapter and post.section==section %}
                                                                 <a href="{{ post.url }}">
                                                                     {% if post.short %}
-                                                                        {{post.short}} -
+                                                                        {{post.short}}: 
                                                                     {% endif %}
                                                                     {{post.title}}
                                                                 </a>
@@ -155,13 +155,7 @@ site.github.owner_name }}</a>.</span>
                 </footer>
                 {% else %}
                 <footer class="site-footer realcontent">
-                    <span class="site-footer-owner">
-                        <a href="{{ site.github.repository_url }}">
-                            {{ site.github.repository_name }}
-                        </a>
-                        is created by
-                        <a href="{{ site.github.owner_url }}">
-                            {{ site.github.owner_name }}</a>.</span>
+                    <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
                 </footer>
             {% endif %}
         </main>
