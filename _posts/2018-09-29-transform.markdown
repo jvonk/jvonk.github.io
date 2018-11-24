@@ -8,7 +8,7 @@ chapter: 1
 section: 3
 link: https://github.com/matterdark/USACO/blob/master/Chapter_1/transform/transform.java
 ---
-
+ 
 
 A square pattern of size N x N (1 <= N <= 10) black and white square tiles is transformed into another square pattern. Write a program that will recognize the minimum transformation that has been applied to the original pattern given the following list of possible transformations:
 
