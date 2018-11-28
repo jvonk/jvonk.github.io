@@ -16,7 +16,7 @@
 title: Johan Vonk's Website
 email: johan.d.s.vonk@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  My personal website created using Github Pages, Markdown, and Jekyll
+  My personal static website created using Github Pages, Markdown, and Jekyll
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://matterdark.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
