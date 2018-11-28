@@ -1,4 +1,293 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T02:42:20+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Mother’s Milk</title><link href="https://matterdark.github.io//usaco/2018/10/03/milk3.html" rel="alternate" type="text/html" title="Mother's Milk" /><published>2018-10-03T00:00:00+00:00</published><updated>2018-10-03T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/03/milk3</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/03/milk3.html">&lt;p&gt;Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T03:20:40+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">The Castle</title><link href="https://matterdark.github.io//usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/castle</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
+
+&lt;p&gt;Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room.&lt;/p&gt;
+
+&lt;p&gt;Your task is to help Farmer John know the exact room count and sizes.&lt;/p&gt;
+
+&lt;p&gt;The castle floorplan is divided into M (wide) by N (1 &amp;lt;=M,N&amp;lt;=50) square modules. Each such module can have between zero and four walls. Castles always have walls on their “outer edges” to keep out the wind and rain.&lt;/p&gt;
+
+&lt;p&gt;Consider this annotated floorplan of a castle:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     1   2   3   4   5   6   7
+   #############################
+ 1 #   |   #   |   #   |   |   #
+   #####---#####---#---#####---#   
+ 2 #   #   |   #   #   #   #   #
+   #---#####---#####---#####---#
+ 3 #   |   |   #   #   #   #   #   
+   #---#########---#####---#---#
+ 4 # -&amp;gt;#   |   |   |   |   #   #   
+   ############################# 
+
+#  = Wall     -,|  = No wall
+-&amp;gt; = Points to the wall to remove to
+     make the largest possible new room
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;By way of example, this castle sits on a 7 x 4 base. A “room” includes any set of connected “squares” in the floor plan. This floorplan contains five rooms (whose sizes are 9, 7, 3, 1, and 8 in no particular order).&lt;/p&gt;
+
+&lt;p&gt;Removing the wall marked by the arrow merges a pair of rooms to make the largest possible room that can be made by removing a single wall.&lt;/p&gt;
+
+&lt;p&gt;The castle always has at least two rooms and always has a wall that can be removed.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-castle&quot;&gt;PROGRAM NAME: castle&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The map is stored in the form of numbers, one number for each module (“room”), M numbers on each of N lines to describe the floorplan. The input order corresponds to the numbering in the example diagram above.&lt;/p&gt;
+
+&lt;p&gt;Each module descriptive-number tells which of the four walls exist and is the sum of up to four integers:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. wall to the west
+2. wall to the north
+4. wall to the east
+8. wall to the south
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Inner walls are defined twice; a wall to the south in module 1,1 is also indicated as a wall to the north in module 2,1.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two space-separated integers: M and N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..M+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;M x N integers, several per line.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-castlein&quot;&gt;SAMPLE INPUT (file castle.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7 4
+11 6 11 6 3 10 6
+7 9 6 13 5 15 5
+1 10 12 7 13 7 5
+13 11 10 8 10 12 13
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output contains several lines:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The number of rooms the castle has.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The size of the largest room&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The size of the largest room creatable by removing one wall&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 4:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The single wall to remove to make the largest room possible&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Choose the optimal wall to remove from the set of optimal walls by choosing the module farthest to the west (and then, if still tied, farthest to the south). If still tied, choose ‘N’ before ‘E’. Name that wall by naming the module that borders it on either the west or south, along with a direction of N or E giving the location of the wall with respect to the module.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-castleout&quot;&gt;SAMPLE OUTPUT (file castle.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+9
+16
+4 1 E
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
+
+&lt;p&gt;First, the map is partitioned like below. Note that walls not on the outside borders are doubled:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     1    2    3    4    5    6    7
+   ####|####|####|####|####|####|#####
+ 1 #   |   #|#   |   #|#   |    |    #
+   ####|   #|####|   #|#   |####|    #
+  -----|----|----|----|----|----|-----
+   ####|#   |####|#  #|#  #|####|#   #
+ 2 #  #|#   |   #|#  #|#  #|#  #|#   #
+   #  #|####|   #|####|#  #|####|#   #
+  -----|----|----|----|----|----|-----
+   #   |####|   #|####|#  #|####|#   #
+ 3 #   |    |   #|#  #|#  #|#  #|#   #
+   #   |####|####|#  #|####|#  #|#   #
+  -----|----|----|----|----|----|-----
+   #  #|####|####|    |####|   #|#   #
+ 4 #  #|#   |    |    |    |   #|#   #
+   ####|####|####|####|####|####|#####
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s talk about the squares with a (row, column) notation such that the lower right corner is denoted (4, 7).&lt;/p&gt;
+
+&lt;p&gt;The input will have four lines, each with 7 numbers. Each number describes one ‘room’. &amp;gt;Walls further toward the top are ‘north’, towards the bottom are ‘south’, towards the left are ‘west’, and towards the right are ‘east’.&lt;/p&gt;
+
+&lt;p&gt;Consider square (1,1) which has three walls: north, south, and west. To encode those three walls, we consult the chart:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. wall to the west
+2. wall to the north
+3. wall to the east
+4. wall to the south
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and sum the numbers for north (2), south (8), and west (1). 2 + 8 + 1 = 11, so this room is encoded as 11.&lt;/p&gt;
+
+&lt;p&gt;The next room to the right (1,2) has walls on the north (2) and east (4) and thus is encoded as 2 +4 = 6.&lt;/p&gt;
+
+&lt;p&gt;The next room to the right (1,3) is the same as (1,1) and thus encodes as 11.&lt;/p&gt;
+
+&lt;p&gt;Room (1,4) is the same as (1,2) and thus encodes as 6.&lt;/p&gt;
+
+&lt;p&gt;Room (1,5) has rooms on the west (1) and north (2) and thus encodes as 1 + 2 = 3.&lt;/p&gt;
+
+&lt;p&gt;Room (1,6) has rooms on the north (2) and south (8) and thus encodes as 2 + 8 = 10.&lt;/p&gt;
+
+&lt;p&gt;Room (1,7) is the same as room (1,2) and thus encodes as 6.&lt;/p&gt;
+
+&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Prime Palindromes</title><link href="https://matterdark.github.io//usaco/2018/10/05/pprime.html" rel="alternate" type="text/html" title="Prime Palindromes" /><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/05/pprime</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/05/pprime.html">&lt;p&gt;The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-pprime&quot;&gt;PROGRAM NAME: pprime&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Line 1: Two integers, a and b&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-pprimein&quot;&gt;SAMPLE INPUT (file pprime.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 500
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The list of palindromic primes in numerical order, one per line.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-pprimeout&quot;&gt;SAMPLE OUTPUT (file pprime.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+7
+11
+101
+131
+151
+181
+191
+313
+353
+373
+383
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;hints-use-them-carefully&quot;&gt;HINTS (use them carefully!)&lt;/h3&gt;
+
+&lt;h4 id=&quot;hint-1&quot;&gt;Hint 1&lt;/h4&gt;
+
+&lt;p&gt;Generate the palindromes and see if they are prime.&lt;/p&gt;
+
+&lt;h4 id=&quot;hint-2&quot;&gt;Hint 2&lt;/h4&gt;
+
+&lt;p&gt;Generate the palindromes and see if they are prime.&lt;/p&gt;
+
+&lt;p&gt;Generate palindromes by combining digits properly. You might need more than one of the loops like below.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* generate five digit palindrome: */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;	&lt;span class=&quot;cm&quot;&gt;/* only odd; evens aren't so prime */&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	    &lt;span class=&quot;n&quot;&gt;palindrome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	    &lt;span class=&quot;c1&quot;&gt;//... deal with palindrome ...&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .</summary></entry><entry><title type="html">Superprime Rib</title><link href="https://matterdark.github.io//usaco/2018/10/04/sprime.html" rel="alternate" type="text/html" title="Superprime Rib" /><published>2018-10-04T01:00:00+00:00</published><updated>2018-10-04T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/04/sprime</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/04/sprime.html">&lt;p&gt;Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7  3  3  1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The set of ribs denoted by 7331 is prime; the three ribs 733 are prime; the two ribs 73 are prime, and, of course, the last rib, 7, is prime. The number 7331 is called a superprime of length 4.&lt;/p&gt;
+
+&lt;p&gt;Write a program that accepts a number N 1 &amp;lt;=N&amp;lt;=8 of ribs and prints all the superprimes of that length.&lt;/p&gt;
+
+&lt;p&gt;The number 1 (by itself) is not a prime number.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-sprime&quot;&gt;PROGRAM NAME: sprime&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the number N.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-sprimein&quot;&gt;SAMPLE INPUT (file sprime.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The superprime ribs of length N, printed in ascending order one per line.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-sprimeout&quot;&gt;SAMPLE OUTPUT (file sprime.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2333
+2339
+2393
+2399
+2939
+3119
+3137
+3733
+3739
+3793
+3797
+5939
+7193
+7331
+7333
+7393
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:</summary></entry><entry><title type="html">Number Triangles</title><link href="https://matterdark.github.io//usaco/2018/10/04/numtri.html" rel="alternate" type="text/html" title="Number Triangles" /><published>2018-10-04T00:00:00+00:00</published><updated>2018-10-04T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/04/numtri</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/04/numtri.html">&lt;p&gt;Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        7
+
+      3   8
+
+    8   1   0
+
+  2   7   4   4
+
+4   5   2   6   5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-numtri&quot;&gt;PROGRAM NAME: numtri&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The first line contains R (1 &amp;lt;= R &amp;lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-numtriin&quot;&gt;SAMPLE INPUT (file numtri.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+7
+3 8
+8 1 0
+2 7 4 4
+4 5 2 6 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the largest sum using the traversal specified.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-numtriout&quot;&gt;SAMPLE OUTPUT (file numtri.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</summary></entry><entry><title type="html">Mother’s Milk</title><link href="https://matterdark.github.io//usaco/2018/10/03/milk3.html" rel="alternate" type="text/html" title="Mother's Milk" /><published>2018-10-03T00:00:00+00:00</published><updated>2018-10-03T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/03/milk3</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/03/milk3.html">&lt;p&gt;Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.&lt;/p&gt;
 
 &lt;p&gt;Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.&lt;/p&gt;
 
@@ -271,318 +560,4 @@
 2,2,1  3,3,4  3,8,7  5,4,5  6,4,8  7,5,6  2,50,5 50,1,2  50,50,4
 2,2,2  3,3,5  3,8,8  5,4,6  6,4,9  7,5,7  3,50,1 50,1,3  50,50,5
 2,2,3  3,4,1  3,8,9  5,4,7  6,5,5  7,5,8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John’s cows keep escaping from his farm and causing mischief. To try and prevent them from leaving, he purchases a fancy combination lock to keep his cows from opening the pasture gate.</summary></entry><entry><title type="html">Prime Cryptarithm</title><link href="https://matterdark.github.io//usaco/2018/09/30/crypt1.html" rel="alternate" type="text/html" title="Prime Cryptarithm" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/30/crypt1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/30/crypt1.html">&lt;p&gt;&lt;em&gt;This poorly named task has nothing to do with prime numbers or even, really, prime digits. Sorry ‘bout that.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A cryptarithm is usually presented as a pencil-and-paper task in which the solver is required to substitute a digit for each of the asterisks (or, often, letters) in the manual evaluation of an arithmetic term or expression so that the consistent application of the digits results in a proper expression. A classic example is this cryptarithm, shown with its unique solution:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    SEND            9562       S-&amp;gt;9  E-&amp;gt;5  N-&amp;gt;6  D-&amp;gt;2
-  + MORE          + 1085       M-&amp;gt;1  O-&amp;gt;0  R-&amp;gt;8
-  -------        -------
-   MONEY           10657       Y-&amp;gt;7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The following cryptarithm is a multiplication problem that can be solved by substituting digits from a specified set of N digits into the positions marked with *. Since the asterisks are generic, any digit from the input set can be used for any of the asterisks; any digit may be duplicated as many times as desired.&lt;/p&gt;
-
-&lt;p&gt;Consider using the set {2,3,5,7} for the cryptarithm below:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      * * *
-   x    * *
-    -------
-      * * *         &amp;lt;-- partial product 1 -- MUST BE 3 DIGITS LONG
-    * * *           &amp;lt;-- partial product 2 -- MUST BE 3 DIGITS LONG
-    -------
-    * * * *
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Digits can appear only in places marked by `*’. Of course, leading zeroes are not allowed.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The partial products must be three digits long&lt;/strong&gt;, even though the general case (see below) might have four digit partial products.&lt;/p&gt;
-
-&lt;h3 id=&quot;note-about-cryptarithms-multiplication&quot;&gt;Note About Cryptarithm’s Multiplication&lt;/h3&gt;
-&lt;p&gt;In USA, children are taught to perform multidigit multiplication as described here. Consider multiplying a three digit number whose digits are ‘a’, ‘b’, and ‘c’ by a two digit number whose digits are ‘d’ and ‘e’:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note that this diagram shows far more digits in its results than
-the required diagram above which has three digit partial products!&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;          a b c     &amp;lt;-- number 'abc'
-        x   d e     &amp;lt;-- number 'de'; the 'x' means 'multiply'
-     -----------
-p1      * * * *     &amp;lt;-- product of e * abc; first star might be 0 (absent)
-p2    * * * *       &amp;lt;-- product of d * abc; first star might be 0 (absent)
-     -----------
-      * * * * *     &amp;lt;-- sum of p1 and p2 (e*abc + 10*d*abc) == de*abc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that the ‘partial products’ are as taught in USA schools. The first partial product is the product of the final digit of the second number and the top number. The second partial product is the product of the first digit of the second number and the top number.&lt;/p&gt;
-
-&lt;p&gt;Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-crypt1&quot;&gt;PROGRAM NAME: crypt1&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N, the number of digits that will be used&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N space separated non-zero digits with which to solve the cryptarithm&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-crypt1in&quot;&gt;SAMPLE INPUT (file crypt1.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-2 3 4 6 8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the total number of solutions. Here is the one and only solution for the sample input:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      2 2 2
-    x   2 2
-     ------
-      4 4 4
-    4 4 4
-  ---------
-    4 8 8 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sample-output-file-crypt1out&quot;&gt;SAMPLE OUTPUT (file crypt1.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS&lt;/h3&gt;
-
-&lt;p&gt;Here’s why 222x22 works: 3 digits times 2 digits yields two (equal!) partial products, each of three digits (as required). The answer has four digits, as required. Each digit used {2, 4, 8} is in the supplied set {2, 3, 4, 6, 8}.&lt;/p&gt;
-
-&lt;p&gt;Why 222x23 doesn’t work:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      2 2 2   &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
-        2 3   &amp;lt;-- OK:  two digits, all members of {2, 3, 4, 6, 8}
-     ------
-      6 6 6   &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
-    4 4 4     &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
-  ---------
-    5 1 0 6   &amp;lt;-- NOT OK: four digits (good), but 5, 1, and 0 are not in
-                                                    {2, 3, 4, 6, 8}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">This poorly named task has nothing to do with prime numbers or even, really, prime digits. Sorry ‘bout that.</summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
-
-&lt;p&gt;The number 21 (base 10) is not palindrome in base 10, but the number 21 (base 10) is, in fact, a palindrome in base 2 (10101).&lt;/p&gt;
-
-&lt;p&gt;Write a program that reads two numbers (expressed in base 10):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;N (1 &amp;lt;= N &amp;lt;= 15)&lt;/li&gt;
-  &lt;li&gt;S (0 &amp;lt; S &amp;lt; 10000)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;and then finds and prints (in base 10) the first N numbers strictly greater than S that are palindromic when written in two or more number bases (2 &amp;lt;= base &amp;lt;= 10).
-Solutions to this problem do not require manipulating integers larger than the standard 32 bits.&lt;/p&gt;
-
-&lt;h2 id=&quot;program-name-dualpal&quot;&gt;PROGRAM NAME: dualpal&lt;/h2&gt;
-
-&lt;h2 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h2&gt;
-&lt;p&gt;A single line with space separated integers N and S.&lt;/p&gt;
-
-&lt;h2 id=&quot;sample-input-file-dualpalin&quot;&gt;SAMPLE INPUT (file dualpal.in)&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 25
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h2&gt;
-&lt;p&gt;N lines, each with a base 10 number that is palindromic when expressed in at least two of the bases 2..10. The numbers should be listed in order from smallest to largest.&lt;/p&gt;
-
-&lt;h2 id=&quot;sample-output-file-dualpalout&quot;&gt;SAMPLE OUTPUT (file dualpal.out)&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;26
-27
-28
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.</summary></entry><entry><title type="html">Barn Repair</title><link href="https://matterdark.github.io//usaco/2018/09/29/barn1.html" rel="alternate" type="text/html" title="Barn Repair" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/barn1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/barn1.html">&lt;p&gt;It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.&lt;/p&gt;
-
-&lt;p&gt;The cows spend the night in stalls that are arranged adjacent to each other in a long line. Some stalls have cows in them; some do not. All stalls are the same width.&lt;/p&gt;
-
-&lt;p&gt;Farmer John must quickly erect new boards in front of the stalls, since the doors were lost. His new lumber supplier will supply him boards of any length he wishes, but the supplier can only deliver a small number of total boards. Farmer John wishes to minimize the total length of the boards he must purchase.&lt;/p&gt;
-
-&lt;p&gt;Given M (1 &amp;lt;= M &amp;lt;= 50), the maximum number of boards that can be purchased; S (1 &amp;lt;= S &amp;lt;= 200), the total number of stalls; C (1 &amp;lt;= C &amp;lt;= S) the number of cows in the stalls, and the C occupied stall numbers (1 &amp;lt;= stall_number &amp;lt;= S), calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them.&lt;/p&gt;
-
-&lt;p&gt;Print your answer as the total number of stalls blocked.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-barn1&quot;&gt;PROGRAM NAME: barn1&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;M, S, and C (space separated)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2-C+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains one integer, the number of an occupied stall.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-barn1in&quot;&gt;SAMPLE INPUT (file barn1.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 50 18
-3
-4
-6
-8
-14
-15
-16
-17
-21
-25
-26
-27
-30
-31
-40
-41
-42
-43
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with one integer that represents the total number of stalls blocked.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-barn1out&quot;&gt;SAMPLE OUTPUT (file barn1.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;25
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;[One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.]&lt;/p&gt;</content><author><name></name></author><summary type="html">It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.</summary></entry><entry><title type="html">Mixing Milk</title><link href="https://matterdark.github.io//usaco/2018/09/29/milk.html" rel="alternate" type="text/html" title="Mixing Milk" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/milk</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/milk.html">&lt;p&gt;The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.&lt;/p&gt;
-
-&lt;p&gt;Since milk packaging is such a difficult business in which to make money, it is important to keep the costs as low as possible. Help Merry Milk Makers purchase the farmers’ milk in the cheapest possible manner. The MMM company has an extraordinarily talented marketing department and knows precisely how much milk they need each day to package for their customers.&lt;/p&gt;
-
-&lt;p&gt;The company has contracts with several farmers from whom they may purchase milk, and each farmer has a (potentially) different price at which they sell milk to the packing plant. Of course, a herd of cows can only produce so much milk each day, so the farmers already know how much milk they will have available.&lt;/p&gt;
-
-&lt;p&gt;Each day, Merry Milk Makers can purchase an integer number of units of milk from each farmer, a number that is always less than or equal to the farmer’s limit (and might be the entire production from that farmer, none of the production, or any integer in between).&lt;/p&gt;
-
-&lt;p&gt;Given:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The Merry Milk Makers’ daily requirement of milk&lt;/li&gt;
-  &lt;li&gt;The cost per unit for milk from each farmer&lt;/li&gt;
-  &lt;li&gt;The amount of milk available from each farmer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk.&lt;/p&gt;
-
-&lt;p&gt;Note: The total milk produced per day by the farmers will always be sufficient to meet the demands of the Merry Milk Makers even if the prices are high.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-milk&quot;&gt;PROGRAM NAME: milk&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Line 1:&lt;/td&gt;
-      &lt;td&gt;Two integers, N and M. The first value, N, (0 &amp;lt;= N &amp;lt;= 2,000,000) is the amount of milk that Merry Milk Makers wants per day. The second, M, (0 &amp;lt;= M &amp;lt;= 5,000) is the number of farmers that they may buy from.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Lines 2 through M+1:&lt;/td&gt;
-      &lt;td&gt;The next M lines each contain two integers: Pi and Ai. Pi (0 &amp;lt;= Pi &amp;lt;= 1,000) is price in cents that farmer i charges. Ai (0 &amp;lt;= Ai &amp;lt;= 2,000,000) is the amount of milk that farmer i can sell to Merry Milk Makers per day.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-milkin&quot;&gt;SAMPLE INPUT (file milk.in)&lt;/h3&gt;
-
-&lt;p&gt;100 5
-5 20
-9 40
-3 10
-8 80
-6 30&lt;/p&gt;
-
-&lt;h3 id=&quot;input-explanation&quot;&gt;INPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;100 5 – MMM wants 100 units of milk from 5 farmers&lt;br /&gt;
-5 20 – Farmer 1 says, “I can sell you 20 units at 5 cents per unit”&lt;br /&gt;
-9 40 etc.&lt;br /&gt;
-3 10 – Farmer 3 says, “I can sell you 10 units at 3 cents per unit”&lt;br /&gt;
-8 80 etc.&lt;br /&gt;
-6 30 – Farmer 5 says, “I can sell you 30 units at 6 cents per unit”&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with a single integer that is the minimum cost that Merry Milk Makers must pay for one day’s milk.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-milkout&quot;&gt;SAMPLE OUTPUT (file milk.out)&lt;/h3&gt;
-
-&lt;p&gt;630&lt;/p&gt;
-
-&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;Here’s how the MMM company spent only 630 cents to purchase 100 units of milk:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Price per unit&lt;/th&gt;
-      &lt;th&gt;Units available&lt;/th&gt;
-      &lt;th&gt;Units bought&lt;/th&gt;
-      &lt;th&gt;Price * # units&lt;/th&gt;
-      &lt;th&gt;Total cost&lt;/th&gt;
-      &lt;th&gt;Notes&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;5*20&lt;/td&gt;
-      &lt;td&gt;100&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;40&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;Bought no milk from farmer 2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;3*10&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;80&lt;/td&gt;
-      &lt;td&gt;40&lt;/td&gt;
-      &lt;td&gt;8*40&lt;/td&gt;
-      &lt;td&gt;320&lt;/td&gt;
-      &lt;td&gt;Did not buy all 80 units!&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;6*30&lt;/td&gt;
-      &lt;td&gt;180&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Total&lt;/td&gt;
-      &lt;td&gt;180&lt;/td&gt;
-      &lt;td&gt;100&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;630&lt;/td&gt;
-      &lt;td&gt;Cheapest total cost&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John’s cows keep escaping from his farm and causing mischief. To try and prevent them from leaving, he purchases a fancy combination lock to keep his cows from opening the pasture gate.</summary></entry></feed>

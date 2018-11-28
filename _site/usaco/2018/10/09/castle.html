@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Mother’s Milk | Johan Vonk’s Website</title>
+<title>The Castle | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Mother’s Milk" />
+<meta property="og:title" content="The Castle" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty." />
-<meta property="og:description" content="Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/03/milk3.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/03/milk3.html" />
+<meta name="description" content="Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes." />
+<meta property="og:description" content="Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/09/castle.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/09/castle.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-03T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-09T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/03/milk3.html","headline":"Mother’s Milk","dateModified":"2018-10-03T00:00:00+00:00","datePublished":"2018-10-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/03/milk3.html"},"@context":"http://schema.org"}</script>
+{"description":"Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/09/castle.html","headline":"The Castle","dateModified":"2018-10-09T00:00:00+00:00","datePublished":"2018-10-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/09/castle.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -905,13 +905,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Mother's Milk</h1>
+                    USACO: The Castle</h1>
                 
                     <h2 class="project-tagline">
-                        Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.</h2>
+                        Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk3/milk3.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/castle/castle.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -922,47 +922,168 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.</p>
+                <p>In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</p>
 
-<p>Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.</p>
+<p>Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room.</p>
 
-<h3 id="program-name-milk3">PROGRAM NAME: milk3</h3>
+<p>Your task is to help Farmer John know the exact room count and sizes.</p>
+
+<p>The castle floorplan is divided into M (wide) by N (1 &lt;=M,N&lt;=50) square modules. Each such module can have between zero and four walls. Castles always have walls on their “outer edges” to keep out the wind and rain.</p>
+
+<p>Consider this annotated floorplan of a castle:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     1   2   3   4   5   6   7
+   #############################
+ 1 #   |   #   |   #   |   |   #
+   #####---#####---#---#####---#   
+ 2 #   #   |   #   #   #   #   #
+   #---#####---#####---#####---#
+ 3 #   |   |   #   #   #   #   #   
+   #---#########---#####---#---#
+ 4 # -&gt;#   |   |   |   |   #   #   
+   ############################# 
+
+#  = Wall     -,|  = No wall
+-&gt; = Points to the wall to remove to
+     make the largest possible new room
+</code></pre></div></div>
+
+<p>By way of example, this castle sits on a 7 x 4 base. A “room” includes any set of connected “squares” in the floor plan. This floorplan contains five rooms (whose sizes are 9, 7, 3, 1, and 8 in no particular order).</p>
+
+<p>Removing the wall marked by the arrow merges a pair of rooms to make the largest possible room that can be made by removing a single wall.</p>
+
+<p>The castle always has at least two rooms and always has a wall that can be removed.</p>
+
+<h3 id="program-name-castle">PROGRAM NAME: castle</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>A single line with the three integers A, B, and C.</p>
+<p>The map is stored in the form of numbers, one number for each module (“room”), M numbers on each of N lines to describe the floorplan. The input order corresponds to the numbering in the example diagram above.</p>
 
-<h3 id="sample-input-file-milk3in">SAMPLE INPUT (file milk3.in)</h3>
+<p>Each module descriptive-number tells which of the four walls exist and is the sum of up to four integers:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8 9 10
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. wall to the west
+2. wall to the north
+4. wall to the east
+8. wall to the south
+</code></pre></div></div>
+
+<p>Inner walls are defined twice; a wall to the south in module 1,1 is also indicated as a wall to the north in module 2,1.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Line 1:</strong></td>
+      <td>Two space-separated integers: M and N</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2..M+1:</strong></td>
+      <td>M x N integers, several per line.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-input-file-castlein">SAMPLE INPUT (file castle.in)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 4
+11 6 11 6 3 10 6
+7 9 6 13 5 15 5
+1 10 12 7 13 7 5
+13 11 10 8 10 12 13
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>A single line with a sorted list of all the possible amounts of milk that can be in bucket C when bucket A is empty.</p>
+<p>The output contains several lines:</p>
 
-<h3 id="sample-output-file-milk3out">SAMPLE OUTPUT (file milk3.out)</h3>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Line 1:</strong></td>
+      <td>The number of rooms the castle has.</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2:</strong></td>
+      <td>The size of the largest room</td>
+    </tr>
+    <tr>
+      <td><strong>Line 3:</strong></td>
+      <td>The size of the largest room creatable by removing one wall</td>
+    </tr>
+    <tr>
+      <td><strong>Line 4:</strong></td>
+      <td>The single wall to remove to make the largest room possible</td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 2 8 9 10
+<p>Choose the optimal wall to remove from the set of optimal walls by choosing the module farthest to the west (and then, if still tied, farthest to the south). If still tied, choose ‘N’ before ‘E’. Name that wall by naming the module that borders it on either the west or south, along with a direction of N or E giving the location of the wall with respect to the module.</p>
+
+<h3 id="sample-output-file-castleout">SAMPLE OUTPUT (file castle.out)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+9
+16
+4 1 E
 </code></pre></div></div>
 
-<h3 id="sample-input-file-milk3in-1">SAMPLE INPUT (file milk3.in)</h3>
+<h3 id="input-details">INPUT DETAILS</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 5 10
+<p>First, the map is partitioned like below. Note that walls not on the outside borders are doubled:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     1    2    3    4    5    6    7
+   ####|####|####|####|####|####|#####
+ 1 #   |   #|#   |   #|#   |    |    #
+   ####|   #|####|   #|#   |####|    #
+  -----|----|----|----|----|----|-----
+   ####|#   |####|#  #|#  #|####|#   #
+ 2 #  #|#   |   #|#  #|#  #|#  #|#   #
+   #  #|####|   #|####|#  #|####|#   #
+  -----|----|----|----|----|----|-----
+   #   |####|   #|####|#  #|####|#   #
+ 3 #   |    |   #|#  #|#  #|#  #|#   #
+   #   |####|####|#  #|####|#  #|#   #
+  -----|----|----|----|----|----|-----
+   #  #|####|####|    |####|   #|#   #
+ 4 #  #|#   |    |    |    |   #|#   #
+   ####|####|####|####|####|####|#####
 </code></pre></div></div>
 
-<h3 id="sample-output-file-milk3out-1">SAMPLE OUTPUT (file milk3.out)</h3>
+<p>Let’s talk about the squares with a (row, column) notation such that the lower right corner is denoted (4, 7).</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 6 7 8 9 10
+<p>The input will have four lines, each with 7 numbers. Each number describes one ‘room’. &gt;Walls further toward the top are ‘north’, towards the bottom are ‘south’, towards the left are ‘west’, and towards the right are ‘east’.</p>
+
+<p>Consider square (1,1) which has three walls: north, south, and west. To encode those three walls, we consult the chart:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. wall to the west
+2. wall to the north
+3. wall to the east
+4. wall to the south
 </code></pre></div></div>
+
+<p>and sum the numbers for north (2), south (8), and west (1). 2 + 8 + 1 = 11, so this room is encoded as 11.</p>
+
+<p>The next room to the right (1,2) has walls on the north (2) and east (4) and thus is encoded as 2 +4 = 6.</p>
+
+<p>The next room to the right (1,3) is the same as (1,1) and thus encodes as 11.</p>
+
+<p>Room (1,4) is the same as (1,2) and thus encodes as 6.</p>
+
+<p>Room (1,5) has rooms on the west (1) and north (2) and thus encodes as 1 + 2 = 3.</p>
+
+<p>Room (1,6) has rooms on the north (2) and south (8) and thus encodes as 2 + 8 = 10.</p>
+
+<p>Room (1,7) is the same as room (1,2) and thus encodes as 6.</p>
+
+<p>This same method continues for rooms (2,1) through (4,7).</p>
 
             </div>
             
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/milk3/milk3.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/milk3/milk3.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/castle/castle.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/castle/castle.java"></script>-->
                 </div>
             
             

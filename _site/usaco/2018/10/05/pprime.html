@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Mother’s Milk | Johan Vonk’s Website</title>
+<title>Prime Palindromes | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Mother’s Milk" />
+<meta property="og:title" content="Prime Palindromes" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty." />
-<meta property="og:description" content="Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/03/milk3.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/03/milk3.html" />
+<meta name="description" content="Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &lt;= a &lt; b &lt;= 100,000,000); both a and b are considered to be within the range." />
+<meta property="og:description" content="Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &lt;= a &lt; b &lt;= 100,000,000); both a and b are considered to be within the range." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/05/pprime.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/05/pprime.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-03T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-05T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/03/milk3.html","headline":"Mother’s Milk","dateModified":"2018-10-03T00:00:00+00:00","datePublished":"2018-10-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/03/milk3.html"},"@context":"http://schema.org"}</script>
+{"description":"Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &lt;= a &lt; b &lt;= 100,000,000); both a and b are considered to be within the range.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/05/pprime.html","headline":"Prime Palindromes","dateModified":"2018-10-05T00:00:00+00:00","datePublished":"2018-10-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/05/pprime.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -905,13 +905,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Mother's Milk</h1>
+                    USACO: Prime Palindromes</h1>
                 
                     <h2 class="project-tagline">
-                        Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.</h2>
+                        Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 <= a < b <= 100,000,000); both a and b are considered to be within the range.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk3/milk3.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/pprime/pprime.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -922,38 +922,60 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.</p>
+                <p>The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &lt;= a &lt; b &lt;= 100,000,000); both a and b are considered to be within the range .</p>
 
-<p>Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.</p>
-
-<h3 id="program-name-milk3">PROGRAM NAME: milk3</h3>
+<h3 id="program-name-pprime">PROGRAM NAME: pprime</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>A single line with the three integers A, B, and C.</p>
+<p>Line 1: Two integers, a and b</p>
 
-<h3 id="sample-input-file-milk3in">SAMPLE INPUT (file milk3.in)</h3>
+<h3 id="sample-input-file-pprimein">SAMPLE INPUT (file pprime.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8 9 10
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 500
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>A single line with a sorted list of all the possible amounts of milk that can be in bucket C when bucket A is empty.</p>
+<p>The list of palindromic primes in numerical order, one per line.</p>
 
-<h3 id="sample-output-file-milk3out">SAMPLE OUTPUT (file milk3.out)</h3>
+<h3 id="sample-output-file-pprimeout">SAMPLE OUTPUT (file pprime.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 2 8 9 10
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+7
+11
+101
+131
+151
+181
+191
+313
+353
+373
+383
 </code></pre></div></div>
 
-<h3 id="sample-input-file-milk3in-1">SAMPLE INPUT (file milk3.in)</h3>
+<h3 id="hints-use-them-carefully">HINTS (use them carefully!)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 5 10
-</code></pre></div></div>
+<h4 id="hint-1">Hint 1</h4>
 
-<h3 id="sample-output-file-milk3out-1">SAMPLE OUTPUT (file milk3.out)</h3>
+<p>Generate the palindromes and see if they are prime.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 6 7 8 9 10
+<h4 id="hint-2">Hint 2</h4>
+
+<p>Generate the palindromes and see if they are prime.</p>
+
+<p>Generate palindromes by combining digits properly. You might need more than one of the loops like below.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* generate five digit palindrome: */</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">d1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">d1</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="o">;</span> <span class="n">d1</span><span class="o">+=</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>	<span class="cm">/* only odd; evens aren't so prime */</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">d2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">d2</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="o">;</span> <span class="n">d2</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">d3</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">d3</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="o">;</span> <span class="n">d3</span><span class="o">++)</span> <span class="o">{</span>
+	    <span class="n">palindrome</span> <span class="o">=</span> <span class="mi">10000</span><span class="o">*</span><span class="n">d1</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">*</span><span class="n">d2</span> <span class="o">+</span><span class="mi">100</span><span class="o">*</span><span class="n">d3</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">d2</span> <span class="o">+</span> <span class="n">d1</span><span class="o">;</span>
+	    <span class="c1">//... deal with palindrome ...</span>
+	<span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
             </div>
@@ -961,8 +983,8 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/milk3/milk3.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/milk3/milk3.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/pprime/pprime.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/pprime/pprime.java"></script>-->
                 </div>
             
             

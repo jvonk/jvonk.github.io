@@ -37,55 +37,33 @@
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
                         {% if cat=="USACO" %}
-                            {% for chapter in (1..2) %}
+                        {% assign starts = "2 1 1" | split: " " %}
+                        {% assign ends = "6 4 4" | split: " " %}
+                            {% for chapter in (1..starts.size) %}
                                 <div class="dropdown">
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-                                        {% if chapter == 1 %}
-                                        <div class="navbar">
-                                            {% for section in (2..5) %}
-
-                                                <div class="dropdown">
-                                                    <button class="dropbtn">SECTION {{ section }}<i class="fa fa-caret-down"></i>
-                                                    </button>
-                                                    <div class="dropdown-content">
-                                                        {% for post in site.categories[cat] %}
-                                                            {% if post.chapter==chapter and post.section==section %}
-                                                                <a href="{{ post.url }}">
-                                                                    {% if post.short %}
-                                                                        {{post.short}}: 
-                                                                    {% endif %}
-                                                                    {{post.title}}
-                                                                </a>
-                                                            {% endif %}
-                                                        {% endfor %}
-                                                    </div>
+                                        {% assign chapterInArr = chapter | minus: 1 %}
+                                        {% for section in (starts[chapterInArr]..ends[chapterInArr]) %}
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    {% for post in site.categories[cat] %}
+                                                        {% if post.chapter==chapter and post.section==section %}
+                                                            <a href="{{ post.url }}">
+                                                                {% if post.short %}
+                                                                    {{post.short}} -
+                                                                {% endif %}
+                                                                {{post.title}}
+                                                            </a>
+                                                        {% endif %}
+                                                    {% endfor %}
                                                 </div>
+                                            </div>
+                                        {% endfor %}
 
-                                            {% endfor %}
-                                        </div>
-                                            {% else %}
-                                            {% for section in (1..0) %}
-                                            
-                                                <div class="dropdown">
-                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
-                                                    </button>
-                                                    <div class="dropdown-content">
-                                                        {% for post in site.categories[cat] %}
-                                                            {% if post.chapter==chapter and post.section==section %}
-                                                                <a href="{{ post.url }}">
-                                                                    {% if post.short %}
-                                                                        {{post.short}} -
-                                                                    {% endif %}
-                                                                    {{post.title}}
-                                                                </a>
-                                                            {% endif %}
-                                                        {% endfor %}
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endif %}
                                     </div>
                                 </div>
                             {% endfor %}
