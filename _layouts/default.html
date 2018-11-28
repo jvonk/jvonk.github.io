@@ -44,7 +44,8 @@
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-                                        {% assign chapterInArr = chapter | minus: 1 %}
+                                        
+        <div class="navbar">{% assign chapterInArr = chapter | minus: 1 %}
                                         {% for section in (starts[chapterInArr]..ends[chapterInArr]) %}
                                             <div class="dropdown">
                                                 <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
@@ -64,6 +65,7 @@
                                             </div>
                                         {% endfor %}
 
+                                    </div>
                                     </div>
                                 </div>
                             {% endfor %}
