@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-24T23:15:54+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T01:30:13+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
 
 &lt;p&gt;The number 21 (base 10) is not palindrome in base 10, but the number 21 (base 10) is, in fact, a palindrome in base 2 (10101).&lt;/p&gt;
 
@@ -28,7 +28,66 @@ Solutions to this problem do not require manipulating integers larger than the s
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;26
 27
 28
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.</summary></entry><entry><title type="html">Mixing Milk</title><link href="https://matterdark.github.io//usaco/2018/09/29/milk.html" rel="alternate" type="text/html" title="Mixing Milk" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/milk</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/milk.html">&lt;p&gt;The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.</summary></entry><entry><title type="html">Barn Repair</title><link href="https://matterdark.github.io//usaco/2018/09/29/barn1.html" rel="alternate" type="text/html" title="Barn Repair" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/barn1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/barn1.html">&lt;p&gt;It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.&lt;/p&gt;
+
+&lt;p&gt;The cows spend the night in stalls that are arranged adjacent to each other in a long line. Some stalls have cows in them; some do not. All stalls are the same width.&lt;/p&gt;
+
+&lt;p&gt;Farmer John must quickly erect new boards in front of the stalls, since the doors were lost. His new lumber supplier will supply him boards of any length he wishes, but the supplier can only deliver a small number of total boards. Farmer John wishes to minimize the total length of the boards he must purchase.&lt;/p&gt;
+
+&lt;p&gt;Given M (1 &amp;lt;= M &amp;lt;= 50), the maximum number of boards that can be purchased; S (1 &amp;lt;= S &amp;lt;= 200), the total number of stalls; C (1 &amp;lt;= C &amp;lt;= S) the number of cows in the stalls, and the C occupied stall numbers (1 &amp;lt;= stall_number &amp;lt;= S), calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them.&lt;/p&gt;
+
+&lt;p&gt;Print your answer as the total number of stalls blocked.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-barn1&quot;&gt;PROGRAM NAME: barn1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Line 1:&lt;/th&gt;
+      &lt;th&gt;M, S, and C (space separated)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lines 2-C+1:&lt;/td&gt;
+      &lt;td&gt;Each line contains one integer, the number of an occupied stall.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-barn1in&quot;&gt;SAMPLE INPUT (file barn1.in)&lt;/h3&gt;
+
+&lt;p&gt;4 50 18
+3
+4
+6
+8
+14
+15
+16
+17
+21
+25
+26
+27
+30
+31
+40
+41
+42
+43&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with one integer that represents the total number of stalls blocked.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-barn1out&quot;&gt;SAMPLE OUTPUT (file barn1.out)&lt;/h3&gt;
+
+&lt;p&gt;25&lt;/p&gt;
+
+&lt;p&gt;[One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.]&lt;/p&gt;</content><author><name></name></author><summary type="html">It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.</summary></entry><entry><title type="html">Mixing Milk</title><link href="https://matterdark.github.io//usaco/2018/09/29/milk.html" rel="alternate" type="text/html" title="Mixing Milk" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/milk</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/milk.html">&lt;p&gt;The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.&lt;/p&gt;
 
 &lt;p&gt;Since milk packaging is such a difficult business in which to make money, it is important to keep the costs as low as possible. Help Merry Milk Makers purchase the farmers’ milk in the cheapest possible manner. The MMM company has an extraordinarily talented marketing department and knows precisely how much milk they need each day to package for their customers.&lt;/p&gt;
 
@@ -420,132 +479,4 @@ wwwbbrwrbrbrrbrbrwrwwrbwrwrrb|wwwbbrwrbrbrrbrbrwrwwrbwrwrrb
 
 &lt;h3 id=&quot;sample-output-file-fridayout&quot;&gt;SAMPLE OUTPUT (file friday.out)&lt;/h3&gt;
 
-&lt;p&gt;36 33 34 33 35 35 34&lt;/p&gt;</content><author><name></name></author><summary type="html">Is Friday the 13th really an unusual event?</summary></entry><entry><title type="html">Greedy Gift Givers</title><link href="https://matterdark.github.io//usaco/2018/09/26/gift1.html" rel="alternate" type="text/html" title="Greedy Gift Givers" /><published>2018-09-26T01:00:00+00:00</published><updated>2018-09-26T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/26/gift1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/26/gift1.html">&lt;p&gt;A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.&lt;/p&gt;
-
-&lt;p&gt;The rules for gift-giving are potentially different than you might expect. Each person goes to the bank (or any other source of money) to get a certain amount of money to give and divides this money evenly among all those to whom he or she is giving a gift. No fractional money is available, so dividing 7 among 2 friends would be 3 each for the friends with 1 left over – that 1 left over goes into the giver’s “account”. All the participants’ gift accounts start at 0 and are decreased by money given and increased by money received.&lt;/p&gt;
-
-&lt;p&gt;In any group of friends, some people are more giving than others (or at least may have more acquaintances) and some people have more money than others.&lt;/p&gt;
-
-&lt;p&gt;Given:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;a group of friends, no one of whom has a name longer than 14 characters,&lt;/li&gt;
-  &lt;li&gt;the money each person in the group spends on gifts, and&lt;/li&gt;
-  &lt;li&gt;a (sub)list of friends to whom each person gives gifts,&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;determine how much money each person ends up with.&lt;/p&gt;
-
-&lt;h3 id=&quot;important-note&quot;&gt;IMPORTANT NOTE&lt;/h3&gt;
-
-&lt;p&gt;The grader machine is a Linux machine that uses standard Unix conventions: end of line is a single character often known as ‘\n’. This differs from Windows, which ends lines with two characters, ‘\n’ and ‘\r’. Do not let your program get trapped by this!&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-gift1&quot;&gt;PROGRAM NAME: gift1&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table border=&quot;0&quot; style=&quot;border-collapse: collapse;&quot;&gt;
-&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;Line #&lt;/th&gt;&lt;th&gt;Contents&lt;/th&gt;&lt;/tr&gt;
-&lt;tr&gt; &lt;td align=&quot;center&quot;&gt;1&lt;/td&gt; &lt;td&gt; A single integer, NP &lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt; &lt;td align=&quot;center&quot;&gt;2..NP+1&lt;/td&gt; &lt;td&gt; Line &lt;i&gt;i&lt;/i&gt;+1 contains the name
-of group member &lt;i&gt;i&lt;/i&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt; &lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;NP+2..end&lt;/td&gt; &lt;td&gt;NP groups of lines organized like this:
-
-
-&lt;table border=&quot;0&quot;&gt;
-
-&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;The first line of each group tells the person's name who
-will be giving gifts.
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;The second line in the group contains two numbers:
-	&lt;ul&gt;
-	&lt;li&gt;The amount of money (in the range 0..2000) to be divided
-        into gifts by the giver
-        &lt;/li&gt;&lt;li&gt;NG&lt;sub&gt;i&lt;/sub&gt; (1 ≤ NG&lt;sub&gt;i&lt;/sub&gt; ≤ NP), the
-        number of people to whom the giver will give gifts
-	&lt;/li&gt;&lt;/ul&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; If NG&lt;sub&gt;i&lt;/sub&gt; is nonzero, each of the next NG&lt;sub&gt;i&lt;/sub&gt;
-lines lists the name of a recipient of a gift; recipients are not repeated
-in a single giver's list.
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-gift1in&quot;&gt;SAMPLE INPUT (file gift1.in)&lt;/h3&gt;
-
-&lt;p&gt;5
-dave
-laura
-owen
-vick
-amr
-dave
-200 3
-laura
-owen
-vick
-owen
-500 1
-dave
-amr
-150 2
-vick
-owen
-laura
-0 2
-amr
-vick
-vick
-0 0&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output is NP lines, each with the name of a person followed by a single blank followed by the net gain or loss (final_money_value - initial_money_value) for that person. The names should be printed in the same order they appear starting on line 2 of the input.&lt;/p&gt;
-
-&lt;p&gt;All gifts are integers. Each person gives the same integer amount of money to each friend to whom any money is given, and gives as much as possible that meets this constraint. Any money not given is kept by the giver.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-gift1out&quot;&gt;SAMPLE OUTPUT (file gift1.out)&lt;/h3&gt;
-
-&lt;p&gt;dave 302
-laura 66
-owen -359
-vick 141
-amr -150&lt;/p&gt;
-
-&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;Five names: dave, laura, owen, vick, amr. Let’s keep a table of the gives (money) each person ‘has’:&amp;lt;h3&amp;gt;Welcome to the real-time HTML editor!&amp;lt;/h3&amp;gt;&lt;/p&gt;
-&lt;p&gt;Type HTML in the textarea above, and it will magically appear in the frame below.&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;dave&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;laura&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;owen&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;vick&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;amr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr class=&quot;narrow&quot;&gt;&lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;    &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td colspan=&quot;5&quot;&gt;
-
-First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
-66 each, with 2 left over&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;-200+2&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;+66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;-198&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;66&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Second, 'owen' gives 500 to 'dave':&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;-198&lt;b&gt;+500&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;b&gt;-500&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;302&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-434&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;0&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Third, 'amr' splits 150 between 'vick' and 'owen':
-
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-434&lt;b&gt;+75&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;66&lt;b&gt;+75&lt;/b&gt;&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-150&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; style=&quot;padding-top:0;padding-bottom:0;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-359&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;141&lt;/b&gt;&lt;/td&gt; &lt;td class=&quot;l&quot;&gt;&lt;b&gt;-150&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-359&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;141&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-150&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td colspan=&quot;5&quot; align=&quot;left&quot;&gt;Finally, 'vick' gives 0 to no one:
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;dave&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;laura&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;owen&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;vick&lt;/b&gt;&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;&lt;b&gt;amr&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&quot;l&quot;&gt;302&lt;/td&gt;   &lt;td class=&quot;l&quot;&gt;66&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-359&lt;/td&gt;&lt;td class=&quot;l&quot;&gt;141&lt;/td&gt;  &lt;td class=&quot;l&quot;&gt;-150&lt;/td&gt;&lt;/tr&gt;
-
-&lt;/tbody&gt;&lt;/table&gt;</content><author><name></name></author><summary type="html">A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</summary></entry></feed>
+&lt;p&gt;36 33 34 33 35 35 34&lt;/p&gt;</content><author><name></name></author><summary type="html">Is Friday the 13th really an unusual event?</summary></entry></feed>

@@ -137,7 +137,8 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <script src="{{ 'http://gist-it.appspot.com/' | append: page.link }}"></script>
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="{{ 'https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}"></object>
+                    <!--<script src="{{ 'http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}"></script>-->
                 </div>
             {% endif %}
             {% if page.link and page.short %}
