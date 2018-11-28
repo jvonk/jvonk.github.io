@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<!DOCTYPE html>
 <div class="tags-expo">
 <div class="tags-expo-list">
 {% for tag in site.categories %}
