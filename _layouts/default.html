@@ -111,9 +111,10 @@
                     <h2 class="project-tagline">
                         {{ page.description }}</h2>
                 {% endif %}
-                {% if page.link %}
-                    <a href="{{ page.link }}" class="btn">Code on GitHub</a>
-                {% endif %}
+                {% if page.chapter and page.section %}
+                <a href="{{ 'https://github.com/matterdark/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a>                            
+                {% endif %}                        
+
                 {% else %}
                 <h1 class="project-name">
                     {{ site.title }}</h1>
@@ -128,12 +129,12 @@
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
-                {% if page.link %}
+                {% if page.chapter and page.section %}
                     <a id="skip-to-content" href="#code">Skip to code</a>
                 {% endif %}
                 {{ content }}
             </div>
-            {% if page.link %}
+            {% if page.chapter and page.section %}
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>

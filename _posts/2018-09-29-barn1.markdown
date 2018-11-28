@@ -23,12 +23,12 @@ Print your answer as the total number of stalls blocked.
 
 ### INPUT FORMAT
 
-| Line 1: | M, S, and C (space separated) |
-|--------------|------------------------------------------------------------------|
-| Lines 2-C+1: | Each line contains one integer, the number of an occupied stall. |
+| **Line 1:** | M, S, and C (space separated) |
+| **Lines 2-C+1:** | Each line contains one integer, the number of an occupied stall. |
 
 ### SAMPLE INPUT (file barn1.in)
 
+```
 4 50 18
 3
 4
@@ -48,6 +48,7 @@ Print your answer as the total number of stalls blocked.
 41
 42
 43
+```
 
 ### OUTPUT FORMAT
 
@@ -55,6 +56,8 @@ A single line with one integer that represents the total number of stalls blocke
 
 ### SAMPLE OUTPUT (file barn1.out)
 
+```
 25
+```
 
 \[One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.\]

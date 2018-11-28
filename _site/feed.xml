@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T01:30:13+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T01:47:54+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Prime Cryptarithm</title><link href="https://matterdark.github.io//usaco/2018/09/30/crypt1.html" rel="alternate" type="text/html" title="Prime Cryptarithm" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/30/crypt1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/30/crypt1.html">&lt;p&gt;&lt;em&gt;This poorly named task has nothing to do with prime numbers or even, really, prime digits. Sorry ‘bout that.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A cryptarithm is usually presented as a pencil-and-paper task in which the solver is required to substitute a digit for each of the asterisks (or, often, letters) in the manual evaluation of an arithmetic term or expression so that the consistent application of the digits results in a proper expression. A classic example is this cryptarithm, shown with its unique solution:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    SEND            9562       S-&amp;gt;9  E-&amp;gt;5  N-&amp;gt;6  D-&amp;gt;2
+  + MORE          + 1085       M-&amp;gt;1  O-&amp;gt;0  R-&amp;gt;8
+  -------        -------
+   MONEY           10657       Y-&amp;gt;7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following cryptarithm is a multiplication problem that can be solved by substituting digits from a specified set of N digits into the positions marked with *. Since the asterisks are generic, any digit from the input set can be used for any of the asterisks; any digit may be duplicated as many times as desired.&lt;/p&gt;
+
+&lt;p&gt;Consider using the set {2,3,5,7} for the cryptarithm below:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      * * *
+   x    * *
+    -------
+      * * *         &amp;lt;-- partial product 1 -- MUST BE 3 DIGITS LONG
+    * * *           &amp;lt;-- partial product 2 -- MUST BE 3 DIGITS LONG
+    -------
+    * * * *
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Digits can appear only in places marked by `*’. Of course, leading zeroes are not allowed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The partial products must be three digits long&lt;/strong&gt;, even though the general case (see below) might have four digit partial products.&lt;/p&gt;
+
+&lt;h3 id=&quot;note-about-cryptarithms-multiplication&quot;&gt;Note About Cryptarithm’s Multiplication&lt;/h3&gt;
+&lt;p&gt;In USA, children are taught to perform multidigit multiplication as described here. Consider multiplying a three digit number whose digits are ‘a’, ‘b’, and ‘c’ by a two digit number whose digits are ‘d’ and ‘e’:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that this diagram shows far more digits in its results than
+the required diagram above which has three digit partial products!&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;          a b c     &amp;lt;-- number 'abc'
+        x   d e     &amp;lt;-- number 'de'; the 'x' means 'multiply'
+     -----------
+p1      * * * *     &amp;lt;-- product of e * abc; first star might be 0 (absent)
+p2    * * * *       &amp;lt;-- product of d * abc; first star might be 0 (absent)
+     -----------
+      * * * * *     &amp;lt;-- sum of p1 and p2 (e*abc + 10*d*abc) == de*abc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that the ‘partial products’ are as taught in USA schools. The first partial product is the product of the final digit of the second number and the top number. The second partial product is the product of the first digit of the second number and the top number.&lt;/p&gt;
+
+&lt;p&gt;Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-crypt1&quot;&gt;PROGRAM NAME: crypt1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N, the number of digits that will be used&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N space separated non-zero digits with which to solve the cryptarithm&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-crypt1in&quot;&gt;SAMPLE INPUT (file crypt1.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+2 3 4 6 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the total number of solutions. Here is the one and only solution for the sample input:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      2 2 2
+    x   2 2
+     ------
+      4 4 4
+    4 4 4
+  ---------
+    4 8 8 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sample-output-file-crypt1out&quot;&gt;SAMPLE OUTPUT (file crypt1.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS&lt;/h3&gt;
+
+&lt;p&gt;Here’s why 222x22 works: 3 digits times 2 digits yields two (equal!) partial products, each of three digits (as required). The answer has four digits, as required. Each digit used {2, 4, 8} is in the supplied set {2, 3, 4, 6, 8}.&lt;/p&gt;
+
+&lt;p&gt;Why 222x23 doesn’t work:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      2 2 2   &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
+        2 3   &amp;lt;-- OK:  two digits, all members of {2, 3, 4, 6, 8}
+     ------
+      6 6 6   &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
+    4 4 4     &amp;lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
+  ---------
+    5 1 0 6   &amp;lt;-- NOT OK: four digits (good), but 5, 1, and 0 are not in
+                                                    {2, 3, 4, 6, 8}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">This poorly named task has nothing to do with prime numbers or even, really, prime digits. Sorry ‘bout that.</summary></entry><entry><title type="html">Dual Palindromes</title><link href="https://matterdark.github.io//usaco/2018/09/29/dualpal.html" rel="alternate" type="text/html" title="Dual Palindromes" /><published>2018-09-29T04:00:00+00:00</published><updated>2018-09-29T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/dualpal</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/dualpal.html">&lt;p&gt;A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.&lt;/p&gt;
 
 &lt;p&gt;The number 21 (base 10) is not palindrome in base 10, but the number 21 (base 10) is, in fact, a palindrome in base 2 (10101).&lt;/p&gt;
 
@@ -43,15 +140,13 @@ Solutions to this problem do not require manipulating integers larger than the s
 &lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
 
 &lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Line 1:&lt;/th&gt;
-      &lt;th&gt;M, S, and C (space separated)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Lines 2-C+1:&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;M, S, and C (space separated)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2-C+1:&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Each line contains one integer, the number of an occupied stall.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -59,7 +154,7 @@ Solutions to this problem do not require manipulating integers larger than the s
 
 &lt;h3 id=&quot;sample-input-file-barn1in&quot;&gt;SAMPLE INPUT (file barn1.in)&lt;/h3&gt;
 
-&lt;p&gt;4 50 18
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 50 18
 3
 4
 6
@@ -77,7 +172,8 @@ Solutions to this problem do not require manipulating integers larger than the s
 40
 41
 42
-43&lt;/p&gt;
+43
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
 
@@ -85,7 +181,8 @@ Solutions to this problem do not require manipulating integers larger than the s
 
 &lt;h3 id=&quot;sample-output-file-barn1out&quot;&gt;SAMPLE OUTPUT (file barn1.out)&lt;/h3&gt;
 
-&lt;p&gt;25&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;[One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.]&lt;/p&gt;</content><author><name></name></author><summary type="html">It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.</summary></entry><entry><title type="html">Mixing Milk</title><link href="https://matterdark.github.io//usaco/2018/09/29/milk.html" rel="alternate" type="text/html" title="Mixing Milk" /><published>2018-09-29T03:00:00+00:00</published><updated>2018-09-29T03:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/29/milk</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/29/milk.html">&lt;p&gt;The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.&lt;/p&gt;
 
@@ -444,39 +541,4 @@ wwwbbrwrbrbrrbrbrwrwwrbwrwrrb|wwwbbrwrbrbrrbrbrwrwwrbwrwrrb
                        rrrrrb|bbbbb  &amp;lt;-- assignments
                    5xr .....#|#####  6xb
                         5+6 = 11 total
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">You have a necklace of N red, white, or blue beads (3&amp;lt;=N&amp;lt;=350) some of which are red, others blue, and others white, arranged at random. Here are two examples for n=29: 1 2 1 2 r b b r b r r b r b b b r r b r r r w r b r w w b b r r b b b b b b r b r r b r b r r r b r r r r r r b r b r r r w Figure A Figure B r red bead b blue bead w white bead The beads considered first and second in the text that follows have been marked in the picture.</summary></entry><entry><title type="html">Friday the 13th</title><link href="https://matterdark.github.io//usaco/2018/09/26/friday.html" rel="alternate" type="text/html" title="Friday the 13th" /><published>2018-09-26T02:00:00+00:00</published><updated>2018-09-26T02:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/26/friday</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/26/friday.html">&lt;p&gt;Is Friday the 13th really an unusual event?&lt;/p&gt;
-
-&lt;p&gt;That is, does the 13th of the month land on a Friday less often than on any other day of the week? To answer this question, write a program that will compute the frequency that the 13th of each month lands on Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday over a given period of N years. The time period to test will be from January 1, 1900 to December 31, 1900+N-1 for a given number of years, N. N is positive and will not exceed 400.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note that the start year is NINETEEN HUNDRED, not NINETEEN NINETY.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There are few facts you need to know before you can solve this problem:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;January 1, 1900 was on a Monday.&lt;/li&gt;
-  &lt;li&gt;Thirty days has September, April, June, and November, all the rest have 31 except for February which has 28 except in leap years when it has 29.&lt;/li&gt;
-  &lt;li&gt;Every year evenly divisible by 4 is a leap year (1992 = 4*498 so 1992 will be a leap year, but the year 1990 is not a leap year)&lt;/li&gt;
-  &lt;li&gt;The rule above does not hold for century years. Century years divisible by 400 are leap years, all other are not. Thus, the century years 1700, 1800, 1900 and 2100 are not leap years, but 2000 is a leap year.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Do not use any built-in date functions in your computer language.&lt;/p&gt;
-
-&lt;p&gt;Don’t just precompute the answers, either, please.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-friday&quot;&gt;PROGRAM NAME: friday&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;One line with the integer N.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-fridayin&quot;&gt;SAMPLE INPUT (file friday.in)&lt;/h3&gt;
-
-&lt;p&gt;20&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Seven space separated integers on one line. These integers represent the number of times the 13th falls on Saturday, Sunday, Monday, Tuesday, …, Friday.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-fridayout&quot;&gt;SAMPLE OUTPUT (file friday.out)&lt;/h3&gt;
-
-&lt;p&gt;36 33 34 33 35 35 34&lt;/p&gt;</content><author><name></name></author><summary type="html">Is Friday the 13th really an unusual event?</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">You have a necklace of N red, white, or blue beads (3&amp;lt;=N&amp;lt;=350) some of which are red, others blue, and others white, arranged at random. Here are two examples for n=29: 1 2 1 2 r b b r b r r b r b b b r r b r r r w r b r w w b b r r b b b b b b r b r r b r b r r r b r r r r r r b r b r r r w Figure A Figure B r red bead b blue bead w white bead The beads considered first and second in the text that follows have been marked in the picture.</summary></entry></feed>
