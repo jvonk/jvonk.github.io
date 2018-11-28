@@ -44,7 +44,7 @@
                                     <div class="dropdown-content">
                                         {% if chapter == 1 %}
                                         <div class="navbar">
-                                            {% for section in (2..4) %}
+                                            {% for section in (2..5) %}
 
                                                 <div class="dropdown">
                                                     <button class="dropbtn">SECTION {{ section }}<i class="fa fa-caret-down"></i>
@@ -130,7 +130,8 @@
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 {% if page.chapter and page.section %}
-                    <a id="skip-to-content" href="#code">Skip to code</a>
+                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
+                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 {% endif %}
                 {{ content }}
             </div>

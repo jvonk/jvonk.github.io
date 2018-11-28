@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Mixing Milk | Johan Vonk’s Website</title>
+<title>Wormholes | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Mixing Milk" />
+<meta property="og:title" content="Wormholes" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk." />
-<meta property="og:description" content="The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/29/milk.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/29/milk.html" />
+<meta name="description" content="Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle)." />
+<meta property="og:description" content="Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle)." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/09/30/wormhole.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/09/30/wormhole.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-09-29T03:00:00+00:00" />
+<meta property="article:published_time" content="2018-09-30T04:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/29/milk.html","headline":"Mixing Milk","dateModified":"2018-09-29T03:00:00+00:00","datePublished":"2018-09-29T03:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/29/milk.html"},"@context":"http://schema.org"}</script>
+{"description":"Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle).","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/09/30/wormhole.html","headline":"Wormholes","dateModified":"2018-09-30T04:00:00+00:00","datePublished":"2018-09-30T04:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/09/30/wormhole.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -393,10 +393,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Mixing Milk</h1>
+                    USACO: Wormholes</h1>
+                
+                    <h2 class="project-tagline">
+                        Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn't know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle).</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk/milk.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/wormhole/wormhole.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -407,157 +410,83 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.</p>
+                <p>Farmer John’s hobby of conducting high-energy physics experiments on weekends has backfired, causing N wormholes (2 &lt;= N &lt;= 12, N even) to materialize on his farm, each located at a distinct point on the 2D map of his farm (the x,y coordinates are both integers).</p>
 
-<p>Since milk packaging is such a difficult business in which to make money, it is important to keep the costs as low as possible. Help Merry Milk Makers purchase the farmers’ milk in the cheapest possible manner. The MMM company has an extraordinarily talented marketing department and knows precisely how much milk they need each day to package for their customers.</p>
+<p>According to his calculations, Farmer John knows that his wormholes will form N/2 connected pairs. For example, if wormholes A and B are connected as a pair, then any object entering wormhole A will exit wormhole B moving in the same direction, and any object entering wormhole B will similarly exit from wormhole A moving in the same direction. This can have rather unpleasant consequences.</p>
 
-<p>The company has contracts with several farmers from whom they may purchase milk, and each farmer has a (potentially) different price at which they sell milk to the packing plant. Of course, a herd of cows can only produce so much milk each day, so the farmers already know how much milk they will have available.</p>
+<p>For example, suppose there are two paired wormholes A at (1,1) and B at (3,1), and that Bessie the cow starts from position (2,1) moving in the +x direction. Bessie will enter wormhole B [at (3,1)], exit from A [at (1,1)], then enter B again, and so on, getting trapped in an infinite cycle!</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   | . . . .
+   | A &gt; B .      Bessie will travel to B then
+   + . . . .      A then across to B again
+</code></pre></div></div>
+<p>Farmer John knows the exact location of each wormhole on his farm. He knows that Bessie the cow always walks in the +x direction, although he does not remember where Bessie is currently located.</p>
 
-<p>Each day, Merry Milk Makers can purchase an integer number of units of milk from each farmer, a number that is always less than or equal to the farmer’s limit (and might be the entire production from that farmer, none of the production, or any integer in between).</p>
+<p>Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle). Note that a loop with a smaller number of wormholes might contribute a number of different sets of pairings to the total count as those wormholes that are not in the loop are paired in many different ways.</p>
 
-<p>Given:</p>
+<h3 id="program-name-wormhole">PROGRAM NAME: wormhole</h3>
 
-<ul>
-  <li>The Merry Milk Makers’ daily requirement of milk</li>
-  <li>The cost per unit for milk from each farmer</li>
-  <li>The amount of milk available from each farmer</li>
-</ul>
-
-<p>calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk.</p>
-
-<p>Note: The total milk produced per day by the farmers will always be sufficient to meet the demands of the Merry Milk Makers even if the prices are high.</p>
-
-<h3 id="program-name-milk">PROGRAM NAME: milk</h3>
-
-<h3 id="input-format">INPUT FORMAT</h3>
+<h3 id="input-format">INPUT FORMAT:</h3>
 
 <table>
   <tbody>
     <tr>
-      <td>Line 1:</td>
-      <td>Two integers, N and M. The first value, N, (0 &lt;= N &lt;= 2,000,000) is the amount of milk that Merry Milk Makers wants per day. The second, M, (0 &lt;= M &lt;= 5,000) is the number of farmers that they may buy from.</td>
+      <td><strong>Line 1:</strong></td>
+      <td>The number of wormholes, N.</td>
     </tr>
     <tr>
-      <td>Lines 2 through M+1:</td>
-      <td>The next M lines each contain two integers: Pi and Ai. Pi (0 &lt;= Pi &lt;= 1,000) is price in cents that farmer i charges. Ai (0 &lt;= Ai &lt;= 2,000,000) is the amount of milk that farmer i can sell to Merry Milk Makers per day.</td>
+      <td><strong>Lines 2..1+N:</strong></td>
+      <td>Each line contains two space-separated integers describing the (x,y) coordinates of a single wormhole. Each coordinate is in the range 0..1,000,000,000.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="sample-input-file-milkin">SAMPLE INPUT (file milk.in)</h3>
+<h3 id="sample-input-file-wormholein">SAMPLE INPUT (file wormhole.in):</h3>
 
-<p>100 5
-5 20
-9 40
-3 10
-8 80
-6 30</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+0 0
+1 0
+1 1
+0 1
+</code></pre></div></div>
 
-<h3 id="input-explanation">INPUT EXPLANATION</h3>
+<h3 id="input-details">INPUT DETAILS:</h3>
 
-<p>100 5 – MMM wants 100 units of milk from 5 farmers<br />
-5 20 – Farmer 1 says, “I can sell you 20 units at 5 cents per unit”<br />
-9 40 etc.<br />
-3 10 – Farmer 3 says, “I can sell you 10 units at 3 cents per unit”<br />
-8 80 etc.<br />
-6 30 – Farmer 5 says, “I can sell you 30 units at 6 cents per unit”</p>
+<p>There are 4 wormholes, forming the corners of a square.</p>
 
-<h3 id="output-format">OUTPUT FORMAT</h3>
+<h3 id="output-format">OUTPUT FORMAT:</h3>
 
-<p>A single line with a single integer that is the minimum cost that Merry Milk Makers must pay for one day’s milk.</p>
+<p>Line 1: The number of distinct pairings of wormholes such that Bessie could conceivably get stuck in a cycle walking from some starting point in the +x direction.</p>
 
-<h3 id="sample-output-file-milkout">SAMPLE OUTPUT (file milk.out)</h3>
+<h3 id="sample-output-file-wormholeout">SAMPLE OUTPUT (file wormhole.out):</h3>
 
-<p>630</p>
+<pre><code class="language-`">2
+</code></pre>
 
-<h3 id="output-explanation">OUTPUT EXPLANATION</h3>
+<h3 id="output-details">OUTPUT DETAILS:</h3>
 
-<p>Here’s how the MMM company spent only 630 cents to purchase 100 units of milk:</p>
+<p>If we number the wormholes 1..4 as we read them from the input, then if wormhole 1 pairs with wormhole 2 and wormhole 3 pairs with wormhole 4, Bessie can get stuck if she starts anywhere between (0,0) and (1,0) or between (0,1) and (1,1).</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   | . . . .
+   4 3 . . .      Bessie will travel to B then
+   1-2-.-.-.      A then across to B again
+</code></pre></div></div>
+<p>Similarly, with the same starting points, Bessie can get stuck in a cycle if the pairings are 1-3 and 2-4 (if Bessie enters WH#3 and comes out at WH#1, she then walks to WH#2 which transports here to WH#4 which directs her towards WH#3 again for a cycle).</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Price per unit</th>
-      <th>Units available</th>
-      <th>Units bought</th>
-      <th>Price * # units</th>
-      <th>Total cost</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>5</td>
-      <td>20</td>
-      <td>20</td>
-      <td>5*20</td>
-      <td>100</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>40</td>
-      <td>0</td>
-      <td> </td>
-      <td> </td>
-      <td>Bought no milk from farmer 2</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>10</td>
-      <td>10</td>
-      <td>3*10</td>
-      <td>30</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>80</td>
-      <td>40</td>
-      <td>8*40</td>
-      <td>320</td>
-      <td>Did not buy all 80 units!</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>30</td>
-      <td>30</td>
-      <td>6*30</td>
-      <td>180</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Total</td>
-      <td>180</td>
-      <td>100</td>
-      <td> </td>
-      <td>630</td>
-      <td>Cheapest total cost</td>
-    </tr>
-  </tbody>
-</table>
+<p>Only the pairings 1-4 and 2-3 allow Bessie to walk in the +x direction from any point in the 2D plane with no danger of cycling.</p>
 
             </div>
             
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/milk/milk.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/milk/milk.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/wormhole/wormhole.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/wormhole/wormhole.java"></script>-->
                 </div>
             
             
                 <footer class="site-footer realcontent">
-                    
-                        <span class="site-footer-owner">
-                            <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/milk/milk.java">
-                                USACO - milk</a>
-                            is created by
-                            <a href="http://github.com/matterdark">
-                                matterdark</a>.</span>
-                        
+                    <span class="site-footer-owner"><a href="http://github.com/matterdark/matterdark.github.io">matterdark.github.io</a> is created by <a href="http://github.com/matterdark">matterdark</a></span>
                 </footer>
-                
+            
         </main>
     </body>
 </html>
