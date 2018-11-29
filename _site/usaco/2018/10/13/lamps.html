@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Number Triangles | Johan Vonk’s Website</title>
+<title>Party Lamps | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Number Triangles" />
+<meta property="og:title" content="Party Lamps" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right." />
-<meta property="og:description" content="Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/04/numtri.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/04/numtri.html" />
+<meta name="description" content="Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data." />
+<meta property="og:description" content="Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/13/lamps.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/13/lamps.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-13T01:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/04/numtri.html","headline":"Number Triangles","dateModified":"2018-10-04T00:00:00+00:00","datePublished":"2018-10-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/04/numtri.html"},"@context":"http://schema.org"}</script>
+{"description":"Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/13/lamps.html","headline":"Party Lamps","dateModified":"2018-10-13T01:00:00+00:00","datePublished":"2018-10-13T01:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/13/lamps.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1175,13 +1175,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Number Triangles</h1>
+                    USACO: Party Lamps</h1>
                 
                     <h2 class="project-tagline">
-                        Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right.</h2>
+                        Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/numtri/numtri.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/lamps/lamps.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1192,53 +1192,88 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</p>
+                <p>To brighten up the gala dinner of the IOI’98 we have a set of <strong>N</strong> (10 &lt;= N &lt;= 100) colored lamps numbered from 1 to <strong>N</strong>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        7
+<p>The lamps are connected to four buttons:</p>
 
-      3   8
+<ul>
+  <li>Button 1: When this button is pressed, all the lamps change their state: those that are ON are turned OFF and those that are OFF are turned ON.</li>
+  <li>Button 2: Changes the state of all the odd numbered lamps.</li>
+  <li>Button 3: Changes the state of all the even numbered lamps.</li>
+  <li>Button 4: Changes the state of the lamps whose number is of the form 3xK+1 (with K&gt;=0), i.e., 1,4,7,…</li>
+</ul>
 
-    8   1   0
+<p>A counter C records the total number of button presses.</p>
 
-  2   7   4   4
+<p>When the party starts, all the lamps are ON and the counter C is set to zero.</p>
 
-4   5   2   6   5
-</code></pre></div></div>
+<p>You are given the value of counter C (0 &lt;= C &lt;= 10000) and the final state of some of the lamps after some operations have been executed. Write a program to determine all the possible final configurations of the N lamps that are consistent with the given information, without repetitions.</p>
 
-<p>In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.</p>
-
-<h3 id="program-name-numtri">PROGRAM NAME: numtri</h3>
+<h3 id="program-name-lamps">PROGRAM NAME: lamps</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>The first line contains R (1 &lt;= R &lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.</p>
+<p>No lamp will be listed twice in the input.</p>
 
-<h3 id="sample-input-file-numtriin">SAMPLE INPUT (file numtri.in)</h3>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Line 1:</strong></td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2:</strong></td>
+      <td>Final value of C</td>
+    </tr>
+    <tr>
+      <td><strong>Line 3:</strong></td>
+      <td>Some lamp numbers ON in the final configuration, separated by one space and terminated by the integer -1.</td>
+    </tr>
+    <tr>
+      <td><strong>Line 4:</strong></td>
+      <td>Some lamp numbers OFF in the final configuration, separated by one space and terminated by the integer -1.</td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
-7
-3 8
-8 1 0
-2 7 4 4
-4 5 2 6 5
+<h3 id="sample-input-file-lampsin">SAMPLE INPUT (file lamps.in)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+1
+-1
+7 -1
 </code></pre></div></div>
+
+<p>In this case, there are 10 lamps and only one button has been pressed. Lamp 7 is OFF in the final configuration.</p>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>A single line containing the largest sum using the traversal specified.</p>
+<p>Lines with all the possible final configurations (without repetitions) of all the lamps. Each line has N characters, where the first character represents the state of lamp 1 and the last character represents the state of lamp N. A 0 (zero) stands for a lamp that is OFF, and a 1 (one) stands for a lamp that is ON. The lines must be ordered from least to largest (as binary numbers).</p>
 
-<h3 id="sample-output-file-numtriout">SAMPLE OUTPUT (file numtri.out)</h3>
+<p>If there are no possible configurations, output a single line with the single word `IMPOSSIBLE’</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>30
+<h3 id="sample-output-file-lampsout">SAMPLE OUTPUT (file lamps.out)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0000000000
+0101010101
+0110110110
 </code></pre></div></div>
+
+<p>In this case, there are three possible final configurations:</p>
+
+<ul>
+  <li>All lamps are OFF</li>
+  <li>Lamps 1, 3, 5, 7, 9 are OFF and lamps 2, 4, 6, 8, 10 are <strong>ON</strong>.</li>
+  <li>Lamps 1, 4, 7, 10 are OFF and lamps 2, 3, 5, 6, 8, 9 are <strong>ON</strong>.</li>
+</ul>
 
             </div>
             
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/numtri/numtri.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/numtri/numtri.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/lamps/lamps.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/lamps/lamps.java"></script>-->
                 </div>
             
             

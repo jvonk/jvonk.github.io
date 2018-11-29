@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Number Triangles | Johan Vonk’s Website</title>
+<title>Runaround Numbers | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Number Triangles" />
+<meta property="og:title" content="Runaround Numbers" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right." />
-<meta property="og:description" content="Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/04/numtri.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/04/numtri.html" />
+<meta name="description" content="Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data." />
+<meta property="og:description" content="Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/13/runround.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/13/runround.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-13T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/04/numtri.html","headline":"Number Triangles","dateModified":"2018-10-04T00:00:00+00:00","datePublished":"2018-10-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/04/numtri.html"},"@context":"http://schema.org"}</script>
+{"description":"Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/13/runround.html","headline":"Runaround Numbers","dateModified":"2018-10-13T00:00:00+00:00","datePublished":"2018-10-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/13/runround.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1175,13 +1175,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Number Triangles</h1>
+                    USACO: Runaround Numbers</h1>
                 
                     <h2 class="project-tagline">
-                        Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base of a number triangle. Each step can go either diagonally down to the left or diagonally down to the right.</h2>
+                        Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number, a number with unique and nonzero digits, higher than M, which will always fit into an unsigned long integer for the given test data.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/numtri/numtri.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/runround/runround.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1192,44 +1192,36 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</p>
+                <p>Runaround numbers are integers with unique digits, none of which is zero (e.g., 81362) that also have an interesting property, exemplified by this demonstration:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        7
+<ul>
+  <li>If you start at the left digit (8 in our number) and count that number of digits to the right (wrapping back to the first digit when no digits on the right are available), you’ll end up at a new digit (a number which does not end up at a new digit is not a Runaround Number). Consider: 8 1 3 6 2 which cycles through eight digits: 1 3 6 2 8 1 3 6 so the next digit is 6.</li>
+  <li>Repeat this cycle (this time for the six counts designed by the `6’) and you should end on a new digit: 2 8 1 3 6 2, namely 2.</li>
+  <li>Repeat again (two digits this time): 8 1</li>
+  <li>Continue again (one digit this time): 3</li>
+  <li>One more time: 6 2 8 and you have ended up back where you started, after touching each digit once. If you don’t end up back where you started after touching each digit once, your number is not a Runaround number.</li>
+</ul>
 
-      3   8
+<p>Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number higher than M, which will always fit into an unsigned long integer for the given test data.</p>
 
-    8   1   0
-
-  2   7   4   4
-
-4   5   2   6   5
-</code></pre></div></div>
-
-<p>In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.</p>
-
-<h3 id="program-name-numtri">PROGRAM NAME: numtri</h3>
+<h3 id="program-name-runround">PROGRAM NAME: runround</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>The first line contains R (1 &lt;= R &lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.</p>
+<p>A single line with a single integer, M</p>
 
-<h3 id="sample-input-file-numtriin">SAMPLE INPUT (file numtri.in)</h3>
+<h3 id="sample-input-file-runroundin">SAMPLE INPUT (file runround.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
-7
-3 8
-8 1 0
-2 7 4 4
-4 5 2 6 5
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>81361
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>A single line containing the largest sum using the traversal specified.</p>
+<p>A single line containing the next runaround number higher than the input value, M.</p>
 
-<h3 id="sample-output-file-numtriout">SAMPLE OUTPUT (file numtri.out)</h3>
+<h3 id="sample-output-file-runroundout">SAMPLE OUTPUT (file runround.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>30
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>81362
 </code></pre></div></div>
 
             </div>
@@ -1237,8 +1229,8 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_1/numtri/numtri.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/numtri/numtri.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/runround/runround.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/runround/runround.java"></script>-->
                 </div>
             
             

@@ -1,4 +1,209 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-29T17:17:45+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="http://localhost:4000/portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/2018/11/24/overview</id><content type="html" xml:base="http://localhost:4000/portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Healthy Holsteins</title><link href="http://localhost:4000/usaco/2018/10/11/holstein.html" rel="alternate" type="text/html" title="Healthy Holsteins" /><published>2018-10-11T00:00:00+00:00</published><updated>2018-10-11T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/11/holstein</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/11/holstein.html">&lt;p&gt;Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T17:33:14+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Party Lamps</title><link href="https://matterdark.github.io//usaco/2018/10/13/lamps.html" rel="alternate" type="text/html" title="Party Lamps" /><published>2018-10-13T01:00:00+00:00</published><updated>2018-10-13T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/lamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/lamps.html">&lt;p&gt;To brighten up the gala dinner of the IOI’98 we have a set of &lt;strong&gt;N&lt;/strong&gt; (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to &lt;strong&gt;N&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The lamps are connected to four buttons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Button 1: When this button is pressed, all the lamps change their state: those that are ON are turned OFF and those that are OFF are turned ON.&lt;/li&gt;
+  &lt;li&gt;Button 2: Changes the state of all the odd numbered lamps.&lt;/li&gt;
+  &lt;li&gt;Button 3: Changes the state of all the even numbered lamps.&lt;/li&gt;
+  &lt;li&gt;Button 4: Changes the state of the lamps whose number is of the form 3xK+1 (with K&amp;gt;=0), i.e., 1,4,7,…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A counter C records the total number of button presses.&lt;/p&gt;
+
+&lt;p&gt;When the party starts, all the lamps are ON and the counter C is set to zero.&lt;/p&gt;
+
+&lt;p&gt;You are given the value of counter C (0 &amp;lt;= C &amp;lt;= 10000) and the final state of some of the lamps after some operations have been executed. Write a program to determine all the possible final configurations of the N lamps that are consistent with the given information, without repetitions.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-lamps&quot;&gt;PROGRAM NAME: lamps&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;No lamp will be listed twice in the input.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Final value of C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Some lamp numbers ON in the final configuration, separated by one space and terminated by the integer -1.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 4:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Some lamp numbers OFF in the final configuration, separated by one space and terminated by the integer -1.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-lampsin&quot;&gt;SAMPLE INPUT (file lamps.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
+1
+-1
+7 -1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case, there are 10 lamps and only one button has been pressed. Lamp 7 is OFF in the final configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Lines with all the possible final configurations (without repetitions) of all the lamps. Each line has N characters, where the first character represents the state of lamp 1 and the last character represents the state of lamp N. A 0 (zero) stands for a lamp that is OFF, and a 1 (one) stands for a lamp that is ON. The lines must be ordered from least to largest (as binary numbers).&lt;/p&gt;
+
+&lt;p&gt;If there are no possible configurations, output a single line with the single word `IMPOSSIBLE’&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-lampsout&quot;&gt;SAMPLE OUTPUT (file lamps.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0000000000
+0101010101
+0110110110
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case, there are three possible final configurations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All lamps are OFF&lt;/li&gt;
+  &lt;li&gt;Lamps 1, 3, 5, 7, 9 are OFF and lamps 2, 4, 6, 8, 10 are &lt;strong&gt;ON&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Lamps 1, 4, 7, 10 are OFF and lamps 2, 3, 5, 6, 8, 9 are &lt;strong&gt;ON&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">To brighten up the gala dinner of the IOI’98 we have a set of N (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to N.</summary></entry><entry><title type="html">Runaround Numbers</title><link href="https://matterdark.github.io//usaco/2018/10/13/runround.html" rel="alternate" type="text/html" title="Runaround Numbers" /><published>2018-10-13T00:00:00+00:00</published><updated>2018-10-13T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/runround</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/runround.html">&lt;p&gt;Runaround numbers are integers with unique digits, none of which is zero (e.g., 81362) that also have an interesting property, exemplified by this demonstration:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you start at the left digit (8 in our number) and count that number of digits to the right (wrapping back to the first digit when no digits on the right are available), you’ll end up at a new digit (a number which does not end up at a new digit is not a Runaround Number). Consider: 8 1 3 6 2 which cycles through eight digits: 1 3 6 2 8 1 3 6 so the next digit is 6.&lt;/li&gt;
+  &lt;li&gt;Repeat this cycle (this time for the six counts designed by the `6’) and you should end on a new digit: 2 8 1 3 6 2, namely 2.&lt;/li&gt;
+  &lt;li&gt;Repeat again (two digits this time): 8 1&lt;/li&gt;
+  &lt;li&gt;Continue again (one digit this time): 3&lt;/li&gt;
+  &lt;li&gt;One more time: 6 2 8 and you have ended up back where you started, after touching each digit once. If you don’t end up back where you started after touching each digit once, your number is not a Runaround number.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number higher than M, which will always fit into an unsigned long integer for the given test data.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-runround&quot;&gt;PROGRAM NAME: runround&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with a single integer, M&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-runroundin&quot;&gt;SAMPLE INPUT (file runround.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;81361
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the next runaround number higher than the input value, M.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-runroundout&quot;&gt;SAMPLE OUTPUT (file runround.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;81362
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Runaround numbers are integers with unique digits, none of which is zero (e.g., 81362) that also have an interesting property, exemplified by this demonstration:</summary></entry><entry><title type="html">Subset Sums</title><link href="https://matterdark.github.io//usaco/2018/10/12/subset.html" rel="alternate" type="text/html" title="Subset Sums" /><published>2018-10-12T00:00:00+00:00</published><updated>2018-10-12T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/12/subset</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/12/subset.html">&lt;p&gt;For many sets of consecutive integers from 1 through N (1 &amp;lt;= N &amp;lt;= 39), one can partition the set into two sets whose sums are identical.&lt;/p&gt;
+
+&lt;p&gt;For example, if N=3, one can partition the set {1, 2, 3} in one way so that the sums of both subsets are identical:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;{3} and {1,2}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This counts as a single partitioning (i.e., reversing the order counts as the same partitioning and thus does not increase the count of partitions).&lt;/p&gt;
+
+&lt;p&gt;If N=7, there are four ways to partition the set {1, 2, 3, … 7} so that each partition has the same sum:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;{1,6,7} and {2,3,4,5}&lt;/li&gt;
+  &lt;li&gt;{2,5,7} and {1,3,4,6}&lt;/li&gt;
+  &lt;li&gt;{3,4,7} and {1,2,5,6}&lt;/li&gt;
+  &lt;li&gt;{1,2,4,7} and {3,5,6}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Given N, your program should print the number of ways a set containing the integers from 1 through N can be partitioned into two sets whose sums are identical. Print 0 if there are no such ways.&lt;/p&gt;
+
+&lt;p&gt;Your program must calculate the answer, not look it up from a table.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-subset&quot;&gt;PROGRAM NAME: subset&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The input file contains a single line with a single integer representing N, as above.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-subsetin&quot;&gt;SAMPLE INPUT (file subset.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output file contains a single line with a single integer that tells how many same-sum partitions can be made from the set {1, 2, …, N}. The output file should contain 0 if there are no ways to make a same-sum partition.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-subsetout&quot;&gt;SAMPLE OUTPUT (file subset.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For many sets of consecutive integers from 1 through N (1 &amp;lt;= N &amp;lt;= 39), one can partition the set into two sets whose sums are identical.</summary></entry><entry><title type="html">Preface Numbering</title><link href="https://matterdark.github.io//usaco/2018/10/11/preface.html" rel="alternate" type="text/html" title="Preface Numbering" /><published>2018-10-11T01:00:00+00:00</published><updated>2018-10-11T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/11/preface</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/11/preface.html">&lt;p&gt;A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I   1
+V   5
+X  10
+L   50
+C  100
+D  500
+M  1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As many as three of the same marks that represent 10n may be placed consecutively to form other numbers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;III is 3&lt;/li&gt;
+  &lt;li&gt;CCC is 300&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Marks that have the value 5x10n are never used consecutively.&lt;/p&gt;
+
+&lt;p&gt;Generally (with the exception of the next rule), marks are connected together and written in descending order to form even more numbers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CCLXVIII = 100+100+50+10+5+1+1+1 = 268&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sometimes, a mark that represents 10^n is placed before a mark of one of the two next higher values (I before V or X; X before L or C; etc.). In this case, the value of the smaller mark is SUBTRACTED from the mark it precedes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IV = 4&lt;/li&gt;
+  &lt;li&gt;IX = 9&lt;/li&gt;
+  &lt;li&gt;XL = 40&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This compound mark forms a unit and may not be combined to make another compound mark (e.g., IXL is wrong for 39; XXXIX is correct).&lt;/p&gt;
+
+&lt;p&gt;Compound marks like XD, IC, and XM are not legal, since the smaller mark is too much smaller than the larger one. For XD (wrong for 490), one would use CDXC; for IC (wrong for 99), one would use XCIX; for XM (wrong for 990), one would use CMXC. 90 is expressed XC and not LXL, since L followed by X connotes that successive marks are X or smaller (probably, anyway).&lt;/p&gt;
+
+&lt;p&gt;Given N (1 &amp;lt;= N &amp;lt; 3,500), the number of pages in the preface of a book, calculate and print the number of I’s, V’s, etc. (in order from lowest to highest) required to typeset all the page numbers (in Roman numerals) from 1 through N. Do not print letters that do not appear in the page numbers specified.&lt;/p&gt;
+
+&lt;p&gt;If N = 5, then the page numbers are: I, II, III, IV, V. The total number of I’s is 7 and the total number of V’s is 2.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-preface&quot;&gt;PROGRAM NAME: preface&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the integer N.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-prefacein&quot;&gt;SAMPLE INPUT (file preface.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output lines specify, in ascending order of Roman numeral letters, the letter, a single space, and the number of times that letter appears on preface page numbers. Stop printing letter totals after printing the highest value letter used to form preface numbers in the specified set.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-prefaceout&quot;&gt;SAMPLE OUTPUT (file preface.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I 7
+V 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:</summary></entry><entry><title type="html">Healthy Holsteins</title><link href="https://matterdark.github.io//usaco/2018/10/11/holstein.html" rel="alternate" type="text/html" title="Healthy Holsteins" /><published>2018-10-11T00:00:00+00:00</published><updated>2018-10-11T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/11/holstein</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/11/holstein.html">&lt;p&gt;Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.&lt;/p&gt;
 
 &lt;p&gt;Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.&lt;/p&gt;
 
@@ -53,7 +258,7 @@
 &lt;h3 id=&quot;sample-output-file-holsteinout&quot;&gt;SAMPLE OUTPUT (file holstein.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 1 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</summary></entry><entry><title type="html">Hamming Codes</title><link href="http://localhost:4000/usaco/2018/10/10/hamming.html" rel="alternate" type="text/html" title="Hamming Codes" /><published>2018-10-10T00:00:00+00:00</published><updated>2018-10-10T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/10/hamming</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/10/hamming.html">&lt;p&gt;Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</summary></entry><entry><title type="html">Hamming Codes</title><link href="https://matterdark.github.io//usaco/2018/10/10/hamming.html" rel="alternate" type="text/html" title="Hamming Codes" /><published>2018-10-10T00:00:00+00:00</published><updated>2018-10-10T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/10/hamming</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/10/hamming.html">&lt;p&gt;Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.&lt;/p&gt;
 
 &lt;p&gt;The Hamming distance between a pair of codewords is the number of binary bits that differ in their binary notation. Consider the two codewords 0x554 and 0x234 and their differences (0x554 means the hexadecimal number with hex digits 5, 5, and 4)(a hex digit requires four bits):&lt;/p&gt;
 
@@ -83,7 +288,7 @@ Bit differences:   -XXX -XX- ----
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 7 25 30 42 45 51 52 75 76
 82 85 97 102 120 127
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.</summary></entry><entry><title type="html">Sorting a Three-Valued Sequence</title><link href="http://localhost:4000/usaco/2018/10/09/sort3.html" rel="alternate" type="text/html" title="Sorting a Three-Valued Sequence" /><published>2018-10-09T01:00:00+00:00</published><updated>2018-10-09T01:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/09/sort3</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/09/sort3.html">&lt;p&gt;Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most &lt;em&gt;three&lt;/em&gt; different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.</summary></entry><entry><title type="html">Sorting a Three-Valued Sequence</title><link href="https://matterdark.github.io//usaco/2018/10/09/sort3.html" rel="alternate" type="text/html" title="Sorting a Three-Valued Sequence" /><published>2018-10-09T01:00:00+00:00</published><updated>2018-10-09T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/sort3</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/sort3.html">&lt;p&gt;Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most &lt;em&gt;three&lt;/em&gt; different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.&lt;/p&gt;
 
 &lt;p&gt;In this task the possible key values are the integers 1, 2 and 3. The required sorting order is non-decreasing. However, sorting has to be accomplished by a sequence of exchange operations. An exchange operation, defined by two position numbers p and q, exchanges the elements in positions p and q.&lt;/p&gt;
 
@@ -127,7 +332,7 @@ Bit differences:   -XXX -XX- ----
 &lt;h3 id=&quot;sample-output-file-sort3out&quot;&gt;SAMPLE OUTPUT (file sort3.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most three different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.</summary></entry><entry><title type="html">The Castle</title><link href="http://localhost:4000/usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/09/castle</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most three different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.</summary></entry><entry><title type="html">The Castle</title><link href="https://matterdark.github.io//usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/castle</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
 
 &lt;p&gt;Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room.&lt;/p&gt;
 
@@ -280,7 +485,7 @@ Bit differences:   -XXX -XX- ----
 
 &lt;p&gt;Room (1,7) is the same as room (1,2) and thus encodes as 6.&lt;/p&gt;
 
-&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Ordered Fractions</title><link href="http://localhost:4000/usaco/2018/10/06/frac1.html" rel="alternate" type="text/html" title="Ordered Fractions" /><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/06/frac1</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/06/frac1.html">&lt;p&gt;Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.&lt;/p&gt;
+&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Ordered Fractions</title><link href="https://matterdark.github.io//usaco/2018/10/06/frac1.html" rel="alternate" type="text/html" title="Ordered Fractions" /><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/06/frac1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/06/frac1.html">&lt;p&gt;Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.&lt;/p&gt;
 
 &lt;p&gt;Here is the set when N = 5:&lt;/p&gt;
 
@@ -317,172 +522,4 @@ Bit differences:   -XXX -XX- ----
 3/4
 4/5
 1/1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.</summary></entry><entry><title type="html">Prime Palindromes</title><link href="http://localhost:4000/usaco/2018/10/05/pprime.html" rel="alternate" type="text/html" title="Prime Palindromes" /><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/05/pprime</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/05/pprime.html">&lt;p&gt;The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-pprime&quot;&gt;PROGRAM NAME: pprime&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Line 1: Two integers, a and b&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-pprimein&quot;&gt;SAMPLE INPUT (file pprime.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 500
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The list of palindromic primes in numerical order, one per line.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-pprimeout&quot;&gt;SAMPLE OUTPUT (file pprime.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-7
-11
-101
-131
-151
-181
-191
-313
-353
-373
-383
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;hints-use-them-carefully&quot;&gt;HINTS (use them carefully!)&lt;/h3&gt;
-
-&lt;h4 id=&quot;hint-1&quot;&gt;Hint 1&lt;/h4&gt;
-
-&lt;p&gt;Generate the palindromes and see if they are prime.&lt;/p&gt;
-
-&lt;h4 id=&quot;hint-2&quot;&gt;Hint 2&lt;/h4&gt;
-
-&lt;p&gt;Generate the palindromes and see if they are prime.&lt;/p&gt;
-
-&lt;p&gt;Generate palindromes by combining digits properly. You might need more than one of the loops like below.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* generate five digit palindrome: */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;	&lt;span class=&quot;cm&quot;&gt;/* only odd; evens aren't so prime */&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	    &lt;span class=&quot;n&quot;&gt;palindrome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	    &lt;span class=&quot;c1&quot;&gt;//... deal with palindrome ...&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .</summary></entry><entry><title type="html">Superprime Rib</title><link href="http://localhost:4000/usaco/2018/10/04/sprime.html" rel="alternate" type="text/html" title="Superprime Rib" /><published>2018-10-04T01:00:00+00:00</published><updated>2018-10-04T01:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/04/sprime</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/04/sprime.html">&lt;p&gt;Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7  3  3  1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The set of ribs denoted by 7331 is prime; the three ribs 733 are prime; the two ribs 73 are prime, and, of course, the last rib, 7, is prime. The number 7331 is called a superprime of length 4.&lt;/p&gt;
-
-&lt;p&gt;Write a program that accepts a number N 1 &amp;lt;=N&amp;lt;=8 of ribs and prints all the superprimes of that length.&lt;/p&gt;
-
-&lt;p&gt;The number 1 (by itself) is not a prime number.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-sprime&quot;&gt;PROGRAM NAME: sprime&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the number N.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-sprimein&quot;&gt;SAMPLE INPUT (file sprime.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The superprime ribs of length N, printed in ascending order one per line.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-sprimeout&quot;&gt;SAMPLE OUTPUT (file sprime.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2333
-2339
-2393
-2399
-2939
-3119
-3137
-3733
-3739
-3793
-3797
-5939
-7193
-7331
-7333
-7393
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:</summary></entry><entry><title type="html">Number Triangles</title><link href="http://localhost:4000/usaco/2018/10/04/numtri.html" rel="alternate" type="text/html" title="Number Triangles" /><published>2018-10-04T00:00:00+00:00</published><updated>2018-10-04T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/04/numtri</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/04/numtri.html">&lt;p&gt;Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        7
-
-      3   8
-
-    8   1   0
-
-  2   7   4   4
-
-4   5   2   6   5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-numtri&quot;&gt;PROGRAM NAME: numtri&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The first line contains R (1 &amp;lt;= R &amp;lt;= 1000), the number of rows. Each subsequent line contains the integers for that particular row of the triangle. All the supplied integers are non-negative and no larger than 100.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-numtriin&quot;&gt;SAMPLE INPUT (file numtri.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-7
-3 8
-8 1 0
-2 7 4 4
-4 5 2 6 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the largest sum using the traversal specified.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-numtriout&quot;&gt;SAMPLE OUTPUT (file numtri.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</summary></entry><entry><title type="html">Mother’s Milk</title><link href="http://localhost:4000/usaco/2018/10/03/milk3.html" rel="alternate" type="text/html" title="Mother's Milk" /><published>2018-10-03T00:00:00+00:00</published><updated>2018-10-03T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/03/milk3</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/03/milk3.html">&lt;p&gt;Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.&lt;/p&gt;
-
-&lt;p&gt;Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-milk3&quot;&gt;PROGRAM NAME: milk3&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the three integers A, B, and C.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-milk3in&quot;&gt;SAMPLE INPUT (file milk3.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 9 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with a sorted list of all the possible amounts of milk that can be in bucket C when bucket A is empty.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-milk3out&quot;&gt;SAMPLE OUTPUT (file milk3.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2 8 9 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sample-input-file-milk3in-1&quot;&gt;SAMPLE INPUT (file milk3.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 5 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sample-output-file-milk3out-1&quot;&gt;SAMPLE OUTPUT (file milk3.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 6 7 8 9 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.</summary></entry></feed>
