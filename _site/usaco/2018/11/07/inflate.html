@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Hamming Codes | Johan Vonk’s Website</title>
+<title>Score Inflation | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Hamming Codes" />
+<meta property="og:title" content="Score Inflation" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Given N, B, and D: Find a set of N codewords (1 &lt;= N &lt;= 64), each of length B bits (1 &lt;= B &lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &lt;= D &lt;= 7) away from each of the other codewords." />
-<meta property="og:description" content="Given N, B, and D: Find a set of N codewords (1 &lt;= N &lt;= 64), each of length B bits (1 &lt;= B &lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &lt;= D &lt;= 7) away from each of the other codewords." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/10/hamming.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/10/hamming.html" />
+<meta name="description" content="Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Calculate the maximum number of possible points." />
+<meta property="og:description" content="Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Calculate the maximum number of possible points." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/11/07/inflate.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-10T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-11-07T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Given N, B, and D: Find a set of N codewords (1 &lt;= N &lt;= 64), each of length B bits (1 &lt;= B &lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &lt;= D &lt;= 7) away from each of the other codewords.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/10/hamming.html","headline":"Hamming Codes","dateModified":"2018-10-10T00:00:00+00:00","datePublished":"2018-10-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/10/hamming.html"},"@context":"http://schema.org"}</script>
+{"description":"Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Calculate the maximum number of possible points.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/11/07/inflate.html","headline":"Score Inflation","dateModified":"2018-11-07T00:00:00+00:00","datePublished":"2018-11-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/11/07/inflate.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1571,13 +1571,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Hamming Codes</h1>
+                    USACO: Score Inflation</h1>
                 
                     <h2 class="project-tagline">
-                        Given N, B, and D: Find a set of N codewords (1 <= N <= 64), each of length B bits (1 <= B <= 8), such that each of the codewords is at least Hamming distance of D (1 <= D <= 7) away from each of the other codewords.</h2>
+                        Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Calculate the maximum number of possible points.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/hamming/hamming.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_3/inflate/inflate.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1588,44 +1588,59 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Given N, B, and D: Find a set of N codewords (1 &lt;= N &lt;= 64), each of length B bits (1 &lt;= B &lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &lt;= D &lt;= 7) away from each of the other codewords.</p>
+                <p>The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</p>
 
-<p>The Hamming distance between a pair of codewords is the number of binary bits that differ in their binary notation. Consider the two codewords 0x554 and 0x234 and their differences (0x554 means the hexadecimal number with hex digits 5, 5, and 4)(a hex digit requires four bits):</p>
+<p>We have several categories from which problems can be chosen, where a “category” is an unlimited set of contest problems which all require the same amount of time to solve and deserve the same number of points for a correct solution. Your task is write a program which tells the USACO staff how many problems from each category to include in a contest so as to maximize the total number of points in the chosen problems while keeping the total solution time within the length of the contest.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           0x554 = 0101 0101 0100
-           0x234 = 0010 0011 0100
-Bit differences:   -XXX -XX- ----
-</code></pre></div></div>
+<p>The input includes the length of the contest, M (1 &lt;= M &lt;= 10,000) (don’t worry, you won’t have to compete in the longer contests until training camp) and N, the number of problem categories, where 1 &lt;= N &lt;= 10,000.</p>
 
-<p>Since five bits were different, the Hamming distance is 5.</p>
+<p>Each of the subsequent N lines contains two integers describing a category: the first integer tells the number of points a problem from that category is worth (1 &lt;= points &lt;= 10000); the second tells the number of minutes a problem from that category takes to solve (1 &lt;= minutes &lt;= 10000).</p>
 
-<h3 id="program-name-hamming">PROGRAM NAME: hamming</h3>
+<p>Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Remember, the number from any category can be any nonnegative integer (0, one, or many). Calculate the maximum number of possible points.</p>
+
+<h3 id="program-name-inflate">PROGRAM NAME: inflate</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>N, B, D on a single line</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Lines 1:</strong></td>
+      <td>M, N – contest minutes and number of problem classes</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2..N+1:</strong></td>
+      <td>Two integers: the points and minutes for each class</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="sample-input-file-hammingin">SAMPLE INPUT (file hamming.in)</h3>
+<h3 id="sample-input-file-inflatein">SAMPLE INPUT (file inflate.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>16 7 3
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>300 4
+100 60
+250 120
+120 100
+35 20
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>N codewords, sorted, in decimal, ten per line. In the case of multiple solutions, your program should output the solution which, if interpreted as a base 2^B integer, would have the least value.</p>
+<p>A single line with the maximum number of points possible given the constraints.</p>
 
-<h3 id="sample-output-file-hammingout">SAMPLE OUTPUT (file hamming.out)</h3>
+<h3 id="sample-output-file-inflateout">SAMPLE OUTPUT (file inflate.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 7 25 30 42 45 51 52 75 76
-82 85 97 102 120 127
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>605
 </code></pre></div></div>
+
+<p><em>(Take two problems from #2 and three from #4.)</em></p>
 
             </div>
             
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/hamming/hamming.java"></script>
+                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_3/inflate/inflate.java"></script>
                 </div>
             
             

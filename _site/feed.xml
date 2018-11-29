@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T21:50:02+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Fractions to Decimals</title><link href="https://matterdark.github.io//usaco/2018/11/01/fracdec.html" rel="alternate" type="text/html" title="Fractions to Decimals" /><published>2018-11-01T01:00:00+00:00</published><updated>2018-11-01T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/fracdec</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/fracdec.html">&lt;p&gt;Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T22:20:52+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Score Inflation</title><link href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-07T00:00:00+00:00</published><updated>2018-11-07T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/07/inflate</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/07/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
+
+&lt;p&gt;We have several categories from which problems can be chosen, where a “category” is an unlimited set of contest problems which all require the same amount of time to solve and deserve the same number of points for a correct solution. Your task is write a program which tells the USACO staff how many problems from each category to include in a contest so as to maximize the total number of points in the chosen problems while keeping the total solution time within the length of the contest.&lt;/p&gt;
+
+&lt;p&gt;The input includes the length of the contest, M (1 &amp;lt;= M &amp;lt;= 10,000) (don’t worry, you won’t have to compete in the longer contests until training camp) and N, the number of problem categories, where 1 &amp;lt;= N &amp;lt;= 10,000.&lt;/p&gt;
+
+&lt;p&gt;Each of the subsequent N lines contains two integers describing a category: the first integer tells the number of points a problem from that category is worth (1 &amp;lt;= points &amp;lt;= 10000); the second tells the number of minutes a problem from that category takes to solve (1 &amp;lt;= minutes &amp;lt;= 10000).&lt;/p&gt;
+
+&lt;p&gt;Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Remember, the number from any category can be any nonnegative integer (0, one, or many). Calculate the maximum number of possible points.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-inflate&quot;&gt;PROGRAM NAME: inflate&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;M, N – contest minutes and number of problem classes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two integers: the points and minutes for each class&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-inflatein&quot;&gt;SAMPLE INPUT (file inflate.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;300 4
+100 60
+250 120
+120 100
+35 20
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the maximum number of points possible given the constraints.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-inflateout&quot;&gt;SAMPLE OUTPUT (file inflate.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;605
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry><entry><title type="html">Agri-Net</title><link href="https://matterdark.github.io//usaco/2018/11/02/agrinet.html" rel="alternate" type="text/html" title="Agri-Net" /><published>2018-11-02T00:00:00+00:00</published><updated>2018-11-02T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/02/agrinet</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/02/agrinet.html">&lt;p&gt;Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.&lt;/p&gt;
+
+&lt;p&gt;Farmer John ordered a high speed connection for his farm and is going to share his connectivity with the other farmers. To minimize cost, he wants to lay the minimum amount of optical fiber to connect his farm to all the other farms.&lt;/p&gt;
+
+&lt;p&gt;Given a list of how much fiber it takes to connect each pair of farms, you must find the minimum amount of fiber needed to connect them all together. Each farm must connect to some other farm such that a packet can flow from any one farm to any other farm.&lt;/p&gt;
+
+&lt;p&gt;The distance between any two farms will not exceed 100,000.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-agrinet&quot;&gt;PROGRAM NAME: agrinet&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The number of farms, N (3 &amp;lt;= N &amp;lt;= 100).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The subsequent lines contain the N x N connectivity matrix, where each element shows the distance from on farm to another. Logically, they are N lines of N space-separated integers. Physically, they are limited in length to 80 characters, so some lines continue onto others. Of course, the diagonal will be 0, since the distance from farm i to itself is not interesting for this problem.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-agrinetin&quot;&gt;SAMPLE INPUT (file agrinet.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+0 4 9 21
+4 0 8 17
+9 8 0 16
+21 17 16 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The single output contains the integer length that is the sum of the minimum length of fiber required to connect the entire set of farms.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-agrinetout&quot;&gt;SAMPLE OUTPUT (file agrinet.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;28
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.</summary></entry><entry><title type="html">Fractions to Decimals</title><link href="https://matterdark.github.io//usaco/2018/11/01/fracdec.html" rel="alternate" type="text/html" title="Fractions to Decimals" /><published>2018-11-01T01:00:00+00:00</published><updated>2018-11-01T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/fracdec</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/fracdec.html">&lt;p&gt;Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1/3     =  0.(3)
 22/5    =  4.4
@@ -393,71 +479,4 @@ F Farmer
 &lt;h3 id=&quot;sample-output-file-moneyout&quot;&gt;SAMPLE OUTPUT (file money.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.</summary></entry><entry><title type="html">Zero Sum</title><link href="https://matterdark.github.io//usaco/2018/10/16/zerosum.html" rel="alternate" type="text/html" title="Zero Sum" /><published>2018-10-16T02:00:00+00:00</published><updated>2018-10-16T02:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/zerosum</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/zerosum.html">&lt;p&gt;Consider the sequence of digits from 1 through N (where N=9) in increasing order: 1 2 3 … N.&lt;/p&gt;
-
-&lt;p&gt;Now insert either a `+’ for addition or a `-‘ for subtraction or a ` ‘ [blank] to run the digits together between each pair of digits (not in front of the first digit). Calculate the result that of the expression and see if you get zero.&lt;/p&gt;
-
-&lt;p&gt;Write a program that will find all sequences of length N that produce a zero sum.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-zerosum&quot;&gt;PROGRAM NAME: zerosum&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the integer N (3 &amp;lt;= N &amp;lt;= 9).&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-zerosumin&quot;&gt;SAMPLE INPUT (file zerosum.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;In ASCII order, show each sequence that can create 0 sum with a `+’, `-‘, or ` ‘ between each pair of numbers.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-zerosumout&quot;&gt;SAMPLE OUTPUT (file zerosum.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1+2-3+4-5-6+7
-1+2-3-4+5+6-7
-1-2 3+4+5+6+7
-1-2 3-4 5+6 7
-1-2+3+4-5+6-7
-1-2-3-4-5+6+7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the sequence of digits from 1 through N (where N=9) in increasing order: 1 2 3 … N.</summary></entry><entry><title type="html">Cow Pedigrees</title><link href="https://matterdark.github.io//usaco/2018/10/16/nocows.html" rel="alternate" type="text/html" title="Cow Pedigrees" /><published>2018-10-16T01:00:00+00:00</published><updated>2018-10-16T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/nocows</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/nocows.html">&lt;p&gt;Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The degree of each node is 0 or 2. The degree is the count of the node’s immediate children.&lt;/li&gt;
-  &lt;li&gt;The height of the tree is equal to K (1 &amp;lt; K &amp;lt; 100). The height is the number of nodes on the longest path from the root to any leaf; a leaf is a node with no children.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-nocows&quot;&gt;PROGRAM NAME: nocows&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Line 1: Two space-separated integers, N and K.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-nocowsin&quot;&gt;SAMPLE INPUT (file nocows.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Line 1: One single integer number representing the number of possible pedigrees MODULO 9901.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-nocowsout&quot;&gt;SAMPLE OUTPUT (file nocows.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS&lt;/h3&gt;
-
-&lt;p&gt;Two possible pedigrees have 5 nodes and height equal to 3:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    @                   @      
-   / \                 / \
-  @   @      and      @   @
- / \                     / \
-@   @                   @   @
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.</summary></entry></feed>

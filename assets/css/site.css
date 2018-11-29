@@ -24,6 +24,9 @@ body {
     font-family: "Montserrat",sans-serif;
     font-weight: 600;
   }
+  .main-content h2, .main-content h2, .main-content h3, .main-content h4, .main-content h5 {
+    color: #155799 !important;
+  }
   
   .realcontent a:link,.realcontent a:visited {
     border-bottom: 3px solid var(--link-color);
