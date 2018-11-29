@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Healthy Holsteins | Johan Vonk’s Website</title>
+<title>Humble Numbers | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Healthy Holsteins" />
+<meta property="og:title" content="Humble Numbers" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<meta property="og:description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
+<meta name="description" content="For a given set of K prime numbers S = {p1, p2, …, pK}, the set of all numbers whose prime factors are a subset of S is the set of humble numbers. Your job is to find the Nth humble number for a given set S." />
+<meta property="og:description" content="For a given set of K prime numbers S = {p1, p2, …, pK}, the set of all numbers whose prime factors are a subset of S is the set of humble numbers. Your job is to find the Nth humble number for a given set S." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/11/06/humble.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/11/06/humble.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-11T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-11-06T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/11/holstein.html","headline":"Healthy Holsteins","dateModified":"2018-10-11T00:00:00+00:00","datePublished":"2018-10-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/11/holstein.html"},"@context":"http://schema.org"}</script>
+{"description":"For a given set of K prime numbers S = {p1, p2, …, pK}, the set of all numbers whose prime factors are a subset of S is the set of humble numbers. Your job is to find the Nth humble number for a given set S.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/11/06/humble.html","headline":"Humble Numbers","dateModified":"2018-11-06T00:00:00+00:00","datePublished":"2018-11-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/11/06/humble.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1703,13 +1703,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Healthy Holsteins</h1>
+                    USACO: Humble Numbers</h1>
                 
                     <h2 class="project-tagline">
-                        Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</h2>
+                        For a given set of K prime numbers S = {p1, p2, ..., pK}, the set of all numbers whose prime factors are a subset of S is the set of humble numbers. Your job is to find the Nth humble number for a given set S.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_3/humble/humble.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1720,13 +1720,11 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</p>
+                <p>For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.</p>
 
-<p>Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</p>
+<p>Your job is to find the Nth humble number for a given set S. Long integers (signed 32-bit) will be adequate for all solutions.</p>
 
-<p>Vitamins are measured in integer units. Cows can be fed at most one scoop of any feed type. It is guaranteed that a solution exists for all contest input data.</p>
-
-<h3 id="program-name-holstein">PROGRAM NAME: holstein</h3>
+<h3 id="program-name-humble">PROGRAM NAME: humble</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
@@ -1734,47 +1732,28 @@
   <tbody>
     <tr>
       <td><strong>Line 1:</strong></td>
-      <td>integer V (1 &lt;= V &lt;= 25), the number of types of vitamins</td>
+      <td>Two space separated integers: K and N, 1 &lt;= K &lt;=100 and 1 &lt;= N &lt;= 100,000.</td>
     </tr>
     <tr>
       <td><strong>Line 2:</strong></td>
-      <td>V integers (1 &lt;= each one &lt;= 1000), the minimum requirement for each of the V vitamins that a cow requires each day</td>
-    </tr>
-    <tr>
-      <td><strong>Line 3:</strong></td>
-      <td>integer G (1 &lt;= G &lt;= 15), the number of types of feeds available</td>
-    </tr>
-    <tr>
-      <td><strong>Lines 4..G+3:</strong></td>
-      <td>V integers (0 &lt;= each one &lt;= 1000), the amount of each vitamin that one scoop of this feed contains. The first line of these G lines describes feed #1; the second line describes feed #2; and so on.</td>
+      <td>K space separated positive integers that compose the set S.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="sample-input-file-holsteinin">SAMPLE INPUT (file holstein.in)</h3>
+<h3 id="sample-input-file-humblein">SAMPLE INPUT (file humble.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
-100 200 300 400
-3
-50   50  50  50
-200 300 200 300
-900 150 389 399
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 19
+2 3 5 7
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>The output is a single line of output that contains:</p>
+<p>The Nth humble number from set S printed alone on a line.</p>
 
-<ul>
-  <li>the minimum number of scoops a cow must eat, followed by:</li>
-  <li>a SORTED list (from smallest to largest) of the feed types the cow is given</li>
-</ul>
+<h3 id="sample-output-file-humbleout">SAMPLE OUTPUT (file humble.out)</h3>
 
-<p>If more than one set of feedtypes yield a minimum of scoops, choose the set with the smallest feedtype numbers.</p>
-
-<h3 id="sample-output-file-holsteinout">SAMPLE OUTPUT (file holstein.out)</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 1 3
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>27
 </code></pre></div></div>
 
             </div>
@@ -1782,7 +1761,7 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java"></script>
+                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_3/humble/humble.java"></script>
                 </div>
             
             

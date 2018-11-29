@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T22:20:52+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Score Inflation</title><link href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-07T00:00:00+00:00</published><updated>2018-11-07T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/07/inflate</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/07/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T23:45:01+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Stamps</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Stamps" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.&lt;/p&gt;
+
+&lt;p&gt;For example, consider stamps whose values are limited to 1 cent and 3 cents; you can use at most 5 stamps. It’s easy to see how to assemble postage of 1 through 5 cents (just use that many 1 cent stamps), and successive values aren’t much harder:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;6 = 3 + 3&lt;/li&gt;
+  &lt;li&gt;7 = 3 + 3 + 1&lt;/li&gt;
+  &lt;li&gt;8 = 3 + 3 + 1 + 1&lt;/li&gt;
+  &lt;li&gt;9 = 3 + 3 + 3&lt;/li&gt;
+  &lt;li&gt;10 = 3 + 3 + 3 + 1&lt;/li&gt;
+  &lt;li&gt;11 = 3 + 3 + 3 + 1 + 1&lt;/li&gt;
+  &lt;li&gt;12 = 3 + 3 + 3 + 3&lt;/li&gt;
+  &lt;li&gt;13 = 3 + 3 + 3 + 3 + 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, there is no way to make 14 cents of postage with 5 or fewer stamps of value 1 and 3 cents. Thus, for this set of two stamp values and a limit of K=5, the answer is M=13.&lt;/p&gt;
+
+&lt;p&gt;The most difficult test case for this problem has a time limit of 3 seconds.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-stamps&quot;&gt;PROGRAM NAME: stamps&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two integers K and N. K (1 &amp;lt;= K &amp;lt;= 200) is the total number of stamps that can be used. N (1 &amp;lt;= N &amp;lt;= 50) is the number of stamp values.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N integers, 15 per line, listing all of the N stamp values, each of which will be at most 10000.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-stampsin&quot;&gt;SAMPLE INPUT (file stamps.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 2
+1 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;One integer, the number of contiguous postage values starting at 1 cent that can be formed using no more than K stamps from the set.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-output-file-stampsout&quot;&gt;SAMPLE OUTPUT (file stamps.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;13
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.</summary></entry><entry><title type="html">Score Inflation</title><link href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-07T00:00:00+00:00</published><updated>2018-11-07T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/07/inflate</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/07/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
 
 &lt;p&gt;We have several categories from which problems can be chosen, where a “category” is an unlimited set of contest problems which all require the same amount of time to solve and deserve the same number of points for a correct solution. Your task is write a program which tells the USACO staff how many problems from each category to include in a contest so as to maximize the total number of points in the chosen problems while keeping the total solution time within the length of the contest.&lt;/p&gt;
 
@@ -43,7 +99,156 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;605
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry><entry><title type="html">Agri-Net</title><link href="https://matterdark.github.io//usaco/2018/11/02/agrinet.html" rel="alternate" type="text/html" title="Agri-Net" /><published>2018-11-02T00:00:00+00:00</published><updated>2018-11-02T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/02/agrinet</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/02/agrinet.html">&lt;p&gt;Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry><entry><title type="html">Contact</title><link href="https://matterdark.github.io//usaco/2018/11/06/contact.html" rel="alternate" type="text/html" title="Contact" /><published>2018-11-06T01:00:00+00:00</published><updated>2018-11-06T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/06/contact</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/06/contact.html">&lt;p&gt;The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.&lt;/p&gt;
+
+&lt;p&gt;Help the cows to find the Truth by providing a tool to analyze bit patterns in the files they record. They are seeking bit patterns of length &lt;strong&gt;A&lt;/strong&gt; through &lt;strong&gt;B&lt;/strong&gt; inclusive (1 &amp;lt;= A &amp;lt;= B &amp;lt;= 12) that repeat themselves most often in each day’s data file. An input limit tells how many of the most frequent patterns to output.&lt;/p&gt;
+
+&lt;p&gt;Pattern occurrences may overlap, and only patterns that occur at least once are taken into account.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-contact&quot;&gt;PROGRAM NAME: contact&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Three space-separated integers: A, B, N; (1 &amp;lt;= N ≤ 50).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A sequence of as many as 200,000 characters, all 0 or 1; the characters are presented 80 per line, except potentially the last line.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-contactin&quot;&gt;SAMPLE INPUT (file contact.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 4 10
+01010010010001000111101100001010011001111000010010011110010000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, pattern 100 occurs 12 times, and pattern 1000 occurs 5 times. The most frequent pattern is 00, with 23 occurrences.&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Lines that list the N highest frequencies (in descending order of frequency) along with the patterns that occur in those frequencies. Order those patterns by shortest-to-longest and increasing binary number for those of the same frequency. If fewer than N highest frequencies are available, print only those that are.&lt;/p&gt;
+
+&lt;p&gt;Print the frequency alone by itself on a line. Then print the actual patterns space separated, six to a line (unless fewer than six remain).&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-contactout&quot;&gt;SAMPLE OUTPUT (file contact.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;23
+00
+15
+01 10
+12
+100
+11
+11 000 001
+10
+010
+8
+0100
+7
+0010 1001
+6
+111 0000
+5
+011 110 1000
+4
+0001 0011 1100
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.</summary></entry><entry><title type="html">Humble Numbers</title><link href="https://matterdark.github.io//usaco/2018/11/06/humble.html" rel="alternate" type="text/html" title="Humble Numbers" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/06/humble</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/06/humble.html">&lt;p&gt;For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.&lt;/p&gt;
+
+&lt;p&gt;Your job is to find the Nth humble number for a given set S. Long integers (signed 32-bit) will be adequate for all solutions.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-humble&quot;&gt;PROGRAM NAME: humble&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two space separated integers: K and N, 1 &amp;lt;= K &amp;lt;=100 and 1 &amp;lt;= N &amp;lt;= 100,000.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;K space separated positive integers that compose the set S.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-humblein&quot;&gt;SAMPLE INPUT (file humble.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 19
+2 3 5 7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The Nth humble number from set S printed alone on a line.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-humbleout&quot;&gt;SAMPLE OUTPUT (file humble.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;27
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.</summary></entry><entry><title type="html">Stamps</title><link href="https://matterdark.github.io//usaco/2018/11/04/stamps.html" rel="alternate" type="text/html" title="Stamps" /><published>2018-11-04T00:00:00+00:00</published><updated>2018-11-04T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/04/stamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/04/stamps.html">&lt;p&gt;Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.&lt;/p&gt;
+
+&lt;p&gt;For example, consider stamps whose values are limited to 1 cent and 3 cents; you can use at most 5 stamps. It’s easy to see how to assemble postage of 1 through 5 cents (just use that many 1 cent stamps), and successive values aren’t much harder:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;6 = 3 + 3&lt;/li&gt;
+  &lt;li&gt;7 = 3 + 3 + 1&lt;/li&gt;
+  &lt;li&gt;8 = 3 + 3 + 1 + 1&lt;/li&gt;
+  &lt;li&gt;9 = 3 + 3 + 3&lt;/li&gt;
+  &lt;li&gt;10 = 3 + 3 + 3 + 1&lt;/li&gt;
+  &lt;li&gt;11 = 3 + 3 + 3 + 1 + 1&lt;/li&gt;
+  &lt;li&gt;12 = 3 + 3 + 3 + 3&lt;/li&gt;
+  &lt;li&gt;13 = 3 + 3 + 3 + 3 + 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, there is no way to make 14 cents of postage with 5 or fewer stamps of value 1 and 3 cents. Thus, for this set of two stamp values and a limit of K=5, the answer is M=13.&lt;/p&gt;
+
+&lt;p&gt;The most difficult test case for this problem has a time limit of 3 seconds.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-stamps&quot;&gt;PROGRAM NAME: stamps&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two integers K and N. K (1 &amp;lt;= K &amp;lt;= 200) is the total number of stamps that can be used. N (1 &amp;lt;= N &amp;lt;= 50) is the number of stamp values.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N integers, 15 per line, listing all of the N stamp values, each of which will be at most 10000.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-stampsin&quot;&gt;SAMPLE INPUT (file stamps.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 2
+1 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;One integer, the number of contiguous postage values starting at 1 cent that can be formed using no more than K stamps from the set.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-output-file-stampsout&quot;&gt;SAMPLE OUTPUT (file stamps.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;13
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.</summary></entry><entry><title type="html">Agri-Net</title><link href="https://matterdark.github.io//usaco/2018/11/02/agrinet.html" rel="alternate" type="text/html" title="Agri-Net" /><published>2018-11-02T00:00:00+00:00</published><updated>2018-11-02T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/02/agrinet</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/02/agrinet.html">&lt;p&gt;Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.&lt;/p&gt;
 
 &lt;p&gt;Farmer John ordered a high speed connection for his farm and is going to share his connectivity with the other farmers. To minimize cost, he wants to lay the minimum amount of optical fiber to connect his farm to all the other farms.&lt;/p&gt;
 
@@ -260,223 +465,4 @@ e Z 3
 &lt;h3 id=&quot;sample-output-file-comehomeout&quot;&gt;SAMPLE OUTPUT (file comehome.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B 11
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).</summary></entry><entry><title type="html">Overfencing</title><link href="https://matterdark.github.io//usaco/2018/10/23/maze1.html" rel="alternate" type="text/html" title="Overfencing" /><published>2018-10-23T01:00:00+00:00</published><updated>2018-10-23T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/23/maze1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/23/maze1.html">&lt;p&gt;Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two “exits” for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it.&lt;/p&gt;
-
-&lt;p&gt;Given W (1 &amp;lt;= W &amp;lt;= 38), the width of the maze; H (1 &amp;lt;= H &amp;lt;= 100), the height of the maze; 2*H+1 lines with width 2*W+1 characters that represent the maze in a format like that shown later - then calculate the number of steps required to exit the maze from the ‘worst’ point in the maze (the point that is ‘farther’ from either exit even when walking optimally to the closest exit). Of course, cows walk only parallel or perpendicular to the x-y axes; they do not walk on a diagonal. Each move to a new square counts as a single unit of distance (including the move “out” of the maze.&lt;/p&gt;
-
-&lt;p&gt;Here’s what one particular W=5, H=3 maze looks like:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+-+-+-+-+-+
-|         |
-+-+ +-+ + +
-|     | | |
-+ +-+-+ + +
-| |     |  
-+-+ +-+-+-+
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Fenceposts appear only in odd numbered rows and and odd numbered columns (as in the example). The format should be obvious and self explanatory. Each maze has exactly two blank walls on the outside for exiting.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-maze1&quot;&gt;PROGRAM NAME: maze1&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;W and H, space separated&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2 through 2*H+2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;2*W+1 characters that represent the maze&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-maze1in&quot;&gt;SAMPLE INPUT (file maze1.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3
-+-+-+-+-+-+
-|         |
-+-+ +-+ + +
-|     | | |
-+ +-+-+ + +
-| |     |  
-+-+ +-+-+-+
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single integer on a single output line. The integer specifies the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-maze1out&quot;&gt;SAMPLE OUTPUT (file maze1.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The lower left-hand corner is &lt;strong&gt;nine&lt;/strong&gt; steps from the closest exit.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two “exits” for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it.</summary></entry><entry><title type="html">The Tamworth Two</title><link href="https://matterdark.github.io//usaco/2018/10/23/ttwo.html" rel="alternate" type="text/html" title="The Tamworth Two" /><published>2018-10-23T00:00:00+00:00</published><updated>2018-10-23T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/23/ttwo</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/23/ttwo.html">&lt;p&gt;A pair of cows is loose somewhere in the forest. Farmer John is lending his expertise to their capture. Your task is to model their behavior.&lt;/p&gt;
-
-&lt;p&gt;The chase takes place on a 10 by 10 planar grid. Squares can be empty or they can contain:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;an obstacle,&lt;/li&gt;
-  &lt;li&gt;the cows (who always travel together), or&lt;/li&gt;
-  &lt;li&gt;Farmer John.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The cows and Farmer John can occupy the same square (when they `meet’) but neither the cows nor Farmer John can share a square with an obstacle.&lt;/p&gt;
-
-&lt;p&gt;Each square is represented as follows:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;. Empty square
-* Obstacle
-C Cows
-F Farmer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here is a sample grid:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*...*.....
-......*...
-...*...*..
-..........
-...*.F....
-*.....*...
-...*......
-..C......*
-...*.*....
-.*.*......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The cows wander around the grid in a fixed way. Each minute, they either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking `forward’, then they spend the entire minute rotating 90 degrees clockwise.&lt;/p&gt;
-
-&lt;p&gt;Farmer John, wise in the ways of cows, moves in exactly the same way.&lt;/p&gt;
-
-&lt;p&gt;The farmer and the cows can be considered to move simultaneously during each minute. If the farmer and the cows pass each other while moving, they are not considered to have met. The chase ends when Farmer John and the cows occupy the same square at the end of a minute.&lt;/p&gt;
-
-&lt;p&gt;Read a ten-line grid that represents the initial state of the cows, Farmer John, and obstacles. Each of the ten lines contains exactly ten characters using the coding above. There is guaranteed to be only one farmer and one pair of cows. The cows and Farmer John will not initially be on the same square.&lt;/p&gt;
-
-&lt;p&gt;Calculate the number of minutes until the cows and Farmer John meet. Assume both the cows and farmer begin the simulation facing in the ‘north’ direction. Print 0 if they will never meet.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-ttwo&quot;&gt;PROGRAM NAME: ttwo&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1-10:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Ten lines of ten characters each, as explained above&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-ttwoin&quot;&gt;SAMPLE INPUT (file ttwo.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*...*.....
-......*...
-...*...*..
-..........
-...*.F....
-*.....*...
-...*......
-..C......*
-...*.*....
-.*.*......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the integer number of minutes until Farmer John and the cows meet. Print 0 if they will never meet.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-ttwoout&quot;&gt;SAMPLE OUTPUT (file ttwo.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;49
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A pair of cows is loose somewhere in the forest. Farmer John is lending his expertise to their capture. Your task is to model their behavior.</summary></entry><entry><title type="html">Controlling Companies</title><link href="https://matterdark.github.io//usaco/2018/10/18/concom.html" rel="alternate" type="text/html" title="Controlling Companies" /><published>2018-10-18T01:00:00+00:00</published><updated>2018-10-18T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/concom</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/concom.html">&lt;p&gt;Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Company A = Company B&lt;/li&gt;
-  &lt;li&gt;Company A owns more than 50% of Company B&lt;/li&gt;
-  &lt;li&gt;Company A controls K (K &amp;gt;= 1) companies denoted C1, …, CK with each company Ci owning xi% of company B and x1 + …. + xK &amp;gt; 50%.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Given a list of triples (i,j,p) which denote company i owning p% of company j, calculate all the pairs (h,s) in which company h controls company s. There are at most 100 companies.&lt;/p&gt;
-
-&lt;p&gt;Write a program to read the list of triples (i,j,p) where i, j and p are positive integers all in the range (1..100) and find all the pairs (h,s) so that company h controls company s.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-concom&quot;&gt;PROGRAM NAME: concom&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N, the number of input triples to follow&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..n+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Three integers per line as a triple (i,j,p) described above.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-concomin&quot;&gt;SAMPLE INPUT (file concom.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
-1 2 80
-2 3 80
-3 1 20
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;List 0 or more companies that control other companies. Each line contains two integers that denote that the company whose number is the first integer controls the company whose number is the second integer. Order the lines in ascending order of the first integer (and ascending order of the second integer to break ties). Do not print that a company controls itself.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-concomout&quot;&gt;SAMPLE OUTPUT (file concom.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2
-1 3
-2 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:</summary></entry><entry><title type="html">Money Systems</title><link href="https://matterdark.github.io//usaco/2018/10/18/money.html" rel="alternate" type="text/html" title="Money Systems" /><published>2018-10-18T00:00:00+00:00</published><updated>2018-10-18T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/money</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/money.html">&lt;p&gt;The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.&lt;/p&gt;
-
-&lt;p&gt;The cows want to know how many different ways it is possible to dispense a certain amount of money using various coin systems. For instance, using a system of {1, 2, 5, 10, …} it is possible to create 18 units several different ways, including: 18x1, 9x2, 8x2+2x1, 3x5+2+1, and many others.&lt;/p&gt;
-
-&lt;p&gt;Write a program to compute how many ways to construct a given amount of money using supplied coinage. It is guaranteed that the total will fit into both a signed long long (C/C++) and Int64 (Free Pascal).&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-money&quot;&gt;PROGRAM NAME: money&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The number of coins in the system is V (1 &amp;lt;= V &amp;lt;= 25).&lt;/p&gt;
-
-&lt;p&gt;The amount money to construct is N (1 &amp;lt;= N &amp;lt;= 10,000).&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two integers, V and N&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;V integers that represent the available coins (no particular number of integers per line)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-moneyin&quot;&gt;SAMPLE INPUT (file money.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 10
-1 2 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the total number of ways to construct N money units using V coins.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-moneyout&quot;&gt;SAMPLE OUTPUT (file money.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).</summary></entry></feed>
