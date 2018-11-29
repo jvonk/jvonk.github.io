@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T17:33:14+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Party Lamps</title><link href="https://matterdark.github.io//usaco/2018/10/13/lamps.html" rel="alternate" type="text/html" title="Party Lamps" /><published>2018-10-13T01:00:00+00:00</published><updated>2018-10-13T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/lamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/lamps.html">&lt;p&gt;To brighten up the gala dinner of the IOI’98 we have a set of &lt;strong&gt;N&lt;/strong&gt; (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to &lt;strong&gt;N&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T20:13:59+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Controlling Companies</title><link href="https://matterdark.github.io//usaco/2018/10/18/concom.html" rel="alternate" type="text/html" title="Controlling Companies" /><published>2018-10-18T01:00:00+00:00</published><updated>2018-10-18T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/concom</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/concom.html">&lt;p&gt;Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Company A = Company B&lt;/li&gt;
+  &lt;li&gt;Company A owns more than 50% of Company B&lt;/li&gt;
+  &lt;li&gt;Company A controls K (K &amp;gt;= 1) companies denoted C1, …, CK with each company Ci owning xi% of company B and x1 + …. + xK &amp;gt; 50%.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Given a list of triples (i,j,p) which denote company i owning p% of company j, calculate all the pairs (h,s) in which company h controls company s. There are at most 100 companies.&lt;/p&gt;
+
+&lt;p&gt;Write a program to read the list of triples (i,j,p) where i, j and p are positive integers all in the range (1..100) and find all the pairs (h,s) so that company h controls company s.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-concom&quot;&gt;PROGRAM NAME: concom&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N, the number of input triples to follow&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..n+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Three integers per line as a triple (i,j,p) described above.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-concomin&quot;&gt;SAMPLE INPUT (file concom.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
+1 2 80
+2 3 80
+3 1 20
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;List 0 or more companies that control other companies. Each line contains two integers that denote that the company whose number is the first integer controls the company whose number is the second integer. Order the lines in ascending order of the first integer (and ascending order of the second integer to break ties). Do not print that a company controls itself.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-concomout&quot;&gt;SAMPLE OUTPUT (file concom.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2
+1 3
+2 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:</summary></entry><entry><title type="html">Money Systems</title><link href="https://matterdark.github.io//usaco/2018/10/18/money.html" rel="alternate" type="text/html" title="Money Systems" /><published>2018-10-18T00:00:00+00:00</published><updated>2018-10-18T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/money</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/money.html">&lt;p&gt;The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.&lt;/p&gt;
+
+&lt;p&gt;The cows want to know how many different ways it is possible to dispense a certain amount of money using various coin systems. For instance, using a system of {1, 2, 5, 10, …} it is possible to create 18 units several different ways, including: 18x1, 9x2, 8x2+2x1, 3x5+2+1, and many others.&lt;/p&gt;
+
+&lt;p&gt;Write a program to compute how many ways to construct a given amount of money using supplied coinage. It is guaranteed that the total will fit into both a signed long long (C/C++) and Int64 (Free Pascal).&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-money&quot;&gt;PROGRAM NAME: money&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The number of coins in the system is V (1 &amp;lt;= V &amp;lt;= 25).&lt;/p&gt;
+
+&lt;p&gt;The amount money to construct is N (1 &amp;lt;= N &amp;lt;= 10,000).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two integers, V and N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2..:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;V integers that represent the available coins (no particular number of integers per line)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-moneyin&quot;&gt;SAMPLE INPUT (file money.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 10
+1 2 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the total number of ways to construct N money units using V coins.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-moneyout&quot;&gt;SAMPLE OUTPUT (file money.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have not only created their own government but they have chosen to create their own money system. In their own rebellious way, they are curious about values of coinage. Traditionally, coins come in values like 1, 5, 10, 20 or 25, 50, and 100 units, sometimes with a 2 unit coin thrown in for good measure.</summary></entry><entry><title type="html">Zero Sum</title><link href="https://matterdark.github.io//usaco/2018/10/16/zerosum.html" rel="alternate" type="text/html" title="Zero Sum" /><published>2018-10-16T02:00:00+00:00</published><updated>2018-10-16T02:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/zerosum</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/zerosum.html">&lt;p&gt;Consider the sequence of digits from 1 through N (where N=9) in increasing order: 1 2 3 … N.&lt;/p&gt;
+
+&lt;p&gt;Now insert either a `+’ for addition or a `-‘ for subtraction or a ` ‘ [blank] to run the digits together between each pair of digits (not in front of the first digit). Calculate the result that of the expression and see if you get zero.&lt;/p&gt;
+
+&lt;p&gt;Write a program that will find all sequences of length N that produce a zero sum.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-zerosum&quot;&gt;PROGRAM NAME: zerosum&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the integer N (3 &amp;lt;= N &amp;lt;= 9).&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-zerosumin&quot;&gt;SAMPLE INPUT (file zerosum.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;In ASCII order, show each sequence that can create 0 sum with a `+’, `-‘, or ` ‘ between each pair of numbers.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-zerosumout&quot;&gt;SAMPLE OUTPUT (file zerosum.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1+2-3+4-5-6+7
+1+2-3-4+5+6-7
+1-2 3+4+5+6+7
+1-2 3-4 5+6 7
+1-2+3+4-5+6-7
+1-2-3-4-5+6+7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the sequence of digits from 1 through N (where N=9) in increasing order: 1 2 3 … N.</summary></entry><entry><title type="html">Cow Pedigrees</title><link href="https://matterdark.github.io//usaco/2018/10/16/nocows.html" rel="alternate" type="text/html" title="Cow Pedigrees" /><published>2018-10-16T01:00:00+00:00</published><updated>2018-10-16T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/nocows</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/nocows.html">&lt;p&gt;Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The degree of each node is 0 or 2. The degree is the count of the node’s immediate children.&lt;/li&gt;
+  &lt;li&gt;The height of the tree is equal to K (1 &amp;lt; K &amp;lt; 100). The height is the number of nodes on the longest path from the root to any leaf; a leaf is a node with no children.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-nocows&quot;&gt;PROGRAM NAME: nocows&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Line 1: Two space-separated integers, N and K.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-nocowsin&quot;&gt;SAMPLE INPUT (file nocows.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Line 1: One single integer number representing the number of possible pedigrees MODULO 9901.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-nocowsout&quot;&gt;SAMPLE OUTPUT (file nocows.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS&lt;/h3&gt;
+
+&lt;p&gt;Two possible pedigrees have 5 nodes and height equal to 3:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    @                   @      
+   / \                 / \
+  @   @      and      @   @
+ / \                     / \
+@   @                   @   @
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:</summary></entry><entry><title type="html">Longest Prefix</title><link href="https://matterdark.github.io//usaco/2018/10/16/prefix.html" rel="alternate" type="text/html" title="Longest Prefix" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/prefix</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/prefix.html">&lt;p&gt;The structure of some biological objects is represented by the sequence of their constituents, where each part is denoted by an uppercase letter. Biologists are interested in decomposing a long sequence into shorter sequences called &lt;em&gt;primitives&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We say that a sequence &lt;strong&gt;S&lt;/strong&gt; can be composed from a given set of primitives &lt;strong&gt;P&lt;/strong&gt; if there is a some sequence of (possibly repeated) primitives from the set whose concatenation equals S. Not necessarily all primitives need be present. For instance the sequence ABABACABAAB can be composed from the set of primitives&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{A, AB, BA, CA, BBC}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first K characters of S are the &lt;em&gt;prefix of S with length K&lt;/em&gt;. Write a program which accepts as input a set of primitives and a sequence of constituents and then computes the length of the longest prefix that can be composed from primitives.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-prefix&quot;&gt;PROGRAM NAME: prefix&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;First, the input file contains the list (length 1..200) of primitives (length 1..10) expressed as a series of space-separated strings of upper-case characters on one or more lines. The list of primitives is terminated by a line that contains nothing more than a period (‘.’). No primitive appears twice in the list. Then, the input file contains a sequence S (length 1..200,000) expressed as one or more lines, none of which exceeds 76 letters in length. The “newlines” (line terminators) are not part of the string S.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-prefixin&quot;&gt;SAMPLE INPUT (file prefix.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A AB BA CA BBC
+.
+ABABACABAABC
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing an integer that is the length of the longest prefix that can be composed from the set P.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-prefixout&quot;&gt;SAMPLE OUTPUT (file prefix.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The structure of some biological objects is represented by the sequence of their constituents, where each part is denoted by an uppercase letter. Biologists are interested in decomposing a long sequence into shorter sequences called primitives.</summary></entry><entry><title type="html">Party Lamps</title><link href="https://matterdark.github.io//usaco/2018/10/13/lamps.html" rel="alternate" type="text/html" title="Party Lamps" /><published>2018-10-13T01:00:00+00:00</published><updated>2018-10-13T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/lamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/lamps.html">&lt;p&gt;To brighten up the gala dinner of the IOI’98 we have a set of &lt;strong&gt;N&lt;/strong&gt; (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to &lt;strong&gt;N&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;The lamps are connected to four buttons:&lt;/p&gt;
 
@@ -203,323 +385,4 @@ M  1000
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I 7
 V 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:</summary></entry><entry><title type="html">Healthy Holsteins</title><link href="https://matterdark.github.io//usaco/2018/10/11/holstein.html" rel="alternate" type="text/html" title="Healthy Holsteins" /><published>2018-10-11T00:00:00+00:00</published><updated>2018-10-11T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/11/holstein</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/11/holstein.html">&lt;p&gt;Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.&lt;/p&gt;
-
-&lt;p&gt;Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.&lt;/p&gt;
-
-&lt;p&gt;Vitamins are measured in integer units. Cows can be fed at most one scoop of any feed type. It is guaranteed that a solution exists for all contest input data.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-holstein&quot;&gt;PROGRAM NAME: holstein&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;integer V (1 &amp;lt;= V &amp;lt;= 25), the number of types of vitamins&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;V integers (1 &amp;lt;= each one &amp;lt;= 1000), the minimum requirement for each of the V vitamins that a cow requires each day&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;integer G (1 &amp;lt;= G &amp;lt;= 15), the number of types of feeds available&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 4..G+3:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;V integers (0 &amp;lt;= each one &amp;lt;= 1000), the amount of each vitamin that one scoop of this feed contains. The first line of these G lines describes feed #1; the second line describes feed #2; and so on.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-holsteinin&quot;&gt;SAMPLE INPUT (file holstein.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-100 200 300 400
-3
-50   50  50  50
-200 300 200 300
-900 150 389 399
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output is a single line of output that contains:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the minimum number of scoops a cow must eat, followed by:&lt;/li&gt;
-  &lt;li&gt;a SORTED list (from smallest to largest) of the feed types the cow is given&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If more than one set of feedtypes yield a minimum of scoops, choose the set with the smallest feedtype numbers.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-holsteinout&quot;&gt;SAMPLE OUTPUT (file holstein.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 1 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</summary></entry><entry><title type="html">Hamming Codes</title><link href="https://matterdark.github.io//usaco/2018/10/10/hamming.html" rel="alternate" type="text/html" title="Hamming Codes" /><published>2018-10-10T00:00:00+00:00</published><updated>2018-10-10T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/10/hamming</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/10/hamming.html">&lt;p&gt;Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.&lt;/p&gt;
-
-&lt;p&gt;The Hamming distance between a pair of codewords is the number of binary bits that differ in their binary notation. Consider the two codewords 0x554 and 0x234 and their differences (0x554 means the hexadecimal number with hex digits 5, 5, and 4)(a hex digit requires four bits):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;           0x554 = 0101 0101 0100
-           0x234 = 0010 0011 0100
-Bit differences:   -XXX -XX- ----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Since five bits were different, the Hamming distance is 5.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-hamming&quot;&gt;PROGRAM NAME: hamming&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;N, B, D on a single line&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-hammingin&quot;&gt;SAMPLE INPUT (file hamming.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;16 7 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;N codewords, sorted, in decimal, ten per line. In the case of multiple solutions, your program should output the solution which, if interpreted as a base 2^B integer, would have the least value.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-hammingout&quot;&gt;SAMPLE OUTPUT (file hamming.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 7 25 30 42 45 51 52 75 76
-82 85 97 102 120 127
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.</summary></entry><entry><title type="html">Sorting a Three-Valued Sequence</title><link href="https://matterdark.github.io//usaco/2018/10/09/sort3.html" rel="alternate" type="text/html" title="Sorting a Three-Valued Sequence" /><published>2018-10-09T01:00:00+00:00</published><updated>2018-10-09T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/sort3</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/sort3.html">&lt;p&gt;Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most &lt;em&gt;three&lt;/em&gt; different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.&lt;/p&gt;
-
-&lt;p&gt;In this task the possible key values are the integers 1, 2 and 3. The required sorting order is non-decreasing. However, sorting has to be accomplished by a sequence of exchange operations. An exchange operation, defined by two position numbers p and q, exchanges the elements in positions p and q.&lt;/p&gt;
-
-&lt;p&gt;You are given a sequence of key values. Write a program that computes the minimal number of exchange operations that are necessary to make the sequence sorted.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-sort3&quot;&gt;PROGRAM NAME: sort3&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N (1 &amp;lt;= N &amp;lt;= 1000), the number of records to be sorted&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2-N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;A single integer from the set {1, 2, 3}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-sort3in&quot;&gt;SAMPLE INPUT (file sort3.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
-2
-2
-1
-3
-3
-3
-2
-3
-1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the number of exchanges required&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-sort3out&quot;&gt;SAMPLE OUTPUT (file sort3.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most three different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.</summary></entry><entry><title type="html">The Castle</title><link href="https://matterdark.github.io//usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/castle</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
-
-&lt;p&gt;Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room.&lt;/p&gt;
-
-&lt;p&gt;Your task is to help Farmer John know the exact room count and sizes.&lt;/p&gt;
-
-&lt;p&gt;The castle floorplan is divided into M (wide) by N (1 &amp;lt;=M,N&amp;lt;=50) square modules. Each such module can have between zero and four walls. Castles always have walls on their “outer edges” to keep out the wind and rain.&lt;/p&gt;
-
-&lt;p&gt;Consider this annotated floorplan of a castle:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     1   2   3   4   5   6   7
-   #############################
- 1 #   |   #   |   #   |   |   #
-   #####---#####---#---#####---#   
- 2 #   #   |   #   #   #   #   #
-   #---#####---#####---#####---#
- 3 #   |   |   #   #   #   #   #   
-   #---#########---#####---#---#
- 4 # -&amp;gt;#   |   |   |   |   #   #   
-   ############################# 
-
-#  = Wall     -,|  = No wall
--&amp;gt; = Points to the wall to remove to
-     make the largest possible new room
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;By way of example, this castle sits on a 7 x 4 base. A “room” includes any set of connected “squares” in the floor plan. This floorplan contains five rooms (whose sizes are 9, 7, 3, 1, and 8 in no particular order).&lt;/p&gt;
-
-&lt;p&gt;Removing the wall marked by the arrow merges a pair of rooms to make the largest possible room that can be made by removing a single wall.&lt;/p&gt;
-
-&lt;p&gt;The castle always has at least two rooms and always has a wall that can be removed.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-castle&quot;&gt;PROGRAM NAME: castle&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The map is stored in the form of numbers, one number for each module (“room”), M numbers on each of N lines to describe the floorplan. The input order corresponds to the numbering in the example diagram above.&lt;/p&gt;
-
-&lt;p&gt;Each module descriptive-number tells which of the four walls exist and is the sum of up to four integers:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. wall to the west
-2. wall to the north
-4. wall to the east
-8. wall to the south
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Inner walls are defined twice; a wall to the south in module 1,1 is also indicated as a wall to the north in module 2,1.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two space-separated integers: M and N&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..M+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;M x N integers, several per line.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-castlein&quot;&gt;SAMPLE INPUT (file castle.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7 4
-11 6 11 6 3 10 6
-7 9 6 13 5 15 5
-1 10 12 7 13 7 5
-13 11 10 8 10 12 13
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output contains several lines:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The number of rooms the castle has.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The size of the largest room&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The size of the largest room creatable by removing one wall&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 4:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The single wall to remove to make the largest room possible&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Choose the optimal wall to remove from the set of optimal walls by choosing the module farthest to the west (and then, if still tied, farthest to the south). If still tied, choose ‘N’ before ‘E’. Name that wall by naming the module that borders it on either the west or south, along with a direction of N or E giving the location of the wall with respect to the module.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-castleout&quot;&gt;SAMPLE OUTPUT (file castle.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-9
-16
-4 1 E
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
-
-&lt;p&gt;First, the map is partitioned like below. Note that walls not on the outside borders are doubled:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     1    2    3    4    5    6    7
-   ####|####|####|####|####|####|#####
- 1 #   |   #|#   |   #|#   |    |    #
-   ####|   #|####|   #|#   |####|    #
-  -----|----|----|----|----|----|-----
-   ####|#   |####|#  #|#  #|####|#   #
- 2 #  #|#   |   #|#  #|#  #|#  #|#   #
-   #  #|####|   #|####|#  #|####|#   #
-  -----|----|----|----|----|----|-----
-   #   |####|   #|####|#  #|####|#   #
- 3 #   |    |   #|#  #|#  #|#  #|#   #
-   #   |####|####|#  #|####|#  #|#   #
-  -----|----|----|----|----|----|-----
-   #  #|####|####|    |####|   #|#   #
- 4 #  #|#   |    |    |    |   #|#   #
-   ####|####|####|####|####|####|#####
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Let’s talk about the squares with a (row, column) notation such that the lower right corner is denoted (4, 7).&lt;/p&gt;
-
-&lt;p&gt;The input will have four lines, each with 7 numbers. Each number describes one ‘room’. &amp;gt;Walls further toward the top are ‘north’, towards the bottom are ‘south’, towards the left are ‘west’, and towards the right are ‘east’.&lt;/p&gt;
-
-&lt;p&gt;Consider square (1,1) which has three walls: north, south, and west. To encode those three walls, we consult the chart:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. wall to the west
-2. wall to the north
-3. wall to the east
-4. wall to the south
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and sum the numbers for north (2), south (8), and west (1). 2 + 8 + 1 = 11, so this room is encoded as 11.&lt;/p&gt;
-
-&lt;p&gt;The next room to the right (1,2) has walls on the north (2) and east (4) and thus is encoded as 2 +4 = 6.&lt;/p&gt;
-
-&lt;p&gt;The next room to the right (1,3) is the same as (1,1) and thus encodes as 11.&lt;/p&gt;
-
-&lt;p&gt;Room (1,4) is the same as (1,2) and thus encodes as 6.&lt;/p&gt;
-
-&lt;p&gt;Room (1,5) has rooms on the west (1) and north (2) and thus encodes as 1 + 2 = 3.&lt;/p&gt;
-
-&lt;p&gt;Room (1,6) has rooms on the north (2) and south (8) and thus encodes as 2 + 8 = 10.&lt;/p&gt;
-
-&lt;p&gt;Room (1,7) is the same as room (1,2) and thus encodes as 6.&lt;/p&gt;
-
-&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Ordered Fractions</title><link href="https://matterdark.github.io//usaco/2018/10/06/frac1.html" rel="alternate" type="text/html" title="Ordered Fractions" /><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/06/frac1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/06/frac1.html">&lt;p&gt;Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.&lt;/p&gt;
-
-&lt;p&gt;Here is the set when N = 5:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0/1 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 1/1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Write a program that, given an integer N between 1 and 160 inclusive, prints the fractions in order of increasing magnitude.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-frac1&quot;&gt;PROGRAM NAME: frac1&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;One line with a single integer N.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-frac1in&quot;&gt;SAMPLE INPUT (file frac1.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;One fraction per line, sorted in order of magnitude.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-frac1out&quot;&gt;SAMPLE OUTPUT (file frac1.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0/1
-1/5
-1/4
-1/3
-2/5
-1/2
-3/5
-2/3
-3/4
-4/5
-1/1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:</summary></entry></feed>

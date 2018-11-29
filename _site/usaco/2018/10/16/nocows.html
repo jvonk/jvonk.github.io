@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Healthy Holsteins | Johan Vonk’s Website</title>
+<title>Cow Pedigrees | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Healthy Holsteins" />
+<meta property="og:title" content="Cow Pedigrees" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<meta property="og:description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
+<meta name="description" content="How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901." />
+<meta property="og:description" content="How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901." />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/16/nocows.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/16/nocows.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-11T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-16T01:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/11/holstein.html","headline":"Healthy Holsteins","dateModified":"2018-10-11T00:00:00+00:00","datePublished":"2018-10-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/11/holstein.html"},"@context":"http://schema.org"}</script>
+{"description":"How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/16/nocows.html","headline":"Cow Pedigrees","dateModified":"2018-10-16T01:00:00+00:00","datePublished":"2018-10-16T01:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/16/nocows.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1340,13 +1340,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Healthy Holsteins</h1>
+                    USACO: Cow Pedigrees</h1>
                 
                     <h2 class="project-tagline">
-                        Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</h2>
+                        How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901.</h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/nocows/nocows.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1357,61 +1357,44 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</p>
+                <p>Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &lt;= N &lt; 200) nodes. The trees have these properties:</p>
 
-<p>Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</p>
+<ul>
+  <li>The degree of each node is 0 or 2. The degree is the count of the node’s immediate children.</li>
+  <li>The height of the tree is equal to K (1 &lt; K &lt; 100). The height is the number of nodes on the longest path from the root to any leaf; a leaf is a node with no children.</li>
+</ul>
 
-<p>Vitamins are measured in integer units. Cows can be fed at most one scoop of any feed type. It is guaranteed that a solution exists for all contest input data.</p>
+<p>How many different possible pedigree structures are there? A pedigree is different if its tree structure differs from that of another pedigree. Output the remainder when the total number of different possible pedigrees is divided by 9901.</p>
 
-<h3 id="program-name-holstein">PROGRAM NAME: holstein</h3>
+<h3 id="program-name-nocows">PROGRAM NAME: nocows</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Line 1:</strong></td>
-      <td>integer V (1 &lt;= V &lt;= 25), the number of types of vitamins</td>
-    </tr>
-    <tr>
-      <td><strong>Line 2:</strong></td>
-      <td>V integers (1 &lt;= each one &lt;= 1000), the minimum requirement for each of the V vitamins that a cow requires each day</td>
-    </tr>
-    <tr>
-      <td><strong>Line 3:</strong></td>
-      <td>integer G (1 &lt;= G &lt;= 15), the number of types of feeds available</td>
-    </tr>
-    <tr>
-      <td><strong>Lines 4..G+3:</strong></td>
-      <td>V integers (0 &lt;= each one &lt;= 1000), the amount of each vitamin that one scoop of this feed contains. The first line of these G lines describes feed #1; the second line describes feed #2; and so on.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Line 1: Two space-separated integers, N and K.</p>
 
-<h3 id="sample-input-file-holsteinin">SAMPLE INPUT (file holstein.in)</h3>
+<h3 id="sample-input-file-nocowsin">SAMPLE INPUT (file nocows.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
-100 200 300 400
-3
-50   50  50  50
-200 300 200 300
-900 150 389 399
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 3
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>The output is a single line of output that contains:</p>
+<p>Line 1: One single integer number representing the number of possible pedigrees MODULO 9901.</p>
 
-<ul>
-  <li>the minimum number of scoops a cow must eat, followed by:</li>
-  <li>a SORTED list (from smallest to largest) of the feed types the cow is given</li>
-</ul>
+<h3 id="sample-output-file-nocowsout">SAMPLE OUTPUT (file nocows.out)</h3>
 
-<p>If more than one set of feedtypes yield a minimum of scoops, choose the set with the smallest feedtype numbers.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+</code></pre></div></div>
 
-<h3 id="sample-output-file-holsteinout">SAMPLE OUTPUT (file holstein.out)</h3>
+<h3 id="output-details">OUTPUT DETAILS</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 1 3
+<p>Two possible pedigrees have 5 nodes and height equal to 3:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    @                   @      
+   / \                 / \
+  @   @      and      @   @
+ / \                     / \
+@   @                   @   @
 </code></pre></div></div>
 
             </div>
@@ -1419,8 +1402,8 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/holstein/holstein.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/nocows/nocows.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/nocows/nocows.java"></script>-->
                 </div>
             
             

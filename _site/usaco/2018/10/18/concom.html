@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Healthy Holsteins | Johan Vonk’s Website</title>
+<title>Controlling Companies | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Healthy Holsteins" />
+<meta property="og:title" content="Controlling Companies" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<meta property="og:description" content="Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/11/holstein.html" />
+<meta name="description" content="My personal static website created using Github Pages, Markdown, and Jekyll" />
+<meta property="og:description" content="My personal static website created using Github Pages, Markdown, and Jekyll" />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/18/concom.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/18/concom.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-11T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-10-18T01:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/11/holstein.html","headline":"Healthy Holsteins","dateModified":"2018-10-11T00:00:00+00:00","datePublished":"2018-10-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/11/holstein.html"},"@context":"http://schema.org"}</script>
+{"description":"My personal static website created using Github Pages, Markdown, and Jekyll","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/18/concom.html","headline":"Controlling Companies","dateModified":"2018-10-18T01:00:00+00:00","datePublished":"2018-10-18T01:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/18/concom.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1340,13 +1340,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Healthy Holsteins</h1>
+                    USACO: Controlling Companies</h1>
                 
                     <h2 class="project-tagline">
-                        Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</h2>
+                        </h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_2/concom/concom.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1357,13 +1357,19 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</p>
+                <p>Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:</p>
 
-<p>Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.</p>
+<ul>
+  <li>Company A = Company B</li>
+  <li>Company A owns more than 50% of Company B</li>
+  <li>Company A controls K (K &gt;= 1) companies denoted C1, …, CK with each company Ci owning xi% of company B and x1 + …. + xK &gt; 50%.</li>
+</ul>
 
-<p>Vitamins are measured in integer units. Cows can be fed at most one scoop of any feed type. It is guaranteed that a solution exists for all contest input data.</p>
+<p>Given a list of triples (i,j,p) which denote company i owning p% of company j, calculate all the pairs (h,s) in which company h controls company s. There are at most 100 companies.</p>
 
-<h3 id="program-name-holstein">PROGRAM NAME: holstein</h3>
+<p>Write a program to read the list of triples (i,j,p) where i, j and p are positive integers all in the range (1..100) and find all the pairs (h,s) so that company h controls company s.</p>
+
+<h3 id="program-name-concom">PROGRAM NAME: concom</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
@@ -1371,47 +1377,32 @@
   <tbody>
     <tr>
       <td><strong>Line 1:</strong></td>
-      <td>integer V (1 &lt;= V &lt;= 25), the number of types of vitamins</td>
+      <td>N, the number of input triples to follow</td>
     </tr>
     <tr>
-      <td><strong>Line 2:</strong></td>
-      <td>V integers (1 &lt;= each one &lt;= 1000), the minimum requirement for each of the V vitamins that a cow requires each day</td>
-    </tr>
-    <tr>
-      <td><strong>Line 3:</strong></td>
-      <td>integer G (1 &lt;= G &lt;= 15), the number of types of feeds available</td>
-    </tr>
-    <tr>
-      <td><strong>Lines 4..G+3:</strong></td>
-      <td>V integers (0 &lt;= each one &lt;= 1000), the amount of each vitamin that one scoop of this feed contains. The first line of these G lines describes feed #1; the second line describes feed #2; and so on.</td>
+      <td><strong>Line 2..n+1:</strong></td>
+      <td>Three integers per line as a triple (i,j,p) described above.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="sample-input-file-holsteinin">SAMPLE INPUT (file holstein.in)</h3>
+<h3 id="sample-input-file-concomin">SAMPLE INPUT (file concom.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
-100 200 300 400
-3
-50   50  50  50
-200 300 200 300
-900 150 389 399
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+1 2 80
+2 3 80
+3 1 20
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>The output is a single line of output that contains:</p>
+<p>List 0 or more companies that control other companies. Each line contains two integers that denote that the company whose number is the first integer controls the company whose number is the second integer. Order the lines in ascending order of the first integer (and ascending order of the second integer to break ties). Do not print that a company controls itself.</p>
 
-<ul>
-  <li>the minimum number of scoops a cow must eat, followed by:</li>
-  <li>a SORTED list (from smallest to largest) of the feed types the cow is given</li>
-</ul>
+<h3 id="sample-output-file-concomout">SAMPLE OUTPUT (file concom.out)</h3>
 
-<p>If more than one set of feedtypes yield a minimum of scoops, choose the set with the smallest feedtype numbers.</p>
-
-<h3 id="sample-output-file-holsteinout">SAMPLE OUTPUT (file holstein.out)</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 1 3
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 2
+1 3
+2 3
 </code></pre></div></div>
 
             </div>
@@ -1419,8 +1410,8 @@
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/holstein/holstein.java"></object>
-                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/holstein/holstein.java"></script>-->
+                    <object id="code" type="text/plain" style="width: 1000px; height: 500px;" data="https://gitcdn.xyz/repo/matterdark/USACO/master/Chapter_2/concom/concom.java"></object>
+                    <!--<script src="http://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_2/concom/concom.java"></script>-->
                 </div>
             
             
