@@ -1,4 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-28T04:23:36+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">The Castle</title><link href="https://matterdark.github.io//usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/09/castle</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-29T17:17:45+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="http://localhost:4000/portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>http://localhost:4000/portfolio/2018/11/24/overview</id><content type="html" xml:base="http://localhost:4000/portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Healthy Holsteins</title><link href="http://localhost:4000/usaco/2018/10/11/holstein.html" rel="alternate" type="text/html" title="Healthy Holsteins" /><published>2018-10-11T00:00:00+00:00</published><updated>2018-10-11T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/11/holstein</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/11/holstein.html">&lt;p&gt;Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.&lt;/p&gt;
+
+&lt;p&gt;Given the daily requirements of each kind of vitamin that a cow needs, identify the smallest combination of scoops of feed a cow can be fed in order to meet at least the minimum vitamin requirements.&lt;/p&gt;
+
+&lt;p&gt;Vitamins are measured in integer units. Cows can be fed at most one scoop of any feed type. It is guaranteed that a solution exists for all contest input data.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-holstein&quot;&gt;PROGRAM NAME: holstein&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;integer V (1 &amp;lt;= V &amp;lt;= 25), the number of types of vitamins&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;V integers (1 &amp;lt;= each one &amp;lt;= 1000), the minimum requirement for each of the V vitamins that a cow requires each day&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;integer G (1 &amp;lt;= G &amp;lt;= 15), the number of types of feeds available&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 4..G+3:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;V integers (0 &amp;lt;= each one &amp;lt;= 1000), the amount of each vitamin that one scoop of this feed contains. The first line of these G lines describes feed #1; the second line describes feed #2; and so on.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-holsteinin&quot;&gt;SAMPLE INPUT (file holstein.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+100 200 300 400
+3
+50   50  50  50
+200 300 200 300
+900 150 389 399
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output is a single line of output that contains:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the minimum number of scoops a cow must eat, followed by:&lt;/li&gt;
+  &lt;li&gt;a SORTED list (from smallest to largest) of the feed types the cow is given&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If more than one set of feedtypes yield a minimum of scoops, choose the set with the smallest feedtype numbers.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-holsteinout&quot;&gt;SAMPLE OUTPUT (file holstein.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 1 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John prides himself on having the healthiest dairy cows in the world. He knows the vitamin content for one scoop of each feed type and the minimum daily vitamin requirement for his cows. Help Farmer John feed the cows so they stay healthy while minimizing the number of scoops that a cow is fed.</summary></entry><entry><title type="html">Hamming Codes</title><link href="http://localhost:4000/usaco/2018/10/10/hamming.html" rel="alternate" type="text/html" title="Hamming Codes" /><published>2018-10-10T00:00:00+00:00</published><updated>2018-10-10T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/10/hamming</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/10/hamming.html">&lt;p&gt;Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.&lt;/p&gt;
+
+&lt;p&gt;The Hamming distance between a pair of codewords is the number of binary bits that differ in their binary notation. Consider the two codewords 0x554 and 0x234 and their differences (0x554 means the hexadecimal number with hex digits 5, 5, and 4)(a hex digit requires four bits):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;           0x554 = 0101 0101 0100
+           0x234 = 0010 0011 0100
+Bit differences:   -XXX -XX- ----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since five bits were different, the Hamming distance is 5.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-hamming&quot;&gt;PROGRAM NAME: hamming&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;N, B, D on a single line&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-hammingin&quot;&gt;SAMPLE INPUT (file hamming.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;16 7 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;N codewords, sorted, in decimal, ten per line. In the case of multiple solutions, your program should output the solution which, if interpreted as a base 2^B integer, would have the least value.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-hammingout&quot;&gt;SAMPLE OUTPUT (file hamming.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 7 25 30 42 45 51 52 75 76
+82 85 97 102 120 127
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given N, B, and D: Find a set of N codewords (1 &amp;lt;= N &amp;lt;= 64), each of length B bits (1 &amp;lt;= B &amp;lt;= 8), such that each of the codewords is at least Hamming distance of D (1 &amp;lt;= D &amp;lt;= 7) away from each of the other codewords.</summary></entry><entry><title type="html">Sorting a Three-Valued Sequence</title><link href="http://localhost:4000/usaco/2018/10/09/sort3.html" rel="alternate" type="text/html" title="Sorting a Three-Valued Sequence" /><published>2018-10-09T01:00:00+00:00</published><updated>2018-10-09T01:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/09/sort3</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/09/sort3.html">&lt;p&gt;Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most &lt;em&gt;three&lt;/em&gt; different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.&lt;/p&gt;
+
+&lt;p&gt;In this task the possible key values are the integers 1, 2 and 3. The required sorting order is non-decreasing. However, sorting has to be accomplished by a sequence of exchange operations. An exchange operation, defined by two position numbers p and q, exchanges the elements in positions p and q.&lt;/p&gt;
+
+&lt;p&gt;You are given a sequence of key values. Write a program that computes the minimal number of exchange operations that are necessary to make the sequence sorted.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-sort3&quot;&gt;PROGRAM NAME: sort3&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N (1 &amp;lt;= N &amp;lt;= 1000), the number of records to be sorted&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2-N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A single integer from the set {1, 2, 3}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-sort3in&quot;&gt;SAMPLE INPUT (file sort3.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
+2
+2
+1
+3
+3
+3
+2
+3
+1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the number of exchanges required&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-sort3out&quot;&gt;SAMPLE OUTPUT (file sort3.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Sorting is one of the most frequently performed computational tasks. Consider the special sorting problem in which the records to be sorted have at most three different key values. This happens for instance when we sort medalists of a competition according to medal value, that is, gold medalists come first, followed by silver, and bronze medalists come last.</summary></entry><entry><title type="html">The Castle</title><link href="http://localhost:4000/usaco/2018/10/09/castle.html" rel="alternate" type="text/html" title="The Castle" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/09/castle</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/09/castle.html">&lt;p&gt;In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.&lt;/p&gt;
 
 &lt;p&gt;Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room.&lt;/p&gt;
 
@@ -151,7 +280,44 @@
 
 &lt;p&gt;Room (1,7) is the same as room (1,2) and thus encodes as 6.&lt;/p&gt;
 
-&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Prime Palindromes</title><link href="https://matterdark.github.io//usaco/2018/10/05/pprime.html" rel="alternate" type="text/html" title="Prime Palindromes" /><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/05/pprime</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/05/pprime.html">&lt;p&gt;The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .&lt;/p&gt;
+&lt;p&gt;This same method continues for rooms (2,1) through (4,7).&lt;/p&gt;</content><author><name></name></author><summary type="html">In a stroke of luck almost beyond imagination, Farmer John was sent a ticket to the Irish Sweepstakes (really a lottery) for his birthday. This ticket turned out to have only the winning number for the lottery! Farmer John won a fabulous castle in the Irish countryside.</summary></entry><entry><title type="html">Ordered Fractions</title><link href="http://localhost:4000/usaco/2018/10/06/frac1.html" rel="alternate" type="text/html" title="Ordered Fractions" /><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/06/frac1</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/06/frac1.html">&lt;p&gt;Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.&lt;/p&gt;
+
+&lt;p&gt;Here is the set when N = 5:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0/1 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 1/1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Write a program that, given an integer N between 1 and 160 inclusive, prints the fractions in order of increasing magnitude.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-frac1&quot;&gt;PROGRAM NAME: frac1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;One line with a single integer N.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-frac1in&quot;&gt;SAMPLE INPUT (file frac1.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;One fraction per line, sorted in order of magnitude.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-frac1out&quot;&gt;SAMPLE OUTPUT (file frac1.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0/1
+1/5
+1/4
+1/3
+2/5
+1/2
+3/5
+2/3
+3/4
+4/5
+1/1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the set of all reduced fractions between 0 and 1 inclusive with denominators less than or equal to N.</summary></entry><entry><title type="html">Prime Palindromes</title><link href="http://localhost:4000/usaco/2018/10/05/pprime.html" rel="alternate" type="text/html" title="Prime Palindromes" /><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/05/pprime</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/05/pprime.html">&lt;p&gt;The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .&lt;/p&gt;
 
 &lt;h3 id=&quot;program-name-pprime&quot;&gt;PROGRAM NAME: pprime&lt;/h3&gt;
 
@@ -205,7 +371,7 @@
 	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .</summary></entry><entry><title type="html">Superprime Rib</title><link href="https://matterdark.github.io//usaco/2018/10/04/sprime.html" rel="alternate" type="text/html" title="Superprime Rib" /><published>2018-10-04T01:00:00+00:00</published><updated>2018-10-04T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/04/sprime</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/04/sprime.html">&lt;p&gt;Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The number 151 is a prime palindrome because it is both a prime number and a palindrome (it is the same number when read forward as backward). Write a program that finds all prime palindromes in the range of two supplied numbers a and b (5 &amp;lt;= a &amp;lt; b &amp;lt;= 100,000,000); both a and b are considered to be within the range .</summary></entry><entry><title type="html">Superprime Rib</title><link href="http://localhost:4000/usaco/2018/10/04/sprime.html" rel="alternate" type="text/html" title="Superprime Rib" /><published>2018-10-04T01:00:00+00:00</published><updated>2018-10-04T01:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/04/sprime</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/04/sprime.html">&lt;p&gt;Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7  3  3  1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -249,7 +415,7 @@
 7331
 7333
 7393
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:</summary></entry><entry><title type="html">Number Triangles</title><link href="https://matterdark.github.io//usaco/2018/10/04/numtri.html" rel="alternate" type="text/html" title="Number Triangles" /><published>2018-10-04T00:00:00+00:00</published><updated>2018-10-04T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/04/numtri</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/04/numtri.html">&lt;p&gt;Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Butchering Farmer John’s cows always yields the best prime rib. You can tell prime ribs by looking at the digits lovingly stamped across them, one by one, by FJ and the USDA. Farmer John ensures that a purchaser of his prime ribs gets really prime ribs because when sliced from the right, the numbers on the ribs continue to stay prime right down to the last rib, e.g.:</summary></entry><entry><title type="html">Number Triangles</title><link href="http://localhost:4000/usaco/2018/10/04/numtri.html" rel="alternate" type="text/html" title="Number Triangles" /><published>2018-10-04T00:00:00+00:00</published><updated>2018-10-04T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/04/numtri</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/04/numtri.html">&lt;p&gt;Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        7
 
@@ -287,7 +453,7 @@
 &lt;h3 id=&quot;sample-output-file-numtriout&quot;&gt;SAMPLE OUTPUT (file numtri.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</summary></entry><entry><title type="html">Mother’s Milk</title><link href="https://matterdark.github.io//usaco/2018/10/03/milk3.html" rel="alternate" type="text/html" title="Mother's Milk" /><published>2018-10-03T00:00:00+00:00</published><updated>2018-10-03T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/03/milk3</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/03/milk3.html">&lt;p&gt;Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the number triangle shown below. Write a program that calculates the highest sum of numbers that can be passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right.</summary></entry><entry><title type="html">Mother’s Milk</title><link href="http://localhost:4000/usaco/2018/10/03/milk3.html" rel="alternate" type="text/html" title="Mother's Milk" /><published>2018-10-03T00:00:00+00:00</published><updated>2018-10-03T00:00:00+00:00</updated><id>http://localhost:4000/usaco/2018/10/03/milk3</id><content type="html" xml:base="http://localhost:4000/usaco/2018/10/03/milk3.html">&lt;p&gt;Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.&lt;/p&gt;
 
 &lt;p&gt;Write a program to help FJ determine what amounts of milk he can leave in bucket C when he begins with three buckets as above, pours milk among the buckets for a while, and then notes that bucket A is empty.&lt;/p&gt;
 
@@ -319,245 +485,4 @@
 &lt;h3 id=&quot;sample-output-file-milk3out-1&quot;&gt;SAMPLE OUTPUT (file milk3.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 6 7 8 9 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.</summary></entry><entry><title type="html">Arithmetic Progressions</title><link href="https://matterdark.github.io//usaco/2018/10/02/ariprog.html" rel="alternate" type="text/html" title="Arithmetic Progressions" /><published>2018-10-02T00:00:00+00:00</published><updated>2018-10-02T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/02/ariprog</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/02/ariprog.html">&lt;p&gt;An arithmetic progression is a sequence of the form a, a+b, a+2b, …, a+nb where n=0, 1, 2, 3, … . For this problem, a is a non-negative integer and b is a positive integer.&lt;/p&gt;
-
-&lt;p&gt;Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers).&lt;/p&gt;
-
-&lt;h3 id=&quot;time-limit-5-secs&quot;&gt;TIME LIMIT: 5 secs&lt;/h3&gt;
-
-&lt;h3 id=&quot;program-name-ariprog&quot;&gt;PROGRAM NAME: ariprog&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N (3 &amp;lt;= N &amp;lt;= 25), the length of progressions for which to search&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;M (1 &amp;lt;= M &amp;lt;= 250), an upper bound to limit the search to the bisquares with 0 &amp;lt;= p,q &amp;lt;= M.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-ariprogin&quot;&gt;SAMPLE INPUT (file ariprog.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;If no sequence is found, a single line reading `NONE’. Otherwise, output one or more lines, each with two integers: the first element in a found sequence and the difference between consecutive elements in the same sequence. The lines should be ordered with smallest-difference sequences first and smallest starting number within those sequences first.&lt;/p&gt;
-
-&lt;p&gt;There will be no more than 10,000 sequences.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-ariprogout&quot;&gt;SAMPLE OUTPUT (file ariprog.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 4
-37 4
-2 8
-29 8
-1 12
-5 12
-13 12
-17 12
-5 20
-2 24
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">An arithmetic progression is a sequence of the form a, a+b, a+2b, …, a+nb where n=0, 1, 2, 3, … . For this problem, a is a non-negative integer and b is a positive integer.</summary></entry><entry><title type="html">Ski Course Design</title><link href="https://matterdark.github.io//usaco/2018/10/01/skidesign.html" rel="alternate" type="text/html" title="Ski Course Design" /><published>2018-10-01T00:00:00+00:00</published><updated>2018-10-01T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/01/skidesign</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/01/skidesign.html">&lt;p&gt;Farmer John has N hills on his farm (1 &amp;lt;= N &amp;lt;= 1,000), each with an integer elevation in the range 0 .. 100. In the winter, since there is abundant snow on these hills, FJ routinely operates a ski training camp.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, FJ has just found out about a new tax that will be assessed next year on farms used as ski training camps. Upon careful reading of the law, however, he discovers that the official definition of a ski camp requires the difference between the highest and lowest hill on his property to be strictly larger than 17. Therefore, if he shortens his tallest hills and adds mass to increase the height of his shorter hills, FJ can avoid paying the tax as long as the new difference between the highest and lowest hill is at most 17.&lt;/p&gt;
-
-&lt;p&gt;If it costs x^2 units of money to change the height of a hill by x units, what is the minimum amount of money FJ will need to pay? FJ can change the height of a hill only once, so the total cost for each hill is the square of the difference between its original and final height. FJ is only willing to change the height of each hill by an integer amount.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-skidesign&quot;&gt;PROGRAM NAME: skidesign&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT:&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The integer N.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..1+N:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains the elevation of a single hill.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-skidesignin&quot;&gt;SAMPLE INPUT (file skidesign.in):&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-20
-4
-1
-24
-21
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS:&lt;/h3&gt;
-
-&lt;p&gt;FJ’s farm has 5 hills, with elevations 1, 4, 20, 21, and 24.&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT:&lt;/h3&gt;
-
-&lt;p&gt;The minimum amount FJ needs to pay to modify the elevations of his hills so the difference between largest and smallest is at most 17 units.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-skidesignout&quot;&gt;SAMPLE OUTPUT (file skidesign.out):&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;18
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS:&lt;/h3&gt;
-
-&lt;p&gt;FJ keeps the hills of heights 4, 20, and 21 as they are. He adds mass to the hill of height 1, bringing it to height 4 (cost = 3^2 = 9). He shortens the hill of height 24 to height 21, also at a cost of 3^2 = 9.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has N hills on his farm (1 &amp;lt;= N &amp;lt;= 1,000), each with an integer elevation in the range 0 .. 100. In the winter, since there is abundant snow on these hills, FJ routinely operates a ski training camp.</summary></entry><entry><title type="html">Wormholes</title><link href="https://matterdark.github.io//usaco/2018/09/30/wormhole.html" rel="alternate" type="text/html" title="Wormholes" /><published>2018-09-30T04:00:00+00:00</published><updated>2018-09-30T04:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/30/wormhole</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/30/wormhole.html">&lt;p&gt;Farmer John’s hobby of conducting high-energy physics experiments on weekends has backfired, causing N wormholes (2 &amp;lt;= N &amp;lt;= 12, N even) to materialize on his farm, each located at a distinct point on the 2D map of his farm (the x,y coordinates are both integers).&lt;/p&gt;
-
-&lt;p&gt;According to his calculations, Farmer John knows that his wormholes will form N/2 connected pairs. For example, if wormholes A and B are connected as a pair, then any object entering wormhole A will exit wormhole B moving in the same direction, and any object entering wormhole B will similarly exit from wormhole A moving in the same direction. This can have rather unpleasant consequences.&lt;/p&gt;
-
-&lt;p&gt;For example, suppose there are two paired wormholes A at (1,1) and B at (3,1), and that Bessie the cow starts from position (2,1) moving in the +x direction. Bessie will enter wormhole B [at (3,1)], exit from A [at (1,1)], then enter B again, and so on, getting trapped in an infinite cycle!&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   | . . . .
-   | A &amp;gt; B .      Bessie will travel to B then
-   + . . . .      A then across to B again
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Farmer John knows the exact location of each wormhole on his farm. He knows that Bessie the cow always walks in the +x direction, although he does not remember where Bessie is currently located.&lt;/p&gt;
-
-&lt;p&gt;Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle). Note that a loop with a smaller number of wormholes might contribute a number of different sets of pairings to the total count as those wormholes that are not in the loop are paired in many different ways.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-wormhole&quot;&gt;PROGRAM NAME: wormhole&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT:&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The number of wormholes, N.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..1+N:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains two space-separated integers describing the (x,y) coordinates of a single wormhole. Each coordinate is in the range 0..1,000,000,000.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-wormholein&quot;&gt;SAMPLE INPUT (file wormhole.in):&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-0 0
-1 0
-1 1
-0 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS:&lt;/h3&gt;
-
-&lt;p&gt;There are 4 wormholes, forming the corners of a square.&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT:&lt;/h3&gt;
-
-&lt;p&gt;Line 1: The number of distinct pairings of wormholes such that Bessie could conceivably get stuck in a cycle walking from some starting point in the +x direction.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-wormholeout&quot;&gt;SAMPLE OUTPUT (file wormhole.out):&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-`&quot;&gt;2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;output-details&quot;&gt;OUTPUT DETAILS:&lt;/h3&gt;
-
-&lt;p&gt;If we number the wormholes 1..4 as we read them from the input, then if wormhole 1 pairs with wormhole 2 and wormhole 3 pairs with wormhole 4, Bessie can get stuck if she starts anywhere between (0,0) and (1,0) or between (0,1) and (1,1).&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   | . . . .
-   4 3 . . .      Bessie will travel to B then
-   1-2-.-.-.      A then across to B again
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Similarly, with the same starting points, Bessie can get stuck in a cycle if the pairings are 1-3 and 2-4 (if Bessie enters WH#3 and comes out at WH#1, she then walks to WH#2 which transports here to WH#4 which directs her towards WH#3 again for a cycle).&lt;/p&gt;
-
-&lt;p&gt;Only the pairings 1-4 and 2-3 allow Bessie to walk in the +x direction from any point in the 2D plane with no danger of cycling.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John’s hobby of conducting high-energy physics experiments on weekends has backfired, causing N wormholes (2 &amp;lt;= N &amp;lt;= 12, N even) to materialize on his farm, each located at a distinct point on the 2D map of his farm (the x,y coordinates are both integers).</summary></entry><entry><title type="html">Combination Lock</title><link href="https://matterdark.github.io//usaco/2018/09/30/combo.html" rel="alternate" type="text/html" title="Combination Lock" /><published>2018-09-30T01:00:00+00:00</published><updated>2018-09-30T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/09/30/combo</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/09/30/combo.html">&lt;p&gt;Farmer John’s cows keep escaping from his farm and causing mischief. To try and prevent them from leaving, he purchases a fancy combination lock to keep his cows from opening the pasture gate.&lt;/p&gt;
-
-&lt;p&gt;Knowing that his cows are quite clever, Farmer John wants to make sure they cannot easily open the lock by simply trying many different combinations. The lock has three dials, each numbered 1..N (1 &amp;lt;= N &amp;lt;= 100), where 1 and N are adjacent since the dials are circular. There are two combinations that open the lock, one set by Farmer John, and also a “master” combination set by the lock maker.&lt;/p&gt;
-
-&lt;p&gt;The lock has a small tolerance for error, however, so it will open even if the numbers on the dials are each within at most 2 positions of a valid combination.&lt;/p&gt;
-
-&lt;p&gt;For example, if Farmer John’s combination is (1,2,3) and the master combination is (4,5,6), the lock will open if its dials are set to (1,3,5) (since this is close enough to Farmer John’s combination) or to (2,4,8) (since this is close enough to the master combination). Note that (1,5,6) would not open the lock, since it is not close enough to any one single combination.&lt;/p&gt;
-
-&lt;p&gt;Given Farmer John’s combination and the master combination, please determine the number of distinct settings for the dials that will open the lock. Order matters, so the setting (1,2,3) is distinct from (3,2,1).&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-combo&quot;&gt;PROGRAM NAME: combo&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT:&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Line 1:&lt;/th&gt;
-      &lt;th&gt;The integer N.&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Line 2:&lt;/td&gt;
-      &lt;td&gt;Three space-separated integers, specifying Farmer John’s combination.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Line 3:&lt;/td&gt;
-      &lt;td&gt;Three space-separated integers, specifying the master combination (possibly the same as Farmer John’s combination).&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-comboin&quot;&gt;SAMPLE INPUT (file combo.in):&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;50
-1 2 3
-5 6 7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS:&lt;/h3&gt;
-
-&lt;p&gt;Each dial is numbered 1..50. Farmer John’s combination is (1,2,3), and the master combination is (5,6,7).&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT:&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Line 1:&lt;/strong&gt; The number of distinct dial settings that will open the lock.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-comboout&quot;&gt;SAMPLE OUTPUT (file combo.out):&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;249
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sample-output-explanation&quot;&gt;SAMPLE OUTPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;Here’s a list:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1,1,1  2,2,4  3,4,2  4,4,5  5,4,8  6,5,6  7,5,9  3,50,2  50,1,4 
-1,1,2  2,2,5  3,4,3  4,4,6  5,4,9  6,5,7  7,6,5  3,50,3  50,1,5 
-1,1,3  2,3,1  3,4,4  4,4,7  5,5,5  6,5,8  7,6,6  3,50,4  50,2,1 
-1,1,4  2,3,2  3,4,5  4,4,8  5,5,6  6,5,9  7,6,7  3,50,5  50,2,2 
-1,1,5  2,3,3  3,4,6  4,4,9  5,5,7  6,6,5  7,6,8  49,1,1  50,2,3 
-1,2,1  2,3,4  3,4,7  4,5,5  5,5,8  6,6,6  7,6,9  49,1,2  50,2,4 
-1,2,2  2,3,5  3,4,8  4,5,6  5,5,9  6,6,7  7,7,5  49,1,3  50,2,5 
-1,2,3  2,4,1  3,4,9  4,5,7  5,6,5  6,6,8  7,7,6  49,1,4  50,3,1 
-1,2,4  2,4,2  3,5,5  4,5,8  5,6,6  6,6,9  7,7,7  49,1,5  50,3,2 
-1,2,5  2,4,3  3,5,6  4,5,9  5,6,7  6,7,5  7,7,8  49,2,1  50,3,3 
-1,3,1  2,4,4  3,5,7  4,6,5  5,6,8  6,7,6  7,7,9  49,2,2  50,3,4 
-1,3,2  2,4,5  3,5,8  4,6,6  5,6,9  6,7,7  7,8,5  49,2,3  50,3,5 
-1,3,3  3,1,1  3,5,9  4,6,7  5,7,5  6,7,8  7,8,6  49,2,4  50,4,1 
-1,3,4  3,1,2  3,6,5  4,6,8  5,7,6  6,7,9  7,8,7  49,2,5  50,4,2 
-1,3,5  3,1,3  3,6,6  4,6,9  5,7,7  6,8,5  7,8,8  49,3,1  50,4,3 
-1,4,1  3,1,4  3,6,7  4,7,5  5,7,8  6,8,6  7,8,9  49,3,2  50,4,4 
-1,4,2  3,1,5  3,6,8  4,7,6  5,7,9  6,8,7  1,50,1 49,3,3  50,4,5 
-1,4,3  3,2,1  3,6,9  4,7,7  5,8,5  6,8,8  1,50,2 49,3,4  49,50,1
-1,4,4  3,2,2  3,7,5  4,7,8  5,8,6  6,8,9  1,50,3 49,3,5  49,50,2
-1,4,5  3,2,3  3,7,6  4,7,9  5,8,7  7,4,5  1,50,4 49,4,1  49,50,3
-2,1,1  3,2,4  3,7,7  4,8,5  5,8,8  7,4,6  1,50,5 49,4,2  49,50,4
-2,1,2  3,2,5  3,7,8  4,8,6  5,8,9  7,4,7  2,50,1 49,4,3  49,50,5
-2,1,3  3,3,1  3,7,9  4,8,7  6,4,5  7,4,8  2,50,2 49,4,4  50,50,1
-2,1,4  3,3,2  3,8,5  4,8,8  6,4,6  7,4,9  2,50,3 49,4,5  50,50,2
-2,1,5  3,3,3  3,8,6  4,8,9  6,4,7  7,5,5  2,50,4 50,1,1  50,50,3
-2,2,1  3,3,4  3,8,7  5,4,5  6,4,8  7,5,6  2,50,5 50,1,2  50,50,4
-2,2,2  3,3,5  3,8,8  5,4,6  6,4,9  7,5,7  3,50,1 50,1,3  50,50,5
-2,2,3  3,4,1  3,8,9  5,4,7  6,5,5  7,5,8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John’s cows keep escaping from his farm and causing mischief. To try and prevent them from leaving, he purchases a fancy combination lock to keep his cows from opening the pasture gate.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John has three milking buckets of capacity A, B, and C liters. Each of the numbers A, B, and C is an integer from 1 through 20, inclusive. Initially, buckets A and B are empty while bucket C is full of milk. Sometimes, FJ pours milk from one bucket to another until the second bucket is filled or the first bucket is empty. Once begun, a pour must be completed, of course. Being thrifty, no milk may be tossed out.</summary></entry></feed>
