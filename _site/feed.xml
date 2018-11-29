@@ -1,4 +1,313 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T20:54:21+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Controlling Companies</title><link href="https://matterdark.github.io//usaco/2018/10/18/concom.html" rel="alternate" type="text/html" title="Controlling Companies" /><published>2018-10-18T01:00:00+00:00</published><updated>2018-10-18T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/concom</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/concom.html">&lt;p&gt;Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T21:50:02+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Fractions to Decimals</title><link href="https://matterdark.github.io//usaco/2018/11/01/fracdec.html" rel="alternate" type="text/html" title="Fractions to Decimals" /><published>2018-11-01T01:00:00+00:00</published><updated>2018-11-01T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/fracdec</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/fracdec.html">&lt;p&gt;Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1/3     =  0.(3)
+22/5    =  4.4
+1/7     =  0.(142857)
+2/2     =  1.0
+3/8     =  0.375
+45/56   =  0.803(571428)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;program-name-fracdec&quot;&gt;PROGRAM NAME: fracdec&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with two space separated integers, N and D, 1 &amp;lt;= N,D &amp;lt;= 100000.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-fracdecin&quot;&gt;SAMPLE INPUT (file fracdec.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;45 56
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The decimal expansion, as detailed above. If the expansion exceeds 76 characters in length, print it on multiple lines with 76 characters per line.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fracdecout&quot;&gt;SAMPLE OUTPUT (file fracdec.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.803(571428)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:</summary></entry><entry><title type="html">Cow Tours</title><link href="https://matterdark.github.io//usaco/2018/11/01/cowtour.html" rel="alternate" type="text/html" title="Cow Tours" /><published>2018-11-01T00:00:00+00:00</published><updated>2018-11-01T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/cowtour</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/cowtour.html">&lt;p&gt;Farmer John has a number of pastures on his farm. Cow paths connect some pastures with certain other pastures, forming a field. But, at the present time, you can find at least two pastures that cannot be connected by any sequence of cow paths, thus partitioning Farmer John’s farm into multiple fields.&lt;/p&gt;
+
+&lt;p&gt;Farmer John would like add a single a cow path between one pair of pastures using the constraints below.&lt;/p&gt;
+
+&lt;p&gt;A field’s `diameter’ is defined to be the largest distance of all the shortest walks between any pair of pastures in the field. Consider the field below with five pastures, located at the points shown, and cow paths marked by lines:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         15,15   20,15
+           D       E
+           *-------*
+           |     _/|
+           |   _/  |
+           | _/    |
+           |/      |
+  *--------*-------*
+  A        B       C
+10,10    15,10   20,10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The `diameter’ of this field is approximately 12.07106, since the longest of the set of shortest paths between pairs of pastures is the path from A to E (which includes the point set {A,B,E}). No other pair of pastures in this field is farther apart when connected by an optimal sequence of cow paths.&lt;/p&gt;
+
+&lt;p&gt;Suppose an additional field on the same plane as above is connected by cow paths as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         *F 30,15
+        / 
+      _/  
+    _/    
+   /      
+  *------*
+  G      H
+25,10  30,10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Given just these two fields on his farm, Farmer John would add a cow path between a point in each of these two fields (namely point sets {A,B,C,D,E} and {F,G,H}) so that the joined set of pastures {A,B,C,D,E,F,G,H} has the smallest possible diameter.&lt;/p&gt;
+
+&lt;p&gt;Note that cow paths do not connect just because they cross each other; they only connect at listed points.&lt;/p&gt;
+
+&lt;p&gt;The input contains the pastures, their locations, and a symmetric “adjacency” matrix that tells whether pastures are connected by cow paths. Pastures are not considered to be connected to themselves. Here’s one annotated adjacency list for the pasture {A,B,C,D,E,F,G,H} as shown above:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  A B C D E F G H
+A 0 1 0 0 0 0 0 0
+B 1 0 1 1 1 0 0 0
+C 0 1 0 0 1 0 0 0
+D 0 1 0 0 1 0 0 0
+E 0 1 1 1 0 0 0 0
+F 0 0 0 0 0 0 1 0
+G 0 0 0 0 0 1 0 1
+H 0 0 0 0 0 0 1 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Other equivalent adjacency lists might permute the rows and columns by using some order other than alphabetical to show the point connections. The input data contains no names for the points.&lt;/p&gt;
+
+&lt;p&gt;The input will contain at least two pastures that are not connected by any sequence of cow paths.&lt;/p&gt;
+
+&lt;p&gt;Find a way to connect exactly two pastures in the input with a cow path so that the new combined field has the smallest possible diameter of any possible pair of connected pastures. Output that smallest possible diameter.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-cowtour&quot;&gt;PROGRAM NAME: cowtour&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;An integer, N (1 &amp;lt;= N &amp;lt;= 150), the number of pastures&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2-N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two integers, X and Y (0 &amp;lt;= X ,Y&amp;lt;= 100000), that denote that X,Y grid location of the pastures; all input pastures are unique.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line N+2-2*N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;lines, each containing N digits (0 or 1) that represent the adjacency matrix as described above, where the rows’ and columns’ indices are in order of the points just listed.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-cowtourin&quot;&gt;SAMPLE INPUT (file cowtour.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8
+10 10
+15 10
+20 10
+15 15
+20 15
+30 15
+25 10
+30 10
+01000000
+10111000
+01001000
+01001000
+01110000
+00000010
+00000101
+00000010
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output consists of a single line with the diameter of the newly joined pastures. Print the answer to exactly six decimal places. Do not perform any special rounding on your output.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-cowtourout&quot;&gt;SAMPLE OUTPUT (file cowtour.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;22.071068
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
+
+&lt;p&gt;After trying all possible connection pairs, connecting C to G yields the minimum diameter.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has a number of pastures on his farm. Cow paths connect some pastures with certain other pastures, forming a field. But, at the present time, you can find at least two pastures that cannot be connected by any sequence of cow paths, thus partitioning Farmer John’s farm into multiple fields.</summary></entry><entry><title type="html">Bessie Come Home</title><link href="https://matterdark.github.io//usaco/2018/10/28/comehome.html" rel="alternate" type="text/html" title="Bessie Come Home" /><published>2018-10-28T00:00:00+00:00</published><updated>2018-10-28T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/28/comehome</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/28/comehome.html">&lt;p&gt;It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).&lt;/p&gt;
+
+&lt;p&gt;Between milkings, each cow is located in her own pasture, though some pastures have no cows in them. Each pasture is connected by a path to one or more other pastures (potentially including itself). Sometimes, two (potentially self-same) pastures are connected by more than one path. One or more of the pastures has a path to the barn. Thus, all cows have a path to the barn and they always know the shortest path. Of course, cows can go either direction on a path and they all walk at the same speed.&lt;/p&gt;
+
+&lt;p&gt;The pastures are labeled ‘a’..’z’ and ‘A’..’Y’. One cow is in each pasture labeled with a capital letter. No cow is in a pasture labeled with a lower case letter. The barn’s label is ‘Z’; no cows are in the barn, though.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-comehome&quot;&gt;PROGRAM NAME: comehome&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Integer P (1 &amp;lt;= P &amp;lt;= 10000) the number of paths that interconnect the pastures (and the barn)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2..P+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Space separated, two letters and an integer: the names of the interconnected pastures/barn and the distance between them (1 &amp;lt;= distance &amp;lt;= 1000)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-comehomein&quot;&gt;SAMPLE INPUT (file comehome.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+A d 6
+B d 3
+C e 9
+d Z 8
+e Z 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing two items: the capital letter name of the pasture of the cow that arrives first back at the barn, the length of the path followed by that cow.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-comehomeout&quot;&gt;SAMPLE OUTPUT (file comehome.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B 11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).</summary></entry><entry><title type="html">Overfencing</title><link href="https://matterdark.github.io//usaco/2018/10/23/maze1.html" rel="alternate" type="text/html" title="Overfencing" /><published>2018-10-23T01:00:00+00:00</published><updated>2018-10-23T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/23/maze1</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/23/maze1.html">&lt;p&gt;Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two “exits” for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it.&lt;/p&gt;
+
+&lt;p&gt;Given W (1 &amp;lt;= W &amp;lt;= 38), the width of the maze; H (1 &amp;lt;= H &amp;lt;= 100), the height of the maze; 2*H+1 lines with width 2*W+1 characters that represent the maze in a format like that shown later - then calculate the number of steps required to exit the maze from the ‘worst’ point in the maze (the point that is ‘farther’ from either exit even when walking optimally to the closest exit). Of course, cows walk only parallel or perpendicular to the x-y axes; they do not walk on a diagonal. Each move to a new square counts as a single unit of distance (including the move “out” of the maze.&lt;/p&gt;
+
+&lt;p&gt;Here’s what one particular W=5, H=3 maze looks like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+-+-+-+-+-+
+|         |
++-+ +-+ + +
+|     | | |
++ +-+-+ + +
+| |     |  
++-+ +-+-+-+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Fenceposts appear only in odd numbered rows and and odd numbered columns (as in the example). The format should be obvious and self explanatory. Each maze has exactly two blank walls on the outside for exiting.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-maze1&quot;&gt;PROGRAM NAME: maze1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;W and H, space separated&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2 through 2*H+2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;2*W+1 characters that represent the maze&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-maze1in&quot;&gt;SAMPLE INPUT (file maze1.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3
++-+-+-+-+-+
+|         |
++-+ +-+ + +
+|     | | |
++ +-+-+ + +
+| |     |  
++-+ +-+-+-+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single integer on a single output line. The integer specifies the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-maze1out&quot;&gt;SAMPLE OUTPUT (file maze1.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The lower left-hand corner is &lt;strong&gt;nine&lt;/strong&gt; steps from the closest exit.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two “exits” for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it.</summary></entry><entry><title type="html">The Tamworth Two</title><link href="https://matterdark.github.io//usaco/2018/10/23/ttwo.html" rel="alternate" type="text/html" title="The Tamworth Two" /><published>2018-10-23T00:00:00+00:00</published><updated>2018-10-23T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/23/ttwo</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/23/ttwo.html">&lt;p&gt;A pair of cows is loose somewhere in the forest. Farmer John is lending his expertise to their capture. Your task is to model their behavior.&lt;/p&gt;
+
+&lt;p&gt;The chase takes place on a 10 by 10 planar grid. Squares can be empty or they can contain:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an obstacle,&lt;/li&gt;
+  &lt;li&gt;the cows (who always travel together), or&lt;/li&gt;
+  &lt;li&gt;Farmer John.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The cows and Farmer John can occupy the same square (when they `meet’) but neither the cows nor Farmer John can share a square with an obstacle.&lt;/p&gt;
+
+&lt;p&gt;Each square is represented as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;. Empty square
+* Obstacle
+C Cows
+F Farmer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is a sample grid:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*...*.....
+......*...
+...*...*..
+..........
+...*.F....
+*.....*...
+...*......
+..C......*
+...*.*....
+.*.*......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The cows wander around the grid in a fixed way. Each minute, they either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking `forward’, then they spend the entire minute rotating 90 degrees clockwise.&lt;/p&gt;
+
+&lt;p&gt;Farmer John, wise in the ways of cows, moves in exactly the same way.&lt;/p&gt;
+
+&lt;p&gt;The farmer and the cows can be considered to move simultaneously during each minute. If the farmer and the cows pass each other while moving, they are not considered to have met. The chase ends when Farmer John and the cows occupy the same square at the end of a minute.&lt;/p&gt;
+
+&lt;p&gt;Read a ten-line grid that represents the initial state of the cows, Farmer John, and obstacles. Each of the ten lines contains exactly ten characters using the coding above. There is guaranteed to be only one farmer and one pair of cows. The cows and Farmer John will not initially be on the same square.&lt;/p&gt;
+
+&lt;p&gt;Calculate the number of minutes until the cows and Farmer John meet. Assume both the cows and farmer begin the simulation facing in the ‘north’ direction. Print 0 if they will never meet.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-ttwo&quot;&gt;PROGRAM NAME: ttwo&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 1-10:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Ten lines of ten characters each, as explained above&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-ttwoin&quot;&gt;SAMPLE INPUT (file ttwo.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*...*.....
+......*...
+...*...*..
+..........
+...*.F....
+*.....*...
+...*......
+..C......*
+...*.*....
+.*.*......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the integer number of minutes until Farmer John and the cows meet. Print 0 if they will never meet.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-ttwoout&quot;&gt;SAMPLE OUTPUT (file ttwo.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;49
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A pair of cows is loose somewhere in the forest. Farmer John is lending his expertise to their capture. Your task is to model their behavior.</summary></entry><entry><title type="html">Controlling Companies</title><link href="https://matterdark.github.io//usaco/2018/10/18/concom.html" rel="alternate" type="text/html" title="Controlling Companies" /><published>2018-10-18T01:00:00+00:00</published><updated>2018-10-18T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/18/concom</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/18/concom.html">&lt;p&gt;Some companies are partial owners of other companies because they have acquired part of their total shares of stock. For example, Ford at one point owned 12% of Mazda. It is said that a company A controls company B if at least one of the following conditions is satisfied:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Company A = Company B&lt;/li&gt;
@@ -151,238 +460,4 @@
   @   @      and      @   @
  / \                     / \
 @   @                   @   @
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:</summary></entry><entry><title type="html">Longest Prefix</title><link href="https://matterdark.github.io//usaco/2018/10/16/prefix.html" rel="alternate" type="text/html" title="Longest Prefix" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/16/prefix</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/16/prefix.html">&lt;p&gt;The structure of some biological objects is represented by the sequence of their constituents, where each part is denoted by an uppercase letter. Biologists are interested in decomposing a long sequence into shorter sequences called &lt;em&gt;primitives&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;We say that a sequence &lt;strong&gt;S&lt;/strong&gt; can be composed from a given set of primitives &lt;strong&gt;P&lt;/strong&gt; if there is a some sequence of (possibly repeated) primitives from the set whose concatenation equals S. Not necessarily all primitives need be present. For instance the sequence ABABACABAAB can be composed from the set of primitives&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{A, AB, BA, CA, BBC}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The first K characters of S are the &lt;em&gt;prefix of S with length K&lt;/em&gt;. Write a program which accepts as input a set of primitives and a sequence of constituents and then computes the length of the longest prefix that can be composed from primitives.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-prefix&quot;&gt;PROGRAM NAME: prefix&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;First, the input file contains the list (length 1..200) of primitives (length 1..10) expressed as a series of space-separated strings of upper-case characters on one or more lines. The list of primitives is terminated by a line that contains nothing more than a period (‘.’). No primitive appears twice in the list. Then, the input file contains a sequence S (length 1..200,000) expressed as one or more lines, none of which exceeds 76 letters in length. The “newlines” (line terminators) are not part of the string S.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-prefixin&quot;&gt;SAMPLE INPUT (file prefix.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A AB BA CA BBC
-.
-ABABACABAABC
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing an integer that is the length of the longest prefix that can be composed from the set P.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-prefixout&quot;&gt;SAMPLE OUTPUT (file prefix.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;11
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The structure of some biological objects is represented by the sequence of their constituents, where each part is denoted by an uppercase letter. Biologists are interested in decomposing a long sequence into shorter sequences called primitives.</summary></entry><entry><title type="html">Party Lamps</title><link href="https://matterdark.github.io//usaco/2018/10/13/lamps.html" rel="alternate" type="text/html" title="Party Lamps" /><published>2018-10-13T01:00:00+00:00</published><updated>2018-10-13T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/lamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/lamps.html">&lt;p&gt;To brighten up the gala dinner of the IOI’98 we have a set of &lt;strong&gt;N&lt;/strong&gt; (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to &lt;strong&gt;N&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;The lamps are connected to four buttons:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Button 1: When this button is pressed, all the lamps change their state: those that are ON are turned OFF and those that are OFF are turned ON.&lt;/li&gt;
-  &lt;li&gt;Button 2: Changes the state of all the odd numbered lamps.&lt;/li&gt;
-  &lt;li&gt;Button 3: Changes the state of all the even numbered lamps.&lt;/li&gt;
-  &lt;li&gt;Button 4: Changes the state of the lamps whose number is of the form 3xK+1 (with K&amp;gt;=0), i.e., 1,4,7,…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A counter C records the total number of button presses.&lt;/p&gt;
-
-&lt;p&gt;When the party starts, all the lamps are ON and the counter C is set to zero.&lt;/p&gt;
-
-&lt;p&gt;You are given the value of counter C (0 &amp;lt;= C &amp;lt;= 10000) and the final state of some of the lamps after some operations have been executed. Write a program to determine all the possible final configurations of the N lamps that are consistent with the given information, without repetitions.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-lamps&quot;&gt;PROGRAM NAME: lamps&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;No lamp will be listed twice in the input.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Final value of C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 3:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Some lamp numbers ON in the final configuration, separated by one space and terminated by the integer -1.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 4:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Some lamp numbers OFF in the final configuration, separated by one space and terminated by the integer -1.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-lampsin&quot;&gt;SAMPLE INPUT (file lamps.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
-1
--1
-7 -1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In this case, there are 10 lamps and only one button has been pressed. Lamp 7 is OFF in the final configuration.&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Lines with all the possible final configurations (without repetitions) of all the lamps. Each line has N characters, where the first character represents the state of lamp 1 and the last character represents the state of lamp N. A 0 (zero) stands for a lamp that is OFF, and a 1 (one) stands for a lamp that is ON. The lines must be ordered from least to largest (as binary numbers).&lt;/p&gt;
-
-&lt;p&gt;If there are no possible configurations, output a single line with the single word `IMPOSSIBLE’&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-lampsout&quot;&gt;SAMPLE OUTPUT (file lamps.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0000000000
-0101010101
-0110110110
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In this case, there are three possible final configurations:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;All lamps are OFF&lt;/li&gt;
-  &lt;li&gt;Lamps 1, 3, 5, 7, 9 are OFF and lamps 2, 4, 6, 8, 10 are &lt;strong&gt;ON&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Lamps 1, 4, 7, 10 are OFF and lamps 2, 3, 5, 6, 8, 9 are &lt;strong&gt;ON&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">To brighten up the gala dinner of the IOI’98 we have a set of N (10 &amp;lt;= N &amp;lt;= 100) colored lamps numbered from 1 to N.</summary></entry><entry><title type="html">Runaround Numbers</title><link href="https://matterdark.github.io//usaco/2018/10/13/runround.html" rel="alternate" type="text/html" title="Runaround Numbers" /><published>2018-10-13T00:00:00+00:00</published><updated>2018-10-13T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/13/runround</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/13/runround.html">&lt;p&gt;Runaround numbers are integers with unique digits, none of which is zero (e.g., 81362) that also have an interesting property, exemplified by this demonstration:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If you start at the left digit (8 in our number) and count that number of digits to the right (wrapping back to the first digit when no digits on the right are available), you’ll end up at a new digit (a number which does not end up at a new digit is not a Runaround Number). Consider: 8 1 3 6 2 which cycles through eight digits: 1 3 6 2 8 1 3 6 so the next digit is 6.&lt;/li&gt;
-  &lt;li&gt;Repeat this cycle (this time for the six counts designed by the `6’) and you should end on a new digit: 2 8 1 3 6 2, namely 2.&lt;/li&gt;
-  &lt;li&gt;Repeat again (two digits this time): 8 1&lt;/li&gt;
-  &lt;li&gt;Continue again (one digit this time): 3&lt;/li&gt;
-  &lt;li&gt;One more time: 6 2 8 and you have ended up back where you started, after touching each digit once. If you don’t end up back where you started after touching each digit once, your number is not a Runaround number.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Given a number M (that has anywhere from 1 through 9 digits), find and print the next runaround number higher than M, which will always fit into an unsigned long integer for the given test data.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-runround&quot;&gt;PROGRAM NAME: runround&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with a single integer, M&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-runroundin&quot;&gt;SAMPLE INPUT (file runround.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;81361
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the next runaround number higher than the input value, M.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-runroundout&quot;&gt;SAMPLE OUTPUT (file runround.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;81362
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Runaround numbers are integers with unique digits, none of which is zero (e.g., 81362) that also have an interesting property, exemplified by this demonstration:</summary></entry><entry><title type="html">Subset Sums</title><link href="https://matterdark.github.io//usaco/2018/10/12/subset.html" rel="alternate" type="text/html" title="Subset Sums" /><published>2018-10-12T00:00:00+00:00</published><updated>2018-10-12T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/12/subset</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/12/subset.html">&lt;p&gt;For many sets of consecutive integers from 1 through N (1 &amp;lt;= N &amp;lt;= 39), one can partition the set into two sets whose sums are identical.&lt;/p&gt;
-
-&lt;p&gt;For example, if N=3, one can partition the set {1, 2, 3} in one way so that the sums of both subsets are identical:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;{3} and {1,2}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This counts as a single partitioning (i.e., reversing the order counts as the same partitioning and thus does not increase the count of partitions).&lt;/p&gt;
-
-&lt;p&gt;If N=7, there are four ways to partition the set {1, 2, 3, … 7} so that each partition has the same sum:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;{1,6,7} and {2,3,4,5}&lt;/li&gt;
-  &lt;li&gt;{2,5,7} and {1,3,4,6}&lt;/li&gt;
-  &lt;li&gt;{3,4,7} and {1,2,5,6}&lt;/li&gt;
-  &lt;li&gt;{1,2,4,7} and {3,5,6}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Given N, your program should print the number of ways a set containing the integers from 1 through N can be partitioned into two sets whose sums are identical. Print 0 if there are no such ways.&lt;/p&gt;
-
-&lt;p&gt;Your program must calculate the answer, not look it up from a table.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-subset&quot;&gt;PROGRAM NAME: subset&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The input file contains a single line with a single integer representing N, as above.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-subsetin&quot;&gt;SAMPLE INPUT (file subset.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output file contains a single line with a single integer that tells how many same-sum partitions can be made from the set {1, 2, …, N}. The output file should contain 0 if there are no ways to make a same-sum partition.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-subsetout&quot;&gt;SAMPLE OUTPUT (file subset.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For many sets of consecutive integers from 1 through N (1 &amp;lt;= N &amp;lt;= 39), one can partition the set into two sets whose sums are identical.</summary></entry><entry><title type="html">Preface Numbering</title><link href="https://matterdark.github.io//usaco/2018/10/11/preface.html" rel="alternate" type="text/html" title="Preface Numbering" /><published>2018-10-11T01:00:00+00:00</published><updated>2018-10-11T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/11/preface</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/11/preface.html">&lt;p&gt;A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I   1
-V   5
-X  10
-L   50
-C  100
-D  500
-M  1000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As many as three of the same marks that represent 10n may be placed consecutively to form other numbers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;III is 3&lt;/li&gt;
-  &lt;li&gt;CCC is 300&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Marks that have the value 5x10n are never used consecutively.&lt;/p&gt;
-
-&lt;p&gt;Generally (with the exception of the next rule), marks are connected together and written in descending order to form even more numbers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CCLXVIII = 100+100+50+10+5+1+1+1 = 268&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sometimes, a mark that represents 10^n is placed before a mark of one of the two next higher values (I before V or X; X before L or C; etc.). In this case, the value of the smaller mark is SUBTRACTED from the mark it precedes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;IV = 4&lt;/li&gt;
-  &lt;li&gt;IX = 9&lt;/li&gt;
-  &lt;li&gt;XL = 40&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This compound mark forms a unit and may not be combined to make another compound mark (e.g., IXL is wrong for 39; XXXIX is correct).&lt;/p&gt;
-
-&lt;p&gt;Compound marks like XD, IC, and XM are not legal, since the smaller mark is too much smaller than the larger one. For XD (wrong for 490), one would use CDXC; for IC (wrong for 99), one would use XCIX; for XM (wrong for 990), one would use CMXC. 90 is expressed XC and not LXL, since L followed by X connotes that successive marks are X or smaller (probably, anyway).&lt;/p&gt;
-
-&lt;p&gt;Given N (1 &amp;lt;= N &amp;lt; 3,500), the number of pages in the preface of a book, calculate and print the number of I’s, V’s, etc. (in order from lowest to highest) required to typeset all the page numbers (in Roman numerals) from 1 through N. Do not print letters that do not appear in the page numbers specified.&lt;/p&gt;
-
-&lt;p&gt;If N = 5, then the page numbers are: I, II, III, IV, V. The total number of I’s is 7 and the total number of V’s is 2.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-preface&quot;&gt;PROGRAM NAME: preface&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the integer N.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-prefacein&quot;&gt;SAMPLE INPUT (file preface.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output lines specify, in ascending order of Roman numeral letters, the letter, a single space, and the number of times that letter appears on preface page numbers. Stop printing letter totals after printing the highest value letter used to form preface numbers in the specified set.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-prefaceout&quot;&gt;SAMPLE OUTPUT (file preface.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I 7
-V 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">A certain book’s prefaces are numbered in upper case Roman numerals. Traditional Roman numeral values use a single letter to represent a certain subset of decimal numbers. Here is the standard set:</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John is considering purchasing a new herd of cows. In this new herd, each mother cow gives birth to two children. The relationships among the cows can easily be represented by one or more binary trees with a total of N (3 &amp;lt;= N &amp;lt; 200) nodes. The trees have these properties:</summary></entry></feed>
