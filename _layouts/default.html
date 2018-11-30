@@ -130,15 +130,18 @@
                                 {{ page.categories[0] }} - {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">
-                                {{ site.github.owner_name }}</a>.</span>
-                        {% else %}
+                                {{ site.github.owner_name }}</a>
+                            .
+                        </span>
+                    {% else %}
                         <span class="site-footer-owner">
                             <a href="{{ page.link }}">
                                 {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">
-                                {{
-site.github.owner_name }}</a>.</span>
+                                {{site.github.owner_name }}</a>
+                            .
+                        </span>
                     {% endif %}
                 </footer>
                 {% else %}

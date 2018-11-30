@@ -1,23 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-29T23:45:01+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Stamps</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Stamps" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-11-30T00:16:20+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://matterdark.github.io//usaco/2018/11/16/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/16/spin</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/16/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
 
-&lt;p&gt;For example, consider stamps whose values are limited to 1 cent and 3 cents; you can use at most 5 stamps. It’s easy to see how to assemble postage of 1 through 5 cents (just use that many 1 cent stamps), and successive values aren’t much harder:&lt;/p&gt;
+&lt;p&gt;This is an integer problem. Wheels are never actually at 1.5 degrees or 23.51234123 degrees. For example, the wheels are considered to move instantaneously from 20 to 25 degrees during a single second or even from 30 to 40 degrees if the wheel is spinning quickly.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;6 = 3 + 3&lt;/li&gt;
-  &lt;li&gt;7 = 3 + 3 + 1&lt;/li&gt;
-  &lt;li&gt;8 = 3 + 3 + 1 + 1&lt;/li&gt;
-  &lt;li&gt;9 = 3 + 3 + 3&lt;/li&gt;
-  &lt;li&gt;10 = 3 + 3 + 3 + 1&lt;/li&gt;
-  &lt;li&gt;11 = 3 + 3 + 3 + 1 + 1&lt;/li&gt;
-  &lt;li&gt;12 = 3 + 3 + 3 + 3&lt;/li&gt;
-  &lt;li&gt;13 = 3 + 3 + 3 + 3 + 1.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;All angles in this problem are presumed to be integers in the range 0 &amp;lt;= angle &amp;lt;= 359. The angle of 0 degrees follows the angle of 359 degrees. Each wheel rotates at a certain integer number of degrees per second, 1 &amp;lt;= speed &amp;lt;= 180.&lt;/p&gt;
 
-&lt;p&gt;However, there is no way to make 14 cents of postage with 5 or fewer stamps of value 1 and 3 cents. Thus, for this set of two stamp values and a limit of K=5, the answer is M=13.&lt;/p&gt;
+&lt;p&gt;Wedges for each wheel are specified by an integer start angle and integer angle size (or `extent’), both specified in degrees. Wedges in the test data will be separated by at least one degree. The ‘extent’ also includes the original “degree” of the wedge, so ‘0 180’ means degrees 0..180 inclusive – one more than most would imagine.&lt;/p&gt;
 
-&lt;p&gt;The most difficult test case for this problem has a time limit of 3 seconds.&lt;/p&gt;
+&lt;p&gt;At the start, which is time 0, all the wheels’ alignment marks line up. Your program must determine the earliest time (integer seconds) at or after the start that some wedge on each wheel will align with the wedges on the other wheel so that a light beam can pass through openings on all five wedges. The wedges can align at any part of the rotation.&lt;/p&gt;
 
-&lt;h3 id=&quot;program-name-stamps&quot;&gt;PROGRAM NAME: stamps&lt;/h3&gt;
+&lt;h3 id=&quot;program-name-spin&quot;&gt;PROGRAM NAME: spin&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Each of five input lines describes a wheel.&lt;/p&gt;
+
+&lt;p&gt;The first integer on an input line is the wheel’s rotation speed. The next integer is the number of wedges, 1 &amp;lt;= W &amp;lt;= 5. The next W pairs of integers tell each wedge’s start angle and extent.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-spinin&quot;&gt;SAMPLE INPUT (file spin.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30 1 0 120
+50 1 150 90
+60 1 60 90
+70 1 180 180
+90 1 180 60
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with a single integer that is the first time the wedges align so a light beam can pass through them. Print `none’ (lower case, no quotes) if the wedges will never align properly.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-spinout&quot;&gt;SAMPLE OUTPUT (file spin.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).</summary></entry><entry><title type="html">Feed Ratios</title><link href="https://matterdark.github.io//usaco/2018/11/15/ratios.html" rel="alternate" type="text/html" title="Feed Ratios" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/ratios</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/ratios.html">&lt;p&gt;Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.&lt;/p&gt;
+
+&lt;p&gt;Given a set of integer ratios barley:oats:wheat, find a way to combine them IN INTEGER MULTIPLES to form a mix with some goal ratio x:y:z.&lt;/p&gt;
+
+&lt;p&gt;For example, given the goal 3:4:5 and the ratios of three mixtures:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1:2:3
+3:7:1
+2:1:2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;your program should find some minimum number of integer units (the `mixture’) of the first, second, and third mixture that should be mixed together to achieve the goal ratio or print `NONE’. `Minimum number’ means the sum of the three non-negative mixture integers is minimized.&lt;/p&gt;
+
+&lt;p&gt;For this example, you can combine eight units of mixture 1, one unit of mixture 2, and five units of mixture 3 to get seven units of the goal ratio:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8*(1:2:3) + 1*(3:7:1) + 5*(2:1:2) = (21:28:35) = 7*(3:4:5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Integers in the goal ratio and mixture ratios are all non-negative and smaller than 100 in magnitude. The number of units of each type of feed in the mixture must be less than 100. The mixture ratios are not linear combinations of each other.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-ratios&quot;&gt;PROGRAM NAME: ratios&lt;/h3&gt;
 
 &lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
 
@@ -25,19 +60,148 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two integers K and N. K (1 &amp;lt;= K &amp;lt;= 200) is the total number of stamps that can be used. N (1 &amp;lt;= N &amp;lt;= 50) is the number of stamp values.&lt;/td&gt;
+      &lt;td&gt;Three space separated integers that represent the goal ratios&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N integers, 15 per line, listing all of the N stamp values, each of which will be at most 10000.&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..4:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each contain three space separated integers that represent the ratios of the three mixtures purchased.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;sample-input-file-stampsin&quot;&gt;SAMPLE INPUT (file stamps.in)&lt;/h3&gt;
+&lt;h3 id=&quot;sample-input-file-ratiosin&quot;&gt;SAMPLE INPUT (file ratios.in)&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 2
-1 3
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4 5
+1 2 3
+3 7 1
+2 1 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output file should contain one line containing four integers or the word `NONE’. The first three integers should represent the number of units of each mixture to use to obtain the goal ratio. The fourth number should be the multiple of the goal ratio obtained by mixing the initial feed using the first three integers as mixing ratios.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-ratiosout&quot;&gt;SAMPLE OUTPUT (file ratios.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 1 5 7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/butter.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/butter</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/butter.html">&lt;p&gt;Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.&lt;/p&gt;
+
+&lt;p&gt;FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.&lt;/p&gt;
+
+&lt;p&gt;FJ knows each cow spends her time in a given pasture (not necessarily alone). Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-butter&quot;&gt;PROGRAM NAME: butter&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Three space-separated integers: N, the number of pastures: P (2 &amp;lt;= P &amp;lt;= 800), and the number of connecting paths: C (1 &amp;lt;= C &amp;lt;= 1,450). Cows are uniquely numbered 1..N. Pastures are uniquely numbered 1..P.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line contains a single integer that is the pasture number in which a cow is grazing. Cow i’s pasture is listed on line i+1.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines N+2..N+C+1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line contains three space-separated integers that describe a single path that connects a pair of pastures and its length. Paths may be traversed in either direction. No pair of pastures is directly connected by more than one path. The first two integers are in the range 1..P; the third integer is in the range (1..225).&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-butterin&quot;&gt;SAMPLE INPUT (file butter.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4 5
+2
+3
+4
+1 2 1
+1 3 5
+2 3 7
+2 4 3
+3 4 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
+
+&lt;p&gt;This diagram shows the connections geometrically:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         P2  
+P1 @--1--@ C1
+    \    |\
+     \   | \
+      5  7  3
+       \ |   \
+        \|    \ C3
+      C2 @--5--@
+        P3    P4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Line 1: A single integer that is the minimum distance the cows must walk to a pasture with a sugar cube.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sample-output-file-butterout&quot;&gt;SAMPLE OUTPUT (file butter.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;OUTPUT DETAILS:&lt;/p&gt;
+
+&lt;p&gt;Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
+units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/msquare.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/msquare</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/msquare.html">&lt;p&gt;Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1234
+8765
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this task we consider the version where each square has a different color. Colors are denoted by the first 8 positive integers. A sheet configuration is given by the sequence of colors obtained by reading the colors of the squares starting at the upper left corner and going in clockwise direction. For instance, the configuration of &lt;em&gt;Figure 3&lt;/em&gt; is given by the sequence (1,2,3,4,5,6,7,8). This configuration is the initial configuration.&lt;/p&gt;
+
+&lt;p&gt;Three basic transformations, identified by the letters `A’, `B’ and `C’, can be applied to a sheet:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;‘A’: exchange the top and bottom row,&lt;/li&gt;
+  &lt;li&gt;‘B’: single right circular shifting of the rectangle,&lt;/li&gt;
+  &lt;li&gt;‘C’: single clockwise rotation of the middle four squares.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below is a demonstration of applying the transformations to the initial squares given above:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8765
+1234
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;B:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4123
+5876
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;C:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1724
+8635
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;All possible configurations are available using the three basic transformations.&lt;/p&gt;
+
+&lt;p&gt;You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration above to a specific target configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-msquare&quot;&gt;PROGRAM NAME: msquare&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with eight space-separated integers (a permutation of {1..8}) that are the target configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-msquarein&quot;&gt;SAMPLE INPUT (file msquare.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 6 8 4 5 7 3 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
@@ -46,15 +210,64 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;One integer, the number of contiguous postage values starting at 1 cent that can be formed using no more than K stamps from the set.&lt;/td&gt;
+      &lt;td&gt;A single integer that is the length of the shortest transformation sequence.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The lexically earliest string of transformations expressed as a string of characters, 60 per line except possibly the last line.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;sample-output-file-stampsout&quot;&gt;SAMPLE OUTPUT (file stamps.out)&lt;/h3&gt;
+&lt;h3 id=&quot;sample-output-file-msquareout&quot;&gt;SAMPLE OUTPUT (file msquare.out)&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;13
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.</summary></entry><entry><title type="html">Score Inflation</title><link href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-07T00:00:00+00:00</published><updated>2018-11-07T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/07/inflate</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/07/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
+BCABCCB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Factorials</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-fact4&quot;&gt;PROGRAM NAME: fact4&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single positive integer N no larger than 4,220.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-fact4in&quot;&gt;SAMPLE INPUT (file fact4.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing but a single digit: the right most non-zero digit of N! .&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fact4out&quot;&gt;SAMPLE OUTPUT (file fact4.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.</summary></entry><entry><title type="html">Stringsobits</title><link href="https://matterdark.github.io//usaco/2018/11/08/kimbits.html" rel="alternate" type="text/html" title="Stringsobits" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/kimbits</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/kimbits.html">&lt;p&gt;Consider an ordered set S of strings of N (1 &amp;lt;= N &amp;lt;= 31) bits. Bits, of course, are either 0 or 1.&lt;/p&gt;
+
+&lt;p&gt;This set of strings is interesting because it is ordered and contains all possible strings of length N that have L (1 &amp;lt;= L &amp;lt;= N) or fewer bits that are ‘1’.&lt;/p&gt;
+
+&lt;p&gt;Your task is to read a number I (1 &amp;lt;= I &amp;lt;= sizeof(S)) from the input and print the Ith element of the ordered set for N bits with no more than L bits that are ‘1’.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-kimbits&quot;&gt;PROGRAM NAME: kimbits&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with three space separated integers: N, L, and I.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-kimbitsin&quot;&gt;SAMPLE INPUT (file kimbits.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3 19
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line containing the integer that represents the Ith element from the order set, as described.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-kimbitsout&quot;&gt;SAMPLE OUTPUT (file kimbits.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10011
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider an ordered set S of strings of N (1 &amp;lt;= N &amp;lt;= 31) bits. Bits, of course, are either 0 or 1.</summary></entry><entry><title type="html">Score Inflation</title><link href="https://matterdark.github.io//usaco/2018/11/07/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-07T00:00:00+00:00</published><updated>2018-11-07T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/07/inflate</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/07/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
 
 &lt;p&gt;We have several categories from which problems can be chosen, where a “category” is an unlimited set of contest problems which all require the same amount of time to solve and deserve the same number of points for a correct solution. Your task is write a program which tells the USACO staff how many problems from each category to include in a contest so as to maximize the total number of points in the chosen problems while keeping the total solution time within the length of the contest.&lt;/p&gt;
 
@@ -192,277 +405,4 @@
 &lt;h3 id=&quot;sample-output-file-humbleout&quot;&gt;SAMPLE OUTPUT (file humble.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;27
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.</summary></entry><entry><title type="html">Stamps</title><link href="https://matterdark.github.io//usaco/2018/11/04/stamps.html" rel="alternate" type="text/html" title="Stamps" /><published>2018-11-04T00:00:00+00:00</published><updated>2018-11-04T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/04/stamps</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/04/stamps.html">&lt;p&gt;Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.&lt;/p&gt;
-
-&lt;p&gt;For example, consider stamps whose values are limited to 1 cent and 3 cents; you can use at most 5 stamps. It’s easy to see how to assemble postage of 1 through 5 cents (just use that many 1 cent stamps), and successive values aren’t much harder:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;6 = 3 + 3&lt;/li&gt;
-  &lt;li&gt;7 = 3 + 3 + 1&lt;/li&gt;
-  &lt;li&gt;8 = 3 + 3 + 1 + 1&lt;/li&gt;
-  &lt;li&gt;9 = 3 + 3 + 3&lt;/li&gt;
-  &lt;li&gt;10 = 3 + 3 + 3 + 1&lt;/li&gt;
-  &lt;li&gt;11 = 3 + 3 + 3 + 1 + 1&lt;/li&gt;
-  &lt;li&gt;12 = 3 + 3 + 3 + 3&lt;/li&gt;
-  &lt;li&gt;13 = 3 + 3 + 3 + 3 + 1.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, there is no way to make 14 cents of postage with 5 or fewer stamps of value 1 and 3 cents. Thus, for this set of two stamp values and a limit of K=5, the answer is M=13.&lt;/p&gt;
-
-&lt;p&gt;The most difficult test case for this problem has a time limit of 3 seconds.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-stamps&quot;&gt;PROGRAM NAME: stamps&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two integers K and N. K (1 &amp;lt;= K &amp;lt;= 200) is the total number of stamps that can be used. N (1 &amp;lt;= N &amp;lt;= 50) is the number of stamp values.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N integers, 15 per line, listing all of the N stamp values, each of which will be at most 10000.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-stampsin&quot;&gt;SAMPLE INPUT (file stamps.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 2
-1 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;One integer, the number of contiguous postage values starting at 1 cent that can be formed using no more than K stamps from the set.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-output-file-stampsout&quot;&gt;SAMPLE OUTPUT (file stamps.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;13
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Given a set of N stamp values (e.g., {1 cent, 3 cents}) and an upper limit K to the number of stamps that can fit on an envelope, calculate the largest unbroken list of postages from 1 cent to M cents that can be created.</summary></entry><entry><title type="html">Agri-Net</title><link href="https://matterdark.github.io//usaco/2018/11/02/agrinet.html" rel="alternate" type="text/html" title="Agri-Net" /><published>2018-11-02T00:00:00+00:00</published><updated>2018-11-02T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/02/agrinet</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/02/agrinet.html">&lt;p&gt;Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.&lt;/p&gt;
-
-&lt;p&gt;Farmer John ordered a high speed connection for his farm and is going to share his connectivity with the other farmers. To minimize cost, he wants to lay the minimum amount of optical fiber to connect his farm to all the other farms.&lt;/p&gt;
-
-&lt;p&gt;Given a list of how much fiber it takes to connect each pair of farms, you must find the minimum amount of fiber needed to connect them all together. Each farm must connect to some other farm such that a packet can flow from any one farm to any other farm.&lt;/p&gt;
-
-&lt;p&gt;The distance between any two farms will not exceed 100,000.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-agrinet&quot;&gt;PROGRAM NAME: agrinet&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The number of farms, N (3 &amp;lt;= N &amp;lt;= 100).&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The subsequent lines contain the N x N connectivity matrix, where each element shows the distance from on farm to another. Logically, they are N lines of N space-separated integers. Physically, they are limited in length to 80 characters, so some lines continue onto others. Of course, the diagonal will be 0, since the distance from farm i to itself is not interesting for this problem.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-agrinetin&quot;&gt;SAMPLE INPUT (file agrinet.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-0 4 9 21
-4 0 8 17
-9 8 0 16
-21 17 16 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The single output contains the integer length that is the sum of the minimum length of fiber required to connect the entire set of farms.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-agrinetout&quot;&gt;SAMPLE OUTPUT (file agrinet.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;28
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John has been elected mayor of his town! One of his campaign promises was to bring internet connectivity to all farms in the area. He needs your help, of course.</summary></entry><entry><title type="html">Fractions to Decimals</title><link href="https://matterdark.github.io//usaco/2018/11/01/fracdec.html" rel="alternate" type="text/html" title="Fractions to Decimals" /><published>2018-11-01T01:00:00+00:00</published><updated>2018-11-01T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/fracdec</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/fracdec.html">&lt;p&gt;Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1/3     =  0.(3)
-22/5    =  4.4
-1/7     =  0.(142857)
-2/2     =  1.0
-3/8     =  0.375
-45/56   =  0.803(571428)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;program-name-fracdec&quot;&gt;PROGRAM NAME: fracdec&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with two space separated integers, N and D, 1 &amp;lt;= N,D &amp;lt;= 100000.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-fracdecin&quot;&gt;SAMPLE INPUT (file fracdec.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;45 56
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The decimal expansion, as detailed above. If the expansion exceeds 76 characters in length, print it on multiple lines with 76 characters per line.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-fracdecout&quot;&gt;SAMPLE OUTPUT (file fracdec.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.803(571428)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:</summary></entry><entry><title type="html">Cow Tours</title><link href="https://matterdark.github.io//usaco/2018/11/01/cowtour.html" rel="alternate" type="text/html" title="Cow Tours" /><published>2018-11-01T00:00:00+00:00</published><updated>2018-11-01T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/01/cowtour</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/01/cowtour.html">&lt;p&gt;Farmer John has a number of pastures on his farm. Cow paths connect some pastures with certain other pastures, forming a field. But, at the present time, you can find at least two pastures that cannot be connected by any sequence of cow paths, thus partitioning Farmer John’s farm into multiple fields.&lt;/p&gt;
-
-&lt;p&gt;Farmer John would like add a single a cow path between one pair of pastures using the constraints below.&lt;/p&gt;
-
-&lt;p&gt;A field’s `diameter’ is defined to be the largest distance of all the shortest walks between any pair of pastures in the field. Consider the field below with five pastures, located at the points shown, and cow paths marked by lines:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         15,15   20,15
-           D       E
-           *-------*
-           |     _/|
-           |   _/  |
-           | _/    |
-           |/      |
-  *--------*-------*
-  A        B       C
-10,10    15,10   20,10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The `diameter’ of this field is approximately 12.07106, since the longest of the set of shortest paths between pairs of pastures is the path from A to E (which includes the point set {A,B,E}). No other pair of pastures in this field is farther apart when connected by an optimal sequence of cow paths.&lt;/p&gt;
-
-&lt;p&gt;Suppose an additional field on the same plane as above is connected by cow paths as follows:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         *F 30,15
-        / 
-      _/  
-    _/    
-   /      
-  *------*
-  G      H
-25,10  30,10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Given just these two fields on his farm, Farmer John would add a cow path between a point in each of these two fields (namely point sets {A,B,C,D,E} and {F,G,H}) so that the joined set of pastures {A,B,C,D,E,F,G,H} has the smallest possible diameter.&lt;/p&gt;
-
-&lt;p&gt;Note that cow paths do not connect just because they cross each other; they only connect at listed points.&lt;/p&gt;
-
-&lt;p&gt;The input contains the pastures, their locations, and a symmetric “adjacency” matrix that tells whether pastures are connected by cow paths. Pastures are not considered to be connected to themselves. Here’s one annotated adjacency list for the pasture {A,B,C,D,E,F,G,H} as shown above:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  A B C D E F G H
-A 0 1 0 0 0 0 0 0
-B 1 0 1 1 1 0 0 0
-C 0 1 0 0 1 0 0 0
-D 0 1 0 0 1 0 0 0
-E 0 1 1 1 0 0 0 0
-F 0 0 0 0 0 0 1 0
-G 0 0 0 0 0 1 0 1
-H 0 0 0 0 0 0 1 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Other equivalent adjacency lists might permute the rows and columns by using some order other than alphabetical to show the point connections. The input data contains no names for the points.&lt;/p&gt;
-
-&lt;p&gt;The input will contain at least two pastures that are not connected by any sequence of cow paths.&lt;/p&gt;
-
-&lt;p&gt;Find a way to connect exactly two pastures in the input with a cow path so that the new combined field has the smallest possible diameter of any possible pair of connected pastures. Output that smallest possible diameter.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-cowtour&quot;&gt;PROGRAM NAME: cowtour&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;An integer, N (1 &amp;lt;= N &amp;lt;= 150), the number of pastures&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2-N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two integers, X and Y (0 &amp;lt;= X ,Y&amp;lt;= 100000), that denote that X,Y grid location of the pastures; all input pastures are unique.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line N+2-2*N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;lines, each containing N digits (0 or 1) that represent the adjacency matrix as described above, where the rows’ and columns’ indices are in order of the points just listed.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-cowtourin&quot;&gt;SAMPLE INPUT (file cowtour.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8
-10 10
-15 10
-20 10
-15 15
-20 15
-30 15
-25 10
-30 10
-01000000
-10111000
-01001000
-01001000
-01110000
-00000010
-00000101
-00000010
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output consists of a single line with the diameter of the newly joined pastures. Print the answer to exactly six decimal places. Do not perform any special rounding on your output.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-cowtourout&quot;&gt;SAMPLE OUTPUT (file cowtour.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;22.071068
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-explanation&quot;&gt;OUTPUT EXPLANATION&lt;/h3&gt;
-
-&lt;p&gt;After trying all possible connection pairs, connecting C to G yields the minimum diameter.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has a number of pastures on his farm. Cow paths connect some pastures with certain other pastures, forming a field. But, at the present time, you can find at least two pastures that cannot be connected by any sequence of cow paths, thus partitioning Farmer John’s farm into multiple fields.</summary></entry><entry><title type="html">Bessie Come Home</title><link href="https://matterdark.github.io//usaco/2018/10/28/comehome.html" rel="alternate" type="text/html" title="Bessie Come Home" /><published>2018-10-28T00:00:00+00:00</published><updated>2018-10-28T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/10/28/comehome</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/10/28/comehome.html">&lt;p&gt;It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).&lt;/p&gt;
-
-&lt;p&gt;Between milkings, each cow is located in her own pasture, though some pastures have no cows in them. Each pasture is connected by a path to one or more other pastures (potentially including itself). Sometimes, two (potentially self-same) pastures are connected by more than one path. One or more of the pastures has a path to the barn. Thus, all cows have a path to the barn and they always know the shortest path. Of course, cows can go either direction on a path and they all walk at the same speed.&lt;/p&gt;
-
-&lt;p&gt;The pastures are labeled ‘a’..’z’ and ‘A’..’Y’. One cow is in each pasture labeled with a capital letter. No cow is in a pasture labeled with a lower case letter. The barn’s label is ‘Z’; no cows are in the barn, though.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-comehome&quot;&gt;PROGRAM NAME: comehome&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Integer P (1 &amp;lt;= P &amp;lt;= 10000) the number of paths that interconnect the pastures (and the barn)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..P+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Space separated, two letters and an integer: the names of the interconnected pastures/barn and the distance between them (1 &amp;lt;= distance &amp;lt;= 1000)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-comehomein&quot;&gt;SAMPLE INPUT (file comehome.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
-A d 6
-B d 3
-C e 9
-d Z 8
-e Z 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing two items: the capital letter name of the pasture of the cow that arrives first back at the barn, the length of the path followed by that cow.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-comehomeout&quot;&gt;SAMPLE OUTPUT (file comehome.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;B 11
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">It’s dinner time, and the cows are out in their separate pastures. Farmer John rings the bell so they will start walking to the barn. Your job is to figure out which one cow gets to the barn first (the supplied test data will always have exactly one fastest cow).</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.</summary></entry></feed>

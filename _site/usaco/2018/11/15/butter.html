@@ -5,19 +5,19 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
         
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Arithmetic Progressions | Johan Vonk’s Website</title>
+<title>Magic Squares | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Arithmetic Progressions" />
+<meta property="og:title" content="Magic Squares" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers)." />
-<meta property="og:description" content="Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers)." />
-<link rel="canonical" href="https://matterdark.github.io//usaco/2018/10/02/ariprog.html" />
-<meta property="og:url" content="https://matterdark.github.io//usaco/2018/10/02/ariprog.html" />
+<meta name="description" content="My personal static website created using Github Pages, Markdown, and Jekyll" />
+<meta property="og:description" content="My personal static website created using Github Pages, Markdown, and Jekyll" />
+<link rel="canonical" href="https://matterdark.github.io//usaco/2018/11/15/butter.html" />
+<meta property="og:url" content="https://matterdark.github.io//usaco/2018/11/15/butter.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-02T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-11-15T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers).","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/10/02/ariprog.html","headline":"Arithmetic Progressions","dateModified":"2018-10-02T00:00:00+00:00","datePublished":"2018-10-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/10/02/ariprog.html"},"@context":"http://schema.org"}</script>
+{"description":"My personal static website created using Github Pages, Markdown, and Jekyll","@type":"BlogPosting","url":"https://matterdark.github.io//usaco/2018/11/15/butter.html","headline":"Magic Squares","dateModified":"2018-11-15T00:00:00+00:00","datePublished":"2018-11-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://matterdark.github.io//usaco/2018/11/15/butter.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1868,13 +1868,13 @@
         <header class="page-header" role="banner">
             
                 <h1 class="project-name">
-                    USACO: Arithmetic Progressions</h1>
+                    USACO: Magic Squares</h1>
                 
                     <h2 class="project-tagline">
-                        Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers).</h2>
+                        </h2>
                 
                 
-                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_1/ariprog/ariprog.java" class="btn">Code on GitHub</a>                            
+                <a href="https://github.com/matterdark/USACO/blob/master/Chapter_3/butter/butter.java" class="btn">Code on GitHub</a>                            
                                         
 
                 
@@ -1885,13 +1885,13 @@
                 <a id="skip-to-content" href="#code">Skip to code</a><br><br>
                     <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
                 
-                <p>An arithmetic progression is a sequence of the form a, a+b, a+2b, …, a+nb where n=0, 1, 2, 3, … . For this problem, a is a non-negative integer and b is a positive integer.</p>
+                <p>Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &lt;= N &lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</p>
 
-<p>Write a program that finds all arithmetic progressions of length n in the set S of bisquares. The set of bisquares is defined as the set of all integers of the form p2 + q2 (where p and q are non-negative integers).</p>
+<p>FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.</p>
 
-<h3 id="time-limit-5-secs">TIME LIMIT: 5 secs</h3>
+<p>FJ knows each cow spends her time in a given pasture (not necessarily alone). Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.</p>
 
-<h3 id="program-name-ariprog">PROGRAM NAME: ariprog</h3>
+<h3 id="program-name-butter">PROGRAM NAME: butter</h3>
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
@@ -1899,47 +1899,69 @@
   <tbody>
     <tr>
       <td><strong>Line 1:</strong></td>
-      <td>N (3 &lt;= N &lt;= 25), the length of progressions for which to search</td>
+      <td>Three space-separated integers: N, the number of pastures: P (2 &lt;= P &lt;= 800), and the number of connecting paths: C (1 &lt;= C &lt;= 1,450). Cows are uniquely numbered 1..N. Pastures are uniquely numbered 1..P.</td>
     </tr>
     <tr>
-      <td><strong>Line 2:</strong></td>
-      <td>M (1 &lt;= M &lt;= 250), an upper bound to limit the search to the bisquares with 0 &lt;= p,q &lt;= M.</td>
+      <td><strong>Lines 2..N+1:</strong></td>
+      <td>Each line contains a single integer that is the pasture number in which a cow is grazing. Cow i’s pasture is listed on line i+1.</td>
+    </tr>
+    <tr>
+      <td><strong>Lines N+2..N+C+1</strong></td>
+      <td>Each line contains three space-separated integers that describe a single path that connects a pair of pastures and its length. Paths may be traversed in either direction. No pair of pastures is directly connected by more than one path. The first two integers are in the range 1..P; the third integer is in the range (1..225).</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="sample-input-file-ariprogin">SAMPLE INPUT (file ariprog.in)</h3>
+<h3 id="sample-input-file-butterin">SAMPLE INPUT (file butter.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
-7
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 4 5
+2
+3
+4
+1 2 1
+1 3 5
+2 3 7
+2 4 3
+3 4 5
+</code></pre></div></div>
+
+<h3 id="input-details">INPUT DETAILS</h3>
+
+<p>This diagram shows the connections geometrically:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         P2  
+P1 @--1--@ C1
+    \    |\
+     \   | \
+      5  7  3
+       \ |   \
+        \|    \ C3
+      C2 @--5--@
+        P3    P4
 </code></pre></div></div>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
-<p>If no sequence is found, a single line reading `NONE’. Otherwise, output one or more lines, each with two integers: the first element in a found sequence and the difference between consecutive elements in the same sequence. The lines should be ordered with smallest-difference sequences first and smallest starting number within those sequences first.</p>
+<ul>
+  <li>Line 1: A single integer that is the minimum distance the cows must walk to a pasture with a sugar cube.</li>
+</ul>
 
-<p>There will be no more than 10,000 sequences.</p>
+<h3 id="sample-output-file-butterout">SAMPLE OUTPUT (file butter.out)</h3>
 
-<h3 id="sample-output-file-ariprogout">SAMPLE OUTPUT (file ariprog.out)</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 4
-37 4
-2 8
-29 8
-1 12
-5 12
-13 12
-17 12
-5 20
-2 24
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8
 </code></pre></div></div>
+
+<p>OUTPUT DETAILS:</p>
+
+<p>Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
+units; cow 3 walks 0 units – a total of 8.</p>
 
             </div>
             
                 <div id="code">
                     <p></p>
                     <h2>CODE</h2>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_1/ariprog/ariprog.java"></script>
+                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/matterdark/USACO/blob/master/Chapter_3/butter/butter.java"></script>
                 </div>
             
             
