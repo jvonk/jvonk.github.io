@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-12-13T11:08:26+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://matterdark.github.io//usaco/2018/11/16/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/16/spin</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/16/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-12-13T11:11:04+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://matterdark.github.io//usaco/2018/11/16/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/16/spin</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/16/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
 
 &lt;p&gt;This is an integer problem. Wheels are never actually at 1.5 degrees or 23.51234123 degrees. For example, the wheels are considered to move instantaneously from 20 to 25 degrees during a single second or even from 30 to 40 degrees if the wheel is spinning quickly.&lt;/p&gt;
 
@@ -223,7 +223,64 @@ units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
 BCABCCB
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Factorials</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/fence.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/fence</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
+
+&lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
+
+&lt;p&gt;Every fence connects two fence intersections, which are numbered inclusively from 1 through 500 (though some farms have far fewer than 500 intersections). Any number of fences (&amp;gt;=1) can meet at a fence intersection. It is always possible to ride from any fence to any other fence (i.e., all fences are “connected”).&lt;/p&gt;
+
+&lt;p&gt;Your program must output the path of intersections that, if interpreted as a base 500 number, would have the smallest magnitude.&lt;/p&gt;
+
+&lt;p&gt;There will always be at least one solution for each set of input data supplied to your program for testing.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-fence&quot;&gt;PROGRAM NAME: fence&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The number of fences, F (1 &amp;lt;= F &amp;lt;= 1024)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..F+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A pair of integers (1 &amp;lt;= i,j &amp;lt;= 500) that tell which pair of intersections this fence connects.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-fencein&quot;&gt;SAMPLE INPUT (file fence.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
+1 2
+2 3
+3 4
+4 2
+4 5
+2 5
+5 6
+5 7
+4 6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output consists of F+1 lines, each containing a single integer. Print the number of the starting intersection on the first line, the next intersection’s number on the next line, and so on, until the final intersection on the last line. There might be many possible answers to any given input set, but only one is ordered correctly.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fenceout&quot;&gt;SAMPLE OUTPUT (file fence.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
+2
+3
+4
+2
+5
+4
+6
+5
+7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.</summary></entry><entry><title type="html">Factorials</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
 
 &lt;h3 id=&quot;program-name-fact4&quot;&gt;PROGRAM NAME: fact4&lt;/h3&gt;
 
@@ -371,38 +428,4 @@ BCABCCB
 011 110 1000
 4
 0001 0011 1100
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.</summary></entry><entry><title type="html">Humble Numbers</title><link href="https://matterdark.github.io//usaco/2018/11/06/humble.html" rel="alternate" type="text/html" title="Humble Numbers" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/06/humble</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/06/humble.html">&lt;p&gt;For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.&lt;/p&gt;
-
-&lt;p&gt;Your job is to find the Nth humble number for a given set S. Long integers (signed 32-bit) will be adequate for all solutions.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-humble&quot;&gt;PROGRAM NAME: humble&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two space separated integers: K and N, 1 &amp;lt;= K &amp;lt;=100 and 1 &amp;lt;= N &amp;lt;= 100,000.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;K space separated positive integers that compose the set S.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-humblein&quot;&gt;SAMPLE INPUT (file humble.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 19
-2 3 5 7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The Nth humble number from set S printed alone on a line.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-humbleout&quot;&gt;SAMPLE OUTPUT (file humble.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;27
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">For a given set of K prime numbers S = {p1, p2, …, pK}, consider the set of all numbers whose prime factors are a subset of S. This set contains, for example, p1, p1p2, p1p1, and p1p2p3 (among others). This is the set of ‘humble numbers’ for the input set S. Note: The number 1 is explicitly declared not to be a humble number.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.</summary></entry></feed>
