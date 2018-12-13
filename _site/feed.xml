@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-12-13T11:11:04+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://matterdark.github.io//usaco/2018/11/16/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/16/spin</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/16/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://matterdark.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://matterdark.github.io//" rel="alternate" type="text/html" /><updated>2018-12-13T11:13:07+00:00</updated><id>https://matterdark.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/12/13/fence.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-13T00:00:00+00:00</published><updated>2018-12-13T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/12/13/fence</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/12/13/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
+
+&lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
+
+&lt;p&gt;Every fence connects two fence intersections, which are numbered inclusively from 1 through 500 (though some farms have far fewer than 500 intersections). Any number of fences (&amp;gt;=1) can meet at a fence intersection. It is always possible to ride from any fence to any other fence (i.e., all fences are “connected”).&lt;/p&gt;
+
+&lt;p&gt;Your program must output the path of intersections that, if interpreted as a base 500 number, would have the smallest magnitude.&lt;/p&gt;
+
+&lt;p&gt;There will always be at least one solution for each set of input data supplied to your program for testing.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-fence&quot;&gt;PROGRAM NAME: fence&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The number of fences, F (1 &amp;lt;= F &amp;lt;= 1024)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..F+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A pair of integers (1 &amp;lt;= i,j &amp;lt;= 500) that tell which pair of intersections this fence connects.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-fencein&quot;&gt;SAMPLE INPUT (file fence.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
+1 2
+2 3
+3 4
+4 2
+4 5
+2 5
+5 6
+5 7
+4 6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output consists of F+1 lines, each containing a single integer. Print the number of the starting intersection on the first line, the next intersection’s number on the next line, and so on, until the final intersection on the last line. There might be many possible answers to any given input set, but only one is ordered correctly.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fenceout&quot;&gt;SAMPLE OUTPUT (file fence.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
+2
+3
+4
+2
+5
+4
+6
+5
+7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/12/12/msquare.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-12T01:00:00+00:00</published><updated>2018-12-12T01:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/12/12/msquare</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/12/12/msquare.html">&lt;p&gt;Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1234
+8765
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this task we consider the version where each square has a different color. Colors are denoted by the first 8 positive integers. A sheet configuration is given by the sequence of colors obtained by reading the colors of the squares starting at the upper left corner and going in clockwise direction. For instance, the configuration of &lt;em&gt;Figure 3&lt;/em&gt; is given by the sequence (1,2,3,4,5,6,7,8). This configuration is the initial configuration.&lt;/p&gt;
+
+&lt;p&gt;Three basic transformations, identified by the letters `A’, `B’ and `C’, can be applied to a sheet:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;‘A’: exchange the top and bottom row,&lt;/li&gt;
+  &lt;li&gt;‘B’: single right circular shifting of the rectangle,&lt;/li&gt;
+  &lt;li&gt;‘C’: single clockwise rotation of the middle four squares.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below is a demonstration of applying the transformations to the initial squares given above:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8765
+1234
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;B:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4123
+5876
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;C:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1724
+8635
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;All possible configurations are available using the three basic transformations.&lt;/p&gt;
+
+&lt;p&gt;You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration above to a specific target configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-msquare&quot;&gt;PROGRAM NAME: msquare&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with eight space-separated integers (a permutation of {1..8}) that are the target configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-msquarein&quot;&gt;SAMPLE INPUT (file msquare.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 6 8 4 5 7 3 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;A single integer that is the length of the shortest transformation sequence.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The lexically earliest string of transformations expressed as a string of characters, 60 per line except possibly the last line.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-output-file-msquareout&quot;&gt;SAMPLE OUTPUT (file msquare.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
+BCABCCB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/12/12/butter.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-12T00:00:00+00:00</published><updated>2018-12-12T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/12/12/butter</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/12/12/butter.html">&lt;p&gt;Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.&lt;/p&gt;
+
+&lt;p&gt;FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.&lt;/p&gt;
+
+&lt;p&gt;FJ knows each cow spends her time in a given pasture (not necessarily alone). Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-butter&quot;&gt;PROGRAM NAME: butter&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Three space-separated integers: N, the number of pastures: P (2 &amp;lt;= P &amp;lt;= 800), and the number of connecting paths: C (1 &amp;lt;= C &amp;lt;= 1,450). Cows are uniquely numbered 1..N. Pastures are uniquely numbered 1..P.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line contains a single integer that is the pasture number in which a cow is grazing. Cow i’s pasture is listed on line i+1.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Lines N+2..N+C+1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line contains three space-separated integers that describe a single path that connects a pair of pastures and its length. Paths may be traversed in either direction. No pair of pastures is directly connected by more than one path. The first two integers are in the range 1..P; the third integer is in the range (1..225).&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-butterin&quot;&gt;SAMPLE INPUT (file butter.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4 5
+2
+3
+4
+1 2 1
+1 3 5
+2 3 7
+2 4 3
+3 4 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
+
+&lt;p&gt;This diagram shows the connections geometrically:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         P2  
+P1 @--1--@ C1
+    \    |\
+     \   | \
+      5  7  3
+       \ |   \
+        \|    \ C3
+      C2 @--5--@
+        P3    P4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Line 1: A single integer that is the minimum distance the cows must walk to a pasture with a sugar cube.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sample-output-file-butterout&quot;&gt;SAMPLE OUTPUT (file butter.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;OUTPUT DETAILS:&lt;/p&gt;
+
+&lt;p&gt;Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
+units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Overview</title><link href="https://matterdark.github.io//portfolio/2018/11/24/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-24T00:00:00+00:00</published><updated>2018-11-24T00:00:00+00:00</updated><id>https://matterdark.github.io//portfolio/2018/11/24/overview</id><content type="html" xml:base="https://matterdark.github.io//portfolio/2018/11/24/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://matterdark.github.io//usaco/2018/11/16/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/16/spin</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/16/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
 
 &lt;p&gt;This is an integer problem. Wheels are never actually at 1.5 degrees or 23.51234123 degrees. For example, the wheels are considered to move instantaneously from 20 to 25 degrees during a single second or even from 30 to 40 degrees if the wheel is spinning quickly.&lt;/p&gt;
 
@@ -84,203 +280,7 @@
 &lt;h3 id=&quot;sample-output-file-ratiosout&quot;&gt;SAMPLE OUTPUT (file ratios.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 1 5 7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/butter.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/butter</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/butter.html">&lt;p&gt;Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.&lt;/p&gt;
-
-&lt;p&gt;FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.&lt;/p&gt;
-
-&lt;p&gt;FJ knows each cow spends her time in a given pasture (not necessarily alone). Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-butter&quot;&gt;PROGRAM NAME: butter&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Three space-separated integers: N, the number of pastures: P (2 &amp;lt;= P &amp;lt;= 800), and the number of connecting paths: C (1 &amp;lt;= C &amp;lt;= 1,450). Cows are uniquely numbered 1..N. Pastures are uniquely numbered 1..P.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains a single integer that is the pasture number in which a cow is grazing. Cow i’s pasture is listed on line i+1.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines N+2..N+C+1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains three space-separated integers that describe a single path that connects a pair of pastures and its length. Paths may be traversed in either direction. No pair of pastures is directly connected by more than one path. The first two integers are in the range 1..P; the third integer is in the range (1..225).&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-butterin&quot;&gt;SAMPLE INPUT (file butter.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4 5
-2
-3
-4
-1 2 1
-1 3 5
-2 3 7
-2 4 3
-3 4 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
-
-&lt;p&gt;This diagram shows the connections geometrically:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         P2  
-P1 @--1--@ C1
-    \    |\
-     \   | \
-      5  7  3
-       \ |   \
-        \|    \ C3
-      C2 @--5--@
-        P3    P4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Line 1: A single integer that is the minimum distance the cows must walk to a pasture with a sugar cube.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sample-output-file-butterout&quot;&gt;SAMPLE OUTPUT (file butter.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;OUTPUT DETAILS:&lt;/p&gt;
-
-&lt;p&gt;Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
-units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/msquare.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/msquare</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/msquare.html">&lt;p&gt;Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1234
-8765
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In this task we consider the version where each square has a different color. Colors are denoted by the first 8 positive integers. A sheet configuration is given by the sequence of colors obtained by reading the colors of the squares starting at the upper left corner and going in clockwise direction. For instance, the configuration of &lt;em&gt;Figure 3&lt;/em&gt; is given by the sequence (1,2,3,4,5,6,7,8). This configuration is the initial configuration.&lt;/p&gt;
-
-&lt;p&gt;Three basic transformations, identified by the letters `A’, `B’ and `C’, can be applied to a sheet:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;‘A’: exchange the top and bottom row,&lt;/li&gt;
-  &lt;li&gt;‘B’: single right circular shifting of the rectangle,&lt;/li&gt;
-  &lt;li&gt;‘C’: single clockwise rotation of the middle four squares.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Below is a demonstration of applying the transformations to the initial squares given above:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8765
-1234
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;B:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4123
-5876
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;C:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1724
-8635
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;All possible configurations are available using the three basic transformations.&lt;/p&gt;
-
-&lt;p&gt;You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration above to a specific target configuration.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-msquare&quot;&gt;PROGRAM NAME: msquare&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with eight space-separated integers (a permutation of {1..8}) that are the target configuration.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-msquarein&quot;&gt;SAMPLE INPUT (file msquare.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 6 8 4 5 7 3 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;A single integer that is the length of the shortest transformation sequence.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The lexically earliest string of transformations expressed as a string of characters, 60 per line except possibly the last line.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-output-file-msquareout&quot;&gt;SAMPLE OUTPUT (file msquare.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
-BCABCCB
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Magic Squares</title><link href="https://matterdark.github.io//usaco/2018/11/15/fence.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-11-15T00:00:00+00:00</published><updated>2018-11-15T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/15/fence</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/15/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
-
-&lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
-
-&lt;p&gt;Every fence connects two fence intersections, which are numbered inclusively from 1 through 500 (though some farms have far fewer than 500 intersections). Any number of fences (&amp;gt;=1) can meet at a fence intersection. It is always possible to ride from any fence to any other fence (i.e., all fences are “connected”).&lt;/p&gt;
-
-&lt;p&gt;Your program must output the path of intersections that, if interpreted as a base 500 number, would have the smallest magnitude.&lt;/p&gt;
-
-&lt;p&gt;There will always be at least one solution for each set of input data supplied to your program for testing.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-fence&quot;&gt;PROGRAM NAME: fence&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The number of fences, F (1 &amp;lt;= F &amp;lt;= 1024)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..F+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;A pair of integers (1 &amp;lt;= i,j &amp;lt;= 500) that tell which pair of intersections this fence connects.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-fencein&quot;&gt;SAMPLE INPUT (file fence.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
-1 2
-2 3
-3 4
-4 2
-4 5
-2 5
-5 6
-5 7
-4 6
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output consists of F+1 lines, each containing a single integer. Print the number of the starting intersection on the first line, the next intersection’s number on the next line, and so on, until the final intersection on the last line. There might be many possible answers to any given input set, but only one is ordered correctly.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-fenceout&quot;&gt;SAMPLE OUTPUT (file fence.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
-2
-3
-4
-2
-5
-4
-6
-5
-7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.</summary></entry><entry><title type="html">Factorials</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry><entry><title type="html">Factorials</title><link href="https://matterdark.github.io//usaco/2018/11/08/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-08T00:00:00+00:00</published><updated>2018-11-08T00:00:00+00:00</updated><id>https://matterdark.github.io//usaco/2018/11/08/fact4</id><content type="html" xml:base="https://matterdark.github.io//usaco/2018/11/08/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
 
 &lt;h3 id=&quot;program-name-fact4&quot;&gt;PROGRAM NAME: fact4&lt;/h3&gt;
 

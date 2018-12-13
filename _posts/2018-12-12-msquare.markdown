@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Magic Squares
-date:   2018-11-15 0:00:00 +0000
+date:   2018-12-12 1:00:00 +0000
 categories: USACO
 short: msquare
 chapter: 3
