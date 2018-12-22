@@ -6,7 +6,7 @@ categories: USACO
 short: barn1
 chapter: 1
 section: 4
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/barn1/barn1.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/barn1/barn1.java
 ---
 
 It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John's cows. Happily, many of the cows were on vacation, so the barn was not completely full.

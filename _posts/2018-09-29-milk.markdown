@@ -6,7 +6,7 @@ categories: USACO
 short: milk
 chapter: 1
 section: 4
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/milk/milk.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/milk/milk.java
 ---
 
 The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.

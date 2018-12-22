@@ -6,7 +6,7 @@ categories: USACO
 short: dualpal
 chapter: 1
 section: 3
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/dualpal/dualpal.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/dualpal/dualpal.java
 ---
 A number that reads the same from right to left as when read from left to right is called a palindrome. The number 12321 is a palindrome; the number 77778 is not. Of course, palindromes have neither leading nor trailing zeroes, so 0220 is not a palindrome.
 

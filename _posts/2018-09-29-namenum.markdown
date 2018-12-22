@@ -6,7 +6,7 @@ categories: USACO
 short: namenum
 chapter: 1
 section: 3
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/namenum/namenum.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/namenum/namenum.java
 ---
  
 

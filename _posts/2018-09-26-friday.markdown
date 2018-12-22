@@ -6,7 +6,7 @@ categories: USACO
 short: friday
 chapter: 1
 section: 2
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/friday/friday.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/friday/friday.java
 ---
 
 Is Friday the 13th really an unusual event?

@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        
+        <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>The Tamworth Two | Johan Vonk’s Website</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="The Tamworth Two" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet." />
+<meta property="og:description" content="Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet." />
+<link rel="canonical" href="https://jvonk.github.io//usaco/2018/10/22/ttwo.html" />
+<meta property="og:url" content="https://jvonk.github.io//usaco/2018/10/22/ttwo.html" />
+<meta property="og:site_name" content="Johan Vonk’s Website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-22T17:00:00-07:00" />
+<script type="application/ld+json">
+{"description":"Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet.","@type":"BlogPosting","url":"https://jvonk.github.io//usaco/2018/10/22/ttwo.html","headline":"The Tamworth Two","dateModified":"2018-10-22T17:00:00-07:00","datePublished":"2018-10-22T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io//usaco/2018/10/22/ttwo.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#157878">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>The Tamworth Two | Johan Vonk’s Website</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="The Tamworth Two" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet." />
+<meta property="og:description" content="Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet." />
+<link rel="canonical" href="https://jvonk.github.io//usaco/2018/10/22/ttwo.html" />
+<meta property="og:url" content="https://jvonk.github.io//usaco/2018/10/22/ttwo.html" />
+<meta property="og:site_name" content="Johan Vonk’s Website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-22T17:00:00-07:00" />
+<script type="application/ld+json">
+{"description":"Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet.","@type":"BlogPosting","url":"https://jvonk.github.io//usaco/2018/10/22/ttwo.html","headline":"The Tamworth Two","dateModified":"2018-10-22T17:00:00-07:00","datePublished":"2018-10-22T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io//usaco/2018/10/22/ttwo.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="https://jvonk.github.io/">Home</a>
+            
+                
+            
+                
+                    <a href="/about/">
+                        About
+                    </a>
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        USACO</button>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        
+                        
+                        
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 1<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/26/beads.html">
+                                                                
+                                                                    beads -
+                                                                
+                                                                Broken Necklace
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/25/friday.html">
+                                                                
+                                                                    friday -
+                                                                
+                                                                Friday the 13th
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/25/gift1.html">
+                                                                
+                                                                    gift1 -
+                                                                
+                                                                Greedy Gift Givers
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/25/ride.html">
+                                                                
+                                                                    ride -
+                                                                
+                                                                Your Ride Is Here
+                                                            </a>
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/dualpal.html">
+                                                                
+                                                                    dualpal -
+                                                                
+                                                                Dual Palindromes
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/palsquare.html">
+                                                                
+                                                                    palsquare -
+                                                                
+                                                                Palindromic Squares
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/namenum.html">
+                                                                
+                                                                    namenum -
+                                                                
+                                                                Name That Number
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/transform.html">
+                                                                
+                                                                    transform -
+                                                                
+                                                                Transformations
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/27/milk2.html">
+                                                                
+                                                                    milk2 -
+                                                                
+                                                                Milking Cows
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/30/skidesign.html">
+                                                                
+                                                                    skidesign -
+                                                                
+                                                                Ski Course Design
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/29/wormhole.html">
+                                                                
+                                                                    wormhole -
+                                                                
+                                                                Wormholes
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/29/combo.html">
+                                                                
+                                                                    combo -
+                                                                
+                                                                Combination Lock
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/29/crypt1.html">
+                                                                
+                                                                    crypt1 -
+                                                                
+                                                                Prime Cryptarithm
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/milk.html">
+                                                                
+                                                                    milk -
+                                                                
+                                                                Mixing Milk
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/09/28/barn1.html">
+                                                                
+                                                                    barn1 -
+                                                                
+                                                                Barn Repair
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 5<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/02/milk3.html">
+                                                                
+                                                                    milk3 -
+                                                                
+                                                                Mother's Milk
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/01/ariprog.html">
+                                                                
+                                                                    ariprog -
+                                                                
+                                                                Arithmetic Progressions
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/04/pprime.html">
+                                                                
+                                                                    pprime -
+                                                                
+                                                                Prime Palindromes
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/03/sprime.html">
+                                                                
+                                                                    sprime -
+                                                                
+                                                                Superprime Rib
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/03/numtri.html">
+                                                                
+                                                                    numtri -
+                                                                
+                                                                Number Triangles
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 2<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/10/holstein.html">
+                                                                
+                                                                    holstein -
+                                                                
+                                                                Healthy Holsteins
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/09/hamming.html">
+                                                                
+                                                                    hamming -
+                                                                
+                                                                Hamming Codes
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/08/sort3.html">
+                                                                
+                                                                    sort3 -
+                                                                
+                                                                Sorting a Three-Valued Sequence
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/08/castle.html">
+                                                                
+                                                                    castle -
+                                                                
+                                                                The Castle
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/05/frac1.html">
+                                                                
+                                                                    frac1 -
+                                                                
+                                                                Ordered Fractions
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/12/lamps.html">
+                                                                
+                                                                    lamps -
+                                                                
+                                                                Party Lamps
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/12/runround.html">
+                                                                
+                                                                    runround -
+                                                                
+                                                                Runaround Numbers
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/11/subset.html">
+                                                                
+                                                                    subset -
+                                                                
+                                                                Subset Sums
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/10/preface.html">
+                                                                
+                                                                    preface -
+                                                                
+                                                                Preface Numbering
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/17/concom.html">
+                                                                
+                                                                    concom -
+                                                                
+                                                                Controlling Companies
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/17/money.html">
+                                                                
+                                                                    money -
+                                                                
+                                                                Money Systems
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/15/zerosum.html">
+                                                                
+                                                                    zerosum -
+                                                                
+                                                                Zero Sum
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/15/nocows.html">
+                                                                
+                                                                    nocows -
+                                                                
+                                                                Cow Pedigrees
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/15/prefix.html">
+                                                                
+                                                                    prefix -
+                                                                
+                                                                Longest Prefix
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/31/fracdec.html">
+                                                                
+                                                                    fracdec -
+                                                                
+                                                                Fractions to Decimals
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/31/cowtour.html">
+                                                                
+                                                                    cowtour -
+                                                                
+                                                                Cow Tours
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/27/comehome.html">
+                                                                
+                                                                    comehome -
+                                                                
+                                                                Bessie Come Home
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/22/maze1.html">
+                                                                
+                                                                    maze1 -
+                                                                
+                                                                Overfencing
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/10/22/ttwo.html">
+                                                                
+                                                                    ttwo -
+                                                                
+                                                                The Tamworth Two
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 3<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/06/inflate.html">
+                                                                
+                                                                    inflate -
+                                                                
+                                                                Score Inflation
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/05/contact.html">
+                                                                
+                                                                    contact -
+                                                                
+                                                                Contact
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/05/humble.html">
+                                                                
+                                                                    humble -
+                                                                
+                                                                Humble Numbers
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/03/stamps.html">
+                                                                
+                                                                    stamps -
+                                                                
+                                                                Stamps
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/01/agrinet.html">
+                                                                
+                                                                    agrinet -
+                                                                
+                                                                Agri-Net
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/12/11/msquare.html">
+                                                                
+                                                                    msquare -
+                                                                
+                                                                Magic Squares
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/12/11/butter.html">
+                                                                
+                                                                    butter -
+                                                                
+                                                                Magic Squares
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/15/spin.html">
+                                                                
+                                                                    spin -
+                                                                
+                                                                Spinning Wheels
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/14/ratios.html">
+                                                                
+                                                                    ratios -
+                                                                
+                                                                Feed Ratios
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/07/kimbits.html">
+                                                                
+                                                                    kimbits -
+                                                                
+                                                                Stringsobits
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/11/07/fact4.html">
+                                                                
+                                                                    fact4 -
+                                                                
+                                                                Factorials
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2018/12/12/fence.html">
+                                                                
+                                                                    fence -
+                                                                
+                                                                Riding the Fences
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                            
+                    </div>
+                </div>
+            
+                
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        PORTFOLIO</button>
+                    <i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        
+                            
+                                <a href="/portfolio/2018/11/23/overview.html">
+                                    
+                                    Overview
+                                </a>
+                            
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <header class="page-header" role="banner">
+            
+                <h1 class="project-name">
+                    USACO: The Tamworth Two</h1>
+                
+                    <h2 class="project-tagline">
+                        Each minute, the cows either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking, then they rotate 90 degrees clockwise. Farmer John, moves in exactly the same way. Calculate the number of minutes until the cows and Farmer John meet.</h2>
+                
+                
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_2/ttwo/ttwo.java" class="btn">Code on GitHub</a>                            
+                                        
+
+                
+        </header>
+        <main id="content" class="main-content" role="main">
+            <div class="realcontent">
+                
+                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
+                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                
+                <p>A pair of cows is loose somewhere in the forest. Farmer John is lending his expertise to their capture. Your task is to model their behavior.</p>
+
+<p>The chase takes place on a 10 by 10 planar grid. Squares can be empty or they can contain:</p>
+
+<ul>
+  <li>an obstacle,</li>
+  <li>the cows (who always travel together), or</li>
+  <li>Farmer John.</li>
+</ul>
+
+<p>The cows and Farmer John can occupy the same square (when they `meet’) but neither the cows nor Farmer John can share a square with an obstacle.</p>
+
+<p>Each square is represented as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>. Empty square
+* Obstacle
+C Cows
+F Farmer
+</code></pre></div></div>
+
+<p>Here is a sample grid:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*...*.....
+......*...
+...*...*..
+..........
+...*.F....
+*.....*...
+...*......
+..C......*
+...*.*....
+.*.*......
+</code></pre></div></div>
+
+<p>The cows wander around the grid in a fixed way. Each minute, they either move forward or rotate. Normally, they move one square in the direction they are facing. If there is an obstacle in the way or they would leave the board by walking `forward’, then they spend the entire minute rotating 90 degrees clockwise.</p>
+
+<p>Farmer John, wise in the ways of cows, moves in exactly the same way.</p>
+
+<p>The farmer and the cows can be considered to move simultaneously during each minute. If the farmer and the cows pass each other while moving, they are not considered to have met. The chase ends when Farmer John and the cows occupy the same square at the end of a minute.</p>
+
+<p>Read a ten-line grid that represents the initial state of the cows, Farmer John, and obstacles. Each of the ten lines contains exactly ten characters using the coding above. There is guaranteed to be only one farmer and one pair of cows. The cows and Farmer John will not initially be on the same square.</p>
+
+<p>Calculate the number of minutes until the cows and Farmer John meet. Assume both the cows and farmer begin the simulation facing in the ‘north’ direction. Print 0 if they will never meet.</p>
+
+<h3 id="program-name-ttwo">PROGRAM NAME: ttwo</h3>
+
+<h3 id="input-format">INPUT FORMAT</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Lines 1-10:</strong></td>
+      <td>Ten lines of ten characters each, as explained above</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-input-file-ttwoin">SAMPLE INPUT (file ttwo.in)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*...*.....
+......*...
+...*...*..
+..........
+...*.F....
+*.....*...
+...*......
+..C......*
+...*.*....
+.*.*......
+</code></pre></div></div>
+
+<h3 id="output-format">OUTPUT FORMAT</h3>
+
+<p>A single line with the integer number of minutes until Farmer John and the cows meet. Print 0 if they will never meet.</p>
+
+<h3 id="sample-output-file-ttwoout">SAMPLE OUTPUT (file ttwo.out)</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>49
+</code></pre></div></div>
+
+            </div>
+            
+                <div id="code">
+                    <p></p>
+                    <h2>CODE</h2>
+                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_2/ttwo/ttwo.java"></script>
+                </div>
+            
+            
+                <footer class="site-footer realcontent">
+                    <span class="site-footer-owner"><a href="http://github.com/jvonk/jvonk.github.io">jvonk.github.io</a> is created by <a href="http://github.com/jvonk">jvonk</a></span>
+                </footer>
+            
+        </main>
+    </body>
+</html>

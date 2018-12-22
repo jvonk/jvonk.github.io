@@ -18,16 +18,16 @@ email: johan.d.s.vonk@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My personal static website created using Github Pages, Markdown, and Jekyll
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://matterdark.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jvonk.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username:  matterdark
-github_url:  "https://github.com/matterdark/matterdark.github.io"
+github_username:  jvonk
+github_url:  "https://github.com/jvonk/jvonk.github.io"
 linkedin_url:  "https://www.linkedin.com/in/johan-vonk-337778171"
 
 khan_url: "https://www.khanacademy.org/profile/vonkj"
 khan_username: vonkj
 github.is_project_page: true
-repository: matterdark/matterdark.github.io
+repository: jvonk/jvonk.github.io
 skip-to-content: false
 
 

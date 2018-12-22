@@ -6,7 +6,7 @@ categories: USACO
 short: beads
 chapter: 1
 section: 2
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/beads/beads.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/beads/beads.java
 ---
 
 You have a necklace of N red, white, or blue beads (3<=N<=350) some of which are red, others blue, and others white, arranged at random. Here are two examples for n=29:

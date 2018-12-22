@@ -6,7 +6,7 @@ categories: USACO
 short: gift1
 chapter: 1
 section: 2
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/gift1/gift1.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/gift1/gift1.java
 ---
 
 A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.

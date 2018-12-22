@@ -6,7 +6,7 @@ categories: USACO
 short: palsquare
 chapter: 1
 section: 3
-link: https://github.com/matterdark/USACO/blob/master/Chapter_1/palsquare/palsquare.java
+link: https://github.com/jvonk/USACO/blob/master/Chapter_1/palsquare/palsquare.java
 ---
 Palindromes are numbers that read the same forwards as backwards. The number 12321 is a typical palindrome.
 
