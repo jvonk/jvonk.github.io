@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2018-12-22T13:51:10-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Riding the Fences</title><link href="https://jvonk.github.io//usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/12/fence</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2019-01-12T08:21:38-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+
+&lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;three flowers for 5z instead of 6z, or&lt;/li&gt;
+  &lt;li&gt;two vases together with one flower for 10z instead of 12z.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Write a program that calculates the price a customer has to pay for a purchase, making optimal use of the special offers to make the price as low as possible. You are not allowed to add items, even if that would lower the price.&lt;/p&gt;
+
+&lt;p&gt;For the prices and offers given above, the (lowest) price for three flowers and two vases is 14z: two vases and one flower for the reduced price of 10z and two flowers for the regular price of 4z.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-shopping&quot;&gt;PROGRAM NAME: shopping&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The input file has a set of offers followed by a purchase.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;s, the number of special offers, (0 &amp;lt;= s &amp;lt;= 99).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..s+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line describes an offer using several integers. The first integer is n (1 &amp;lt;= n &amp;lt;= 5), the number of products that are offered. The subsequent n pairs of integers c and k indicate that k items (1 &amp;lt;= k &amp;lt;= 5) with product code c (1 &amp;lt;= c &amp;lt;= 999) are part of the offer. The last number p on the line stands for the reduced price (1 &amp;lt;= p &amp;lt;= 9999). The reduced price of an offer is less than the sum of the regular prices.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line s+2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The first line contains the number b (0 &amp;lt;= b &amp;lt;= 5) of different kinds of products to be purchased.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line s+3..s+b+2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each of the subsequent b lines contains three values: c, k, and p. The value c is the (unique) product code (1 &amp;lt;= c &amp;lt;= 999). The value k indicates how many items of this product are to be purchased (1 &amp;lt;= k &amp;lt;= 5). The value p is the regular price per item (1 &amp;lt;= p &amp;lt;= 999). At most 5*5=25 items can be in the basket.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-shoppingin&quot;&gt;SAMPLE INPUT (file shopping.in)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with one integer: the lowest possible price to be paid for the purchases.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-shoppingout&quot;&gt;SAMPLE OUTPUT (file shopping.out)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;14&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Riding the Fences</title><link href="https://jvonk.github.io//usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/12/fence</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
 
 &lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
 
@@ -369,63 +419,4 @@ units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;605
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry><entry><title type="html">Contact</title><link href="https://jvonk.github.io//usaco/2018/11/05/contact.html" rel="alternate" type="text/html" title="Contact" /><published>2018-11-05T17:00:00-08:00</published><updated>2018-11-05T17:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/05/contact</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/05/contact.html">&lt;p&gt;The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.&lt;/p&gt;
-
-&lt;p&gt;Help the cows to find the Truth by providing a tool to analyze bit patterns in the files they record. They are seeking bit patterns of length &lt;strong&gt;A&lt;/strong&gt; through &lt;strong&gt;B&lt;/strong&gt; inclusive (1 &amp;lt;= A &amp;lt;= B &amp;lt;= 12) that repeat themselves most often in each day’s data file. An input limit tells how many of the most frequent patterns to output.&lt;/p&gt;
-
-&lt;p&gt;Pattern occurrences may overlap, and only patterns that occur at least once are taken into account.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-contact&quot;&gt;PROGRAM NAME: contact&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Three space-separated integers: A, B, N; (1 &amp;lt;= N ≤ 50).&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;A sequence of as many as 200,000 characters, all 0 or 1; the characters are presented 80 per line, except potentially the last line.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-contactin&quot;&gt;SAMPLE INPUT (file contact.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 4 10
-01010010010001000111101100001010011001111000010010011110010000000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In this example, pattern 100 occurs 12 times, and pattern 1000 occurs 5 times. The most frequent pattern is 00, with 23 occurrences.&lt;/p&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Lines that list the N highest frequencies (in descending order of frequency) along with the patterns that occur in those frequencies. Order those patterns by shortest-to-longest and increasing binary number for those of the same frequency. If fewer than N highest frequencies are available, print only those that are.&lt;/p&gt;
-
-&lt;p&gt;Print the frequency alone by itself on a line. Then print the actual patterns space separated, six to a line (unless fewer than six remain).&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-contactout&quot;&gt;SAMPLE OUTPUT (file contact.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;23
-00
-15
-01 10
-12
-100
-11
-11 000 001
-10
-010
-8
-0100
-7
-0010 1001
-6
-111 0000
-5
-011 110 1000
-4
-0001 0011 1100
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The cows have developed a new interest in scanning the universe outside their farm with radiotelescopes. Recently, they noticed a very curious microwave pulsing emission sent right from the centre of the galaxy. They wish to know if the emission is transmitted by some extraterrestrial form of intelligent life or if it is nothing but the usual heartbeat of the stars.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry></feed>
