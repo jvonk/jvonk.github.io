@@ -1,4 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2019-01-12T08:21:38-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2019-01-23T15:56:17-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2019/01/14/game1.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2019-01-14T16:00:00-08:00</published><updated>2019-01-14T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2019/01/14/game1</id><content type="html" xml:base="https://jvonk.github.io//usaco/2019/01/14/game1.html">&lt;p&gt;Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.&lt;/p&gt;
+
+&lt;p&gt;Write a program that implements the optimal strategy. The optimal strategy yields maximum points when playing against the “best possible” opponent. Your program must further implement an optimal strategy for player 2.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-game1&quot;&gt;PROGRAM NAME: game1&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N, the size of the board.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..etc:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N integers in the range (1..200) that are the contents of the game board, from left to right.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-game1in&quot;&gt;SAMPLE INPUT (file game1.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6
+4 7 2 9
+5 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Two space-separated integers on a line: the score of Player 1 followed by the score of Player 2.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-game1out&quot;&gt;SAMPLE OUTPUT (file game1.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;18 11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.</summary></entry><entry><title type="html">Camelot</title><link href="https://jvonk.github.io//usaco/2019/01/12/camelot.html" rel="alternate" type="text/html" title="Camelot" /><published>2019-01-12T16:00:00-08:00</published><updated>2019-01-12T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2019/01/12/camelot</id><content type="html" xml:base="https://jvonk.github.io//usaco/2019/01/12/camelot.html">&lt;p&gt;Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.&lt;/p&gt;
+
+&lt;p&gt;This example board is the standard 8x8 array of squares:&lt;/p&gt;
+
+&lt;p&gt;The King can move like a king in chess as long as it does not fall off the board:&lt;/p&gt;
+
+&lt;p&gt;A Knight can jump like a knight in chess to ), as long as it does not fall off the board.&lt;/p&gt;
+
+&lt;p&gt;During the play, the player can place more than one piece in the same square. The board squares are assumed big enough so that a piece is never an obstacle for any other piece to move freely.&lt;/p&gt;
+
+&lt;p&gt;The player’s goal is to move the pieces so as to gather them all in the same square - in the minimal number of moves. To achieve this, he must move the pieces as prescribed above. Additionally, whenever the king and one or more knights are placed in the same square, the player may choose to move the king and one of the knights together from that point on, as a single knight, up to the final gathering point. Moving the knight together with the king counts as a single move.&lt;/p&gt;
+
+&lt;p&gt;Write a program to compute the minimum number of moves the player must perform to produce the gathering. The pieces can gather on any square, of course.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-camelot&quot;&gt;PROGRAM NAME: camelot&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Two space-separated integers: R,C, the number of rows and columns on the board. There will be no more than 26 columns and no more than 30 rows.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..end:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The input file contains a sequence of space-separated letter/digit pairs, 1 or more per line. The first pair represents the board position of the king; subsequent pairs represent positions of knights. There might be 0 knights or the knights might fill the board. Rows are numbered starting at 1; columns are specified as upper case characters starting with ‘A’.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-camelotin&quot;&gt;SAMPLE INPUT (file camelot.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 8
+D 4
+A 3 A 8
+H 1 H 8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The king is positioned at D4. There are four knights, positioned at A3, A8, H1, and H8.&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the number of moves to aggregate the pieces.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-camelotout&quot;&gt;SAMPLE OUTPUT (file camelot.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sample-output-elaboration&quot;&gt;SAMPLE OUTPUT ELABORATION&lt;/h3&gt;
+
+&lt;p&gt;They gather at B5.
+Knight 1: A3 - B5 (1 move)
+Knight 2: A8 - C7 - B5 (2 moves)
+Knight 3: H1 - G3 - F5 - D4 (picking up king) - B5 (4 moves)
+Knight 4: H8 - F7 - D6 - B5 (3 moves)
+1 + 2 + 4 + 3 = 10 moves.&lt;/p&gt;</content><author><name></name></author><summary type="html">Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2018/12/20/range.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/20/range</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/20/range.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+
+&lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;three flowers for 5z instead of 6z, or&lt;/li&gt;
+  &lt;li&gt;two vases together with one flower for 10z instead of 12z.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Write a program that calculates the price a customer has to pay for a purchase, making optimal use of the special offers to make the price as low as possible. You are not allowed to add items, even if that would lower the price.&lt;/p&gt;
+
+&lt;p&gt;For the prices and offers given above, the (lowest) price for three flowers and two vases is 14z: two vases and one flower for the reduced price of 10z and two flowers for the regular price of 4z.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-shopping&quot;&gt;PROGRAM NAME: shopping&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The input file has a set of offers followed by a purchase.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;s, the number of special offers, (0 &amp;lt;= s &amp;lt;= 99).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..s+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each line describes an offer using several integers. The first integer is n (1 &amp;lt;= n &amp;lt;= 5), the number of products that are offered. The subsequent n pairs of integers c and k indicate that k items (1 &amp;lt;= k &amp;lt;= 5) with product code c (1 &amp;lt;= c &amp;lt;= 999) are part of the offer. The last number p on the line stands for the reduced price (1 &amp;lt;= p &amp;lt;= 9999). The reduced price of an offer is less than the sum of the regular prices.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line s+2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The first line contains the number b (0 &amp;lt;= b &amp;lt;= 5) of different kinds of products to be purchased.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line s+3..s+b+2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Each of the subsequent b lines contains three values: c, k, and p. The value c is the (unique) product code (1 &amp;lt;= c &amp;lt;= 999). The value k indicates how many items of this product are to be purchased (1 &amp;lt;= k &amp;lt;= 5). The value p is the regular price per item (1 &amp;lt;= p &amp;lt;= 999). At most 5*5=25 items can be in the basket.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-shoppingin&quot;&gt;SAMPLE INPUT (file shopping.in)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with one integer: the lowest possible price to be paid for the purchases.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-shoppingout&quot;&gt;SAMPLE OUTPUT (file shopping.out)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;14&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
 
 &lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
 
@@ -330,93 +472,4 @@ units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></
 &lt;h3 id=&quot;sample-output-file-ratiosout&quot;&gt;SAMPLE OUTPUT (file ratios.out)&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 1 5 7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry><entry><title type="html">Factorials</title><link href="https://jvonk.github.io//usaco/2018/11/07/fact4.html" rel="alternate" type="text/html" title="Factorials" /><published>2018-11-07T16:00:00-08:00</published><updated>2018-11-07T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/07/fact4</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/07/fact4.html">&lt;p&gt;The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-fact4&quot;&gt;PROGRAM NAME: fact4&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single positive integer N no larger than 4,220.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-fact4in&quot;&gt;SAMPLE INPUT (file fact4.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing but a single digit: the right most non-zero digit of N! .&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-fact4out&quot;&gt;SAMPLE OUTPUT (file fact4.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">The factorial of an integer N, written N!, is the product of all the integers from 1 through N inclusive. The factorial quickly becomes very large: 13! is too large to store in a 32-bit integer on most computers, and 70! is too large for most floating-point variables. Your task is to find the rightmost non-zero digit of n!. For example, 5! = 1 * 2 * 3 * 4 * 5 = 120, so the rightmost non-zero digit of 5! is 2. Likewise, 7! = 1 * 2 * 3 * 4 * 5 * 6 * 7 = 5040, so the rightmost non-zero digit of 7! is 4.</summary></entry><entry><title type="html">Stringsobits</title><link href="https://jvonk.github.io//usaco/2018/11/07/kimbits.html" rel="alternate" type="text/html" title="Stringsobits" /><published>2018-11-07T16:00:00-08:00</published><updated>2018-11-07T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/07/kimbits</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/07/kimbits.html">&lt;p&gt;Consider an ordered set S of strings of N (1 &amp;lt;= N &amp;lt;= 31) bits. Bits, of course, are either 0 or 1.&lt;/p&gt;
-
-&lt;p&gt;This set of strings is interesting because it is ordered and contains all possible strings of length N that have L (1 &amp;lt;= L &amp;lt;= N) or fewer bits that are ‘1’.&lt;/p&gt;
-
-&lt;p&gt;Your task is to read a number I (1 &amp;lt;= I &amp;lt;= sizeof(S)) from the input and print the Ith element of the ordered set for N bits with no more than L bits that are ‘1’.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-kimbits&quot;&gt;PROGRAM NAME: kimbits&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with three space separated integers: N, L, and I.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-kimbitsin&quot;&gt;SAMPLE INPUT (file kimbits.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 3 19
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line containing the integer that represents the Ith element from the order set, as described.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-kimbitsout&quot;&gt;SAMPLE OUTPUT (file kimbits.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10011
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Consider an ordered set S of strings of N (1 &amp;lt;= N &amp;lt;= 31) bits. Bits, of course, are either 0 or 1.</summary></entry><entry><title type="html">Score Inflation</title><link href="https://jvonk.github.io//usaco/2018/11/06/inflate.html" rel="alternate" type="text/html" title="Score Inflation" /><published>2018-11-06T16:00:00-08:00</published><updated>2018-11-06T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/06/inflate</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/06/inflate.html">&lt;p&gt;The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.&lt;/p&gt;
-
-&lt;p&gt;We have several categories from which problems can be chosen, where a “category” is an unlimited set of contest problems which all require the same amount of time to solve and deserve the same number of points for a correct solution. Your task is write a program which tells the USACO staff how many problems from each category to include in a contest so as to maximize the total number of points in the chosen problems while keeping the total solution time within the length of the contest.&lt;/p&gt;
-
-&lt;p&gt;The input includes the length of the contest, M (1 &amp;lt;= M &amp;lt;= 10,000) (don’t worry, you won’t have to compete in the longer contests until training camp) and N, the number of problem categories, where 1 &amp;lt;= N &amp;lt;= 10,000.&lt;/p&gt;
-
-&lt;p&gt;Each of the subsequent N lines contains two integers describing a category: the first integer tells the number of points a problem from that category is worth (1 &amp;lt;= points &amp;lt;= 10000); the second tells the number of minutes a problem from that category takes to solve (1 &amp;lt;= minutes &amp;lt;= 10000).&lt;/p&gt;
-
-&lt;p&gt;Your program should determine the number of problems we should take from each category to make the highest-scoring contest solvable within the length of the contest. Remember, the number from any category can be any nonnegative integer (0, one, or many). Calculate the maximum number of possible points.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-inflate&quot;&gt;PROGRAM NAME: inflate&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;M, N – contest minutes and number of problem classes&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Two integers: the points and minutes for each class&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-inflatein&quot;&gt;SAMPLE INPUT (file inflate.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;300 4
-100 60
-250 120
-120 100
-35 20
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with the maximum number of points possible given the constraints.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-inflateout&quot;&gt;SAMPLE OUTPUT (file inflate.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;605
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;(Take two problems from #2 and three from #4.)&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">The more points students score in our contests, the happier we here at the USACO are. We try to design our contests so that people can score as many points as possible, and would like your assistance.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry></feed>
