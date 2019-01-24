@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2019-01-23T16:00:29-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io//usaco/2019/01/14/game1.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2019-01-14T16:00:00-08:00</published><updated>2019-01-14T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2019/01/14/game1</id><content type="html" xml:base="https://jvonk.github.io//usaco/2019/01/14/game1.html">&lt;p&gt;Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io//" rel="alternate" type="text/html" /><updated>2019-01-23T16:14:12-08:00</updated><id>https://jvonk.github.io//feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html"></title><link href="https://jvonk.github.io//2019/01/23/2019-01-23-fence9.html" rel="alternate" type="text/html" title="" /><published>2019-01-23T16:14:12-08:00</published><updated>2019-01-23T16:14:12-08:00</updated><id>https://jvonk.github.io//2019/01/23/2019-01-23-fence9</id><content type="html" xml:base="https://jvonk.github.io//2019/01/23/2019-01-23-fence9.html">&lt;p&gt;In this problem, ‘lattice points’ in the plane are points with integer coordinates.&lt;/p&gt;
+
+&lt;p&gt;In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a “hot” wire from the origin (0,0) to a lattice point (n,m), then to a lattice point on the positive x axis (p,), with all between 1 and 32000, and then back to the origin (0,0).&lt;/p&gt;
+
+&lt;p&gt;A cow can be placed at each lattice point within the fence without touching the fence (very thin cows). Cows can not be placed on lattice points that the fence touches. How many cows can a given fence hold?&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-fence9&quot;&gt;PROGRAM NAME: fence9&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The single input line contains three space-separated integers that denote n, m, and p.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-input-file-fence9in&quot;&gt;SAMPLE INPUT (file fence9.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+7 5 10
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with a single integer that represents the number of cows the specified fence can hold.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-fence9out&quot;&gt;SAMPLE OUTPUT (file fence9.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+20
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author></entry><entry><title type="html">American Heritage</title><link href="https://jvonk.github.io//usaco/2019/01/16/heritage.html" rel="alternate" type="text/html" title="American Heritage" /><published>2019-01-16T16:00:00-08:00</published><updated>2019-01-16T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2019/01/16/heritage</id><content type="html" xml:base="https://jvonk.github.io//usaco/2019/01/16/heritage.html">&lt;p&gt;Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.&lt;/p&gt;
+
+&lt;p&gt;Your job is to create the ‘tree post-order’ notation of a cow’s heritage after being given the in-order and pre-order notations. Each cow name is encoded as a unique letter. (You may already know that you can frequently reconstruct a tree from any two of the ordered traversals.) Obviously, the trees will have no more than 26 nodes.&lt;/p&gt;
+
+&lt;p&gt;Here is a graphical representation of the tree used in the sample input and output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      C
+    /   \
+   /     \
+  B       G
+ / \     /
+A   D   H
+   / \
+  E   F
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The in-order traversal of this tree prints the left sub-tree, the root, and the right sub-tree.&lt;/p&gt;
+
+&lt;p&gt;The pre-order traversal of this tree prints the root, the left sub-tree, and the right sub-tree.&lt;/p&gt;
+
+&lt;p&gt;The post-order traversal of this tree print the left sub-tree, the right sub-tree, and the root.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-heritage&quot;&gt;PROGRAM NAME: heritage&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The in-order representation of a tree.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The pre-order representation of that same tree.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-heritagein&quot;&gt;SAMPLE INPUT (file heritage.in)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ABEDFCHG CBADEFGH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with the post-order representation of the tree.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-heritageout&quot;&gt;SAMPLE OUTPUT (file heritage.out)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AEFDBHGC
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.</summary></entry><entry><title type="html">A Game</title><link href="https://jvonk.github.io//usaco/2019/01/14/game1.html" rel="alternate" type="text/html" title="A Game" /><published>2019-01-14T16:00:00-08:00</published><updated>2019-01-14T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2019/01/14/game1</id><content type="html" xml:base="https://jvonk.github.io//usaco/2019/01/14/game1.html">&lt;p&gt;Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.&lt;/p&gt;
 
 &lt;p&gt;Write a program that implements the optimal strategy. The optimal strategy yields maximum points when playing against the “best possible” opponent. Your program must further implement an optimal strategy for player 2.&lt;/p&gt;
 
@@ -386,90 +466,4 @@ P1 @--1--@ C1
 &lt;p&gt;OUTPUT DETAILS:&lt;/p&gt;
 
 &lt;p&gt;Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
-units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Overview</title><link href="https://jvonk.github.io//portfolio/2018/11/23/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-23T16:00:00-08:00</published><updated>2018-11-23T16:00:00-08:00</updated><id>https://jvonk.github.io//portfolio/2018/11/23/overview</id><content type="html" xml:base="https://jvonk.github.io//portfolio/2018/11/23/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Spinning Wheels</title><link href="https://jvonk.github.io//usaco/2018/11/15/spin.html" rel="alternate" type="text/html" title="Spinning Wheels" /><published>2018-11-15T16:00:00-08:00</published><updated>2018-11-15T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/15/spin</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/15/spin.html">&lt;p&gt;Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).&lt;/p&gt;
-
-&lt;p&gt;This is an integer problem. Wheels are never actually at 1.5 degrees or 23.51234123 degrees. For example, the wheels are considered to move instantaneously from 20 to 25 degrees during a single second or even from 30 to 40 degrees if the wheel is spinning quickly.&lt;/p&gt;
-
-&lt;p&gt;All angles in this problem are presumed to be integers in the range 0 &amp;lt;= angle &amp;lt;= 359. The angle of 0 degrees follows the angle of 359 degrees. Each wheel rotates at a certain integer number of degrees per second, 1 &amp;lt;= speed &amp;lt;= 180.&lt;/p&gt;
-
-&lt;p&gt;Wedges for each wheel are specified by an integer start angle and integer angle size (or `extent’), both specified in degrees. Wedges in the test data will be separated by at least one degree. The ‘extent’ also includes the original “degree” of the wedge, so ‘0 180’ means degrees 0..180 inclusive – one more than most would imagine.&lt;/p&gt;
-
-&lt;p&gt;At the start, which is time 0, all the wheels’ alignment marks line up. Your program must determine the earliest time (integer seconds) at or after the start that some wedge on each wheel will align with the wedges on the other wheel so that a light beam can pass through openings on all five wedges. The wedges can align at any part of the rotation.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-spin&quot;&gt;PROGRAM NAME: spin&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Each of five input lines describes a wheel.&lt;/p&gt;
-
-&lt;p&gt;The first integer on an input line is the wheel’s rotation speed. The next integer is the number of wedges, 1 &amp;lt;= W &amp;lt;= 5. The next W pairs of integers tell each wedge’s start angle and extent.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-input-file-spinin&quot;&gt;SAMPLE INPUT (file spin.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30 1 0 120
-50 1 150 90
-60 1 60 90
-70 1 180 180
-90 1 180 60
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;A single line with a single integer that is the first time the wedges align so a light beam can pass through them. Print `none’ (lower case, no quotes) if the wedges will never align properly.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-spinout&quot;&gt;SAMPLE OUTPUT (file spin.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Each of five opaque spinning wheels has one or more wedges cut out of its edges. These wedges must be aligned quickly and correctly. Each wheel also has an alignment mark (at 0 degrees) so that the wheels can all be started in a known position. Wheels rotate in the `plus degrees’ direction, so that shortly after they start, they pass through 1 degree, 2 degrees, etc. (though probably not at the same time).</summary></entry><entry><title type="html">Feed Ratios</title><link href="https://jvonk.github.io//usaco/2018/11/14/ratios.html" rel="alternate" type="text/html" title="Feed Ratios" /><published>2018-11-14T16:00:00-08:00</published><updated>2018-11-14T16:00:00-08:00</updated><id>https://jvonk.github.io//usaco/2018/11/14/ratios</id><content type="html" xml:base="https://jvonk.github.io//usaco/2018/11/14/ratios.html">&lt;p&gt;Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.&lt;/p&gt;
-
-&lt;p&gt;Given a set of integer ratios barley:oats:wheat, find a way to combine them IN INTEGER MULTIPLES to form a mix with some goal ratio x:y:z.&lt;/p&gt;
-
-&lt;p&gt;For example, given the goal 3:4:5 and the ratios of three mixtures:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1:2:3
-3:7:1
-2:1:2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;your program should find some minimum number of integer units (the `mixture’) of the first, second, and third mixture that should be mixed together to achieve the goal ratio or print `NONE’. `Minimum number’ means the sum of the three non-negative mixture integers is minimized.&lt;/p&gt;
-
-&lt;p&gt;For this example, you can combine eight units of mixture 1, one unit of mixture 2, and five units of mixture 3 to get seven units of the goal ratio:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8*(1:2:3) + 1*(3:7:1) + 5*(2:1:2) = (21:28:35) = 7*(3:4:5)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Integers in the goal ratio and mixture ratios are all non-negative and smaller than 100 in magnitude. The number of units of each type of feed in the mixture must be less than 100. The mixture ratios are not linear combinations of each other.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-ratios&quot;&gt;PROGRAM NAME: ratios&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Three space separated integers that represent the goal ratios&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..4:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each contain three space separated integers that represent the ratios of the three mixtures purchased.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-ratiosin&quot;&gt;SAMPLE INPUT (file ratios.in)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3 4 5
-1 2 3
-3 7 1
-2 1 2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The output file should contain one line containing four integers or the word `NONE’. The first three integers should represent the number of units of each mixture to use to obtain the goal ratio. The fourth number should be the multiple of the goal ratio obtained by mixing the initial feed using the first three integers as mixing ratios.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-ratiosout&quot;&gt;SAMPLE OUTPUT (file ratios.out)&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 1 5 7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Farmer John feeds his cows only the finest mixture of cow food, which has three components: Barley, Oats, and Wheat. While he knows the precise mixture of these easily mixable grains, he can not buy that mixture! He buys three other mixtures of the three grains and then combines them to form the perfect mixture.</summary></entry></feed>
+units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Overview</title><link href="https://jvonk.github.io//portfolio/2018/11/23/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-23T16:00:00-08:00</published><updated>2018-11-23T16:00:00-08:00</updated><id>https://jvonk.github.io//portfolio/2018/11/23/overview</id><content type="html" xml:base="https://jvonk.github.io//portfolio/2018/11/23/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
