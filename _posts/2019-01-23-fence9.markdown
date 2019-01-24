@@ -6,12 +6,12 @@ categories: USACO
 short: fence9
 chapter: 3
 section: 4
-description: "In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a "hot" wire from the origin to a point to a point on the positive x axis and then back to the origin. Find how many integer points are contained within."
+description: "In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a 'hot' wire from the origin to a point to a point on the positive x axis and then back to the origin. Find how many integer points are contained within."
 ---
 
 In this problem, 'lattice points' in the plane are points with integer coordinates.
 
-In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a "hot" wire from the origin (0,0) to a lattice point (n,m), then to a lattice point on the positive x axis (p,0), with all between 1 and 32000, and then back to the origin (0,0).
+In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a 'hot' wire from the origin (0,0) to a lattice point (n,m), then to a lattice point on the positive x axis (p,0), with all between 1 and 32000, and then back to the origin (0,0).
 
 A cow can be placed at each lattice point within the fence without touching the fence (very thin cows). Cows can not be placed on lattice points that the fence touches. How many cows can a given fence hold?
 
