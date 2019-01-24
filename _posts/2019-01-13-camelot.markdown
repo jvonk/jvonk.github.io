@@ -3,9 +3,9 @@ layout: default
 title:  Camelot
 date:   2019-01-13 0:00:00 +0000
 categories: USACO
-short: shopping
+short: camelot
 chapter: 3
-section: 4
+section: 3
 description: "Compute the minimum number of moves the player must perform to produce the gathering. The pieces can gather on any square, of course."
 ---
 

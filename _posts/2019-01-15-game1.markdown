@@ -3,7 +3,7 @@ layout: default
 title:  Shopping Offers
 date:   2019-01-15 0:00:00 +0000
 categories: USACO
-short: shopping
+short: game1
 chapter: 3
 section: 3
 description: "The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents. Implement the optimal strategy for both teams."
