@@ -2,6 +2,7 @@
 layout: default
 permalink: /index.html
 ---
+<meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
 <div class="tags-expo">
 <div class="tags-expo-list">
 {% for tag in site.categories %}
