@@ -5,14 +5,14 @@ permalink: /index.html
 <div class="tags-expo">
 <div class="tags-expo-list">
 {% for tag in site.categories %}
-<a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+<a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] | upcase }}</a>
 {% endfor %}
 </div>
 <hr/>
 <div class="tags-expo-section">
 {% for tag in site.categories %}
 <h2 id="{{ tag[0] | slugify }}">
-{{ tag | first }}</h2>
+{{ tag | first | upcase }}</h2>
 <ul class="tags-expo-posts">
 {% for post in tag[1] %}
 <a class="post-title" href="{{ site.url }}{{ post.url }}">

@@ -87,7 +87,18 @@
         <header class="page-header" role="banner">
             {% if page.title and page.categories %}
                 <h1 class="project-name">
-                    {{ page.categories[0] }}: {{ page.title }}</h1>
+                    {{ page.title }}</h1>
+                    <div class="post-categories">
+                  {% if post %}
+                    {% assign categories = post.categories %}
+                  {% else %}
+                    {% assign categories = page.categories %}
+                  {% endif %}
+                  {% for category in categories %}
+                  <h2><a href="{{site.url}}#{{category|slugize}}">{{category | upcase}}</a></h2>
+                  {% unless forloop.last %} {% endunless %}
+                  {% endfor %}
+                </div>
                 {% if page.description %}
                     <h2 class="project-tagline">
                         {{ page.description }}</h2>
