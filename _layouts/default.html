@@ -15,6 +15,7 @@
             </script>
         {% endif %}
         <meta charset="UTF-8"> {% seo %}
+        <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#157878">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -45,7 +46,7 @@
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-                                        
+
         <div class="navbar">{% assign chapterInArr = chapter | minus: 1 %}
                                         {% for section in (starts[chapterInArr]..ends[chapterInArr]) %}
                                             <div class="dropdown">
@@ -93,8 +94,8 @@
                         {{ page.description }}</h2>
                 {% endif %}
                 {% if page.chapter and page.section %}
-                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a>                            
-                {% endif %}                        
+                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a>
+                {% endif %}
 
                 {% else %}
                 <h1 class="project-name">
