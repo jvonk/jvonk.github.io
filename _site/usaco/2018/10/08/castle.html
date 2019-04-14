@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_2/castle/castle.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_2/castle/castle".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>The Castle | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes." />
 <meta property="og:description" content="Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/10/08/castle.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/10/08/castle.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/10/08/castle.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/10/08/castle.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-08T17:00:00-07:00" />
 <script type="application/ld+json">
-{"description":"Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/10/08/castle.html","headline":"The Castle","dateModified":"2018-10-08T17:00:00-07:00","datePublished":"2018-10-08T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/10/08/castle.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/10/08/castle.html","headline":"The Castle","dateModified":"2018-10-08T17:00:00-07:00","datePublished":"2018-10-08T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/10/08/castle.html"},"description":"Bragging rights being what they are in Wisconsin, Farmer John wished to tell his cows all about the castle. He wanted to know how many rooms it has and how big the largest room was. In fact, he wants to take out a single wall to make an even bigger room. Your task is to help Farmer John know the exact room count and sizes.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2152,7 +2158,7 @@
 
 <p>Consider this annotated floorplan of a castle:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     1   2   3   4   5   6   7
+<pre><code>     1   2   3   4   5   6   7
    #############################
  1 #   |   #   |   #   |   |   #
    #####---#####---#---#####---#   
@@ -2166,7 +2172,7 @@
 #  = Wall     -,|  = No wall
 -&gt; = Points to the wall to remove to
      make the largest possible new room
-</code></pre></div></div>
+</code></pre>
 
 <p>By way of example, this castle sits on a 7 x 4 base. A “room” includes any set of connected “squares” in the floor plan. This floorplan contains five rooms (whose sizes are 9, 7, 3, 1, and 8 in no particular order).</p>
 
@@ -2182,11 +2188,11 @@
 
 <p>Each module descriptive-number tells which of the four walls exist and is the sum of up to four integers:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. wall to the west
+<pre><code>1. wall to the west
 2. wall to the north
 4. wall to the east
 8. wall to the south
-</code></pre></div></div>
+</code></pre>
 
 <p>Inner walls are defined twice; a wall to the south in module 1,1 is also indicated as a wall to the north in module 2,1.</p>
 
@@ -2205,12 +2211,12 @@
 
 <h3 id="sample-input-file-castlein">SAMPLE INPUT (file castle.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 4
+<pre><code>7 4
 11 6 11 6 3 10 6
 7 9 6 13 5 15 5
 1 10 12 7 13 7 5
 13 11 10 8 10 12 13
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2241,17 +2247,17 @@
 
 <h3 id="sample-output-file-castleout">SAMPLE OUTPUT (file castle.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+<pre><code>5
 9
 16
 4 1 E
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="input-details">INPUT DETAILS</h3>
 
 <p>First, the map is partitioned like below. Note that walls not on the outside borders are doubled:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     1    2    3    4    5    6    7
+<pre><code>     1    2    3    4    5    6    7
    ####|####|####|####|####|####|#####
  1 #   |   #|#   |   #|#   |    |    #
    ####|   #|####|   #|#   |####|    #
@@ -2267,7 +2273,7 @@
    #  #|####|####|    |####|   #|#   #
  4 #  #|#   |    |    |    |   #|#   #
    ####|####|####|####|####|####|#####
-</code></pre></div></div>
+</code></pre>
 
 <p>Let’s talk about the squares with a (row, column) notation such that the lower right corner is denoted (4, 7).</p>
 
@@ -2275,11 +2281,11 @@
 
 <p>Consider square (1,1) which has three walls: north, south, and west. To encode those three walls, we consult the chart:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. wall to the west
+<pre><code>1. wall to the west
 2. wall to the north
 3. wall to the east
 4. wall to the south
-</code></pre></div></div>
+</code></pre>
 
 <p>and sum the numbers for north (2), south (8), and west (1). 2 + 8 + 1 = 11, so this room is encoded as 11.</p>
 
@@ -2299,12 +2305,8 @@
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_2/castle/castle.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">

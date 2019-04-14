@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_2/maze1/maze1.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_2/maze1/maze1".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Overfencing | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
 <meta property="og:description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/10/22/maze1.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/10/22/maze1.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/10/22/maze1.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/10/22/maze1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-22T18:00:00-07:00" />
 <script type="application/ld+json">
-{"description":"Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/10/22/maze1.html","headline":"Overfencing","dateModified":"2018-10-22T18:00:00-07:00","datePublished":"2018-10-22T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/10/22/maze1.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/10/22/maze1.html","headline":"Overfencing","dateModified":"2018-10-22T18:00:00-07:00","datePublished":"2018-10-22T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/10/22/maze1.html"},"description":"Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2148,14 +2154,14 @@
 
 <p>Here’s what one particular W=5, H=3 maze looks like:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-+-+-+-+-+
+<pre><code>+-+-+-+-+-+
 |         |
 +-+ +-+ + +
 |     | | |
 + +-+-+ + +
 | |     |  
 +-+ +-+-+-+
-</code></pre></div></div>
+</code></pre>
 
 <p>Fenceposts appear only in odd numbered rows and and odd numbered columns (as in the example). The format should be obvious and self explanatory. Each maze has exactly two blank walls on the outside for exiting.</p>
 
@@ -2178,7 +2184,7 @@
 
 <h3 id="sample-input-file-maze1in">SAMPLE INPUT (file maze1.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 3
+<pre><code>5 3
 +-+-+-+-+-+
 |         |
 +-+ +-+ + +
@@ -2186,7 +2192,7 @@
 + +-+-+ + +
 | |     |  
 +-+ +-+-+-+
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2194,19 +2200,15 @@
 
 <h3 id="sample-output-file-maze1out">SAMPLE OUTPUT (file maze1.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>9
-</code></pre></div></div>
+<pre><code>9
+</code></pre>
 
 <p>The lower left-hand corner is <strong>nine</strong> steps from the closest exit.</p>
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_2/maze1/maze1.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">

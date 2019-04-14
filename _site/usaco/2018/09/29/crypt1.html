@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_1/crypt1/crypt1.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/crypt1/crypt1".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Prime Cryptarithm | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework." />
 <meta property="og:description" content="Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/09/29/crypt1.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/09/29/crypt1.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/09/29/crypt1.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/09/29/crypt1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-29T17:00:00-07:00" />
 <script type="application/ld+json">
-{"description":"Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/09/29/crypt1.html","headline":"Prime Cryptarithm","dateModified":"2018-09-29T17:00:00-07:00","datePublished":"2018-09-29T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/09/29/crypt1.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/09/29/crypt1.html","headline":"Prime Cryptarithm","dateModified":"2018-09-29T17:00:00-07:00","datePublished":"2018-09-29T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/29/crypt1.html"},"description":"Write a program that will find all solutions to the cryptarithm above for any subset of supplied non-zero single-digits. Note that the multiplicands, partial products, and answers must all conform to the cryptarithm’s framework.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2146,23 +2152,23 @@
 
 <p>A cryptarithm is usually presented as a pencil-and-paper task in which the solver is required to substitute a digit for each of the asterisks (or, often, letters) in the manual evaluation of an arithmetic term or expression so that the consistent application of the digits results in a proper expression. A classic example is this cryptarithm, shown with its unique solution:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    SEND            9562       S-&gt;9  E-&gt;5  N-&gt;6  D-&gt;2
+<pre><code>    SEND            9562       S-&gt;9  E-&gt;5  N-&gt;6  D-&gt;2
   + MORE          + 1085       M-&gt;1  O-&gt;0  R-&gt;8
   -------        -------
    MONEY           10657       Y-&gt;7
-</code></pre></div></div>
+</code></pre>
 
 <p>The following cryptarithm is a multiplication problem that can be solved by substituting digits from a specified set of N digits into the positions marked with *. Since the asterisks are generic, any digit from the input set can be used for any of the asterisks; any digit may be duplicated as many times as desired.</p>
 
 <p>Consider using the set {2,3,5,7} for the cryptarithm below:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      * * *
+<pre><code>      * * *
    x    * *
     -------
       * * *         &lt;-- partial product 1 -- MUST BE 3 DIGITS LONG
     * * *           &lt;-- partial product 2 -- MUST BE 3 DIGITS LONG
     -------
     * * * *
-</code></pre></div></div>
+</code></pre>
 <p>Digits can appear only in places marked by `*’. Of course, leading zeroes are not allowed.</p>
 
 <p><strong>The partial products must be three digits long</strong>, even though the general case (see below) might have four digit partial products.</p>
@@ -2173,14 +2179,14 @@
 <p><em>Note that this diagram shows far more digits in its results than
 the required diagram above which has three digit partial products!</em></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          a b c     &lt;-- number 'abc'
+<pre><code>          a b c     &lt;-- number 'abc'
         x   d e     &lt;-- number 'de'; the 'x' means 'multiply'
      -----------
 p1      * * * *     &lt;-- product of e * abc; first star might be 0 (absent)
 p2    * * * *       &lt;-- product of d * abc; first star might be 0 (absent)
      -----------
       * * * * *     &lt;-- sum of p1 and p2 (e*abc + 10*d*abc) == de*abc
-</code></pre></div></div>
+</code></pre>
 
 <p>Note that the ‘partial products’ are as taught in USA schools. The first partial product is the product of the final digit of the second number and the top number. The second partial product is the product of the first digit of the second number and the top number.</p>
 
@@ -2205,33 +2211,33 @@ p2    * * * *       &lt;-- product of d * abc; first star might be 0 (absent)
 
 <h3 id="sample-input-file-crypt1in">SAMPLE INPUT (file crypt1.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+<pre><code>5
 2 3 4 6 8
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
 <p>A single line with the total number of solutions. Here is the one and only solution for the sample input:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      2 2 2
+<pre><code>      2 2 2
     x   2 2
      ------
       4 4 4
     4 4 4
   ---------
     4 8 8 4
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="sample-output-file-crypt1out">SAMPLE OUTPUT (file crypt1.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
-</code></pre></div></div>
+<pre><code>1
+</code></pre>
 
 <h3 id="output-details">OUTPUT DETAILS</h3>
 
 <p>Here’s why 222x22 works: 3 digits times 2 digits yields two (equal!) partial products, each of three digits (as required). The answer has four digits, as required. Each digit used {2, 4, 8} is in the supplied set {2, 3, 4, 6, 8}.</p>
 
 <p>Why 222x23 doesn’t work:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      2 2 2   &lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
+<pre><code>      2 2 2   &lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
         2 3   &lt;-- OK:  two digits, all members of {2, 3, 4, 6, 8}
      ------
       6 6 6   &lt;-- OK:  three digits, all members of {2, 3, 4, 6, 8}
@@ -2239,16 +2245,12 @@ p2    * * * *       &lt;-- product of d * abc; first star might be 0 (absent)
   ---------
     5 1 0 6   &lt;-- NOT OK: four digits (good), but 5, 1, and 0 are not in
                                                     {2, 3, 4, 6, 8}
-</code></pre></div></div>
+</code></pre>
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_1/crypt1/crypt1.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">

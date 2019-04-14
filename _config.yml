@@ -30,6 +30,8 @@ github.is_project_page: true
 repository: jvonk/jvonk.github.io
 skip-to-content: false
 
+highlighter: none
+
 
 # Build settings
 markdown: kramdown
@@ -40,6 +42,8 @@ plugins:
   - jekyll-sitemap
 
 kramdown:
+  syntax_highlighter_opts:
+    disable : true
   parse_block_html: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

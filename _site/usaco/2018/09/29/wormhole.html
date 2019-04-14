@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_1/wormhole/wormhole.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/wormhole/wormhole".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Wormholes | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle)." />
 <meta property="og:description" content="Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle)." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/09/29/wormhole.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/09/29/wormhole.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/09/29/wormhole.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/09/29/wormhole.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-29T21:00:00-07:00" />
 <script type="application/ld+json">
-{"description":"Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle).","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/09/29/wormhole.html","headline":"Wormholes","dateModified":"2018-09-29T21:00:00-07:00","datePublished":"2018-09-29T21:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/09/29/wormhole.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/09/29/wormhole.html","headline":"Wormholes","dateModified":"2018-09-29T21:00:00-07:00","datePublished":"2018-09-29T21:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/29/wormhole.html"},"description":"Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle).","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2147,10 +2153,10 @@
 <p>According to his calculations, Farmer John knows that his wormholes will form N/2 connected pairs. For example, if wormholes A and B are connected as a pair, then any object entering wormhole A will exit wormhole B moving in the same direction, and any object entering wormhole B will similarly exit from wormhole A moving in the same direction. This can have rather unpleasant consequences.</p>
 
 <p>For example, suppose there are two paired wormholes A at (1,1) and B at (3,1), and that Bessie the cow starts from position (2,1) moving in the +x direction. Bessie will enter wormhole B [at (3,1)], exit from A [at (1,1)], then enter B again, and so on, getting trapped in an infinite cycle!</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   | . . . .
+<pre><code>   | . . . .
    | A &gt; B .      Bessie will travel to B then
    + . . . .      A then across to B again
-</code></pre></div></div>
+</code></pre>
 <p>Farmer John knows the exact location of each wormhole on his farm. He knows that Bessie the cow always walks in the +x direction, although he does not remember where Bessie is currently located.</p>
 
 <p>Please help Farmer John count the number of distinct pairings of the wormholes such that Bessie could possibly get trapped in an infinite cycle if she starts from an unlucky position. FJ doesn’t know which wormhole pairs with any other wormhole, so find all the possibilities (i.e., all the different ways that N wormholes could be paired such that Bessie can, in some way, get in a cycle). Note that a loop with a smaller number of wormholes might contribute a number of different sets of pairings to the total count as those wormholes that are not in the loop are paired in many different ways.</p>
@@ -2174,12 +2180,12 @@
 
 <h3 id="sample-input-file-wormholein">SAMPLE INPUT (file wormhole.in):</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+<pre><code>4
 0 0
 1 0
 1 1
 0 1
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="input-details">INPUT DETAILS:</h3>
 
@@ -2197,22 +2203,18 @@
 <h3 id="output-details">OUTPUT DETAILS:</h3>
 
 <p>If we number the wormholes 1..4 as we read them from the input, then if wormhole 1 pairs with wormhole 2 and wormhole 3 pairs with wormhole 4, Bessie can get stuck if she starts anywhere between (0,0) and (1,0) or between (0,1) and (1,1).</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   | . . . .
+<pre><code>   | . . . .
    4 3 . . .      Bessie will travel to B then
    1-2-.-.-.      A then across to B again
-</code></pre></div></div>
+</code></pre>
 <p>Similarly, with the same starting points, Bessie can get stuck in a cycle if the pairings are 1-3 and 2-4 (if Bessie enters WH#3 and comes out at WH#1, she then walks to WH#2 which transports here to WH#4 which directs her towards WH#3 again for a cycle).</p>
 
 <p>Only the pairings 1-4 and 2-3 allow Bessie to walk in the +x direction from any point in the 2D plane with no danger of cycling.</p>
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_1/wormhole/wormhole.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">

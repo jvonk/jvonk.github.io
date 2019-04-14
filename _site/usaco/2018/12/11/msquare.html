@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_3/msquare/msquare.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_3/msquare/msquare".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Magic Squares | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration of a magic square with colors denoted by the first 8 positive integers to a specific target configuration." />
 <meta property="og:description" content="You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration of a magic square with colors denoted by the first 8 positive integers to a specific target configuration." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/12/11/msquare.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/12/11/msquare.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/12/11/msquare.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/12/11/msquare.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-11T17:00:00-08:00" />
 <script type="application/ld+json">
-{"description":"You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration of a magic square with colors denoted by the first 8 positive integers to a specific target configuration.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/12/11/msquare.html","headline":"Magic Squares","dateModified":"2018-12-11T17:00:00-08:00","datePublished":"2018-12-11T17:00:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/12/11/msquare.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/12/11/msquare.html","headline":"Magic Squares","dateModified":"2018-12-11T17:00:00-08:00","datePublished":"2018-12-11T17:00:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/12/11/msquare.html"},"description":"You are to write a program that computes a minimal sequence of basic transformations that transforms the initial configuration of a magic square with colors denoted by the first 8 positive integers to a specific target configuration.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2144,9 +2150,9 @@
                 
                 <p>Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1234
+<pre><code>1234
 8765
-</code></pre></div></div>
+</code></pre>
 
 <p>In this task we consider the version where each square has a different color. Colors are denoted by the first 8 positive integers. A sheet configuration is given by the sequence of colors obtained by reading the colors of the squares starting at the upper left corner and going in clockwise direction. For instance, the configuration of <em>Figure 3</em> is given by the sequence (1,2,3,4,5,6,7,8). This configuration is the initial configuration.</p>
 
@@ -2162,21 +2168,21 @@
 
 <p><strong>A:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8765
+<pre><code>8765
 1234
-</code></pre></div></div>
+</code></pre>
 
 <p><strong>B:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4123
+<pre><code>4123
 5876
-</code></pre></div></div>
+</code></pre>
 
 <p><strong>C:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1724
+<pre><code>1724
 8635
-</code></pre></div></div>
+</code></pre>
 
 <p>All possible configurations are available using the three basic transformations.</p>
 
@@ -2190,8 +2196,8 @@
 
 <h3 id="sample-input-file-msquarein">SAMPLE INPUT (file msquare.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 6 8 4 5 7 3 1
-</code></pre></div></div>
+<pre><code>2 6 8 4 5 7 3 1
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2210,18 +2216,14 @@
 
 <h3 id="sample-output-file-msquareout">SAMPLE OUTPUT (file msquare.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7
+<pre><code>7
 BCABCCB
-</code></pre></div></div>
+</code></pre>
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_3/msquare/msquare.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">

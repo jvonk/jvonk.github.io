@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/style.css' | relative_url}}">
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/site.css' | relative_url}}">
+        <link rel="stylesheet" type="text/css" href="{{'/assets/css/prism.css' | relative_url}}">
+
         {% if site.google_analytics %}
             <script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
             <script>
@@ -16,18 +18,22 @@
         {% endif %}
         {% if page.chapter and page.section %}
 
-                <script type="text/javascript">
-
-                    fetch("{{'https://GitCDN.link/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                {% endif %}
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short}}".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        {% endif %}
         <meta charset="UTF-8"> {% seo %}
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -142,12 +148,8 @@
                 {{ content }}
             </div>
             {% if page.chapter and page.section %}
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="{{ 'https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}"></script>
-                </div>
+                <div id="code"></div>
+                <script src="{{'/assets/js/prism.js' | relative_url}}"></script>
             {% endif %}
             {% if page.link and page.short %}
                 <footer class="site-footer realcontent">

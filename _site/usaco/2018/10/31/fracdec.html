@@ -3,21 +3,27 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+
         
         
 
-                <script type="text/javascript">
-
-                    fetch("https://GitCDN.link/jvonk/USACO/blob/master/Chapter_2/fracdec/fracdec.java")
-                      .then(function(response) {
-                        response.text().then(function(text) {
-                          document.getElementById('code-text').textContent = text;
-                          console.log(text);
-                          done();
-                        });
-                      });
-                </script>
-                
+        <script type="text/javascript">
+            let typeToName = {
+                'pas': 'Pascal',
+                'cpp': 'C++',
+                'java': 'Java'
+            }
+            function getCode (type) {
+                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_2/fracdec/fracdec".concat('.'+type)+"'></pre></details>";
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                getCode('java');
+                getCode('cpp');
+                getCode('pas');
+            });
+        </script>
+        
         <meta charset="UTF-8"> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Fractions to Decimals | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -25,13 +31,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets." />
 <meta property="og:description" content="Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets." />
-<link rel="canonical" href="http://localhost:4000/usaco/2018/10/31/fracdec.html" />
-<meta property="og:url" content="http://localhost:4000/usaco/2018/10/31/fracdec.html" />
+<link rel="canonical" href="http://localhost:8081/usaco/2018/10/31/fracdec.html" />
+<meta property="og:url" content="http://localhost:8081/usaco/2018/10/31/fracdec.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-31T18:00:00-07:00" />
 <script type="application/ld+json">
-{"description":"Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets.","@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/10/31/fracdec.html","headline":"Fractions to Decimals","dateModified":"2018-10-31T18:00:00-07:00","datePublished":"2018-10-31T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/10/31/fracdec.html"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:8081/usaco/2018/10/31/fracdec.html","headline":"Fractions to Decimals","dateModified":"2018-10-31T18:00:00-07:00","datePublished":"2018-10-31T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/10/31/fracdec.html"},"description":"Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -41,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:4000">Home</a>
+            <a href="http://localhost:8081">Home</a>
             
                 
             
@@ -2122,7 +2128,7 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:4000#USACO">USACO</a></h2>
+                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
                   
                   
                 </div>
@@ -2144,13 +2150,13 @@
                 
                 <p>Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333…is denoted as 0.(3), and 41/333 = 0.123123123…is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1/3     =  0.(3)
+<pre><code>1/3     =  0.(3)
 22/5    =  4.4
 1/7     =  0.(142857)
 2/2     =  1.0
 3/8     =  0.375
 45/56   =  0.803(571428)
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="program-name-fracdec">PROGRAM NAME: fracdec</h3>
 
@@ -2160,8 +2166,8 @@
 
 <h3 id="sample-input-file-fracdecin">SAMPLE INPUT (file fracdec.in)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>45 56
-</code></pre></div></div>
+<pre><code>45 56
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2169,17 +2175,13 @@
 
 <h3 id="sample-output-file-fracdecout">SAMPLE OUTPUT (file fracdec.out)</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.803(571428)
-</code></pre></div></div>
+<pre><code>0.803(571428)
+</code></pre>
 
             </div>
             
-                <div id="code">
-                    <p></p>
-                    <h2>CODE</h2>
-                    <div id="code-text"></div>>
-                    <script type="text/javascript" src="https://gist-it.appspot.com/https://github.com/jvonk/USACO/blob/master/Chapter_2/fracdec/fracdec.java"></script>
-                </div>
+                <div id="code"></div>
+                <script src="/assets/js/prism.js"></script>
             
             
                 <footer class="site-footer realcontent">
