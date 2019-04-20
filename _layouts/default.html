@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/site.css' | relative_url}}">
         <link rel="stylesheet" type="text/css" href="{{'/assets/css/prism.css' | relative_url}}">
 
-        {% if site.google_analytics %}
+        {%- if site.google_analytics -%}
             <script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
@@ -15,8 +15,8 @@
                 gtag('js', new Date());
                 gtag('config', '{{ site.google_analytics }}');
             </script>
-        {% endif %}
-        {% if page.chapter and page.section %}
+        {%- endif -%}
+        {%- if page.chapter and page.section -%}
 
         <script type="text/javascript">
             let typeToName = {
@@ -33,8 +33,8 @@
                 getCode('pas');
             });
         </script>
-        {% endif %}
-        <meta charset="UTF-8"> {% seo %}
+        {%- endif -%}
+        <meta charset="UTF-8"> {%- seo -%}
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#157878">
@@ -43,92 +43,92 @@
     <body>
         <div class="navbar">
             <a href="{{site.url}}">Home</a>
-            {% for post in site.pages %}
-                {% if post.title %}
+            {%- for post in site.pages -%}
+                {%- if post.title -%}
                     <a href="{{ post.url }}">
                         {{ post.title }}
                     </a>
-                {% endif %}
-            {% endfor %}
-            {% for category in site.categories %}
-                {% assign cat = category[0] %}
+                {%- endif -%}
+            {%- endfor -%}
+            {%- for category in site.categories -%}
+                {%- assign cat = category[0] -%}
                 <div class="dropdown">
                     <button class="dropbtn">
                         {{ cat | upcase }}</button>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        {% if cat=="USACO" %}
-                        {% assign starts = "2 1 1 1" | split: " " %}
-                        {% assign ends = "6 4 4 1" | split: " " %}
-                            {% for chapter in (1..starts.size) %}
+                        {%- if cat=="USACO" -%}
+                        {%- assign starts = "2 1 1 1" | split: " " -%}
+                        {%- assign ends = "6 4 4 1" | split: " " -%}
+                            {%- for chapter in (1..starts.size) -%}
                                 <div class="dropdown">
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
 
-        <div class="navbar">{% assign chapterInArr = chapter | minus: 1 %}
-                                        {% for section in (starts[chapterInArr]..ends[chapterInArr]) %}
+        <div class="navbar">{%- assign chapterInArr = chapter | minus: 1 -%}
+                                        {%- for section in (starts[chapterInArr]..ends[chapterInArr]) -%}
                                             <div class="dropdown">
                                                 <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
-                                                    {% for post in site.categories[cat] %}
-                                                        {% if post.chapter==chapter and post.section==section %}
+                                                    {%- for post in site.categories[cat] -%}
+                                                        {%- if post.chapter==chapter and post.section==section -%}
                                                             <a href="{{ post.url }}">
-                                                                {% if post.short %}
+                                                                {%- if post.short -%}
                                                                     {{post.short}} -
-                                                                {% endif %}
+                                                                {%- endif -%}
                                                                 {{post.title}}
                                                             </a>
-                                                        {% endif %}
-                                                    {% endfor %}
+                                                        {%- endif -%}
+                                                    {%- endfor -%}
                                                 </div>
                                             </div>
-                                        {% endfor %}
+                                        {%- endfor -%}
 
                                     </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-                            {% else %}
-                            {% for post in site.categories[cat] %}
+                            {%- endfor -%}
+                            {%- else -%}
+                            {%- for post in site.categories[cat] -%}
                                 <a href="{{ post.url }}">
-                                    {% if post.short %}
+                                    {%- if post.short -%}
                                         {{post.short}} -
-                                    {% endif %}
+                                    {%- endif -%}
                                     {{post.title}}
                                 </a>
-                            {% endfor %}
-                        {% endif %}
+                            {%- endfor -%}
+                        {%- endif -%}
                     </div>
                 </div>
-            {% endfor %}
+            {%- endfor -%}
         </div>
         <header class="page-header" role="banner">
-            {% if page.title and page.categories %}
+            {%- if page.title and page.categories -%}
                 <h1 class="project-name">
                     {{ page.title }}</h1>
                     <div class="post-categories">
-                  {% if post %}
-                    {% assign categories = post.categories %}
-                  {% else %}
-                    {% assign categories = page.categories %}
-                  {% endif %}
-                  {% for category in categories %}
+                  {%- if post -%}
+                    {%- assign categories = post.categories -%}
+                  {%- else -%}
+                    {%- assign categories = page.categories -%}
+                  {%- endif -%}
+                  {%- for category in categories -%}
                   <h2><a href="{{site.url}}#{{category|slugize}}">{{category | upcase}}</a></h2>
-                  {% unless forloop.last %} {% endunless %}
-                  {% endfor %}
+                  {%- unless forloop.last -%} {%- endunless -%}
+                  {%- endfor -%}
                 </div>
-                {% if page.description %}
+                {%- if page.description -%}
                     <h2 class="project-tagline">
                         {{ page.description }}</h2>
-                {% endif %}
-                {% if page.chapter and page.section %}
+                {%- endif -%}
+                {%- if page.chapter and page.section -%}
                 <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a><br>
-                {% endif %}
+                {%- endif -%}
                 <a href="{{ 'https://github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
                 
-                {% else %}
+                {%- else -%}
                 <h1 class="project-name">
                     {{ site.title }}</h1>
                 <h2 class="project-tagline">
@@ -138,68 +138,68 @@
                     LinkedIn</a>
                 <a href="{{ site.khan_url }}" class="btn">
                     Khan Academy</a>
-            {% endif %}
+            {%- endif -%}
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
-                {% if page.chapter and page.section %}
+                {%- if page.chapter and page.section -%}
                 <a id="skip-to-content" href="#code">Skip to code</a><br>
-                {% ifhascontent analysis %}
+                {%- ifhascontent analysis -%}
                     <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
-                {% endifhascontent %}
+                {%- endifhascontent -%}
                 <br>
                 <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
-                {% endif %}
+                {%- endif -%}
                 {{ content }}
-            {% if page.chapter and page.section %}
+            {%- if page.chapter and page.section -%}
                 <div id="code"></div>
                 <script src="{{'/assets/js/prism.js' | relative_url}}"></script>
-                {% ifhascontent analysis %}
+                {%- ifhascontent analysis -%}
                 <br>
                 <div id="analysis">
                     <h2>ANALYSIS</h2>
-                    {% contentblock analysis %}
+                    {%- contentblock analysis -%}
                 </div>
-                {% endifhascontent %}
+                {%- endifhascontent -%}
                 <br>
                 <a id="skip-to-main" href="#content">Back to top</a>
-            {% endif %}
+            {%- endif -%}
             </div>
-            {% if page.short %}
+            {%- if page.short -%}
                 <footer class="site-footer realcontent">
-                    {% if page.categories %}
+                    {%- if page.categories -%}
                         <span class="site-footer-owner">
-                            {% if page.link %}
+                            {%- if page.link -%}
                             <a href="{{ page.link }}">
-                            {% else %}
+                            {%- else -%}
                             <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
-                            {% endif %}
+                            {%- endif -%}
                                 {{ page.categories[0] }} - {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">
                                 {{ site.github.owner_name }}</a>
                             .
                         </span>
-                    {% else %}
+                    {%- else -%}
                         <span class="site-footer-owner">
-                            {% if page.link %}
+                            {%- if page.link -%}
                             <a href="{{ page.link }}">
-                            {% else %}
+                            {%- else -%}
                             <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
-                            {% endif %}
+                            {%- endif -%}
                                 {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">
                                 {{site.github.owner_name }}</a>
                             .
                         </span>
-                    {% endif %}
+                    {%- endif -%}
                 </footer>
-                {% else %}
+                {%- else -%}
                 <footer class="site-footer realcontent">
                     <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
                 </footer>
-            {% endif %}
+            {%- endif -%}
         </main>
     </body>
 </html>
