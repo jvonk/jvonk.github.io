@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/barn1/barn1".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/barn1/barn1".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Barn Repair" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full." />
-<meta property="og:description" content="It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/28/barn1.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/28/barn1.html" />
+<meta name="description" content="Given the maximum number of boards that can be purchased; the total number of stalls; the number of cows in the stalls, and the occupied stall numbers, calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them." />
+<meta property="og:description" content="Given the maximum number of boards that can be purchased; the total number of stalls; the number of cows in the stalls, and the occupied stall numbers, calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/28/barn1.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/28/barn1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-28T20:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/28/barn1.html","headline":"Barn Repair","dateModified":"2018-09-28T20:00:00-07:00","datePublished":"2018-09-28T20:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/28/barn1.html"},"description":"It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/28/barn1.html","headline":"Barn Repair","dateModified":"2018-09-28T20:00:00-07:00","datePublished":"2018-09-28T20:00:00-07:00","description":"Given the maximum number of boards that can be purchased; the total number of stalls; the number of cows in the stalls, and the occupied stall numbers, calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/28/barn1.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,22 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Given the maximum number of boards that can be purchased; the total number of stalls; the number of cows in the stalls, and the occupied stall numbers, calculate the minimum number of stalls that must be blocked in order to block all the stalls that have cows in them.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/barn1/barn1.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/barn1/barn1.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-29-barn1.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>It was a dark and stormy night that ripped the roof and gates off the stalls that hold Farmer John’s cows. Happily, many of the cows were on vacation, so the barn was not completely full.</p>
 
@@ -2174,7 +2386,7 @@
 
 <h3 id="sample-input-file-barn1in">SAMPLE INPUT (file barn1.in)</h3>
 
-<pre><code>4 50 18
+<pre><code class="language-none">4 50 18
 3
 4
 6
@@ -2201,21 +2413,181 @@
 
 <h3 id="sample-output-file-barn1out">SAMPLE OUTPUT (file barn1.out)</h3>
 
-<pre><code>25
+<pre><code class="language-none">25
 </code></pre>
 
-<p>[One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.]</p>
+<p>One minimum arrangement is one board covering stalls 3-8, one covering 14-21, one covering 25-31, and one covering 40-43.</p>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Russ Cox</p>
+  </summary>
+
+  <p>If we can purchase M boards, then we can leave unblocked M-1 runs of stalls without cows in them, in addition to any stalls on the leftmost side that don’t have cows and any stalls on the rightmost side that don’t have cows.</p>
+
+  <p>We input the list of cows in stalls, storing into an array whether or not there is a cow in a particular stall. Then we walk the array counting sizes of runs of cowless stalls. We sort the list of sizes and pick the M-1 largest ones as the stalls that will remain uncovered.</p>
+
+  <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+
+#define MAXSTALL 200
+int hascow[MAXSTALL];
+
+int
+intcmp(const void *va, const void *vb)
+{
+	return *(int*)vb - *(int*)va;
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int n, m, nstall, ncow, i, j, c, lo, hi, nrun;
+    int run[MAXSTALL];
+
+    fin = fopen("barn1.in", "r");
+    fout = fopen("barn1.out", "w");
+    
+    assert(fin != NULL &amp;&amp; fout != NULL);
+
+    fscanf(fin, "%d %d %d", &amp;m, &amp;nstall, &amp;ncow);
+    for(i=0; i&lt;ncow; i++) {
+	fscanf(fin, "%d", &amp;c);
+	hascow[c-1] = 1;
+    }
+
+    n = 0;	/* answer: no. of uncovered stalls */
+
+    /* count empty stalls on left */
+    for(i=0; i&lt;nstall &amp;&amp; !hascow[i]; i++)
+	n++;
+    lo = i;
+
+    /* count empty stalls on right */
+    for(i=nstall-1; i&gt;=0 &amp;&amp; !hascow[i]; i--)
+	n++;
+    hi = i+1;
+
+    /* count runs of empty stalls */
+    nrun = 0;
+    i = lo;
+    while(i &lt; hi) {
+	while(hascow[i] &amp;&amp; i&lt;hi)
+	    i++;
+
+	for(j=i; j&lt;hi &amp;&amp; !hascow[j]; j++)
+	    ;
+
+	run[nrun++] = j-i;
+	i = j;
+    }
+
+    /* sort list of runs */
+    qsort(run, nrun, sizeof(run[0]), intcmp);
+
+    /* uncover best m-1 runs */
+    for(i=0; i&lt;nrun &amp;&amp; i&lt;m-1; i++)
+	n += run[i];
+
+    fprintf(fout, "%d\n", nstall-n);
+    exit(0);
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Alexandru Tudorica</p>
+  </summary>
+
+  <p>Alexandru Tudorica’s solution might be simpler:</p>
+
+  <pre><code class="language-pascal">var f:text;
+    a,b:array[1..1000] of longint;
+    i,m,s,c,k:longint;
+
+procedure qsort(l,r:longint);
+    var i,j,x,y:longint;
+begin
+     i:=l; j:=r; x:=a[(l+r) div 2];
+     repeat
+           while a[i]&lt;x do i:=i+1;
+           while x&lt;a[j] do j:=j-1;
+           if i&lt;=j then begin
+                y:=a[i]; a[i]:=a[j]; a[j]:=y;
+                i:=i+1;
+                j:=j-1;
+           end;
+     until i&gt;j;
+     if l&lt;j then qsort(l,j);
+     if i&lt;r then qsort(i,r);
+end;
+
+procedure qsortb(l,r:longint);
+    var i,j,x,y:longint;
+begin
+     i:=l; j:=r; x:=b[(l+r) div 2];
+     repeat
+           while b[i]&lt;x do i:=i+1;
+           while x&lt;b[j] do j:=j-1;
+           if i&lt;=j then
+           begin
+                y:=b[i]; b[i]:=b[j]; b[j]:=y;
+                i:=i+1;
+                j:=j-1;
+           end;
+     until i&gt;j;
+     if l&lt;j then qsortb(l,j);
+     if i&lt;r then qsortb(i,r);
+end;
+
+
+begin
+     assign(f,'barn1.in');
+     reset(f);
+     readln(f,m,k,c);
+     for i:=1 to c do readln(f,a[i]);
+     qsort(1,c);
+     for i:=1 to c-1 do b[i]:=a[i+1]-a[i]-1;
+     qsortb(1,c-1);
+     for i:=c-1 downto (c-m+1) do s:=s+b[i];
+     close(f);
+     assign(f,'barn1.out');
+     rewrite(f);
+     writeln(f,a[c]-a[1]-s+1);
+     close(f);
+end.
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/barn1/barn1.java">
+                            
                                 USACO - barn1</a>
                             is created by
                             <a href="http://github.com/jvonk">

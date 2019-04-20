@@ -15,17 +15,17 @@ Given a set of integer ratios barley:oats:wheat, find a way to combine them IN I
 
 For example, given the goal 3:4:5 and the ratios of three mixtures:
 
-```
+```none
 1:2:3
 3:7:1
 2:1:2
 ```
 
-your program should find some minimum number of integer units (the \`mixture') of the first, second, and third mixture that should be mixed together to achieve the goal ratio or print \`NONE'. \`Minimum number' means the sum of the three non-negative mixture integers is minimized.
+your program should find some minimum number of integer units (the 'mixture') of the first, second, and third mixture that should be mixed together to achieve the goal ratio or print 'NONE'. 'Minimum number' means the sum of the three non-negative mixture integers is minimized.
 
 For this example, you can combine eight units of mixture 1, one unit of mixture 2, and five units of mixture 3 to get seven units of the goal ratio:
 
-```
+```none
 8*(1:2:3) + 1*(3:7:1) + 5*(2:1:2) = (21:28:35) = 7*(3:4:5)
 ```
 
@@ -40,7 +40,7 @@ Integers in the goal ratio and mixture ratios are all non-negative and smaller t
 
 ### SAMPLE INPUT (file ratios.in)
 
-```
+```none
 3 4 5
 1 2 3
 3 7 1
@@ -49,10 +49,147 @@ Integers in the goal ratio and mixture ratios are all non-negative and smaller t
 
 ### OUTPUT FORMAT
 
-The output file should contain one line containing four integers or the word \`NONE'. The first three integers should represent the number of units of each mixture to use to obtain the goal ratio. The fourth number should be the multiple of the goal ratio obtained by mixing the initial feed using the first three integers as mixing ratios.
+The output file should contain one line containing four integers or the word 'NONE'. The first three integers should represent the number of units of each mixture to use to obtain the goal ratio. The fourth number should be the multiple of the goal ratio obtained by mixing the initial feed using the first three integers as mixing ratios.
 
 ### SAMPLE OUTPUT (file ratios.out)
 
-```
+```none
 8 1 5 7
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Hal Burch
+</summary>
+
+As there are only 101^3 = 1,030,301 ways to do this, try them all and pick the best.
+
+```cpp
+#include <stdio.h>
+
+/* the goal ratio */
+int goal[3];
+
+/* the ratio of the feeds */
+int ratios[3][3];
+
+/* the best solution found so far */
+int min;
+int mloc[4]; /* amounts of ratio 1, 2, and 3, and the amount of ratio 4 prod */
+
+/* the amount of each type of component in the feed */
+int sum[3];
+
+int main(int argc, char **argv)
+ {
+  FILE *fout, *fin;
+  int lv, lv2, lv3; /* loop variables */
+  int t, s; /* temporary variables */
+  int gsum; /* the sum of the amounts of components in the goal mixture */
+
+  if ((fin = fopen("ratios.in", "r")) == NULL)
+   {
+    perror ("fopen fin");
+    exit(1);
+   }
+  if ((fout = fopen("ratios.out", "w")) == NULL)
+   {
+    perror ("fopen fout");
+    exit(1);
+   }
+
+  /* read in data */
+  fscanf (fin, "%d %d %d", &goal[0], &goal[1], &goal[2]);
+  for (lv = 0; lv < 3; lv++)
+    fscanf (fin, "%d %d %d", ratios[lv]+0, ratios[lv]+1, ratios[lv]+2);
+
+  gsum = goal[0] + goal[1] + goal[2];
+
+  min = 301; /* worst than possible = infinity */
+
+  /* boundary case (this ensures gsum != 0) */
+  if (gsum == 0)
+   {
+    fprintf (fout, "0 0 0 0\n");
+    return 0;
+   }
+
+  for (lv = 0; lv < 100; lv++)
+    for (lv2 = 0; lv2 < 100; lv2++)
+     { /* for each amout of the first two types of mixtures */
+      sum[0] = lv*ratios[0][0] + lv2*ratios[1][0];
+      sum[1] = lv*ratios[0][1] + lv2*ratios[1][1];
+      sum[2] = lv*ratios[0][2] + lv2*ratios[1][2];
+
+      if (lv + lv2 > min) break;
+
+      for (lv3 = 0; lv3 < 100; lv3++)
+       {
+        s = lv + lv2 + lv3;
+	if (s >= min) break; /* worse than we've found already */
+
+        /* calculate a guess at the multiples of the goal we've obtained */
+	/* use gsum so we don't have to worry about divide by zero */
+        t = (sum[0] + sum[1] + sum[2]) / gsum;
+	if (t != 0 && sum[0] == t*goal[0] && 
+	        sum[1] == t*goal[1] && sum[2] == t*goal[2])
+	 { /* we've found a better solution! */
+	  /* update min */
+	  min = s;
+
+	  /* store the solution */
+	  mloc[0] = lv;
+	  mloc[1] = lv2;
+	  mloc[2] = lv3;
+	  mloc[3] = t;
+	 }
+
+        /* add another 'bucket' of feed #2 */
+        sum[0] += ratios[2][0];
+        sum[1] += ratios[2][1];
+        sum[2] += ratios[2][2];
+       }
+     }
+  if (min == 301) fprintf (fout, "NONE\n"); /* no solution found */
+  else fprintf (fout, "%d %d %d %d\n", mloc[0], mloc[1], mloc[2], mloc[3]);
+  return 0;
+ }
+```
+
+</details>
+
+<details>
+<summary>
+Vlad Novakovski
+</summary>
+
+When you combine multiples of mixtures, you can look at it as a multiplication of a matrix by a vector. For example, 8*(1:2:3) + 1*(3:7:1) + 5*(2:1:2) = (21:28:35) = 7*(3:4:5) can be seen as
+
+```none
+[ 1 3 2 ]   [ 8 ]            
+[ 2 7 1 ] * [ 1 ] = 7 [3 4 5]
+[ 3 1 2 ]   [ 5 ]           
+```
+
+The matrix and the goal ratio vector (3:4:5 in this case) are given; what we have to find is the multiple vector (8:1:5 in this case) and the proportionality costant (7 here). This is like solving a system of linear equations. We can write it as
+
+```none
+AX = kB.
+```
+
+Now, if we use Cramer's Rule, and let D = determinant of A, then
+
+```none
+X_1 = k D_1 / D
+X_2 = k D_2 / D
+X_3 = k D_3 / D,
+```
+
+Where D\_1 is the determinant of the matrix A with the 1st column is replaced by B, D\_2 is the determinant of the matrix A with the 2nd column is replaced by B, D\_3 is the determinant of the matrix A with the 3rd column is replaced by B. (see a Linear Algebra textbook on why this works.) ,P> We are looking for integral solutions. If D = 0, no solutions. Otherwise, let k = D, and then X\_1 = D\_1, etc. If these values (X\_1,X\_2,X\_3, \_and\_ k) all have a greatest common factor above 1, divide them all by that factor, as we are looking for the smallest possible solutions.
+Now, if some of the numbers is greater than 100, we have not found a feasible solution, so we output 'NONE'. Otherwise, the triple (X\_1,X\_2,X\_3) is output, as well as the value k. 
+
+</details>
+
+{% endcontentfor %}

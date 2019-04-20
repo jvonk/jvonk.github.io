@@ -11,7 +11,7 @@ description: "Write a program that will find all sequences composed of the digit
 
 Consider the sequence of digits from 1 through N (where N=9) in increasing order: 1 2 3 ... N.
 
-Now insert either a \`+' for addition or a \`-' for subtraction or a \` ' \[blank\] to run the digits together between each pair of digits (not in front of the first digit). Calculate the result that of the expression and see if you get zero.
+Now insert either a '+' for addition or a '-' for subtraction or a ' ' \[blank\] to run the digits together between each pair of digits (not in front of the first digit). Calculate the result that of the expression and see if you get zero.
 
 Write a program that will find all sequences of length N that produce a zero sum.
 
@@ -23,17 +23,17 @@ A single line with the integer N (3 <= N <= 9).
 
 ### SAMPLE INPUT (file zerosum.in)
 
-```
+```none
 7
 ```
 
 ### OUTPUT FORMAT
 
-In ASCII order, show each sequence that can create 0 sum with a \`+', \`-', or \` ' between each pair of numbers.
+In ASCII order, show each sequence that can create 0 sum with a '+', '-', or ' ' between each pair of numbers.
 
 ### SAMPLE OUTPUT (file zerosum.out)
 
-```
+```none
 1+2-3+4-5-6+7
 1+2-3-4+5+6-7
 1-2 3+4+5+6+7
@@ -41,3 +41,100 @@ In ASCII order, show each sequence that can create 0 sum with a \`+', \`-', or \
 1-2+3+4-5+6-7
 1-2-3-4-5+6+7
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+We can use a simple recursive depth first search to generate all the possible strings to be had by putting in a space, plus, or minus sign between each number.
+
+Once we've generated each string, we evaluate it as an arithmetic sum and see if we get zero. If so, we print the string.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+FILE *fout;
+int n;
+
+/* evaluate the string s as arithmetic and return the sum */
+int
+eval(char *s)
+{
+    int term, sign, sum;
+    char *p;
+
+    sign = 1;
+    term = 0;
+    sum = 0;
+    for(p=s; *p; p++) {
+        switch(*p){
+        case '+':
+        case '-':
+            sum += sign*term;
+            term = 0;
+            sign = *p == '+' ? 1 : -1;
+            break;
+        case ' ':
+            break;
+        default:    /* digit */
+            term = term*10 + *p-'0';
+        }
+    }
+    sum += sign*term;
+    return sum;
+}
+
+/* 
+ * Insert + - or space after each number, and then  
+ * test to see if we get zero.  The first k numbers have
+ * already been taken care of.
+ */
+void
+search(char *s, int k)
+{
+    char *p;
+
+    if(k == n-1) {
+        if(eval(s) == 0)
+            fprintf(fout, "%s\n", s);
+        return;
+    }
+
+    for(p=" +-"; *p; p++) {
+        s[2*k+1] = *p;
+        search(s, k+1);
+    }
+}
+
+
+void
+main(void)
+{
+    FILE *fin;
+    int i;
+    char str[30];
+
+    fin = fopen("zerosum.in", "r");
+    fout = fopen("zerosum.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d", &n);
+
+    strcpy(str, "1 2 3 4 5 6 7 8 9");
+    str[2*n-1] = '\0';    /* chop string to only have first n numbers */
+
+    search(str, 0);
+
+    exit(0);
+}
+```
+
+</details>
+
+{% endcontentfor %}

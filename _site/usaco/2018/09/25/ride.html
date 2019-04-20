@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/ride/ride".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/ride/ride".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Your Ride Is Here" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet." />
-<meta property="og:description" content="It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/25/ride.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/25/ride.html" />
+<meta name="description" content="Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing ‘GO’ if they match and ‘STAY’ if not." />
+<meta property="og:description" content="Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing ‘GO’ if they match and ‘STAY’ if not." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/25/ride.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/25/ride.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-25T17:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/25/ride.html","headline":"Your Ride Is Here","dateModified":"2018-09-25T17:00:00-07:00","datePublished":"2018-09-25T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/25/ride.html"},"description":"It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/25/ride.html","headline":"Your Ride Is Here","dateModified":"2018-09-25T17:00:00-07:00","datePublished":"2018-09-25T17:00:00-07:00","description":"Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing ‘GO’ if they match and ‘STAY’ if not.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/25/ride.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,22 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Write a program which reads in the name of the comet and the name of the group and figures out whether according to the above scheme the names are a match, printing 'GO' if they match and 'STAY' if not.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/ride/ride.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/ride/ride.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-26-ride.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>It is a well-known fact that behind every good comet is a UFO. These UFOs often come to collect loyal supporters from here on Earth. Unfortunately, they only have room to pick up one group of followers on each trip. They do, however, let the groups know ahead of time which will be picked up for each comet by a clever scheme: they pick a name for the comet which, along with the name of the group, can be used to determine if it is a particular group’s turn to go (who do you think names the comets?). The details of the matching scheme are given below; your job is to write a program which takes the names of a group and a comet and then determines whether the group should go with the UFO behind that comet.</p>
 
@@ -2180,13 +2392,18 @@ PROG: ride<br />
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<p>Line 1:</p>
-
-<p>An upper case character string of length 1..6 that is the name of the comet.</p>
-
-<p>Line 2:</p>
-
-<p>An upper case character string of length 1..6 that is the name of the group.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Line 1:</strong></td>
+      <td>An upper case character string of length 1..6 that is the name of the comet.</td>
+    </tr>
+    <tr>
+      <td><strong>Line 2:</strong></td>
+      <td>An upper case character string of length 1..6 that is the name of the group.</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><strong>NOTE</strong>: The input file has a newline at the end of each line but does not have a “return”. Sometimes, programmers code for the Windows paradigm of “return” followed by “newline”; don’t do that! Use simple input routines like “readln” (for Pascal) and, for C/C++, “fscanf” and “fid»string”.</p>
 
@@ -2194,8 +2411,9 @@ PROG: ride<br />
 
 <h3 id="sample-input-file-ridein">SAMPLE INPUT (file ride.in)</h3>
 
-<p>COMETQ
-HVNGAT</p>
+<pre><code class="language-none">COMETQ
+HVNGAT
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2203,13 +2421,12 @@ HVNGAT</p>
 
 <h3 id="sample-output-file-rideout">SAMPLE OUTPUT (file ride.out)</h3>
 
-<p>GO</p>
+<pre><code class="language-none">GO
+</code></pre>
 
 <h3 id="output-explanation">OUTPUT EXPLANATION</h3>
 
 <p>Converting the letters to numbers:</p>
-
-<p>Copy to clipboard</p>
 
 <table>
   <thead>
@@ -2265,16 +2482,132 @@ HVNGAT</p>
 
 <p>Because both products evaluate to 27 (when modded by 47), the mission is ‘GO’.</p>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Hal Burch</p>
+  </summary>
+
+  <p>This is probably the easiest problem in the entire set of lessons. An ‘ad hoc’ problem, no particular algorithms or tricks are needed save one: one must be careful to get the input without processing the newline on the end!</p>
+
+  <p>Here is a prototype solution:</p>
+
+  <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int
+hash(char *s)
+{
+	int i, h;
+
+	h = 1;
+	for(i=0; s[i] &amp;&amp; isalpha(s[i]); i++)
+		h = ((s[i]-'A'+1)*h) % 47;
+	return h;
+}
+
+void
+main(void)
+{
+	FILE *in, *out;
+	char comet[100], group[100];  /* bigger than necessary, room for newline */
+
+	in = fopen("input.txt", "r");
+	out = fopen("output.txt", "w");
+
+	fgets(comet, sizeof comet, in);
+	fgets(group, sizeof group, in);
+
+	if(hash(comet) == hash(group))
+		fprintf(out, "GO\n");
+	else
+		fprintf(out, "STAY\n");
+	exit (0);
+}
+</code></pre>
+  <p>Solutions generally run in under 0.01 seconds.</p>
+
+</details>
+
+<details>
+  <summary>
+    <p>Iain Found</p>
+  </summary>
+
+  <p>Canada’s Iain Found created this straightforward solution (which has been slightly modified to make the highest quality presentation here):</p>
+
+  <pre><code class="language-python">with open('ride.in', 'r') as fin:
+    comet1 = fin.readline().strip()
+    comet2 = fin.readline().strip()
+prod1, prod2 = 1, 1
+for c in comet1: prod1 *= ord(c) - ord('A') + 1
+for c in comet2: prod2 *= ord(c) - ord('A') + 1
+with open('ride.out', 'w') as fout:
+    if prod1 % 47 == prod2 % 47: fout.write('GO\n')
+    else: fout.write('STAY\n')
+</code></pre>
+
+  <p>Note that a couple important features are included:</p>
+
+  <ul>
+    <li>Newlines are removed.</li>
+    <li>The with construct automatically closes files upon the block exit.</li>
+  </ul>
+
+</details>
+
+<details>
+  <summary>
+    <p>Tyler Adams</p>
+  </summary>
+
+  <p>USACO alumnus Tyler Adams created this more functional-programming-oriented solution:</p>
+
+  <pre><code class="language-python">def char_to_num(c):
+    return ord(c) - ord('A') + 1
+
+def line_to_code(s):
+    nums = map(char_to_num, s) 
+    code = reduce(lambda x,y: x*y, nums) % 47 
+    return code
+
+with open("ride.in", "r") as input_file:
+    raw_lines = input_file.readlines()
+lines = map(lambda s: s.strip(), raw_lines)
+codes = map(line_to_code, lines)
+should_go = codes[0] == codes[1]
+
+with open("ride.out", "w") as output_file:
+    if should_go: output_file.write("GO\n") 
+    else: output_file.write("STAY\n")
+</code></pre>
+
+  <p>Note the good choice of variable names in both of these Python solutions. Don’t miss that even though some lines could be combined, that compression is not performed in interest of creating a program that is debuggable and maintainable.</p>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/ride/ride.java">
+                            
                                 USACO - ride</a>
                             is created by
                             <a href="http://github.com/jvonk">

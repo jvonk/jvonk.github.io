@@ -25,7 +25,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short}}".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short}}".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -58,8 +58,8 @@
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
                         {% if cat=="USACO" %}
-                        {% assign starts = "2 1 1" | split: " " %}
-                        {% assign ends = "6 4 4" | split: " " %}
+                        {% assign starts = "2 1 1 1" | split: " " %}
+                        {% assign ends = "6 4 4 1" | split: " " %}
                             {% for chapter in (1..starts.size) %}
                                 <div class="dropdown">
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
@@ -124,9 +124,10 @@
                         {{ page.description }}</h2>
                 {% endif %}
                 {% if page.chapter and page.section %}
-                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a>
+                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a><br>
                 {% endif %}
-
+                <a href="{{ 'https://github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
+                
                 {% else %}
                 <h1 class="project-name">
                     {{ site.title }}</h1>
@@ -142,20 +143,37 @@
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 {% if page.chapter and page.section %}
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                {% ifhascontent analysis %}
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                {% endifhascontent %}
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 {% endif %}
                 {{ content }}
-            </div>
             {% if page.chapter and page.section %}
                 <div id="code"></div>
                 <script src="{{'/assets/js/prism.js' | relative_url}}"></script>
+                {% ifhascontent analysis %}
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    {% contentblock analysis %}
+                </div>
+                {% endifhascontent %}
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             {% endif %}
-            {% if page.link and page.short %}
+            </div>
+            {% if page.short %}
                 <footer class="site-footer realcontent">
                     {% if page.categories %}
                         <span class="site-footer-owner">
+                            {% if page.link %}
                             <a href="{{ page.link }}">
+                            {% else %}
+                            <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
+                            {% endif %}
                                 {{ page.categories[0] }} - {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">
@@ -164,7 +182,11 @@
                         </span>
                     {% else %}
                         <span class="site-footer-owner">
+                            {% if page.link %}
                             <a href="{{ page.link }}">
+                            {% else %}
+                            <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
+                            {% endif %}
                                 {{ page.short }}</a>
                             is created by
                             <a href="{{ site.github.owner_url }}">

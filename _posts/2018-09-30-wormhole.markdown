@@ -14,7 +14,7 @@ Farmer John's hobby of conducting high-energy physics experiments on weekends ha
 According to his calculations, Farmer John knows that his wormholes will form N/2 connected pairs. For example, if wormholes A and B are connected as a pair, then any object entering wormhole A will exit wormhole B moving in the same direction, and any object entering wormhole B will similarly exit from wormhole A moving in the same direction. This can have rather unpleasant consequences.
 
 For example, suppose there are two paired wormholes A at (1,1) and B at (3,1), and that Bessie the cow starts from position (2,1) moving in the +x direction. Bessie will enter wormhole B \[at (3,1)\], exit from A \[at (1,1)\], then enter B again, and so on, getting trapped in an infinite cycle!
-```
+```none
    | . . . .
    | A > B .      Bessie will travel to B then
    + . . . .      A then across to B again
@@ -32,7 +32,7 @@ Please help Farmer John count the number of distinct pairings of the wormholes s
 
 ### SAMPLE INPUT (file wormhole.in):
 
-```
+```none
 4
 0 0
 1 0
@@ -50,14 +50,14 @@ Line 1: The number of distinct pairings of wormholes such that Bessie could conc
 
 ### SAMPLE OUTPUT (file wormhole.out):
 
-````
+```none`
 2
 ```
 
 ### OUTPUT DETAILS:
 
 If we number the wormholes 1..4 as we read them from the input, then if wormhole 1 pairs with wormhole 2 and wormhole 3 pairs with wormhole 4, Bessie can get stuck if she starts anywhere between (0,0) and (1,0) or between (0,1) and (1,1).
-```
+```none
    | . . . .
    4 3 . . .      Bessie will travel to B then
    1-2-.-.-.      A then across to B again
@@ -65,3 +65,86 @@ If we number the wormholes 1..4 as we read them from the input, then if wormhole
 Similarly, with the same starting points, Bessie can get stuck in a cycle if the pairings are 1-3 and 2-4 (if Bessie enters WH#3 and comes out at WH#1, she then walks to WH#2 which transports here to WH#4 which directs her towards WH#3 again for a cycle).
 
 Only the pairings 1-4 and 2-3 allow Bessie to walk in the +x direction from any point in the 2D plane with no danger of cycling.
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Brian Dean
+</summary>
+
+The process of solving this problem is described in [the video](https://youtu.be/KR4iY-EfEs4); the final code is shown below.
+
+```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+#define MAX_N 12
+
+int N, X[MAX_N+1], Y[MAX_N+1];
+int partner[MAX_N+1];
+int next_on_right[MAX_N+1];
+
+bool cycle_exists(void)
+{
+  for (int start=1; start<=N; start++) {
+    // does there exist a cylce starting from start
+    int pos = start;
+    for (int count=0; count<N; count++)
+      pos = next_on_right[partner[pos]];
+    if (pos != 0) return true;
+  }
+  return false;
+}
+
+// count all solutions
+int solve(void) 
+{
+  // find first unpaired wormhole
+  int i, total=0;
+  for (i=1; i<=N; i++) 
+    if (partner[i] == 0) break;
+
+  // everyone paired?
+  if (i > N) {
+    if (cycle_exists()) return 1;
+    else return 0;
+  }
+
+  // try pairing i with all possible other wormholes j
+  for (int j=i+1; j<=N; j++)
+    if (partner[j] == 0) {
+      // try pairing i & j, let recursion continue to 
+      // generate the rest of the solution
+      partner[i] = j;
+      partner[j] = i;
+      total += solve();
+      partner[i] = partner[j] = 0;
+    }
+  return total;
+}
+
+int main(void)
+{
+  ifstream fin("wormhole.in");
+  fin >> N;
+  for (int i=1; i<=N; i++) fin >> X[i] >> Y[i];
+  fin.close();
+  
+  for (int i=1; i<=N; i++) // set next_on_right[i]...
+    for (int j=1; j<=N; j++)
+      if (X[j] > X[i] && Y[i] == Y[j]) // j right of i...
+	if (next_on_right[i] == 0 ||
+	    X[j]-X[i] < X[next_on_right[i]]-X[i])
+	  next_on_right[i] = j;
+
+  ofstream fout("wormhole.out");
+  fout << solve() << "\n";
+  fout.close();
+  return 0;
+}
+```
+
+</details>
+
+{% endcontentfor %}

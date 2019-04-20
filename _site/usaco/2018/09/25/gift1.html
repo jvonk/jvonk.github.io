@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/gift1/gift1".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/gift1/gift1".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Greedy Gift Givers" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give." />
-<meta property="og:description" content="A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/25/gift1.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/25/gift1.html" />
+<meta name="description" content="Given a group of friends, no one of whom has a name longer than 14 characters, the money each person in the group spends on gifts, and a list of friends to whom each person gives gifts; determine how much money each person ends up with." />
+<meta property="og:description" content="Given a group of friends, no one of whom has a name longer than 14 characters, the money each person in the group spends on gifts, and a list of friends to whom each person gives gifts; determine how much money each person ends up with." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/25/gift1.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/25/gift1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-25T18:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/25/gift1.html","headline":"Greedy Gift Givers","dateModified":"2018-09-25T18:00:00-07:00","datePublished":"2018-09-25T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/25/gift1.html"},"description":"A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/25/gift1.html","headline":"Greedy Gift Givers","dateModified":"2018-09-25T18:00:00-07:00","datePublished":"2018-09-25T18:00:00-07:00","description":"Given a group of friends, no one of whom has a name longer than 14 characters, the money each person in the group spends on gifts, and a list of friends to whom each person gives gifts; determine how much money each person ends up with.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/25/gift1.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,22 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Given a group of friends, no one of whom has a name longer than 14 characters, the money each person in the group spends on gifts, and a list of friends to whom each person gives gifts; determine how much money each person ends up with.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/gift1/gift1.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/gift1/gift1.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-26-gift1.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.</p>
 
@@ -2169,36 +2381,53 @@
 
 <h3 id="input-format">INPUT FORMAT</h3>
 
-<table border="0" style="border-collapse: collapse;">
-<tbody><tr><th>Line #</th><th>Contents</th></tr>
-<tr> <td align="center">1</td> <td> A single integer, NP </td></tr>
-<tr> <td align="center">2..NP+1</td> <td> Line <i>i</i>+1 contains the name
-of group member <i>i</i></td>
-</tr>
-<tr> <td valign="top" align="center">NP+2..end</td> <td>NP groups of lines organized like this:
-
-
-<table border="0">
-
-<tbody><tr><td>The first line of each group tells the person's name who
-will be giving gifts.
-</td></tr><tr><td>The second line in the group contains two numbers:
-	<ul>
-	<li>The amount of money (in the range 0..2000) to be divided
-        into gifts by the giver
-        </li><li>NG<sub>i</sub> (1 ≤ NG<sub>i</sub> ≤ NP), the
-        number of people to whom the giver will give gifts
-	</li></ul>
-</td></tr><tr><td> If NG<sub>i</sub> is nonzero, each of the next NG<sub>i</sub>
-lines lists the name of a recipient of a gift; recipients are not repeated
-in a single giver's list.
-</td></tr></tbody></table>
-
-</td></tr></tbody></table>
+<table>
+    <tbody>
+        <tr>
+            <th>Line #</th>
+            <th>Contents</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td> A single integer, NP </td>
+        </tr>
+        <tr>
+            <td align="center">2..NP+1</td>
+            <td> Line <i>i</i>+1 contains the name of group member <i>i</i></td>
+        </tr>
+        <tr>
+            <td valign="top" align="center">NP+2..end</td>
+            <td>NP groups of lines organized like this:
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>The first line of each group tells the person's name who will be giving gifts.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>The second line in the group contains two numbers:
+                                <ul>
+                                    <li>The amount of money (in the range 0..2000) to be divided into gifts by the giver
+                                    </li>
+                                    <li>NG<sub>i</sub> (1 ≤ NG<sub>i</sub> ≤ NP), the number of people to whom the giver will give gifts
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>If NG<sub>i</sub> is nonzero, each of the next NG<sub>i</sub> lines lists the name of a recipient of a gift; recipients are not repeated in a single giver's list.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 <h3 id="sample-input-file-gift1in">SAMPLE INPUT (file gift1.in)</h3>
 
-<p>5
+<pre><code class="language-none">5
 dave
 laura
 owen
@@ -2221,7 +2450,8 @@ laura
 amr
 vick
 vick
-0 0</p>
+0 0
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2231,60 +2461,250 @@ vick
 
 <h3 id="sample-output-file-gift1out">SAMPLE OUTPUT (file gift1.out)</h3>
 
-<p>dave 302
+<pre><code class="language-none">dave 302
 laura 66
 owen -359
 vick 141
-amr -150</p>
+amr -150
+</code></pre>
 
 <h3 id="output-explanation">OUTPUT EXPLANATION</h3>
 
-<p>Five names: dave, laura, owen, vick, amr. Let’s keep a table of the gives (money) each person ‘has’:&lt;h3&gt;Welcome to the real-time HTML editor!&lt;/h3&gt;</p>
-<p>Type HTML in the textarea above, and it will magically appear in the frame below.</p>
 <table>
-<tbody><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
+  <thead>
+    <tr>
+      <th>dave</th>
+      <th>laura</th>
+      <th>owen</th>
+      <th>vick</th>
+      <th>amr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-<tr class="narrow"><td class="l">0</td>   <td class="l">0</td>    <td class="l">0</td>   <td class="l">0</td>   <td class="l">0</td></tr>
+<p>First, ‘dave’ splits 200 among ‘laura’, ‘owen’, and ‘vick’. That comes to 66 each, with 2 left over</p>
 
-<tr><td colspan="5">
+<table>
+  <tbody>
+    <tr>
+      <td><strong>-200+2</strong></td>
+      <td><strong>+66</strong></td>
+      <td><strong>+66</strong></td>
+      <td><strong>+66</strong></td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><strong>-198</strong></td>
+      <td><strong>66</strong></td>
+      <td><strong>66</strong></td>
+      <td><strong>66</strong></td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
-66 each, with 2 left over</td></tr>
+<p>Second, ‘owen’ gives 500 to ‘dave’:</p>
 
-<tr><td class="l"><b>-200+2</b></td><td class="l"><b>+66</b></td>  <td class="l"><b>+66</b></td> <td class="l"><b>+66</b></td>  <td class="l">0</td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l"><b>-198</b></td><td class="l"><b>66</b></td>  <td class="l"><b>66</b></td> <td class="l"><b>66</b></td>  <td class="l">0</td></tr>
+<table>
+  <tbody>
+    <tr>
+      <td>-198 <strong>+500</strong></td>
+      <td>66</td>
+      <td>66 <strong>-500</strong></td>
+      <td>66</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><strong>302</strong></td>
+      <td>66</td>
+      <td><strong>-434</strong></td>
+      <td>66</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-<tr><td colspan="5" align="left">Second, 'owen' gives 500 to 'dave':</td></tr>
+<p>Third, ‘amr’ splits 150 between ‘vick’ and ‘owen’:</p>
 
-<tr><td class="l">-198<b>+500</b></td>  <td class="l">66</td>  <td class="l">66<b>-500</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l"><b>302</b></td>  <td class="l">66</td>  <td class="l"><b>-434</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
+<table>
+  <tbody>
+    <tr>
+      <td>302</td>
+      <td>66</td>
+      <td>-434 <strong>+75</strong></td>
+      <td>66 <strong>+75</strong></td>
+      <td><strong>-150</strong></td>
+    </tr>
+    <tr>
+      <td>302</td>
+      <td>66</td>
+      <td><strong>-359</strong></td>
+      <td><strong>141</strong></td>
+      <td><strong>-150</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-<tr><td colspan="5" align="left">Third, 'amr' splits 150 between 'vick' and 'owen':
+<p>Fourth, ‘laura’ splits 0 between ‘amr’ and ‘vick’; no changes:</p>
 
-</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-434<b>+75</b></td><td class="l">66<b>+75</b></td>  <td class="l"><b>-150</b></td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l"><b>-359</b></td><td class="l"><b>141</b></td> <td class="l"><b>-150</b></td></tr>
+<table>
+  <tbody>
+    <tr>
+      <td>302</td>
+      <td>66</td>
+      <td>-359</td>
+      <td>141</td>
+      <td>-150</td>
+    </tr>
+  </tbody>
+</table>
 
-<tr><td colspan="5" align="left">Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:
-</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
-<tr><td colspan="5" align="left">Finally, 'vick' gives 0 to no one:
-</td></tr><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
-<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
+<p>Finally, ‘vick’ gives 0 to no one:</p>
 
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>dave</th>
+      <th>laura</th>
+      <th>owen</th>
+      <th>vick</th>
+      <th>amr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>302</td>
+      <td>66</td>
+      <td>-359</td>
+      <td>141</td>
+      <td>-150</td>
+    </tr>
+  </tbody>
+</table>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Russ Cox</p>
+  </summary>
+
+  <p>The hardest part about this problem is dealing with the strings representing people’s names.</p>
+
+  <p>We keep an array of Person structures that contain their name and how much money they give/get.</p>
+
+  <p>The heart of the program is the lookup() function that, given a person’s name, returns their Person structure. We add new people with addperson().</p>
+
+  <p>Note that we assume names are reasonably short.</p>
+
+  <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+
+#define MAXPEOPLE 10
+#define NAMELEN	32
+
+typedef struct Person Person;
+struct Person {
+    char name[NAMELEN];
+    int total;
+};
+
+Person people[MAXPEOPLE];
+int npeople;
+
+void
+addperson(char *name)
+{
+    assert(npeople &lt; MAXPEOPLE);
+	strcpy(people[npeople].name, name);
+    npeople++;
+}
+
+Person*
+lookup(char *name)
+{
+    int i;
+
+    /* look for name in people table */
+    for(i=0; i&lt;npeople; i++)
+	if(strcmp(name, people[i].name) == 0)
+	    return &amp;people[i];
+
+    assert(0);	/* should have found name */
+}
+
+int
+main(void)
+{
+    char name[NAMELEN];
+    FILE *fin, *fout;
+    int i, j, np, amt, ng;
+    Person *giver, *receiver;
+
+    fin = fopen("gift1.in", "r");
+    fout = fopen("gift1.out", "w");
+
+    fscanf(fin, "%d", &amp;np);
+    assert(np &lt;= MAXPEOPLE);
+
+    for(i=0; i&lt;np; i++) {
+	fscanf(fin, "%s", name);
+	addperson(name);
+    }
+
+    /* process gift lines */
+    for(i=0; i&lt;np; i++) {
+	fscanf(fin, "%s %d %d", name, &amp;amt, &amp;ng);
+	giver = lookup(name);
+
+	for(j=0; j&lt;ng; j++) {
+	    fscanf(fin, "%s", name);
+	    receiver = lookup(name);
+	    giver-&gt;total -= amt/ng;
+	    receiver-&gt;total += amt/ng;
+	}
+    }
+
+    /* print gift totals */
+    for(i=0; i&lt;np; i++)
+	fprintf(fout, "%s %d\n", people[i].name, people[i].total);
+    exit (0);
+}
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/gift1/gift1.java">
+                            
                                 USACO - gift1</a>
                             is created by
                             <a href="http://github.com/jvonk">

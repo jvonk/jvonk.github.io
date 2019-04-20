@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:8081/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8081/" rel="alternate" type="text/html" /><updated>2019-04-13T18:48:42-07:00</updated><id>http://localhost:8081/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Electric Fence</title><link href="http://localhost:8081/usaco/2019/01/22/fence9.html" rel="alternate" type="text/html" title="Electric Fence" /><published>2019-01-22T16:00:00-08:00</published><updated>2019-01-22T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2019/01/22/fence9</id><content type="html" xml:base="http://localhost:8081/usaco/2019/01/22/fence9.html">&lt;p&gt;In this problem, ‘lattice points’ in the plane are points with integer coordinates.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io/" rel="alternate" type="text/html" /><updated>2019-04-19T20:03:22-07:00</updated><id>https://jvonk.github.io/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Beef McNuggets</title><link href="https://jvonk.github.io/usaco/2019/01/28/nuggets.html" rel="alternate" type="text/html" title="Beef McNuggets" /><published>2019-01-28T17:00:00-08:00</published><updated>2019-01-28T17:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/28/nuggets</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/28/nuggets.html">&lt;p&gt;Farmer Brown’s cows are up in arms, having heard that McDonalds is considering the introduction of a new product: Beef McNuggets. The cows are trying to find any possible way to put such a product in a negative light.&lt;/p&gt;
+
+&lt;p&gt;One strategy the cows are pursuing is that of ‘inferior packaging’. “Look,” say the cows, “if you have Beef McNuggets in boxes of 3, 6, and 10, you can not satisfy a customer who wants 1, 2, 4, 5, 7, 8, 11, 14, or 17 McNuggets. Bad packaging: bad product.”&lt;/p&gt;
+
+&lt;p&gt;Help the cows. Given N (the number of packaging options, 1 &amp;lt;= N &amp;lt;= 10), and a set of N positive integers (1 &amp;lt;= i &amp;lt;= 256) that represent the number of nuggets in the various packages, output the largest number of nuggets that can not be purchased by buying nuggets in the given sizes. Print 0 if all possible purchases can be made or if there is no bound to the largest number.&lt;/p&gt;
+
+&lt;p&gt;The largest impossible number (if it exists) will be no larger than 2,000,000,000.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-nuggets&quot;&gt;PROGRAM NAME: nuggets&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N, the number of packaging options&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The number of nuggets in one kind of box&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-nuggetsin&quot;&gt;SAMPLE INPUT (file nuggets.in)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;3
+3
+6
+10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;The output file should contain a single line containing a single integer that represents the largest number of nuggets that can not be represented or 0 if all possible purchases can be made or if there is no bound to the largest number.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-nuggetsout&quot;&gt;SAMPLE OUTPUT (file nuggets.out)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;17
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer Brown’s cows are up in arms, having heard that McDonalds is considering the introduction of a new product: Beef McNuggets. The cows are trying to find any possible way to put such a product in a negative light.</summary></entry><entry><title type="html">Raucous Rockers</title><link href="https://jvonk.github.io/usaco/2019/01/28/rockers.html" rel="alternate" type="text/html" title="Raucous Rockers" /><published>2019-01-28T16:00:00-08:00</published><updated>2019-01-28T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/28/rockers</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/28/rockers.html">&lt;p&gt;You just inherited the rights to N (1 &amp;lt;= N &amp;lt;= 20) previously unreleased songs recorded by the popular group Raucous Rockers. You plan to release a set of M (1 &amp;lt;= M &amp;lt;= 20) compact disks with a selection of these songs. Each disk can hold a maximum of T (1 &amp;lt;= T &amp;lt;= 20) minutes of music, and a song can not overlap from one disk to another.&lt;/p&gt;
+
+&lt;p&gt;Since you are a classical music fan and have no way to judge the artistic merits of these songs, you decide on the following criteria for making the selection:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The songs on the set of disks must appear in the order of the dates that they were written.&lt;/li&gt;
+  &lt;li&gt;The total number of songs included will be maximized.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;program-name-rockers&quot;&gt;PROGRAM NAME: rockers&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Three integers: N, T, and M.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N integers that are the lengths of the songs ordered by the date they were written.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-rockersin&quot;&gt;SAMPLE INPUT (file rockers.in)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;4 5 2
+4 3 4 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;A single line with an integer that is the number of songs that will fit on M disks.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-rockersout&quot;&gt;SAMPLE OUTPUT (file rockers.out)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;3
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">You just inherited the rights to N (1 &amp;lt;= N &amp;lt;= 20) previously unreleased songs recorded by the popular group Raucous Rockers. You plan to release a set of M (1 &amp;lt;= M &amp;lt;= 20) compact disks with a selection of these songs. Each disk can hold a maximum of T (1 &amp;lt;= T &amp;lt;= 20) minutes of music, and a song can not overlap from one disk to another.</summary></entry><entry><title type="html">Electric Fence</title><link href="https://jvonk.github.io/usaco/2019/01/22/fence9.html" rel="alternate" type="text/html" title="Electric Fence" /><published>2019-01-22T16:00:00-08:00</published><updated>2019-01-22T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/22/fence9</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/22/fence9.html">&lt;p&gt;In this problem, ‘lattice points’ in the plane are points with integer coordinates.&lt;/p&gt;
 
 &lt;p&gt;In order to contain his cows, Farmer John constructs a triangular electric fence by stringing a ‘hot’ wire from the origin (0,0) to a lattice point (n,m), then to a lattice point on the positive x axis (p,0), with all between 1 and 32000, and then back to the origin (0,0).&lt;/p&gt;
 
@@ -12,9 +91,7 @@
 
 &lt;h3 id=&quot;sample-input-file-fence9in&quot;&gt;SAMPLE INPUT (file fence9.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;
-7 5 10
-
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;7 5 10
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
@@ -23,16 +100,14 @@
 
 &lt;h3 id=&quot;sample-output-file-fence9out&quot;&gt;SAMPLE OUTPUT (file fence9.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;
-20
-
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">In this problem, ‘lattice points’ in the plane are points with integer coordinates.</summary></entry><entry><title type="html">American Heritage</title><link href="http://localhost:8081/usaco/2019/01/16/heritage.html" rel="alternate" type="text/html" title="American Heritage" /><published>2019-01-16T16:00:00-08:00</published><updated>2019-01-16T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2019/01/16/heritage</id><content type="html" xml:base="http://localhost:8081/usaco/2019/01/16/heritage.html">&lt;p&gt;Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;20
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">In this problem, ‘lattice points’ in the plane are points with integer coordinates.</summary></entry><entry><title type="html">American Heritage</title><link href="https://jvonk.github.io/usaco/2019/01/16/heritage.html" rel="alternate" type="text/html" title="American Heritage" /><published>2019-01-16T16:00:00-08:00</published><updated>2019-01-16T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/16/heritage</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/16/heritage.html">&lt;p&gt;Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.&lt;/p&gt;
 
 &lt;p&gt;Your job is to create the ‘tree post-order’ notation of a cow’s heritage after being given the in-order and pre-order notations. Each cow name is encoded as a unique letter. (You may already know that you can frequently reconstruct a tree from any two of the ordered traversals.) Obviously, the trees will have no more than 26 nodes.&lt;/p&gt;
 
 &lt;p&gt;Here is a graphical representation of the tree used in the sample input and output:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;      C
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;      C
     /   \
    /     \
   B       G
@@ -68,7 +143,7 @@ A   D   H
 
 &lt;h3 id=&quot;sample-input-file-heritagein&quot;&gt;SAMPLE INPUT (file heritage.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;ABEDFCHG CBADEFGH
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;ABEDFCHG CBADEFGH
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
@@ -77,8 +152,8 @@ A   D   H
 
 &lt;h3 id=&quot;sample-output-file-heritageout&quot;&gt;SAMPLE OUTPUT (file heritage.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;AEFDBHGC
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.</summary></entry><entry><title type="html">A Game</title><link href="http://localhost:8081/usaco/2019/01/14/game1.html" rel="alternate" type="text/html" title="A Game" /><published>2019-01-14T16:00:00-08:00</published><updated>2019-01-14T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2019/01/14/game1</id><content type="html" xml:base="http://localhost:8081/usaco/2019/01/14/game1.html">&lt;p&gt;Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;AEFDBHGC
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John takes the heritage of his cows very seriously. He is not, however, a truly fine bookkeeper. He keeps his cow genealogies as binary trees and, instead of writing them in graphic form, he records them in the more linear ‘tree in-order’ and ‘tree pre-order’ notations.</summary></entry><entry><title type="html">A Game</title><link href="https://jvonk.github.io/usaco/2019/01/14/game1.html" rel="alternate" type="text/html" title="A Game" /><published>2019-01-14T16:00:00-08:00</published><updated>2019-01-14T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/14/game1</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/14/game1.html">&lt;p&gt;Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.&lt;/p&gt;
 
 &lt;p&gt;Write a program that implements the optimal strategy. The optimal strategy yields maximum points when playing against the “best possible” opponent. Your program must further implement an optimal strategy for player 2.&lt;/p&gt;
 
@@ -101,7 +176,7 @@ A   D   H
 
 &lt;h3 id=&quot;sample-input-file-game1in&quot;&gt;SAMPLE INPUT (file game1.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;6
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;6
 4 7 2 9
 5 2
 &lt;/code&gt;&lt;/pre&gt;
@@ -112,8 +187,8 @@ A   D   H
 
 &lt;h3 id=&quot;sample-output-file-game1out&quot;&gt;SAMPLE OUTPUT (file game1.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;18 11
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.</summary></entry><entry><title type="html">Camelot</title><link href="http://localhost:8081/usaco/2019/01/12/camelot.html" rel="alternate" type="text/html" title="Camelot" /><published>2019-01-12T16:00:00-08:00</published><updated>2019-01-12T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2019/01/12/camelot</id><content type="html" xml:base="http://localhost:8081/usaco/2019/01/12/camelot.html">&lt;p&gt;Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;18 11
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Consider the following two-player game played with a sequence of N positive integers (2 &amp;lt;= N &amp;lt;= 100) laid onto a 1 x N game board. Player 1 starts the game. The players move alternately by selecting a number from either the left or the right end of the gameboard. That number is then deleted from the board, and its value is added to the score of the player who selected it. A player wins if his sum is greater than his opponents.</summary></entry><entry><title type="html">Camelot</title><link href="https://jvonk.github.io/usaco/2019/01/12/camelot.html" rel="alternate" type="text/html" title="Camelot" /><published>2019-01-12T16:00:00-08:00</published><updated>2019-01-12T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/12/camelot</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/12/camelot.html">&lt;p&gt;Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.&lt;/p&gt;
 
 &lt;p&gt;This example board is the standard 8x8 array of squares:&lt;/p&gt;
 
@@ -146,7 +221,7 @@ A   D   H
 
 &lt;h3 id=&quot;sample-input-file-camelotin&quot;&gt;SAMPLE INPUT (file camelot.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;8 8
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;8 8
 D 4
 A 3 A 8
 H 1 H 8
@@ -160,7 +235,7 @@ H 1 H 8
 
 &lt;h3 id=&quot;sample-output-file-camelotout&quot;&gt;SAMPLE OUTPUT (file camelot.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;10
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;10
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;sample-output-elaboration&quot;&gt;SAMPLE OUTPUT ELABORATION&lt;/h3&gt;
@@ -170,7 +245,7 @@ Knight 1: A3 - B5 (1 move)
 Knight 2: A8 - C7 - B5 (2 moves)
 Knight 3: H1 - G3 - F5 - D4 (picking up king) - B5 (4 moves)
 Knight 4: H8 - F7 - D6 - B5 (3 moves)
-1 + 2 + 4 + 3 = 10 moves.&lt;/p&gt;</content><author><name></name></author><summary type="html">Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.</summary></entry><entry><title type="html">Shopping Offers</title><link href="http://localhost:8081/usaco/2018/12/20/range.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2018/12/20/range</id><content type="html" xml:base="http://localhost:8081/usaco/2018/12/20/range.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+1 + 2 + 4 + 3 = 10 moves.&lt;/p&gt;</content><author><name></name></author><summary type="html">Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io/usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
 
 &lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
 
@@ -212,7 +287,8 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-input-file-shoppingin&quot;&gt;SAMPLE INPUT (file shopping.in)&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
 
@@ -220,57 +296,49 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-output-file-shoppingout&quot;&gt;SAMPLE OUTPUT (file shopping.out)&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;14&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Shopping Offers</title><link href="http://localhost:8081/usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2018/12/20/shopping</id><content type="html" xml:base="http://localhost:8081/usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;14
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io/usaco/2018/12/20/range.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/range</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/range.html">&lt;p&gt;Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).&lt;/p&gt;
 
-&lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
+&lt;p&gt;Your task is to count up all the various square grazing areas within the supplied dataset and report the number of square grazing areas (of sizes &amp;gt;= 2x2) remaining. Of course, grazing areas may overlap for purposes of this report.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;three flowers for 5z instead of 6z, or&lt;/li&gt;
-  &lt;li&gt;two vases together with one flower for 10z instead of 12z.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Write a program that calculates the price a customer has to pay for a purchase, making optimal use of the special offers to make the price as low as possible. You are not allowed to add items, even if that would lower the price.&lt;/p&gt;
-
-&lt;p&gt;For the prices and offers given above, the (lowest) price for three flowers and two vases is 14z: two vases and one flower for the reduced price of 10z and two flowers for the regular price of 4z.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-shopping&quot;&gt;PROGRAM NAME: shopping&lt;/h3&gt;
+&lt;h3 id=&quot;program-name-range&quot;&gt;PROGRAM NAME: range&lt;/h3&gt;
 
 &lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;The input file has a set of offers followed by a purchase.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;s, the number of special offers, (0 &amp;lt;= s &amp;lt;= 99).&lt;/td&gt;
+      &lt;td&gt;N, the number of miles on each side of the field.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..s+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line describes an offer using several integers. The first integer is n (1 &amp;lt;= n &amp;lt;= 5), the number of products that are offered. The subsequent n pairs of integers c and k indicate that k items (1 &amp;lt;= k &amp;lt;= 5) with product code c (1 &amp;lt;= c &amp;lt;= 999) are part of the offer. The last number p on the line stands for the reduced price (1 &amp;lt;= p &amp;lt;= 9999). The reduced price of an offer is less than the sum of the regular prices.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line s+2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;The first line contains the number b (0 &amp;lt;= b &amp;lt;= 5) of different kinds of products to be purchased.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line s+3..s+b+2:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each of the subsequent b lines contains three values: c, k, and p. The value c is the (unique) product code (1 &amp;lt;= c &amp;lt;= 999). The value k indicates how many items of this product are to be purchased (1 &amp;lt;= k &amp;lt;= 5). The value p is the regular price per item (1 &amp;lt;= p &amp;lt;= 999). At most 5*5=25 items can be in the basket.&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N characters with no spaces. 0 represents “ravaged for that block; 1 represents “ready to eat”.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;sample-input-file-shoppingin&quot;&gt;SAMPLE INPUT (file shopping.in)&lt;/h3&gt;
+&lt;h3 id=&quot;sample-input-file-rangein&quot;&gt;SAMPLE INPUT (file range.in)&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;6
+101111
+001111
+111111
+001111
+101101
+111001
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
 
-&lt;p&gt;A single line with one integer: the lowest possible price to be paid for the purchases.&lt;/p&gt;
+&lt;p&gt;Potentially several lines with the size of the square and the number of such squares that exist. Order them in ascending order from smallest to largest size.&lt;/p&gt;
 
-&lt;h3 id=&quot;sample-output-file-shoppingout&quot;&gt;SAMPLE OUTPUT (file shopping.out)&lt;/h3&gt;
+&lt;h3 id=&quot;sample-output-file-rangeout&quot;&gt;SAMPLE OUTPUT (file range.out)&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;14&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Riding the Fences</title><link href="http://localhost:8081/usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2018/12/12/fence</id><content type="html" xml:base="http://localhost:8081/usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;2 10
+3 4
+4 1
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).</summary></entry><entry><title type="html">Riding the Fences</title><link href="https://jvonk.github.io/usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/12/fence</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
 
 &lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
 
@@ -299,7 +367,7 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-input-file-fencein&quot;&gt;SAMPLE INPUT (file fence.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;9
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;9
 1 2
 2 3
 3 4
@@ -317,7 +385,7 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-output-file-fenceout&quot;&gt;SAMPLE OUTPUT (file fence.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;1
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;1
 2
 3
 4
@@ -327,15 +395,15 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 6
 5
 7
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.</summary></entry><entry><title type="html">Magic Squares</title><link href="http://localhost:8081/usaco/2018/12/11/msquare.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-11T17:00:00-08:00</published><updated>2018-12-11T17:00:00-08:00</updated><id>http://localhost:8081/usaco/2018/12/11/msquare</id><content type="html" xml:base="http://localhost:8081/usaco/2018/12/11/msquare.html">&lt;p&gt;Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.</summary></entry><entry><title type="html">Magic Squares</title><link href="https://jvonk.github.io/usaco/2018/12/11/msquare.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-11T17:00:00-08:00</published><updated>2018-12-11T17:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/11/msquare</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/11/msquare.html">&lt;p&gt;Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;1234
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;1234
 8765
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;In this task we consider the version where each square has a different color. Colors are denoted by the first 8 positive integers. A sheet configuration is given by the sequence of colors obtained by reading the colors of the squares starting at the upper left corner and going in clockwise direction. For instance, the configuration of &lt;em&gt;Figure 3&lt;/em&gt; is given by the sequence (1,2,3,4,5,6,7,8). This configuration is the initial configuration.&lt;/p&gt;
 
-&lt;p&gt;Three basic transformations, identified by the letters `A’, `B’ and `C’, can be applied to a sheet:&lt;/p&gt;
+&lt;p&gt;Three basic transformations, identified by the letters ‘A’, ‘B’ and ‘C’, can be applied to a sheet:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;‘A’: exchange the top and bottom row,&lt;/li&gt;
@@ -347,19 +415,19 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;8765
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;8765
 1234
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;B:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;4123
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;4123
 5876
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;C:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;1724
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;1724
 8635
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -375,7 +443,7 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-input-file-msquarein&quot;&gt;SAMPLE INPUT (file msquare.in)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;2 6 8 4 5 7 3 1
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;2 6 8 4 5 7 3 1
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
@@ -395,75 +463,6 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 
 &lt;h3 id=&quot;sample-output-file-msquareout&quot;&gt;SAMPLE OUTPUT (file msquare.out)&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;7
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;7
 BCABCCB
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry><entry><title type="html">Magic Squares</title><link href="http://localhost:8081/usaco/2018/12/11/butter.html" rel="alternate" type="text/html" title="Magic Squares" /><published>2018-12-11T16:00:00-08:00</published><updated>2018-12-11T16:00:00-08:00</updated><id>http://localhost:8081/usaco/2018/12/11/butter</id><content type="html" xml:base="http://localhost:8081/usaco/2018/12/11/butter.html">&lt;p&gt;Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.&lt;/p&gt;
-
-&lt;p&gt;FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.&lt;/p&gt;
-
-&lt;p&gt;FJ knows each cow spends her time in a given pasture (not necessarily alone). Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-butter&quot;&gt;PROGRAM NAME: butter&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Three space-separated integers: N, the number of pastures: P (2 &amp;lt;= P &amp;lt;= 800), and the number of connecting paths: C (1 &amp;lt;= C &amp;lt;= 1,450). Cows are uniquely numbered 1..N. Pastures are uniquely numbered 1..P.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines 2..N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains a single integer that is the pasture number in which a cow is grazing. Cow i’s pasture is listed on line i+1.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Lines N+2..N+C+1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Each line contains three space-separated integers that describe a single path that connects a pair of pastures and its length. Paths may be traversed in either direction. No pair of pastures is directly connected by more than one path. The first two integers are in the range 1..P; the third integer is in the range (1..225).&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-butterin&quot;&gt;SAMPLE INPUT (file butter.in)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;3 4 5
-2
-3
-4
-1 2 1
-1 3 5
-2 3 7
-2 4 3
-3 4 5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;input-details&quot;&gt;INPUT DETAILS&lt;/h3&gt;
-
-&lt;p&gt;This diagram shows the connections geometrically:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;         P2  
-P1 @--1--@ C1
-    \    |\
-     \   | \
-      5  7  3
-       \ |   \
-        \|    \ C3
-      C2 @--5--@
-        P3    P4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Line 1: A single integer that is the minimum distance the cows must walk to a pasture with a sugar cube.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sample-output-file-butterout&quot;&gt;SAMPLE OUTPUT (file butter.out)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;8
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;OUTPUT DETAILS:&lt;/p&gt;
-
-&lt;p&gt;Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
-units; cow 3 walks 0 units – a total of 8.&lt;/p&gt;</content><author><name></name></author><summary type="html">Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &amp;lt;= N &amp;lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</summary></entry><entry><title type="html">Overview</title><link href="http://localhost:8081/portfolio/2018/11/23/overview.html" rel="alternate" type="text/html" title="Overview" /><published>2018-11-23T16:00:00-08:00</published><updated>2018-11-23T16:00:00-08:00</updated><id>http://localhost:8081/portfolio/2018/11/23/overview</id><content type="html" xml:base="http://localhost:8081/portfolio/2018/11/23/overview.html">&lt;video controls=&quot;&quot;&gt;&lt;source src=&quot;https://coertvonk.com/wp-content/shield/a0f6-579d/8dadafd0a2a5752d825a90a18ec8f434.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/video&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Following the success of the magic cube, Mr. Rubik invented its planar version, called magic squares. This is a sheet composed of 8 equal-sized squares:</summary></entry></feed>

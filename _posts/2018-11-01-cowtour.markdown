@@ -13,9 +13,9 @@ Farmer John has a number of pastures on his farm. Cow paths connect some pasture
 
 Farmer John would like add a single a cow path between one pair of pastures using the constraints below.
 
-A field's \`diameter' is defined to be the largest distance of all the shortest walks between any pair of pastures in the field. Consider the field below with five pastures, located at the points shown, and cow paths marked by lines:
+A field's 'diameter' is defined to be the largest distance of all the shortest walks between any pair of pastures in the field. Consider the field below with five pastures, located at the points shown, and cow paths marked by lines:
 
-```
+```none
          15,15   20,15
            D       E
            *-------*
@@ -28,11 +28,11 @@ A field's \`diameter' is defined to be the largest distance of all the shortest 
 10,10    15,10   20,10
 ```
 
-The \`diameter' of this field is approximately 12.07106, since the longest of the set of shortest paths between pairs of pastures is the path from A to E (which includes the point set {A,B,E}). No other pair of pastures in this field is farther apart when connected by an optimal sequence of cow paths.
+The 'diameter' of this field is approximately 12.07106, since the longest of the set of shortest paths between pairs of pastures is the path from A to E (which includes the point set {A,B,E}). No other pair of pastures in this field is farther apart when connected by an optimal sequence of cow paths.
 
 Suppose an additional field on the same plane as above is connected by cow paths as follows:
 
-```
+```none
          *F 30,15
         / 
       _/  
@@ -49,7 +49,7 @@ Note that cow paths do not connect just because they cross each other; they only
 
 The input contains the pastures, their locations, and a symmetric "adjacency" matrix that tells whether pastures are connected by cow paths. Pastures are not considered to be connected to themselves. Here's one annotated adjacency list for the pasture {A,B,C,D,E,F,G,H} as shown above:
 
-```
+```none
   A B C D E F G H
 A 0 1 0 0 0 0 0 0
 B 1 0 1 1 1 0 0 0
@@ -74,11 +74,11 @@ Find a way to connect exactly two pastures in the input with a cow path so that 
 
 |**Lines 1:**|An integer, N (1 <= N <= 150), the number of pastures|
 |**Lines 2-N+1:**|Two integers, X and Y (0 <= X ,Y<= 100000), that denote that X,Y grid location of the pastures; all input pastures are unique.|
-|**Line N+2-2\*N+1:**|lines, each containing N digits (0 or 1) that represent the adjacency matrix as described above, where the rows' and columns' indices are in order of the points just listed.|
+|**Line N+2-2\*N+1:**|N digits (0 or 1) that represent the adjacency matrix as described above, where the rows' and columns' indices are in order of the points just listed.|
 
 ### SAMPLE INPUT (file cowtour.in)
 
-```
+```none
 8
 10 10
 15 10
@@ -104,10 +104,150 @@ The output consists of a single line with the diameter of the newly joined pastu
 
 ### SAMPLE OUTPUT (file cowtour.out)
 
-```
+```none
 22.071068
 ```
 
 ### OUTPUT EXPLANATION
 
 After trying all possible connection pairs, connecting C to G yields the minimum diameter.
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+We do a fair bit of precomputation before choosing the path to add.
+
+First, we calculate the minimum distance between all connected points. Then, we use a recursive depth first search to identify the different fields. Then we fill in diam[i], which is defined to be the distance to the farthest pasture that pasture i is connected to. Fielddiam[j] is the diameter of field j, which is the maximum of diam[i] for all pastures i in the field j.
+
+Once we have all this, selecting a path is simple. If we add a path joining pastures i and j which are in different fields, the diameter of the new field is the maximum of:
+
+* dist to point farthest from i + dist from i to j + dist to point farthest from j.
+* old diameter of the field containing pasture i.
+* old diameter of the field containing pasture j.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#include <math.h>
+
+#define INF    (1e40)
+
+typedef struct Point Point;
+struct Point {
+    int x, y;
+};
+
+#define MAXPASTURE 150
+
+int n;
+double dist[MAXPASTURE][MAXPASTURE];
+double diam[MAXPASTURE];
+double fielddiam[MAXPASTURE];
+Point pt[MAXPASTURE];
+int field[MAXPASTURE];
+int nfield;
+
+double
+ptdist(Point a, Point b)
+{
+    return sqrt((double)(b.x-a.x)*(b.x-a.x)+(double)(b.y-a.y)*(b.y-a.y));
+}
+
+/* mark the field containing pasture i with number m */
+void
+mark(int i, int m)
+{
+    int j;
+    if(field[i] != -1) {
+        assert(field[i] == m);
+        return;
+    }
+
+    field[i] = m;
+    for(j=0; j<n; j++)
+        if(dist[i][j] < INF/2)
+            mark(j, m);
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int i, j, k, c;
+    double newdiam, d;
+
+    fin = fopen("cowtour.in", "r");
+    fout = fopen("cowtour.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d\n", &n);
+    for(i=0; i<n; i++)
+        fscanf(fin, "%d %d\n", &pt[i].x, &pt[i].y);
+        
+    for(i=0; i<n; i++) {
+        for(j=0; j<n; j++) {
+            c = getc(fin);
+            if(i == j)
+                dist[i][j] = 0;
+            else if(c == '0')
+                dist[i][j] = INF;        /* a lot */
+            else
+                dist[i][j] = ptdist(pt[i], pt[j]);
+        }
+        assert(getc(fin) == '\n');
+    }
+
+    /* Floyd-Warshall all pairs shortest paths */
+    for(k=0; k<n; k++)
+    for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+        if(dist[i][k]+dist[k][j] < dist[i][j])
+            dist[i][j] = dist[i][k]+dist[k][j];
+
+    /* mark fields */
+    for(i=0; i<n; i++)
+        field[i] = -1;
+    for(i=0; i<n; i++)
+        if(field[i] == -1)
+            mark(i, nfield++);
+
+    /* find worst diameters involving pasture i, and for whole field */
+    for(i=0; i<n; i++) {
+        for(j=0; j<n; j++)
+            if(diam[i] < dist[i][j] && dist[i][j] < INF/2)
+                diam[i] = dist[i][j];
+        if(diam[i] > fielddiam[field[i]])
+            fielddiam[field[i]] = diam[i];
+    }
+
+    /* consider a new path between i and j */
+    newdiam = INF;
+    for(i=0; i<n; i++)
+    for(j=0; j<n; j++) {
+        if(field[i] == field[j])
+            continue;
+
+        d = diam[i]+diam[j]+ptdist(pt[i], pt[j]);
+        if(d < fielddiam[field[i]])
+            d = fielddiam[field[i]];
+        if(d < fielddiam[field[j]])
+            d = fielddiam[field[j]];
+    
+        if(d < newdiam)
+            newdiam = d;
+    }
+
+    fprintf(fout, "%.6lf\n", newdiam);
+    exit(0);
+}
+```
+
+</details>
+
+{% endcontentfor %}

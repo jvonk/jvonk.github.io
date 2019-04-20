@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_2/maze1/maze1".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_2/maze1/maze1".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Overfencing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
-<meta property="og:description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/10/22/maze1.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/10/22/maze1.html" />
+<meta name="description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
+<meta property="og:description" content="Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/10/22/maze1.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/10/22/maze1.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-22T18:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/10/22/maze1.html","headline":"Overfencing","dateModified":"2018-10-22T18:00:00-07:00","datePublished":"2018-10-22T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/10/22/maze1.html"},"description":"Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/10/22/maze1.html","headline":"Overfencing","dateModified":"2018-10-22T18:00:00-07:00","datePublished":"2018-10-22T18:00:00-07:00","description":"Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two ‘exits’ for the maze. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/10/22/maze1.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,25 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
                     <h2 class="project-tagline">
-                        Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two 'exits' for the maze. Even more happily, the maze he created by this overfencing experience is a 'perfect' maze: you can find a way out of the maze from any point inside it. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.</h2>
+                        Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two 'exits' for the maze. Find the minimal number of steps that guarantee a cow can exit the maze from any possible point inside the maze.</h2>
                 
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_2/maze1/maze1.java" class="btn">Code on GitHub</a>
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_2/maze1/maze1.java" class="btn">Code on GitHub</a><br>
                 
-
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-10-23-maze1.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>Farmer John went crazy and created a huge maze of fences out in a field. Happily, he left out two fence segments on the edges, and thus created two “exits” for the maze. Even more happily, the maze he created by this overfencing experience is a ‘perfect’ maze: you can find a way out of the maze from any point inside it.</p>
 
@@ -2154,7 +2363,7 @@
 
 <p>Here’s what one particular W=5, H=3 maze looks like:</p>
 
-<pre><code>+-+-+-+-+-+
+<pre><code class="language-none">+-+-+-+-+-+
 |         |
 +-+ +-+ + +
 |     | | |
@@ -2184,7 +2393,7 @@
 
 <h3 id="sample-input-file-maze1in">SAMPLE INPUT (file maze1.in)</h3>
 
-<pre><code>5 3
+<pre><code class="language-none">5 3
 +-+-+-+-+-+
 |         |
 +-+ +-+ + +
@@ -2200,21 +2409,168 @@
 
 <h3 id="sample-output-file-maze1out">SAMPLE OUTPUT (file maze1.out)</h3>
 
-<pre><code>9
+<pre><code class="language-none">9
 </code></pre>
 
 <p>The lower left-hand corner is <strong>nine</strong> steps from the closest exit.</p>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Russ Cox</p>
+  </summary>
+
+  <p>We can solve this with a standard flood fill, using a queue to implement breadth first search. It is convenient to leave the maze in its ASCII format and just look at it as a bunch of characters, with non-space characters being walls.</p>
+
+  <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+
+#define MAXWID 38
+#define MAXHT 100
+
+typedef struct Point Point;
+struct Point {
+	int r, c;
+};
+
+int wid, ht;
+char maze[MAXHT*2+1][MAXWID*2+1+2];	/* extra +2 for "\n\0" */
+int dist[MAXHT*2+1][MAXWID*2+1];
+
+Point
+Pt(int r, int c)
+{
+    Point p;
+
+    p.r = r;
+    p.c = c;
+    return p;
+}
+
+typedef struct Queue Queue;
+struct Queue {
+    Point p;
+    int d;
+};
+
+Queue floodq[MAXHT*MAXWID];
+int bq, eq;
+
+/* if no wall between point p and point np, add np to queue with distance d+1 */
+void
+addqueue(int d, Point p, Point np)
+{
+    if(maze[(p.r+np.r)/2][(p.c+np.c)/2] == ' ' &amp;&amp; maze[np.r][np.c] == ' ') {
+	maze[np.r][np.c] = '*';
+	floodq[eq].p = np;
+	floodq[eq].d = d+1;
+	eq++;
+    }
+}
+
+/* if there is an exit at point exitp, plug it and record a start point
+ * at startp */
+
+void
+lookexit(Point exitp, Point startp)
+{
+    if(maze[exitp.r][exitp.c] == ' ') {
+	addqueue(0, startp, startp);
+	maze[exitp.r][exitp.c] = '#';
+    }
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    Point p;
+    int i, r, c, m, d;
+
+    fin = fopen("maze1.in", "r");
+    fout = fopen("maze1.out", "w");
+    assert(fin != NULL &amp;&amp; fout != NULL);
+
+    fscanf(fin, "%d %d\n", &amp;wid, &amp;ht);
+    wid = 2*wid+1;
+    ht = 2*ht+1;
+
+    for(i=0; i&lt;ht; i++)
+	fgets(maze[i], sizeof(maze[i]), fin);
+
+    /* find exits */
+    for(i=1; i&lt;wid; i+=2) {
+	lookexit(Pt(0, i), Pt(1, i));
+	lookexit(Pt(ht-1, i), Pt(ht-2, i));
+    }
+    for(i=1; i&lt;ht; i+=2) {
+	lookexit(Pt(i, 0), Pt(i, 1));
+	lookexit(Pt(i, wid-1), Pt(i, wid-2));
+    }
+
+    /* must have found at least one square with an exit */
+    /* since two exits might open onto the same square, perhaps eq == 1 */
+    assert(eq == 1 || eq == 2);	
+
+    for(bq = 0; bq &lt; eq; bq++) {
+	p = floodq[bq].p;
+	d = floodq[bq].d;
+	dist[p.r][p.c] = d;
+
+	addqueue(d, p, Pt(p.r-2, p.c));
+	addqueue(d, p, Pt(p.r+2, p.c));
+	addqueue(d, p, Pt(p.r, p.c-2));
+	addqueue(d, p, Pt(p.r, p.c+2));
+    }
+
+    /* find maximum distance */
+    m = 0;
+    for(r=0; r&lt;ht; r++)
+    for(c=0; c&lt;wid; c++)
+	if(dist[r][c] &gt; m)
+	    m = dist[r][c];
+
+    fprintf(fout, "%d\n", m);
+
+    exit(0);
+}
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
-                    <span class="site-footer-owner"><a href="http://github.com/jvonk/jvonk.github.io">jvonk.github.io</a> is created by <a href="http://github.com/jvonk">jvonk</a></span>
+                    
+                        <span class="site-footer-owner">
+                            
+                            <a href="https://github.com/jvonk/USACO/blob/master/Chapter_2/maze1/maze1.java">
+                            
+                                USACO - maze1</a>
+                            is created by
+                            <a href="http://github.com/jvonk">
+                                jvonk</a>
+                            .
+                        </span>
+                    
                 </footer>
-            
+                
         </main>
     </body>
 </html>

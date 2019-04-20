@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/milk/milk".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/milk/milk".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Mixing Milk" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk." />
-<meta property="og:description" content="The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/28/milk.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/28/milk.html" />
+<meta name="description" content="Given the Merry Milk Makers’ daily requirement of milk, the cost per unit for milk from each farmer, and the amount of milk available from each farmer; calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk." />
+<meta property="og:description" content="Given the Merry Milk Makers’ daily requirement of milk, the cost per unit for milk from each farmer, and the amount of milk available from each farmer; calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/28/milk.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/28/milk.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-28T20:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/28/milk.html","headline":"Mixing Milk","dateModified":"2018-09-28T20:00:00-07:00","datePublished":"2018-09-28T20:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/28/milk.html"},"description":"The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/28/milk.html","headline":"Mixing Milk","dateModified":"2018-09-28T20:00:00-07:00","datePublished":"2018-09-28T20:00:00-07:00","description":"Given the Merry Milk Makers’ daily requirement of milk, the cost per unit for milk from each farmer, and the amount of milk available from each farmer; calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/28/milk.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,22 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Given the Merry Milk Makers' daily requirement of milk, the cost per unit for milk from each farmer, and the amount of milk available from each farmer; calculate the minimum amount of money that Merry Milk Makers must spend to meet their daily need for milk.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk/milk.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk/milk.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-29-milk.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>The Merry Milk Makers company buys milk from farmers, packages it into attractive 1- and 2-Unit bottles, and then sells that milk to grocery stores so we can each start our day with delicious cereal and milk.</p>
 
@@ -2275,16 +2487,327 @@
   </tbody>
 </table>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Russ Cox</p>
+  </summary>
+
+  <p>Since we’re acquiring things that are all of the same size (in this case, units of milk), a greedy solution will suffice: we sort the farmers by price, and then buy milk from the farmers with the lowest prices, always completely exhausting one farmer’s supply before moving on to the next one.</p>
+
+  <p>To do this, we read the input into Farmer structures, sort the array by price, and then walk the array, buying milk until we’ve got all the milk we want.</p>
+
+  <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+
+#define MAXFARMER 5000
+
+typedef struct Farmer Farmer;
+struct Farmer {
+	int p;	/* price per gallon */
+	int a;	/* amount to sell */
+};
+
+int
+farmcmp(const void *va, const void *vb)
+{
+	return ((Farmer*)va)-&gt;p - ((Farmer*)vb)-&gt;p;
+}
+
+int nfarmer;
+Farmer farmer[MAXFARMER];
+
+void
+main(void)
+{
+	FILE *fin, *fout;
+	int i, n, a, p;
+
+	fin = fopen("milk.in", "r");
+	fout = fopen("milk.out", "w");
+
+	assert(fin != NULL &amp;&amp; fout != NULL);
+
+	fscanf(fin, "%d %d", &amp;n, &amp;nfarmer);
+	for(i=0; i&lt;nfarmer; i++)
+		fscanf(fin, "%d %d", &amp;farmer[i].p, &amp;farmer[i].a);
+
+	qsort(farmer, nfarmer, sizeof(farmer[0]), farmcmp);
+
+	p = 0;
+	for(i=0; i&lt;nfarmer &amp;&amp; n &gt; 0; i++) {
+		/* take as much as possible from farmer[i], up to amount n */
+		a = farmer[i].a;
+		if(a &gt; n)
+			a = n;
+		p += a*farmer[i].p;
+		n -= a;
+	}
+
+	fprintf(fout, "%d\n", p);
+	exit(0);
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Ran Pang</p>
+  </summary>
+
+  <p>Here is a program that solves the problem in linear time (with respect to the maximum price, and number of farmers, since we have to read in the data anyway), while I think the qsort used by the solution would consume O(n log n), where n is the number of farmers.</p>
+
+  <pre><code class="language-cpp">#include&lt;stdio.h&gt;
+
+#define MAXPRICE 1001
+
+int amount_for_price[MAXPRICE]={0};
+int N, M;
+
+int Cal(void);
+int Read(void);
+
+int main(void) {
+    Read();
+    Cal();
+    return 0;
+}
+
+int Cal(void) {
+    int i;
+    int price_total=0;
+    int milk_total=0;
+    for(i=0;i&lt;MAXPRICE;i++) {
+        if(amount_for_price[i]) {
+            if(milk_total+amount_for_price[i]&lt;N) {
+                price_total+=(i*amount_for_price[i]);
+                milk_total+=amount_for_price[i];
+            }
+            else {
+                int amount_needed = N-milk_total;
+                price_total+=(i*amount_needed);
+                break;
+            }
+        }
+    }
+    {
+        FILE* out=fopen("milk.out","w");
+        fprintf(out,"%d\n",price_total);
+        fclose(out);
+    }
+    return 0;
+}
+
+int Read(void) {
+    FILE* in = fopen("milk.in","r");
+    int i, price, amount;
+    fscanf(in,"%d %d",&amp;N,&amp;M);
+    for(i=0;i&lt;M;i++) {
+        fscanf(in, "%d %d", &amp;(price), &amp;(amount));
+        amount_for_price[price]+=amount;
+    }
+    fclose(in);
+    return 0;
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Adam Okruhlica</p>
+  </summary>
+
+  <p>It is unnecessary to sort the prices with quicksort in O(n.lg.n) time, because there is an upper limit of the a single price ($1000) and we know that all prices are integral. We can sort this array with count sort. We establish a ‘box’ for each of the available prices (0..1000). We save the input to an array. Then we iterate through each farmer and we memoize his index in the (0..1000) array on index equivalent to the price he offers us. Hence there can be more farmers offering the same price we put them in a linked list. Finally we iterate the array from 0 to 1000 andpick the farmers’ indexes from the linked lists. It’s pretty easy to implement, and the time complexity is O(n).</p>
+
+  <pre><code class="language-pascal">program milk;
+
+type pList = ^List;
+      List = record
+                farmer:longint;
+                next:pList;
+              end;
+      HeadList = record
+                   head:pList;
+                   tail:pList;
+                  end;
+
+var fIn,fOut:text;
+    sofar,i,x,want,cnt,a,b:longint;
+    sorted,cost,amount:array[1..5010] of longint;
+    csort:array[0..1010] of HeadList;
+
+    t:pList;
+
+begin
+    assign(fIn,'milk.in');reset(fIn);
+    assign(fOut,'milk.out'); rewrite(fOut);
+
+    readln(fIn,want,cnt);
+    for i:=1 to cnt do readln(fIn,cost[i],amount[i]);
+
+    for i:=0 to 1000 do begin
+         new(csort[i].head);
+         csort[i].tail:=csort[i].head;
+         csort[i].head^.farmer:=-1;
+    end;
+
+    {Cast indexes into the array}
+    for i:=1 to cnt do begin
+
+       t:=csort[cost[i]].tail;
+       if t^.farmer = -1 then t^.farmer:=i;
+       new(t^.next);
+       t^.next^.farmer:=-1;
+       csort[cost[i]].tail:=t^.next;
+    end;
+
+    {Pick indexes}
+    x:=1;
+    for i:=0 to 1000 do begin
+        t:=csort[i].head;
+        while t^.farmer &gt; 0 do begin
+          sorted[x]:=t^.farmer;
+          inc(x);
+          t:=t^.next;
+        end;
+    end;
+
+    sofar:=0;
+    for i:=1 to cnt do begin
+      if want &lt; amount[sorted[i]] then begin
+        inc(sofar,want*cost[sorted[i]]);
+        want:=0; break;
+      end
+
+      else inc(sofar,amount[sorted[i]]*cost[sorted[i]]);
+      dec(want,amount[sorted[i]]);
+    end;
+
+    writeln(fOut,sofar);
+    close(fOut);
+end.
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Dwayne Crooks</p>
+  </summary>
+
+  <p>Do we really need the linked list that SVK’s Adam Okruhlica uses in his solution? I don’t think so. Here is a better solution that uses essentially the same idea as Adam’s solution but does away with the linked list. Takes O(max(MAXP,M)) time, where MAXP=1000 and M&lt;=5000 is the input size. Editors note: Dwayne should be using long long integers (64 bit) instead of int’s in order to avoid overflow.</p>
+
+  <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+
+#define MAXP 1000
+
+using namespace std;
+
+int main() {
+    ifstream in("milk.in");
+    ofstream out("milk.out");
+    
+    int N, M;
+    int P[MAXP+1];
+    
+    in &gt;&gt; N &gt;&gt; M;
+    for (int i = 0; i &lt;= MAXP; i++) P[i]=0;
+    for (int i = 0; i &lt; M; i++) {
+        int price, amt;
+        in &gt;&gt; price &gt;&gt; amt;
+        
+         // we can add amounts that cost the same price
+        // since x gallons costing c cents and
+        //          y gollons costing c cents
+        // is the same as
+        //      x+y gallons costing c cents
+        P[price] += amt;
+    }
+    
+    // greedy choice: take as much of the item that
+    // has the least price per gallon
+    int res = 0;
+    for (int p = 0; p&lt;=MAXP &amp;&amp; N&gt;0; p++) {
+        if (P[p]&gt;0) {
+            res+=p*(N&lt;P[p]?N:P[p]);
+            N-=P[p];
+        }
+    }
+    out &lt;&lt; res &lt;&lt; endl;
+    
+    in.close();
+    out.close();
+    
+    return 0;
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Miroslav Paskov</p>
+  </summary>
+
+  <p>As the final word, Bulgaria’s Miroslav Paskov has distilled all the best ideas into a simple solution:</p>
+
+  <pre><code class="language-cpp">#include &lt;fstream&gt;
+#define MAXPRICE 1001
+using namespace std;
+
+int main() {
+    ifstream fin ("milk.in");
+    ofstream fout ("milk.out");
+    unsigned int i, needed, price, paid, farmers, amount, milk[MAXPRICE][2];
+    paid = 0;
+    fin&gt;&gt;needed&gt;&gt;farmers;
+    for(i = 0;i&lt;farmers;i++){
+        fin&gt;&gt;price&gt;&gt;amount;
+        milk[price][0] += amount;   
+    } 
+    for(i = 0; i&lt;MAXPRICE &amp;&amp; needed;i++){
+        if(needed &gt;= milk[i][0]) {
+            needed -= milk[i][0];
+            paid += milk[i][0] * i;
+        } else if(milk[i][0] &gt; 0) {
+            paid += i*needed;
+            needed = 0;     
+        }
+    }
+    fout &lt;&lt; paid &lt;&lt; endl; 
+    return 0;
+}
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk/milk.java">
+                            
                                 USACO - milk</a>
                             is created by
                             <a href="http://github.com/jvonk">

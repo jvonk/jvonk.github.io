@@ -6,7 +6,7 @@ categories: USACO
 short: gift1
 chapter: 1
 section: 2
-link: https://github.com/jvonk/USACO/blob/master/Chapter_1/gift1/gift1.java
+description: "Given a group of friends, no one of whom has a name longer than 14 characters, the money each person in the group spends on gifts, and a list of friends to whom each person gives gifts; determine how much money each person ends up with."
 ---
 
 A group of NP (2 ≤ NP ≤ 10) uniquely named friends has decided to exchange gifts of money. Each of these friends might or might not give some money to some or all of the other friends (although some might be cheap and give to no one). Likewise, each friend might or might not receive money from any or all of the other friends. Your goal is to deduce how much more money each person receives than they give.
@@ -31,37 +31,53 @@ The grader machine is a Linux machine that uses standard Unix conventions: end o
 
 ### INPUT FORMAT
 
-  
-<table border="0" style="border-collapse: collapse;">
-<tbody><tr><th>Line #</th><th>Contents</th></tr>
-<tr> <td align="center">1</td> <td> A single integer, NP </td></tr>
-<tr> <td align="center">2..NP+1</td> <td> Line <i>i</i>+1 contains the name
-of group member <i>i</i></td>
-</tr>
-<tr> <td valign="top" align="center">NP+2..end</td> <td>NP groups of lines organized like this:
-
-
-<table border="0">
-
-<tbody><tr><td>The first line of each group tells the person's name who
-will be giving gifts.
-</td></tr><tr><td>The second line in the group contains two numbers:
-	<ul>
-	<li>The amount of money (in the range 0..2000) to be divided
-        into gifts by the giver
-        </li><li>NG<sub>i</sub> (1 ≤ NG<sub>i</sub> ≤ NP), the
-        number of people to whom the giver will give gifts
-	</li></ul>
-</td></tr><tr><td> If NG<sub>i</sub> is nonzero, each of the next NG<sub>i</sub>
-lines lists the name of a recipient of a gift; recipients are not repeated
-in a single giver's list.
-</td></tr></tbody></table>
-
-</td></tr></tbody></table>
-
+<table>
+    <tbody>
+        <tr>
+            <th>Line #</th>
+            <th>Contents</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td> A single integer, NP </td>
+        </tr>
+        <tr>
+            <td align="center">2..NP+1</td>
+            <td> Line <i>i</i>+1 contains the name of group member <i>i</i></td>
+        </tr>
+        <tr>
+            <td valign="top" align="center">NP+2..end</td>
+            <td>NP groups of lines organized like this:
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>The first line of each group tells the person's name who will be giving gifts.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>The second line in the group contains two numbers:
+                                <ul>
+                                    <li>The amount of money (in the range 0..2000) to be divided into gifts by the giver
+                                    </li>
+                                    <li>NG<sub>i</sub> (1 ≤ NG<sub>i</sub> ≤ NP), the number of people to whom the giver will give gifts
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>If NG<sub>i</sub> is nonzero, each of the next NG<sub>i</sub> lines lists the name of a recipient of a gift; recipients are not repeated in a single giver's list.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### SAMPLE INPUT (file gift1.in)
 
+```none
 5
 dave
 laura
@@ -86,6 +102,7 @@ amr
 vick
 vick
 0 0
+```
 
 ### OUTPUT FORMAT
 
@@ -95,45 +112,141 @@ All gifts are integers. Each person gives the same integer amount of money to ea
 
 ### SAMPLE OUTPUT (file gift1.out)
 
+```none
 dave 302
 laura 66
 owen -359
 vick 141
 amr -150
+```
 
 ### OUTPUT EXPLANATION
 
-Five names: dave, laura, owen, vick, amr. Let's keep a table of the gives (money) each person 'has':<h3>Welcome to the real-time HTML editor!</h3>
-<p>Type HTML in the textarea above, and it will magically appear in the frame below.</p><table>
-<tbody><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
+| dave | laura | owen | vick | amr |
+|------|-------|------|------|-----|
+| 0    | 0     | 0    | 0    | 0   |
 
-<tr class="narrow"><td class="l">0</td>   <td class="l">0</td>    <td class="l">0</td>   <td class="l">0</td>   <td class="l">0</td></tr>
+First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to 66 each, with 2 left over
 
-<tr><td colspan="5">
 
-First, 'dave' splits 200 among 'laura', 'owen', and 'vick'. That comes to
-66 each, with 2 left over</td></tr>
+| **-200+2** | **+66** | **+66** | **+66** | 0 |
+| **-198**   | **66**  | **66**  | **66**  | 0 |
 
-<tr><td class="l"><b>-200+2</b></td><td class="l"><b>+66</b></td>  <td class="l"><b>+66</b></td> <td class="l"><b>+66</b></td>  <td class="l">0</td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l"><b>-198</b></td><td class="l"><b>66</b></td>  <td class="l"><b>66</b></td> <td class="l"><b>66</b></td>  <td class="l">0</td></tr>
+Second, 'owen' gives 500 to 'dave':
 
-<tr><td colspan="5" align="left">Second, 'owen' gives 500 to 'dave':</td></tr>
 
-<tr><td class="l">-198<b>+500</b></td>  <td class="l">66</td>  <td class="l">66<b>-500</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l"><b>302</b></td>  <td class="l">66</td>  <td class="l"><b>-434</b></td> <td class="l">66</td>  <td class="l">0</td></tr>
+| -198 **+500** | 66 | 66 **-500**  | 66 | 0 |
+| **302**       | 66 | **-434**     | 66 | 0 |
 
-<tr><td colspan="5" align="left">Third, 'amr' splits 150 between 'vick' and 'owen':
 
-</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-434<b>+75</b></td><td class="l">66<b>+75</b></td>  <td class="l"><b>-150</b></td></tr>
-<tr><td colspan="5" style="padding-top:0;padding-bottom:0;"></td></tr>
-<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l"><b>-359</b></td><td class="l"><b>141</b></td> <td class="l"><b>-150</b></td></tr>
+Third, 'amr' splits 150 between 'vick' and 'owen':                                      
 
-<tr><td colspan="5" align="left">Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:
-</td></tr><tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
-<tr><td colspan="5" align="left">Finally, 'vick' gives 0 to no one:
-</td></tr><tr><td class="l"><b>dave</b></td><td class="l"><b>laura</b></td><td class="l"><b>owen</b></td><td class="l"><b>vick</b></td><td class="l"><b>amr</b></td></tr>
-<tr><td class="l">302</td>   <td class="l">66</td>  <td class="l">-359</td><td class="l">141</td>  <td class="l">-150</td></tr>
+| 302 | 66 | -434 **+75** | 66 **+75** | **-150** |
+| 302 | 66 | **-359**     | **141**    | **-150** |
 
-</tbody></table>
+Fourth, 'laura' splits 0 between 'amr' and 'vick'; no changes:                          
+
+| 302 | 66 | -359 | 141 |-150 |
+
+
+Finally, 'vick' gives 0 to no one:                                                      
+
+| dave | laura | owen | vick | amr  |
+|------|-------|------|------|------|
+| 302  | 66    | -359 | 141  | -150 |
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+The hardest part about this problem is dealing with the strings representing people's names.
+
+We keep an array of Person structures that contain their name and how much money they give/get.
+
+The heart of the program is the lookup() function that, given a person's name, returns their Person structure. We add new people with addperson().
+
+Note that we assume names are reasonably short.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <assert.h>
+
+#define MAXPEOPLE 10
+#define NAMELEN	32
+
+typedef struct Person Person;
+struct Person {
+    char name[NAMELEN];
+    int total;
+};
+
+Person people[MAXPEOPLE];
+int npeople;
+
+void
+addperson(char *name)
+{
+    assert(npeople < MAXPEOPLE);
+	strcpy(people[npeople].name, name);
+    npeople++;
+}
+
+Person*
+lookup(char *name)
+{
+    int i;
+
+    /* look for name in people table */
+    for(i=0; i<npeople; i++)
+	if(strcmp(name, people[i].name) == 0)
+	    return &people[i];
+
+    assert(0);	/* should have found name */
+}
+
+int
+main(void)
+{
+    char name[NAMELEN];
+    FILE *fin, *fout;
+    int i, j, np, amt, ng;
+    Person *giver, *receiver;
+
+    fin = fopen("gift1.in", "r");
+    fout = fopen("gift1.out", "w");
+
+    fscanf(fin, "%d", &np);
+    assert(np <= MAXPEOPLE);
+
+    for(i=0; i<np; i++) {
+	fscanf(fin, "%s", name);
+	addperson(name);
+    }
+
+    /* process gift lines */
+    for(i=0; i<np; i++) {
+	fscanf(fin, "%s %d %d", name, &amt, &ng);
+	giver = lookup(name);
+
+	for(j=0; j<ng; j++) {
+	    fscanf(fin, "%s", name);
+	    receiver = lookup(name);
+	    giver->total -= amt/ng;
+	    receiver->total += amt/ng;
+	}
+    }
+
+    /* print gift totals */
+    for(i=0; i<np; i++)
+	fprintf(fout, "%s %d\n", people[i].name, people[i].total);
+    exit (0);
+}
+```
+
+</details>
+
+{% endcontentfor %}

@@ -22,7 +22,7 @@ Write a program that implements the optimal strategy. The optimal strategy yield
 
 ### SAMPLE INPUT (file game1.in)
 
-```
+```none
 6
 4 7 2 9
 5 2
@@ -34,6 +34,232 @@ Two space-separated integers on a line: the score of Player 1 followed by the sc
 
 ### SAMPLE OUTPUT (file game1.out)
 
-```
+```none
 18 11
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+We use dynamic programming to determine, for every possible piece of board that could be left at any point in the game, how many points the best strategy gets for the winner, and how many for the loser.
+
+Let us define best\[board\] to be the highest score we can hope to get by going first starting with the given board.
+
+If we are looking at a board "a ... b", the best number of points is the maximum of the following: 
+
+```none
+a + total[... b] - best[... b]
+b + total[a ...] - best[a ...]
+```
+
+We use total\[board\] - best\[board\] as the best that we can hope to do going second starting with the given board.
+
+If we are looking at the board "a", the best number of points is a.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+#define MAXBOARD 100
+
+int board[MAXBOARD];
+
+/*
+ * best and total are indexed so that (e.g.) best[i, l] refers
+ * to the board of length l starting at place i.
+ */
+int total[MAXBOARD][MAXBOARD];
+int best[MAXBOARD][MAXBOARD];
+
+int
+max(int a, int b)
+{
+    return a > b ? a : b;
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int j, l, n;
+
+    fin = fopen("game1.in", "r");
+    fout = fopen("game1.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d", &n);
+    for(j=0; j<n; j++)
+        fscanf(fin, "%d", &board[j]);
+
+    /* calculate subboard totals */
+    for(j=0; j<n; j++)
+        total[j][0] = 0;
+
+    for(l=1; l<=n; l++)
+    for(j=0; j+l<=n; j++)
+        total[j][l] = board[j] + total[j+1][l-1];
+
+    /* calc best for boards of size one */
+    for(j=0; j+1<=n; j++)
+        best[j][1] = board[j];
+
+    /* calc best for bigger boards */
+    for(l=2; l<=n; l++)
+      for(j=0; j+l<=n; j++)
+        best[j][l] = max(board[j]     + total[j+1][l-1] - best[j+1][l-1],
+                         board[j+l-1] + total[j  ][l-1] - best[j  ][l-1]);
+
+    fprintf(fout, "%d %d\n", best[0][n], total[0][n]-best[0][n]);
+        
+    exit(0);
+}
+Another take on game1
+Nick Pilkington of South Africa writes:
+You only need O(n) space for the sum not O(n*n). This eliminates extra calculation as it can be computed during input. This also means that the board values don't need to be stored at all, leading to a much tighter solution:
+
+#include <fstream>
+
+using namespace std;
+
+#define min(a,b) ((a<b)?a:b)
+
+ifstream fin("game1.in");
+ofstream fou("game1.out");
+
+int n;
+int sum[101];
+int best[101][101];
+
+void main()
+{
+    fin >> n;
+    for(int i = 1; i <= n; i++) {
+        fin >> best[i][i];
+        sum[i] = sum[i-1] + best[i][i];
+    }
+   
+    for(int i = 1; i <= n; i++)
+    for(int j = 1; j+i <= n; j++)
+        best[j+i][j] = sum[j+i]-sum[j-1] - min(best[j+i-1][j], best[j+i][j+1]);
+    fou << best[n][1] << " " << sum[n] - best[n][1] << endl;
+}
+```
+
+</details>
+
+<details>
+<summary>
+Nick Pilkington
+</summary>
+
+Nick Pilkington of South Africa explains that you only need O(n) space for the sum not O(n*n). This eliminates extra calculation as it can be computed during input. This also means that the board values don't need to be stored at all, leading to a much tighter solution:
+
+```cpp
+#include <fstream>
+
+using namespace std;
+
+#define min(a,b) ((a<b)?a:b)
+
+ifstream fin("game1.in");
+ofstream fou("game1.out");
+
+int n;
+int sum[101];
+int best[101][101];
+
+void main()
+{
+    fin >> n;
+    for(int i = 1; i <= n; i++) {
+        fin >> best[i][i];
+        sum[i] = sum[i-1] + best[i][i];
+    }
+   
+    for(int i = 1; i <= n; i++)
+    for(int j = 1; j+i <= n; j++)
+        best[j+i][j] = sum[j+i]-sum[j-1] - min(best[j+i-1][j], best[j+i][j+1]);
+    fou << best[n][1] << " " << sum[n] - best[n][1] << endl;
+}
+```
+
+</details>
+
+<details>
+<summary>
+Lucian Boca
+</summary>
+
+Lucian Boca of Romania proposes some memory optimizations for "A Game" problem.
+
+The algorithm is the same, I simulate the calculation of the matrix best\[i\]\[l\] = the best score wich can be obtained by the first player with the board pieces i,i+1,...,i+l-1 (a sequence of numbers starting with position i and having the length l). I also simulate the calculation of the matrix total\[i\]\[l\] = the sum of all elements in the sequence starting with position i and having the length l. The reccurence relation is:
+
+```none
+best[i][l]=total[i][l] - min( best[i+1][l-1], best[i][l-1] )
+```
+and our goal is to obtain best[1][n]
+The optimizations:
+
+* You don't need to memorize the board. All the information about the board is in total(i,l)
+* You don't need to use a matrix for total(i,l). You calculate a vector t\[i\]=the sum of elements 1,2,...,i. So, total(i,l) will be t\[i+l-1\] - t\[i-1\]
+* You don't need to use a matrix NxN, since you only need the last two columns. So, instead of using l, we can use l%2 and allocate the matrix best\[NMAX\]\[2\]; the reccurence relation becomes best\[i\]\[l%2\]=total(i,l) - min( best\[i+1\]\[(l-1)%2\], best\[i\]\[(l-1)%2\]) and our goal is to obtain best\[1\]\[n%2\].
+
+```cpp
+#include <stdio.h>
+#define NMAX 101
+
+int     best[NMAX][2], t[NMAX];
+int     n;
+
+void 
+readx () {
+    int     i, aux;
+
+    freopen ("game1.in", "r", stdin);
+    scanf ("%d", &n);
+    for (i = 1; i <= n; i++) {
+	scanf ("%d", &aux);
+	t[i] = t[i - 1] + aux;
+    }
+    fclose (stdin);
+}
+
+inline int 
+min (int x, int y) {
+    return x > y ? y : x;
+}
+
+void 
+solve () {
+    int     i, l;
+
+    for (l = 1; l <= n; l++)
+	for (i = 1; i + l <= n + 1; i++)
+	    best[i][l%2] = t[i + l - 1] - t[i - 1] - min (best[i + 1][(l - 1) % 2],
+		best[i][(l - 1) % 2]);
+}
+
+void writex () {
+    freopen ("game1.out", "w", stdout);
+    printf ("%d %d\n", best[1][n % 2], t[n] - best[1][n % 2]);
+    fclose (stdout);
+}
+
+int 
+main () {
+    readx ();
+    solve ();
+    writex ();
+    return 0;
+}
+```
+
+</details>
+
+{% endcontentfor %}

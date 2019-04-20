@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/milk2/milk2".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/milk2/milk2".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Milking Cows" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<meta property="og:description" content="Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200)." />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/27/milk2.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/27/milk2.html" />
+<meta name="description" content="Your job is to write a program that will examine a list of beginning and ending times for N (1 &lt;= N &lt;= 5000) farmers milking N cows and compute longest time interval when a cow were being milked and during which no cows were being milked." />
+<meta property="og:description" content="Your job is to write a program that will examine a list of beginning and ending times for N (1 &lt;= N &lt;= 5000) farmers milking N cows and compute longest time interval when a cow were being milked and during which no cows were being milked." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/27/milk2.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/27/milk2.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-27T17:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/27/milk2.html","headline":"Milking Cows","dateModified":"2018-09-27T17:00:00-07:00","datePublished":"2018-09-27T17:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/27/milk2.html"},"description":"Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/27/milk2.html","headline":"Milking Cows","dateModified":"2018-09-27T17:00:00-07:00","datePublished":"2018-09-27T17:00:00-07:00","description":"Your job is to write a program that will examine a list of beginning and ending times for N (1 &lt;= N &lt;= 5000) farmers milking N cows and compute longest time interval when a cow were being milked and during which no cows were being milked.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/27/milk2.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,22 +2332,30 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Your job is to write a program that will examine a list of beginning and ending times for N (1 <= N <= 5000) farmers milking N cows and compute longest time interval when a cow were being milked and during which no cows were being milked.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk2/milk2.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk2/milk2.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-28-milk2.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>Three farmers rise at 5 am each morning and head for the barn to milk three cows. The first farmer begins milking his cow at time 300 (measured in seconds after 5 am) and ends at time 1000. The second farmer begins at time 700 and ends at time 1200. The third farmer begins at time 1500 and ends at time 2100. The longest continuous time during which at least one farmer was milking a cow was 900 seconds (from 300 to 1200). The longest time no milking was done, between the beginning and the ending of all milking, was 300 seconds (1500 minus 1200).</p>
 
@@ -2173,10 +2385,11 @@
 
 <h3 id="sample-input-file-milk2in">SAMPLE INPUT (file milk2.in)</h3>
 
-<p>3
+<pre><code class="language-none">3
 300 1000
 700 1200
-1500 2100</p>
+1500 2100
+</code></pre>
 
 <h3 id="output-format">OUTPUT FORMAT</h3>
 
@@ -2184,18 +2397,221 @@
 
 <h3 id="sample-output-file-milk2out">SAMPLE OUTPUT (file milk2.out)</h3>
 
-<p>900 300</p>
+<pre><code class="language-none">900 300
+</code></pre>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>USACO (unknown)</p>
+  </summary>
+
+  <p>We read the list of times, sort it by start time, and then walk over the list once, merging overlapping times. Then we walk the list watching for long milking periods and long non-milking periods.</p>
+
+  <p>An alternate approach would be to just keep an array of size a million and mark off times. On a nice fast processor, that’s probably fast enough, but our above algorithm will work even on slow processors, and it’s not much harder to write.</p>
+
+  <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+
+#define MAXMILKING 5000
+
+typedef struct Milking	Milking;
+struct Milking {
+    int begin;
+    int end;
+};
+
+Milking milking[MAXMILKING];
+int nmilking;
+
+int
+milkcmp(const void *va, const void *vb)
+{
+    Milking *a, *b;
+
+    a = (Milking*)va;
+    b = (Milking*)vb;
+
+    if(a-&gt;begin &gt; b-&gt;begin)
+	return 1;
+    if(a-&gt;begin &lt; b-&gt;begin)
+	return -1;
+    return 0;
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int i, j, t, tmilk, tnomilk;
+    Milking cur;
+
+    fin = fopen("milk2.in", "r");
+    fout = fopen("milk2.out", "w");
+    assert(fin != NULL &amp;&amp; fout != NULL);
+
+    /* read input, sort */
+    fscanf(fin, "%d", &amp;nmilking);
+    for(i=0; i&lt;nmilking; i++)
+	fscanf(fin, "%d %d", &amp;milking[i].begin, &amp;milking[i].end);
+
+    qsort(milking, nmilking, sizeof(Milking), milkcmp);
+
+    /* walk over list, looking for long periods of time */
+    /* tmilk = longest milking time */
+    /* tnomilk = longest non-milking time */
+    /* cur = current span of milking time being considered */
+
+    tmilk = 0;
+    tnomilk = 0;
+    cur = milking[0];
+    for(i=1; i&lt;nmilking; i++) {
+	if(milking[i].begin &gt; cur.end) {	/* a down time */
+	    t = milking[i].begin - cur.end;
+	    if(t &gt; tnomilk)
+		tnomilk = t;
+
+	    t = cur.end - cur.begin;
+	    if(t &gt; tmilk)
+		tmilk = t;
+
+	    cur = milking[i];
+	} else {	
+	    if(milking[i].end &gt; cur.end)
+		cur.end = milking[i].end;
+	}
+    }
+
+    /* check final milking period */
+    t = cur.end - cur.begin;
+    if(t &gt; tmilk)
+	tmilk = t;
+
+    fprintf(fout, "%d %d\n", tmilk, tnomilk);
+    exit(0);
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Jesse Ruderman</p>
+  </summary>
+
+  <p>The solution given for milk2 sorts milking periods by start and then walks through them. The solution page also mentions a second possible solution involving a huge array. Here’s a third solution that sorts starting and stopping times together, and walks through the “events” of farmers starting and stopping to milk.</p>
+
+  <pre><code class="language-c">/* sort the starting and ending times, then go through them from
+ start to finish, keeping track of how many farmers are milking
+ between each "event" (a single farmer starting and stopping). */
+
+#include &lt;fstream.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct event
+{
+ long seconds;   /* seconds since 5 am */
+ signed char ss; /* start = 1, stop = -1 (delta number of farmers milking)
+*/
+};
+
+int eventcmp (const event *a, const event *b)
+{
+ if (a-&gt;seconds != b-&gt;seconds)
+  return (a-&gt;seconds - b-&gt;seconds); /* 300 before 500 */
+
+ return (b-&gt;ss - a-&gt;ss); /* 1 (start) before -1 (stop) */
+}
+
+int main ()
+{
+ ifstream in;
+ ofstream out;
+
+ in.open("milk2.in");
+ out.open("milk2.out");
+
+ int num_intervals, num_events, i;
+ event events[5000 * 2];
+
+ in &gt;&gt; num_intervals;
+ num_events = num_intervals * 2;
+ for (i = 0; i &lt; num_intervals; ++i)
+ {
+  in &gt;&gt; events[2*i  ].seconds; events[2*i  ].ss = 1;
+  in &gt;&gt; events[2*i+1].seconds; events[2*i+1].ss = -1;
+ }
+
+ qsort(events, num_events, sizeof(event),
+  (int(*)(const void*, const void*)) eventcmp);
+
+/* for (i = 0; i &lt; num_events; ++i)
+  out &lt;&lt; events[i].seconds
+    &lt;&lt; (events[i].ss == 1 ? " start" : " stop") &lt;&lt; endl; */
+
+ int num_milkers = 0, was_none = 1;
+ int longest_nomilk = 0, longest_milk = 0;
+ int istart, ilength;
+
+ for (i = 0; i &lt; num_events; ++i)
+ {
+  num_milkers += events[i].ss;
+
+  if (!num_milkers &amp;&amp; !was_none)
+  {
+   /* there are suddenly no milkers. */
+   ilength = (events[i].seconds - istart);
+   if (ilength &gt; longest_milk)
+    longest_milk = ilength;
+   istart = events[i].seconds;
+  }
+  else if (num_milkers &amp;&amp; was_none)
+  {
+   /* there are suddenly milkers. */
+   if (i != 0)
+   {
+    ilength = (events[i].seconds - istart);
+    if (ilength &gt; longest_nomilk)
+     longest_nomilk = ilength;
+   }
+   istart = events[i].seconds;
+  }
+
+  was_none = (num_milkers == 0);
+ }
+
+ out &lt;&lt; longest_milk &lt;&lt; " " &lt;&lt; longest_nomilk &lt;&lt; endl;
+
+ return 0;
+}
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/milk2/milk2.java">
+                            
                                 USACO - milk2</a>
                             is created by
                             <a href="http://github.com/jvonk">

@@ -22,7 +22,7 @@ Your job is to find the Nth humble number for a given set S. Long integers (sign
 
 ### SAMPLE INPUT (file humble.in)
 
-```
+```none
 4 19
 2 3 5 7
 ```
@@ -33,6 +33,91 @@ The Nth humble number from set S printed alone on a line.
 
 ### SAMPLE OUTPUT (file humble.out)
 
-```
+```none
 27
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+We compute the first n humble numbers in the "hum" array. For simplicity of implementation, we treat 1 as a humble number, and adjust accordingly.
+
+Once we have the first k humble numbers and want to compute the k+1st, we do the following:
+
+```none
+for each prime p
+    find the minimum humble number h
+        such that h * p is bigger than the last humble number.
+
+take the smallest h * p found: that's the next humble number.
+```
+
+To speed up the search, we keep an index "pindex" of what h is for each prime, and start there rather than at the beginning of the list.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#include <ctype.h>
+
+#define MAXPRIME 100
+#define MAXN 100000
+
+long hum[MAXN+1];
+int nhum;
+
+int prime[MAXPRIME];
+int pindex[MAXPRIME];
+int nprime;
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int i, minp;
+    long min;
+    int n;
+
+    fin = fopen("humble.in", "r");
+    fout = fopen("humble.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d %d", &nprime, &n);
+    for(i=0; i<nprime; i++)
+	fscanf(fin, "%d", &prime[i]);
+
+    hum[nhum++] = 1;
+    for(i=0; i<nprime; i++)
+	pindex[i] = 0;
+
+    while(nhum < n+1) {
+	min = 0x7FFFFFFF;
+	minp = -1;
+	for(i=0; i<nprime; i++) {
+	    while((double)prime[i] * hum[pindex[i]] <= hum[nhum-1]) 
+		pindex[i]++;
+
+	    /* double to avoid overflow problems */
+	    if((double)prime[i] * hum[pindex[i]] < min) {
+		min = prime[i] * hum[pindex[i]];
+		minp = i;
+	    }
+	}
+
+	hum[nhum++] = min;
+	pindex[minp]++;
+    }
+
+    fprintf(fout, "%d\n", hum[n]);
+    exit(0);
+}
+```
+
+</details>
+
+{% endcontentfor %}

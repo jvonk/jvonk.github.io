@@ -15,7 +15,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/namenum/namenum".concat('.'+type)+"'></pre></details>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_1/namenum/namenum".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -29,15 +29,15 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Name That Number" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”" />
-<meta property="og:description" content="Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”" />
-<link rel="canonical" href="http://localhost:8081/usaco/2018/09/28/namenum.html" />
-<meta property="og:url" content="http://localhost:8081/usaco/2018/09/28/namenum.html" />
+<meta name="description" content="Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number." />
+<meta property="og:description" content="Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number." />
+<link rel="canonical" href="https://jvonk.github.io/usaco/2018/09/28/namenum.html" />
+<meta property="og:url" content="https://jvonk.github.io/usaco/2018/09/28/namenum.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-28T18:00:00-07:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:8081/usaco/2018/09/28/namenum.html","headline":"Name That Number","dateModified":"2018-09-28T18:00:00-07:00","datePublished":"2018-09-28T18:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8081/usaco/2018/09/28/namenum.html"},"description":"Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"https://jvonk.github.io/usaco/2018/09/28/namenum.html","headline":"Name That Number","dateModified":"2018-09-28T18:00:00-07:00","datePublished":"2018-09-28T18:00:00-07:00","description":"Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/09/28/namenum.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="http://localhost:8081">Home</a>
+            <a href="https://jvonk.github.io">Home</a>
             
                 
             
@@ -89,6 +89,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -333,6 +337,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/09/28/dualpal.html">
                                                                 
                                                                     dualpal -
@@ -396,6 +404,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -642,6 +654,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/02/milk3.html">
                                                                 
                                                                     milk3 -
@@ -696,6 +712,10 @@
                                                 <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -917,6 +937,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/10/holstein.html">
                                                                 
                                                                     holstein -
@@ -1008,6 +1032,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1206,6 +1234,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/10/17/concom.html">
                                                                 
                                                                     concom -
@@ -1315,6 +1347,10 @@
                                                 <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1512,6 +1548,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2018/11/06/inflate.html">
                                                                 
                                                                     inflate -
@@ -1641,6 +1681,10 @@
                                                 <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
                                                 </button>
                                                 <div class="dropdown-content">
+                                                    
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1811,6 +1855,10 @@
                                                         
                                                     
                                                         
+                                                    
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/14/game1.html">
                                                                 
                                                                     game1 -
@@ -1964,6 +2012,17 @@
                                                 <div class="dropdown-content">
                                                     
                                                         
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/rockers.html">
+                                                                
+                                                                    rockers -
+                                                                
+                                                                Raucous Rockers
+                                                            </a>
+                                                        
+                                                    
+                                                        
                                                             <a href="/usaco/2019/01/22/fence9.html">
                                                                 
                                                                     fence9 -
@@ -1979,6 +2038,151 @@
                                                                 
                                                                 American Heritage
                                                             </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                        
+
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="dropdown">
+                                    <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-content">
+
+        <div class="navbar">
+                                        
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    
+                                                        
+                                                            <a href="/usaco/2019/01/28/nuggets.html">
+                                                                
+                                                                    nuggets -
+                                                                
+                                                                Beef McNuggets
+                                                            </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -2128,27 +2332,35 @@
                     <div class="post-categories">
                   
                   
-                  <h2><a href="http://localhost:8081#USACO">USACO</a></h2>
+                  <h2><a href="https://jvonk.github.io#USACO">USACO</a></h2>
                   
                   
                 </div>
                 
+                    <h2 class="project-tagline">
+                        Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number.</h2>
                 
-                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/namenum/namenum.java" class="btn">Code on GitHub</a>
                 
-
+                <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/namenum/namenum.java" class="btn">Code on GitHub</a><br>
+                
+                <a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-09-29-namenum.markdown" class="btn">Current Page on GitHub</a>
+                
                 
         </header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent">
                 
-                <a id="skip-to-content" href="#code">Skip to code</a><br><br>
-                    <em>Following is a explanation of this problem from USACO's training website. Please don't just copy code!</em>
+                <a id="skip-to-content" href="#code">Skip to code</a><br>
+                
+                    <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                
+                <br>
+                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 
                 <p>Among the large Wisconsin cattle ranchers, it is customary to brand cows with serial numbers to please the Accounting Department. The cow hands don’t appreciate the advantage of this filing system, though, and wish to call the members of their herd by a pleasing name rather than saying, “C’mon, #4734, get along.”</p>
 
 <p>Help the poor cowhands out by writing a program that will translate the brand serial number of a cow into possible names uniquely associated with that serial number. Since the cow hands all have cellular saddle phones these days, use the standard Touch-Tone(R) telephone keypad mapping to get from numbers to letters (except for “Q” and “Z”):</p>
-<pre><code>2: A,B,C     5: J,K,L    8: T,U,V
+<pre><code class="language-none">2: A,B,C     5: J,K,L    8: T,U,V
 3: D,E,F     6: M,N,O    9: W,X,Y
 4: G,H,I     7: P,R,S
 </code></pre>
@@ -2156,7 +2368,7 @@
 
 <p>For instance, the brand number 4734 produces all the following names:</p>
 
-<pre><code>GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI GREG GREH GREI GRFG GRFH GRFI GSDG
+<pre><code class="language-none">GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI GREG GREH GREI GRFG GRFH GRFI GSDG
 GSDH GSDI GSEG GSEH GSEI GSFG GSFH GSFI HPDG HPDH HPDI HPEG HPEH HPEI HPFG HPFH HPFI HRDG HRDH
 HRDI HREG HREH HREI HRFG HRFH HRFI HSDG HSDH HSDI HSEG HSEH HSEI HSFG HSFH HSFI IPDG IPDH IPDI
 IPEG IPEH IPEI IPFG IPFH IPFI IRDG IRDH IRDI IREG IREH IREI IRFG IRFH IRFI ISDG ISDH ISDI ISEG
@@ -2165,7 +2377,7 @@ ISEH ISEI ISFG ISFH ISFI
 
 <p>As it happens, the only one of these 81 names that is in the list of valid names is “GREG”.</p>
 
-<p>Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number or ``NONE’’ if there are no valid names. Serial numbers can be as many as a dozen digits long.</p>
+<p>Write a program that is given the brand number of a cow and prints all the valid names that can be generated from that brand number or ‘NONE’ if there are no valid names. Serial numbers can be as many as a dozen digits long.</p>
 
 <h2 id="program-name-namenum">PROGRAM NAME: namenum</h2>
 
@@ -2173,26 +2385,185 @@ ISEH ISEI ISFG ISFH ISFI
 <p>A single line with a number from 1 through 12 digits in length.</p>
 
 <h2 id="sample-input-file-namenumin">SAMPLE INPUT (file namenum.in)</h2>
-<pre><code>4734
+<pre><code class="language-none">4734
 </code></pre>
 
 <h2 id="output-format">OUTPUT FORMAT</h2>
 <p>A list of valid names that can be generated from the input, one per line, in ascending alphabetical order.</p>
 
 <h2 id="sample-output-file-namenumout">SAMPLE OUTPUT (file namenum.out)</h2>
-<pre><code>GREG
+<pre><code class="language-none">GREG
 </code></pre>
 
-            </div>
+
             
                 <div id="code"></div>
                 <script src="/assets/js/prism.js"></script>
+                
+                <br>
+                <div id="analysis">
+                    <h2>ANALYSIS</h2>
+                    
+<details>
+  <summary>
+    <p>Russ Cox &amp; Rob Kolstad</p>
+  </summary>
+
+  <p>There are two ways to do this problem. One is, given the number, to generate all possible strings that encode to that number and look them up in the dictionary. Since there are 3 letters for each number and 12 digits in the string, that’s 312 = 531441 lookups into a dictionary of size 5000, which although manageable would be a little on the long side (binary search can help this).</p>
+
+  <p>Or, we can examine each word in the dictionary to see if it maps to the digits of the number in question. This has the advantage of a shorter program that probably will work right first time.</p>
+
+  <p>The solution below might be considered to be a bit more straightforward: no tricky offsets, no +1 or -1, no knowledge about character values. The lines of actual code in this solution are minimal.</p>
+
+  <p>This is the sort of program that might work reliably the first time and every time. The only tricky part is knowing that scanf will yield a string without a newline on the end:</p>
+
+  <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    FILE *in = fopen ("namenum.in", "r");
+    FILE *in2 = fopen ("dict.txt", "r");
+    FILE *out = fopen ("namenum.out","w");
+    int nsolutions = 0;
+    int numlen;
+    char word[80], num[80], *p, *q, map[256];
+    int i, j;
+    map['A'] = map['B'] = map['C'] = '2';
+    map['D'] = map['E'] = map['F'] = '3';
+    map['G'] = map['H'] = map['I'] = '4';
+    map['J'] = map['K'] = map['L'] = '5';
+    map['M'] = map['N'] = map['O'] = '6';
+    map['P'] = map['R'] = map['S'] = '7';
+    map['T'] = map['U'] = map['V'] = '8';
+    map['W'] = map['X'] = map['Y'] = '9';
+    fscanf (in, "%s",num);
+    numlen = strlen(num);
+    while (fscanf (in2, "%s", word) != EOF) {
+        for (p=word, q=num; *p &amp;&amp; *q; p++, q++) {
+            if (map[*p] != *q)
+                break;
+        }
+        if (*p == '\0' &amp;&amp; *q == '\0') {
+            fprintf (out, "%s\n", word);
+            nsolutions++;
+        }
+    }
+    if (nsolutions == 0) fprintf(out,"NONE\n");
+    return 0;
+}
+</code></pre>
+
+</details>
+
+<details>
+  <summary>
+    <p>Michel Mizrah</p>
+  </summary>
+
+  <p>Here is Argentina competitor’s Michel Mizrah’s solution using the first method with a binary search. While it is blazingly fast, it does have the disadvantage of some fairly tricky coding in the binary search routine. A single off-by-one error would doom a program in a contest.</p>
+
+  <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+char num[12],sol[12];
+char dict[5000][13];
+int nsolutions = 0;
+int nwords;
+int maxlen;
+FILE *out;
+
+void calc (int charloc, int low, int high) {
+    if (charloc == maxlen) {
+        sol[charloc] = '\0';
+        for (int x = low; x &lt; high; x++) {
+            if (strcmp (sol, dict[x]) == 0) {
+                fprintf (out, "%s\n", sol);
+                nsolutions++;
+            }
+        }
+        return;
+   }
+   if (charloc &gt; 0) {
+        for (int j=low; j &lt;= high; j++){
+            if (sol[charloc-1] == dict[j][charloc-1]) {
+                low=j;
+                while (sol[charloc-1] == dict[j][charloc-1])
+                    j++;
+                high=j;
+                break;
+            }
+            if (j == high) return;
+        }
+    }
+    if (low &gt; high) return;
+    switch(num[charloc]){
+      case '2':sol[charloc] = 'A'; calc(charloc+1,low,high);
+               sol[charloc] = 'B'; calc(charloc+1,low,high);
+               sol[charloc] = 'C'; calc(charloc+1,low,high);
+               break; 
+      case '3':sol[charloc] = 'D'; calc(charloc+1,low,high);
+               sol[charloc] = 'E'; calc(charloc+1,low,high);
+               sol[charloc] = 'F'; calc(charloc+1,low,high);
+               break; 
+      case '4':sol[charloc] = 'G'; calc(charloc+1,low,high);
+               sol[charloc] = 'H'; calc(charloc+1,low,high);
+               sol[charloc] = 'I'; calc(charloc+1,low,high);
+               break; 
+      case '5':sol[charloc] = 'J'; calc(charloc+1,low,high);
+               sol[charloc] = 'K'; calc(charloc+1,low,high);
+               sol[charloc] = 'L'; calc(charloc+1,low,high);
+               break; 
+      case '6':sol[charloc] = 'M'; calc(charloc+1,low,high);
+               sol[charloc] = 'N'; calc(charloc+1,low,high);
+               sol[charloc] = 'O'; calc(charloc+1,low,high);
+               break; 
+      case '7':sol[charloc] = 'P'; calc(charloc+1,low,high);
+               sol[charloc] = 'R'; calc(charloc+1,low,high);
+               sol[charloc] = 'S'; calc(charloc+1,low,high);
+               break; 
+      case '8':sol[charloc] = 'T'; calc(charloc+1,low,high);
+               sol[charloc] = 'U'; calc(charloc+1,low,high);
+               sol[charloc] = 'V'; calc(charloc+1,low,high);
+               break; 
+      case '9':sol[charloc] = 'W'; calc(charloc+1,low,high);
+               sol[charloc] = 'X'; calc(charloc+1,low,high);
+               sol[charloc] = 'Y'; calc(charloc+1,low,high);
+               break;
+   }
+}
+
+int main(){
+    FILE *in=fopen ("namenum.in", "r");
+    FILE *in2=fopen ("dict.txt", "r");
+    int j;
+    out=fopen ("namenum.out","w");
+    for (nwords = 0; fscanf (in2, "%s", &amp;dict[nwords++]) != EOF; )
+        ;
+    fscanf (in, "%s",&amp;num);
+    maxlen = strlen(num);
+    calc (0, 0, nwords);
+    if (nsolutions == 0) fprintf(out,"NONE\n");
+    return 0;
+}
+</code></pre>
+
+</details>
+
+
+                </div>
+                
+                <br>
+                <a id="skip-to-main" href="#content">Back to top</a>
             
+            </div>
             
                 <footer class="site-footer realcontent">
                     
                         <span class="site-footer-owner">
+                            
                             <a href="https://github.com/jvonk/USACO/blob/master/Chapter_1/namenum/namenum.java">
+                            
                                 USACO - namenum</a>
                             is created by
                             <a href="http://github.com/jvonk">

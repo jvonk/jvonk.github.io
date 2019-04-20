@@ -6,39 +6,211 @@ categories: USACO
 short: shopping
 chapter: 3
 section: 3
-description: "Write a program that calculates the price a customer has to pay for a purchase, making optimal use of the special offers to make the price as low as possible. You are not allowed to add items, even if that would lower the price."
+description: "Your task is to count up all the various square grazing areas within the supplied dataset and report the number of square grazing areas remaining."
 ---
 
-In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.
+Farmer John grazes his cows on a large, square field N (2 <= N <= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).
 
-A special offer consists of one or more product items together for a reduced price, also an integer. Examples:
+Your task is to count up all the various square grazing areas within the supplied dataset and report the number of square grazing areas (of sizes >= 2x2) remaining. Of course, grazing areas may overlap for purposes of this report.
 
-*   three flowers for 5z instead of 6z, or
-*   two vases together with one flower for 10z instead of 12z.
-
-Write a program that calculates the price a customer has to pay for a purchase, making optimal use of the special offers to make the price as low as possible. You are not allowed to add items, even if that would lower the price.
-
-For the prices and offers given above, the (lowest) price for three flowers and two vases is 14z: two vases and one flower for the reduced price of 10z and two flowers for the regular price of 4z.
-
-### PROGRAM NAME: shopping
+### PROGRAM NAME: range
 
 ### INPUT FORMAT
 
-The input file has a set of offers followed by a purchase.
+|**Line 1:**|N, the number of miles on each side of the field.|
+|**Line 2..N+1:**|N characters with no spaces. 0 represents "ravaged for that block; 1 represents "ready to eat".|
 
-|**Line 1:**|s, the number of special offers, (0 <= s <= 99).|
-|**Line 2..s+1:**|Each line describes an offer using several integers. The first integer is n (1 <= n <= 5), the number of products that are offered. The subsequent n pairs of integers c and k indicate that k items (1 <= k <= 5) with product code c (1 <= c <= 999) are part of the offer. The last number p on the line stands for the reduced price (1 <= p <= 9999). The reduced price of an offer is less than the sum of the regular prices.|
-|**Line s+2:**|The first line contains the number b (0 <= b <= 5) of different kinds of products to be purchased.|
-|**Line s+3..s+b+2:**|Each of the subsequent b lines contains three values: c, k, and p. The value c is the (unique) product code (1 <= c <= 999). The value k indicates how many items of this product are to be purchased (1 <= k <= 5). The value p is the regular price per item (1 <= p <= 999). At most 5\*5=25 items can be in the basket.|
+### SAMPLE INPUT (file range.in)
 
-### SAMPLE INPUT (file shopping.in)
-
-```2 1 7 3 5 2 7 1 8 2 10 2 7 3 2 8 2 5```
+```none
+6
+101111
+001111
+111111
+001111
+101101
+111001
+```
 
 ### OUTPUT FORMAT
 
-A single line with one integer: the lowest possible price to be paid for the purchases.
+Potentially several lines with the size of the square and the number of such squares that exist. Order them in ascending order from smallest to largest size.
 
-### SAMPLE OUTPUT (file shopping.out)
+### SAMPLE OUTPUT (file range.out)
 
-```14```
+```none
+2 10
+3 4
+4 1
+```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+To count the squares, we first precompute the biggest square with lower right corner at any particular location. This is done by dynamic programming: the biggest square with lower right corner at (i, j) is the minimum of three numbers:
+
+* the number of consecutive uneaten grid units to the left
+* the number of consecutive uneaten grid units to the right
+* one plus the size of the biggest square with lower right corner at (i-1, j-1)
+
+Once we've computed this information, counting squares is simple: go to each lower right corner and increment the counters for every square size between 2 and the biggest square ending at that corner.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+#define MAXN 250
+
+int goodsq[MAXN][MAXN];
+int bigsq[MAXN][MAXN];
+int tot[MAXN+1];
+
+int
+min(int a, int b)
+{
+    return a < b ? a : b;
+}
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int i, j, k, l, n, sz;
+
+    fin = fopen("range.in", "r");
+    fout = fopen("range.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d\n", &n);
+
+    for(i=0; i<n; i++) {
+	for(j=0; j<n; j++)
+	    goodsq[i][j] = (getc(fin) == '1');
+	assert(getc(fin) == '\n');
+    }
+
+    /* calculate size of biggest square with lower right corner (i,j) */
+    for(i=0; i<n; i++) {
+	for(j=0; j<n; j++) {
+	    for(k=i; k>=0; k--)
+		if(goodsq[k][j] == 0)
+		    break;
+
+	    for(l=j; l>=0; l--)
+		if(goodsq[i][l] == 0)
+		    break;
+
+	    sz = min(i-k, j-l);
+	    if(i > 0 && j > 0)
+		sz = min(sz, bigsq[i-1][j-1]+1);
+
+	    bigsq[i][j] = sz;
+	}
+    }
+
+    /* now just count squares */
+    for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+    for(k=2; k<=bigsq[i][j]; k++)
+	tot[k]++;
+
+    for(i=2; i<=n; i++)
+	if(tot[i])
+	    fprintf(fout, "%d %d\n", i, tot[i]);
+				
+    exit(0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Greg Price
+</summary>
+
+The posted solution runs in cubic time, with quadratic storage. With a little more cleverness in the dynamic programming, the task can be accomplished with only quadratic time and linear storage, and the same amount of code and coding effort. Instead of running back along the rows and columns from each square, we use the biggest-square values immediately to the west and north, so that each non-ravaged square's biggest-square value is one more than the minimum of the values to the west, north, and northwest. This saves time, bringing us from cubic to quadratic time.
+
+Another improvement, which saves space and perhaps cleans up the code marginally, is to keep track of the number of squares of a given size as we go along. This obviates the need to keep a quadratic-size matrix of biggest-square values, because we only need the most recent row for continuing the computation. As for "ravaged" values, we only use each one once, all in order; we can just read those as we need them.
+
+```cpp
+#include <fstream.h>
+
+ifstream fin("range.in");
+ofstream fout("range.out");
+
+const unsigned short maxn = 250 + 5;
+
+unsigned short n;
+char fieldpr;
+unsigned short sq[maxn]; // biggest-square values
+unsigned short sqpr;
+unsigned short numsq[maxn]; // number of squares of each size
+
+unsigned short
+min3(unsigned short a, unsigned short b, unsigned short c)
+{
+	if ((a <= b) && (a <= c))
+		return a;
+	else 
+		return (b <= c) ? b : c;
+}
+
+void
+main()
+{
+	unsigned short r, c;
+	unsigned short i;
+	unsigned short tmp;
+
+	fin >> n;
+
+	for (c = 1; c <= n; c++)
+		sq[c] = 0;
+
+	for (i = 2; i <= n; i++)
+		numsq[i] = 0;
+
+	for (r = 1; r <= n; r++)
+	{
+		sqpr = 0;
+		sq[0] = 0;
+		for (c = 1; c <= n; c++)
+		{
+			fin >> fieldpr;
+			if (!(fieldpr - '0'))
+			{
+				sqpr = sq[c];
+				sq[c] = 0;
+				continue;
+			}
+
+			// Only three values needed.
+			tmp = 1 + min3(sq[c-1], sqpr, sq[c]);
+			sqpr = sq[c];
+			sq[c] = tmp;
+
+			// Only count maximal squares, for now.
+			if (sq[c] >= 2)
+				numsq[ sq[c] ]++;
+		}
+	}
+
+	// Count all squares, not just maximal. 
+	for (i = n-1; i >= 2; i--)
+		numsq[i] += numsq[i+1];
+
+	for (i = 2; i <= n && numsq[i]; i++)
+		fout << i << ' ' << numsq[i] << endl;
+}
+```
+
+</details>
+
+{% endcontentfor %}

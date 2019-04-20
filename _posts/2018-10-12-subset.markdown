@@ -36,7 +36,7 @@ The input file contains a single line with a single integer representing N, as a
 
 ### SAMPLE INPUT (file subset.in)
 
-```
+```none
 7
 ```
 
@@ -46,6 +46,155 @@ The output file contains a single line with a single integer that tells how many
 
 ### SAMPLE OUTPUT (file subset.out)
 
-```
+```none
 4
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Rob Kolstad
+</summary>
+
+This is a classic dynamic programming problem.
+
+The basis of a handful of DP algorithms is the "take-an-old-count, add some to it, and carry it forward again". Subset sums is a classic example of this.
+
+First, let's rephrase the task as, "Given N, calculate the total number a partition must sum to {n*(n+1)/2 /2}, and find the number of ways to form that sum by adding 1, 2, 3, ... N."
+
+Thus, for N=7, the entire set of numbers 1..7 sums to 7*8/2 which is 56/2=28. And, if we partitioned that into two equal-sum sets, they'd pretty much have to sum to ** 14 **.
+
+Now comes the 'DP trick' *for this class of DP tasks*. We'll set up a little one-dimensional array called... 'buckets'. In this array reside the counts of ways you can build various numbers given a set of numbers 1.. m. Thus, over time, buckets looks like this:
+
+```none
+Lev::   0  1  2  3  4  5  6  7  8  9 10 11  ...
+  1::   1  1  0  0  0  0  0  0  0  0  0  0  ...
+  2::   1  1  1  1  0  0  0  0  0  0  0  0  ...
+  3::   1  1  1  2  1  1  1  0  0  0  0  0  ...
+  4::   1  1  1  2  2  2  2  2  1  1  1  0  ...
+```
+
+If we look at row 1::, we see "There is 1 way to make a 0 and one way to build a 1 using the set {1}"
+
+If we look at row 2::, we see "There is 1 way to make a 0 (this is always true), one way to make a 1, one way to make a 2, and one way to make a 3" -- the 3 is from 1 + 2
+
+If we look at row 3::, we see: "... *two* ways to make a 3 ...". Since you can make a 3 with: 3 or 1+2, now we're seeing some growth.
+
+Row 4:: says "... two ways for a 3, two ways for a 4, two ways for a 5, two ways for a 6, two ways for a 7, ..." and one way for many others.
+
+We calculate row N+1 from row N.
+
+For each bucket j in our set:
+
+```cpp
+newbucket[j + added_number] += olderbucket[j]
+```
+
+So if the added_number is 3, and you're processing column 4,
+
+```cpp
+newbucket [4 + 3] += olderbucket[4]
+```
+
+which is to say, "With a 3 in our hand, realize we can create a 7 by olderbucket[4] ways" and mark that down.
+The above sentence is the key. Once you see that, everything becomes clear.
+
+The answer is found for N=7 by looking in bucket 14 and dividing the answer by 2, since we count each partitioning twice (once in each of two orderings).
+
+</details>
+
+<details>
+<summary>
+Hal Burch
+</summary>
+
+```cpp
+/* Calculate how many two-way partitions of {1, 2, ..., N} are
+   even splits (the sums of the elements of both partition are equal) */
+
+#include <stdio.h>
+#include <string.h>
+
+#define MAXSUM 637
+
+unsigned int numsets[637][51];
+
+int max;
+unsigned int sum;
+
+main(int argc, char **argv)
+{
+  int lv, lv2, lv3;
+  int cnt;
+  FILE *fin, *fout;
+
+  fin = fopen ("subset.in", "r");
+  fscanf(fin, "%d", &max);
+  fclose (fin);
+  fout = fopen("subset.out", "w");
+
+  if ((max % 4) == 1 || (max % 4) == 2) {
+    fprintf (stderr, "0\n");
+    exit(1);
+  }
+
+  sum = max * (max+1) / 4;
+
+    memset(numsets, 0, sizeof(numsets[0]));
+    numsets[0][0] = 1;
+    for (lv = 1; lv < max; lv++) {
+      for (lv2 = 0; lv2 <= sum; lv2++)
+        numsets[lv2][lv] = numsets[lv2][lv-1];
+      for (lv2 = 0; lv2 <= sum-lv; lv2++)
+        numsets[lv2+lv][lv] += numsets[lv2][lv-1];
+    }
+
+    fprintf (fout, "%u\n", numsets[sum][max-1]);
+    fclose (fout);
+  exit (0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Nick Tomitov
+</summary>
+
+Here's an even more concise solution from Nick Tomitov of Bulgaria:
+
+```cpp
+#include <fstream>
+using namespace std;
+const unsigned int MAX_SUM = 1024;
+int n;
+unsigned long long int dyn[MAX_SUM];
+ifstream fin ("subset.in");
+ofstream fout ("subset.out");
+
+int main() {
+    fin >> n;
+    fin.close();
+    int s = n*(n+1);
+    if (s % 4) {
+        fout << 0 << endl;
+        fout.close ();
+        return ;
+    }
+    s /= 4;
+    int i, j;
+    dyn [0] = 1;
+    for (i = 1; i <= n; i++)
+        for (j = s; j >= i; j--) 
+            dyn[j] += dyn[j-i];
+    fout << (dyn[s]/2) << endl;
+    fout.close();
+    return 0;
+}
+```
+
+</details>
+
+{% endcontentfor %}

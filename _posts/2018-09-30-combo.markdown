@@ -22,14 +22,13 @@ Given Farmer John's combination and the master combination, please determine the
 
 ### INPUT FORMAT:
 
-| Line 1: | The integer N. |
-|---------|---------------------------------------------------------------------------------------------------------------------|
-| Line 2: | Three space-separated integers, specifying Farmer John's combination. |
-| Line 3: | Three space-separated integers, specifying the master combination (possibly the same as Farmer John's combination). |
+| **Line 1:** | The integer N. |
+| **Line 2:** | Three space-separated integers, specifying Farmer John's combination. |
+| **Line 3:** | Three space-separated integers, specifying the master combination (possibly the same as Farmer John's combination). |
 
 ### SAMPLE INPUT (file combo.in):
 
-```
+```none
 50
 1 2 3
 5 6 7
@@ -45,7 +44,7 @@ Each dial is numbered 1..50. Farmer John's combination is (1,2,3), and the maste
 
 ### SAMPLE OUTPUT (file combo.out):
 
-```
+```none
 249
 ```
 
@@ -53,7 +52,7 @@ Each dial is numbered 1..50. Farmer John's combination is (1,2,3), and the maste
 
 Here's a list:
 
-```
+```none
 1,1,1  2,2,4  3,4,2  4,4,5  5,4,8  6,5,6  7,5,9  3,50,2  50,1,4 
 1,1,2  2,2,5  3,4,3  4,4,6  5,4,9  6,5,7  7,6,5  3,50,3  50,1,5 
 1,1,3  2,3,1  3,4,4  4,4,7  5,5,5  6,5,8  7,6,6  3,50,4  50,2,1 
@@ -83,3 +82,64 @@ Here's a list:
 2,2,2  3,3,5  3,8,8  5,4,6  6,4,9  7,5,7  3,50,1 50,1,3  50,50,5
 2,2,3  3,4,1  3,8,9  5,4,7  6,5,5  7,5,8
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+The process of solving this problem is described in [the video](https://youtu.be/nPs1fvOBG9Y); the final code is shown below.
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+
+int N;
+
+bool close(int a, int b)
+{
+  if (abs(a-b) <= 2) return true;
+  if (abs(a-b) >= N-2) return true;
+  return false;
+}
+
+bool close_enough(int n1, int n2, int n3,
+		  int c1, int c2, int c3)
+{
+  return close(n1,c1) && close(n2,c2) && close(n3,c3);
+}
+
+int main(void)
+{
+  int f1, f2, f3;
+  int m1, m2, m3;
+
+  ifstream fin("combo.in");
+  fin >> N;
+  fin >> f1 >> f2 >> f3;
+  fin >> m1 >> m2 >> m3;
+  fin.close();
+
+  int total = 0;
+  for (int n1=1; n1<=N; n1++)
+    for (int n2=1; n2<=N; n2++)
+      for (int n3=1; n3<=N; n3++)
+	if (close_enough(n1,n2,n3,f1,f2,f3) ||
+	    close_enough(n1,n2,n3,m1,m2,m3))
+	  total++;
+
+  ofstream fout("combo.out");
+  fout << total << "\n";
+  fout.close();
+
+  return 0;
+}
+```
+
+</details>
+
+{% endcontentfor %}

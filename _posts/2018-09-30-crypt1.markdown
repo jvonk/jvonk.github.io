@@ -13,7 +13,7 @@ _This poorly named task has nothing to do with prime numbers or even, really, pr
 
 A cryptarithm is usually presented as a pencil-and-paper task in which the solver is required to substitute a digit for each of the asterisks (or, often, letters) in the manual evaluation of an arithmetic term or expression so that the consistent application of the digits results in a proper expression. A classic example is this cryptarithm, shown with its unique solution:
 
-```
+```none
     SEND            9562       S->9  E->5  N->6  D->2
   + MORE          + 1085       M->1  O->0  R->8
   -------        -------
@@ -23,7 +23,8 @@ A cryptarithm is usually presented as a pencil-and-paper task in which the solve
 The following cryptarithm is a multiplication problem that can be solved by substituting digits from a specified set of N digits into the positions marked with \*. Since the asterisks are generic, any digit from the input set can be used for any of the asterisks; any digit may be duplicated as many times as desired.
 
 Consider using the set {2,3,5,7} for the cryptarithm below:
-```
+
+```none
       * * *
    x    * *
     -------
@@ -32,7 +33,7 @@ Consider using the set {2,3,5,7} for the cryptarithm below:
     -------
     * * * *
 ```
-Digits can appear only in places marked by \`\*'. Of course, leading zeroes are not allowed.
+Digits can appear only in places marked by '\*'. Of course, leading zeroes are not allowed.
 
 **The partial products must be three digits long**, even though the general case (see below) might have four digit partial products.  
   
@@ -42,7 +43,7 @@ In USA, children are taught to perform multidigit multiplication as described he
 _Note that this diagram shows far more digits in its results than
 the required diagram above which has three digit partial products!_
 
-```
+```none
           a b c     <-- number 'abc'
         x   d e     <-- number 'de'; the 'x' means 'multiply'
      -----------
@@ -65,7 +66,7 @@ Write a program that will find all solutions to the cryptarithm above for any su
 
 ### SAMPLE INPUT (file crypt1.in)
 
-```
+```none
 5
 2 3 4 6 8
 ```
@@ -73,7 +74,7 @@ Write a program that will find all solutions to the cryptarithm above for any su
 ### OUTPUT FORMAT
 
 A single line with the total number of solutions. Here is the one and only solution for the sample input:
-```
+```none
       2 2 2
     x   2 2
      ------
@@ -85,7 +86,7 @@ A single line with the total number of solutions. Here is the one and only solut
 
 ### SAMPLE OUTPUT (file crypt1.out)
 
-```
+```none
 1
 ```
 
@@ -94,7 +95,7 @@ A single line with the total number of solutions. Here is the one and only solut
 Here's why 222x22 works: 3 digits times 2 digits yields two (equal!) partial products, each of three digits (as required). The answer has four digits, as required. Each digit used {2, 4, 8} is in the supplied set {2, 3, 4, 6, 8}.
 
 Why 222x23 doesn't work:
-```
+```none
       2 2 2   <-- OK:  three digits, all members of {2, 3, 4, 6, 8}
         2 3   <-- OK:  two digits, all members of {2, 3, 4, 6, 8}
      ------
@@ -104,3 +105,93 @@ Why 222x23 doesn't work:
     5 1 0 6   <-- NOT OK: four digits (good), but 5, 1, and 0 are not in
                                                     {2, 3, 4, 6, 8}
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+The constraints of this problem are small enough that we can just try all possible products of 3 digit * 2 digit numbers, and look to see if all the correct digits are used.
+
+The function "isgood" checks that a number is composed only of acceptable digits, and "isgoodprod" checks that all the lines of the multiplication are composed of acceptable digits.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+int isgooddigit[10];	/* isgooddigit[d] is set if d is an acceptable digit
+*/
+
+/* check that every decimal digit in "n" is a good digit,
+   and that it has the right number "d" of digits. */
+int
+isgood(int n, int d)
+{
+    if(n == 0)
+		return 0;
+
+    while(n) {
+	if(!isgooddigit[n%10])
+	    return 0;
+	n /= 10;
+        d--;
+    }
+
+    if( d == 0 )
+       return 1;
+    else
+       return 0;
+}
+
+/* check that every product line in n * m is an okay number */
+int
+isgoodprod(int n, int m)
+{
+    if(!isgood(n,3) || !isgood(m,2) || !isgood(n*m,4))
+	return 0;
+
+    while(m) {
+	if(!isgood(n*(m%10),3))
+	    return 0;
+	m /= 10;
+    }
+    return 1;
+}
+
+void
+main(void)
+{
+    int i, j, n, nfound;
+    FILE *fin, *fout;
+
+    fin = fopen("crypt1.in", "r");
+    fout = fopen("crypt1.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    for(i=0; i<10; i++) {
+        isgooddigit[i] = 0;
+    }
+    fscanf(fin, "%d", &n);
+    for(i=0; i<n; i++) {
+	fscanf(fin, "%d", &j);
+	isgooddigit[j] = 1;
+    }
+
+   nfound = 0;
+   for(i=100; i<1000; i++)
+	for(j=10; j<100; j++)
+	    if(isgoodprod(i, j))
+		nfound++;
+
+   fprintf(fout, "%d\n", nfound);
+   exit(0);
+}
+```
+
+</details>
+
+{% endcontentfor %}

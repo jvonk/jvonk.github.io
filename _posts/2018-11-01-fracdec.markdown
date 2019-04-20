@@ -11,7 +11,7 @@ description: "Write a program that will accept a fraction of the form N/D, where
 
 Write a program that will accept a fraction of the form N/D, where N is the numerator and D is the denominator and print the decimal representation. If the decimal representation has a repeating sequence of digits, indicate the sequence by enclosing it in brackets. For example, 1/3 = .33333333...is denoted as 0.(3), and 41/333 = 0.123123123...is denoted as 0.(123). Use xxx.0 to denote an integer. Typical conversions are:
 
-```
+```none
 1/3     =  0.(3)
 22/5    =  4.4
 1/7     =  0.(142857)
@@ -28,7 +28,7 @@ A single line with two space separated integers, N and D, 1 <= N,D <= 100000.
 
 ### SAMPLE INPUT (file fracdec.in)
 
-```
+```none
 45 56
 ```
 
@@ -38,6 +38,159 @@ The decimal expansion, as detailed above. If the expansion exceeds 76 characters
 
 ### SAMPLE OUTPUT (file fracdec.out)
 
-```
+```none
 0.803(571428)
 ```
+
+{% contentfor analysis %}
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+Remember long division? We know that the decimal expansion is repeating when, after the decimal point, we see a remainder we've seen before. The repeating part will be all the digits we've calculated since the last time we saw that remainder.
+
+We read in the input and print the integer part. Then we do long division on the fractional part until we see a remainder more than once or the remainder becomes zero. If we see a remainder more than once, we're repeating, in which case we print the non-repeated and repeated part appropriately. If the remainder becomes zero, we finished, in which case we print the decimal expansion. When no digits of the decimal expansion have been generated, the correct answer seems to be to print a zero.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+#define MAXDIGIT 100100
+
+char dec[MAXDIGIT];
+int lastrem[MAXDIGIT];
+char buf[MAXDIGIT];
+
+void
+main(void)
+{
+    FILE *fin, *fout;
+    int n, d, k, i, rem, len;
+
+    fin = fopen("fracdec.in", "r");
+    fout = fopen("fracdec.out", "w");
+    assert(fin != NULL && fout != NULL);
+
+    fscanf(fin, "%d %d", &n, &d);
+    sprintf(buf, "%d.", n/d);
+
+	/* long division keeping track of if we've seem a remainder before */
+    for(i=0; i<MAXDIGIT; i++)
+	lastrem[i] = -1;
+
+    rem = n % d;
+    for(i=0;; i++) {
+	if(rem == 0) {
+	    if(i == 0)
+		sprintf(buf+strlen(buf), "0");
+	    else
+		sprintf(buf+strlen(buf), "%s", dec);
+	    break;
+	}
+	if(lastrem[rem] != -1) {
+	    k = lastrem[rem];
+	    sprintf(buf+strlen(buf), "%.*s(%s)", k, dec, dec+k);
+	    break;
+	}
+
+	lastrem[rem] = i;
+	n = rem * 10;
+	dec[i] = n/d + '0';
+	rem = n%d;
+    }
+
+    /* print buf 76 chars per line */
+    len = strlen(buf);
+    for(i=0; i<len; i+=76) {
+    	fprintf(fout, "%.76s\n", buf+i);
+    }
+    exit(0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Anatoly Preygel
+</summary>
+
+Here's a another, more elegant solution from Anatoly Preygel.
+
+Compute the number of digits before the repeat starts, and then you don't even have to store the digits or remainders, making the program use much less memory and go faster. We know that powers of 2 and 5 are the only numbers which do not result in a repeat, so to find the number of digits before the repeat, we just find the maximum of the differences between the powers of 2 and 5 in the denominator and numerator (see code snippet). Then we just use the first remainder, and output each digit as we calculate it:
+
+```cpp
+#include <iostream.h>
+#include <fstream.h>
+#include <math.h>
+ofstream out("fracdec.out");
+
+int colcount=0;
+
+int numBeforeRepeat(int n, int d) {
+    int c2=0, c5=0;
+    if (n == 0) return 1;
+    while (d%2==0) { d/=2; c2++; }
+    while (d%5==0) { d/=5; c5++; }
+    while (n%2==0) { n/=2; c2--; } /* can go negative */
+    while (n%5==0) { n/=5; c5--; } /* can go negative */
+    if (c2>c5)
+        if (c2>0) return c2;
+        else return 0;
+    else
+        if (c5>0) return c5;
+        else return 0;
+}
+
+void print (char c) {
+    if (colcount==76) {
+        out<<endl;
+        colcount=0;
+    }
+    out<<c;
+    colcount++;
+}
+
+void print (int n) {
+    if (n>=10) print (n/10);
+    print ((char)('0'+(n%10)));
+}
+
+int main() {
+    int n, d;
+    ifstream in("fracdec.in");
+    in>>n>>d;
+    in.close();
+
+    print (n/d);
+    print ('.');
+    n=n%d;
+    int m=numBeforeRepeat(n,d);
+    for(int i=0;i<m;i++) {
+        n*=10;
+	print (n/d);
+        n%=d;
+    }
+    int r=n;
+    if(r!=0) {
+	print ('(');
+        do {
+            n*=10;
+	    print (n/d);
+            n%=d;
+        } while (n!=r);
+	print (')');
+    }
+    out<<endl;
+    out.close();
+    exit (0);
+}
+```
+
+</details>
+
+{% endcontentfor %}
