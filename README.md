@@ -1,2 +1,4 @@
-##Personal Github Pages Site
-This is in progress, so it is NOT finished.
+## Personal Github Pages Site
+* View USACO solutions, analysis, and descriptions
+* A bit about me
+* And much more
