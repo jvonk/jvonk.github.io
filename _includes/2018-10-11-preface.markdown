@@ -1,0 +1,310 @@
+<details>
+<summary>
+Russ Cox
+</summary>
+
+Since the maximum problem size is fairly small, it makes sense to just calculate the corresponding roman number for each page number, and count letters.
+
+The tricky part is generating the roman numbers. The key insight is that roman numbers are not much different than our own decimal digits. The two differences are that the set of digits changes depending on which decimal place we're worrying about, and that sometimes a "digit" is multiple letters or no letters (in the case of zero). So for example, in the ones place 7 is written "VII" and in the tens place "LXX", and so on, but it's always the same format: the letter for 5 and then two occurrences of the letter for 1.
+
+We use a lookup table called "encode" to encode each digit, translating from the letters for the ones place to the letters for the place that we care about. The "romandigit" function takes care of each digit, and the "roman" function strings them all together.
+
+```cpp
+/*
+PROG: preface
+ID: rsc001
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+static char *encode[] = {
+	"", "I", "II", "III", "IV",
+	"V", "VI", "VII", "VIII", "IX",
+};
+
+char*
+romandigit(int d, char *ivx)
+{
+	char *s, *p;
+	static char str[10];
+
+	for(s=encode[d%10], p=str; *s; s++, p++) {
+		switch(*s){
+		case 'I':
+			*p = ivx[0];
+			break;
+		case 'V':
+			*p = ivx[1];
+			break;
+		case 'X':
+			*p = ivx[2];
+			break;
+		}
+	}
+	*p = '\0';
+	return str;
+}
+
+char*
+roman(int n)
+{
+	static char buf[20];
+
+	strcpy(buf, "");
+	strcat(buf, romandigit(n/1000, "M"));
+	strcat(buf, romandigit(n/100,  "CDM"));
+	strcat(buf, romandigit(n/10,   "XLC"));
+	strcat(buf, romandigit(n,      "IVX"));
+	return buf;
+}
+
+void
+main(void)
+{
+	FILE *fin, *fout;
+	int i, n;
+	char *s;
+	int count[256];
+
+	fin = fopen("preface.in", "r");
+	fout = fopen("preface.out", "w");
+	assert(fin != NULL && fout != NULL);
+
+	fscanf(fin, "%d", &n);
+
+	for(s="IVXLCDM"; *s; s++)
+		count[*s] = 0;
+
+	for(i=1; i<=n; i++)
+		for(s=roman(i); *s; s++)
+			count[*s]++;
+
+	for(s="IVXLCDM"; *s; s++)
+		if(count[*s])
+			fprintf(fout, "%c %d\n", *s, count[*s]);
+
+	exit(0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Alex Schendner & Rob Kolstad
+</summary>
+
+While you certainly can find out what the Roman numerals are, the problem does not ask for that information and the program can be made simpler if you only keep track of how many for each digit there are. 
+
+*Rob Kolstad simplified the program slightly.*
+
+```cpp
+#include <fstream.h>
+
+int     Ig = 0;
+int     Vg = 0;
+int     Xg = 0;
+int     Lg = 0;
+int     Cg = 0;
+int     Dg = 0;
+int     Mg = 0;
+
+inline void 
+roman (int x)
+{
+    int     I = 0;
+    int     V = 0;
+    int     X = 0;
+    int     L = 0;
+    int     C = 0;
+    int     D = 0;
+    int     M = 0;
+    for ( ; x >= 1000; ++M, x -= 1000);
+    for ( ; x >= 500; ++D, x -= 500);
+    for ( ; x >= 100; ++C, x -= 100);
+    for ( ; x >= 50; ++L, x -= 50);
+    for ( ; x >= 10; ++X, x -= 10);
+    for ( ; x >= 5; ++V, x -= 5);
+    for ( ; x >= 1; ++I, x -= 1);
+
+    while (D > 0 && (C / 4) > 0) {
+	--D; C -= 4; ++M; ++C;
+    }
+    while (C >= 4) {
+	C -= 4; ++D; ++C;
+    }
+    while (L > 0 && (X / 4) > 0) {
+	--L; X -= 4; ++C; ++X;
+    }
+    while (X >= 4) {
+	X -= 4; ++L; ++X;
+    }
+    while (V > 0 && (I / 4) > 0) {
+	--V; I -= 4; ++X; ++I;
+    }
+    while (I >= 4) {
+	I -= 4; ++V; ++I;
+    }
+    Ig += I;
+    Vg += V;
+    Xg += X;
+    Lg += L;
+    Cg += C;
+    Dg += D;
+    Mg += M;
+    return;
+}
+
+int 
+main ()
+{
+
+    int     n;
+    ifstream filein ("preface.in");
+    filein >> n;
+    filein.close ();
+
+    for (int loop = 1; loop <= n; ++loop) {
+	roman (loop);
+    }
+
+    ofstream fileout ("preface.out");
+    if (Ig != 0) {
+	fileout << 'I' << ' ' << Ig << endl;
+    }
+    if (Vg != 0) {
+	fileout << 'V' << ' ' << Vg << endl;
+    }
+    if (Xg != 0) {
+	fileout << 'X' << ' ' << Xg << endl;
+    }
+    if (Lg != 0) {
+	fileout << 'L' << ' ' << Lg << endl;
+    }
+    if (Cg != 0) {
+	fileout << 'C' << ' ' << Cg << endl;
+    }
+    if (Dg != 0) {
+	fileout << 'D' << ' ' << Dg << endl;
+    }
+    if (Mg != 0) {
+	fileout << 'M' << ' ' << Mg << endl;
+    }
+    fileout.close ();
+
+    return (0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+lifuxin
+</summary>
+
+Similar to Alex's program, this one is simpler in some ways. We can treat those things like "IX" or "IV" as another positive number. We will just use the number to try every number in the ns array. I also used match1 and match2 to save the corresponding letter of each number in ns.
+
+```cpp
+#include <stdio.h>
+int     ns[] =
+   {1000, 900, 500, 400, 100, 90, 50,  40, 10,  9,   5,  4,   1};
+   //"M"  "CM" "D"  "CD" "C" "XC" "L" "XL" "X" "IX" "V" "IV" "I"
+char    rs[] = {"IVXLCDM"};
+int     match1[] = {6, 4, 5, 4, 4, 2, 3, 2, 2, 0, 1, 0, 0};
+int     match2[] = {-1, 6, -1, 5, -1, 4, -1, 3, -1, 2, -1, 1, -1};
+int     n;
+int     counts[7];
+
+void 
+count (int num)
+{
+    int     sct[] = {3, 1, 1, 1, 3, 1, 1, 1, 3, 1, 1, 1, 3};
+    int     i, j = 0;
+    for (i = 0; i < 13; i++) {
+	while (sct[i] > 0) {
+	    if ((num - ns[i]) >= 0) {
+		num -= ns[i];
+		counts[match1[i]]++;
+		if (match2[i] >= 0)
+		    counts[match2[i]]++;
+		sct[i]--;
+	    }
+	    else
+		break;
+	}
+    }
+}
+
+void 
+main ()
+{
+    FILE   *fp = fopen ("preface.in", "r");
+    FILE   *wfp = fopen ("preface.out", "w");
+    int     i;
+    fscanf (fp, "%d", &n);
+    for (i = 0; i < 7; i++)
+	counts[i] = 0;
+    for (i = 1; i <= n; i++)
+	count (i);
+    for (i = 0; i < 7; i++) {
+	if (counts[i])
+	    fprintf (wfp, "%c %d\n", rs[i], counts[i]);
+    }
+    fclose (fp);
+    fclose (wfp);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Cary Yang
+</summary>
+
+Cary Yang sends in this concise solution that works more the way people think about roman numerals, without the 'IV trick':
+
+```cpp
+#include <fstream>
+using namespace std;
+int count[7];
+int mult[6] = {5, 2, 5, 2, 5, 2}; // The factors between consecutive roman
+				  // numeral letter values.
+char roman[] = "IVXLCDM";
+int vals[7] = {1, 5, 10, 50, 100, 500, 1000};
+
+int main() {
+    ofstream fout ("preface.out");
+    ifstream fin ("preface.in");
+    int n;
+    fin >> n;
+
+    for (int i = 1; i <= n; i++) {
+	for (int j = 0, temp = i; temp != 0; j++) {
+             // If there are more than three of the current letter.
+	    if (temp % mult[j] > 3) {
+		count[j]++;
+                // Checks if it can have a two letter difference
+		// (ie. IX instead of IV).
+	        if (temp / mult[j] > 0 && i % vals[j + 2] > vals[j + 1]) {
+	            count[j + 2]++;
+     	            temp -= mult[j];
+                } else
+		    count[j + 1]++;
+	    } else
+		count[j] += temp % mult[j];
+	    temp /= mult[j];
+	}
+    }
+    for (int i = 0; i < 7; i++)
+     if (count[i])
+         fout << roman[i] << " " << count[i] << endl;
+    return 0;
+}
+```
+
+</details>

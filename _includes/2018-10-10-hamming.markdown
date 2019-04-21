@@ -1,0 +1,75 @@
+<details>
+<summary>
+Brian Jacokes
+</summary>
+
+There are only a few tools we need to solve this problem. First of all, we can use basic techniques to find the Nth bit of a number M: counting the least significant bit as bit 0, the next bit as bit 1, etc., we can find the value of that bit through the expression
+
+```cpp
+int Nth_bit = (1 << N) & M;
+```
+
+In other words, we are shifting the number 1 left by N spaces, and then performing a binary AND on the resulting number with our original number, which will leave either a 1 in the Nth bit or a 0. So the first thing we have to do is find out the distance between each pair of numbers within the set of all numbers with B bits (0..2B-1).
+We also know that 0 can be one of the numbers in the set, because if the minimum number in the set were N instead of 0, we could XOR N to each number in the set and they would still be the same distance apart. The limits on the problem are low enough that we can do a DFS, and as soon as we hit a solution we can output it and exit.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream.h>
+#define MAX (1 << 8 + 1)
+#define NMAX 65
+#define BMAX 10
+#define DMAX 10
+
+int nums[NMAX], dist[MAX][MAX];
+int N, B, D, maxval;
+FILE *in, *out;
+
+void findgroups(int cur, int start) {
+    int a, b, canuse;
+    char ch;
+    if (cur == N) {
+        for (a = 0; a < cur; a++) {
+            if (a % 10)
+                fprintf(out, " ");
+            fprintf(out, "%d", nums[a]);
+            if (a % 10 == 9 || a == cur-1)
+                fprintf(out, "\n");
+        }
+        exit(0);
+    }
+    for (a = start; a < maxval; a++) {
+        canuse = 1;
+        for (b = 0; b < cur; b++)
+            if (dist[nums[b]][a] < D) {
+                canuse = 0;
+                break;
+            }
+        if (canuse) {
+            nums[cur] = a;
+            findgroups(cur+1, a+1);
+        }
+    }
+}
+
+int main() {
+    in = fopen("hamming.in", "r");
+    out = fopen("hamming.out", "w");
+    int a, b, c;
+    fscanf(in, "%d%d%d", &N, &B, &D);
+    maxval = (1 << B);
+    for (a = 0; a < maxval; a++)
+        for (b = 0; b < maxval; b++) {
+            dist[a][b] = 0;
+            for (c = 0; c < B; c++) 
+                if (((1 << c) & a) != ((1 << c) & b))
+                    dist[a][b]++;
+        }
+    nums[0] = 0;
+    findgroups(1, 1);
+    return 0;
+}
+```
+
+</details>
+

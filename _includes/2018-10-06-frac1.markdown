@@ -1,0 +1,120 @@
+<details>
+<summary>
+Alex Schwedner
+</summary>
+
+Here's a very fast, straightforward solution from Alex Schwedner:
+
+```cpp
+#include <fstream.h>
+#include <stdlib.h>
+
+struct fraction {
+    int numerator;
+    int denominator;
+};
+
+bool rprime(int a, int b){
+   int r = a % b;
+   while(r != 0){
+       a = b;
+       b = r;
+       r = a % b;
+   }
+   return(b == 1);
+}
+
+int fraccompare (struct fraction *p, struct fraction *q) {
+   return p->numerator * q->denominator - p->denominator *q->numerator;
+}
+
+int main(){
+   int found = 0;
+   struct fraction fract[25600];
+
+   ifstream filein("frac1.in");
+   int n;
+   filein >> n;
+   filein.close();
+
+   for(int bot = 1; bot <= n; ++bot){
+       for(int top = 0; top <= bot; ++top){
+           if(rprime(top,bot)){
+               fract[found].numerator = top;
+               fract[found++].denominator = bot;
+           }
+       }
+   }
+
+   qsort(fract, found, sizeof (struct fraction), fraccompare);
+
+   ofstream fileout("frac1.out");
+   for(int i = 0; i < found; ++i)
+       fileout << fract[i].numerator << '/' << fract[i].denominator << endl;
+   fileout.close();
+
+   exit (0);
+}
+```
+
+</details>
+
+<details>
+<summary>
+Russ Cox
+</summary>
+
+Here's a super fast solution from Russ:
+
+We notice that we can start with 0/1 and 1/1 as our 'endpoints' and recursively generate the middle points by adding numerators and denominators.
+
+```none
+0/1                                                              1/1
+                               1/2
+                  1/3                      2/3
+        1/4              2/5         3/5                 3/4
+    1/5      2/7     3/8    3/7   4/7   5/8       5/7         4/5
+```
+
+Each fraction is created from the one up to its right and the one up to its left. This idea lends itself easily to a recursion that we cut off when we go too deep.
+
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+int n;
+FILE *fout;
+
+/* print the fractions of denominator <= n between n1/d1 and n2/d2 */
+void
+genfrac(int n1, int d1, int n2, int d2)
+{
+	if(d1+d2 > n)	/* cut off recursion */
+		return;
+
+	genfrac(n1,d1, n1+n2,d1+d2);
+	fprintf(fout, "%d/%d\n", n1+n2, d1+d2);
+	genfrac(n1+n2,d1+d2, n2,d2);
+}
+
+void
+main(void)
+{
+	FILE *fin;
+
+	fin = fopen("frac1.in", "r");
+	fout = fopen("frac1.out", "w");
+	assert(fin != NULL && fout != NULL);
+
+	fscanf(fin, "%d", &n);
+
+	fprintf(fout, "0/1\n");
+	genfrac(0,1, 1,1);
+	fprintf(fout, "1/1\n");
+}
+```
+
+</details>
+

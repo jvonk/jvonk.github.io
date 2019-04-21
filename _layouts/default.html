@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <link rel="stylesheet" type="text/css" href="{{'/assets/css/style.css' | relative_url}}">
-        <link rel="stylesheet" type="text/css" href="{{'/assets/css/site.css' | relative_url}}">
-        <link rel="stylesheet" type="text/css" href="{{'/assets/css/prism.css' | relative_url}}">
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/site.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/prism.css' | relative_url }}">
 
         {%- if site.google_analytics -%}
             <script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -25,7 +25,7 @@
                 'java': 'Java'
             }
             function getCode (type) {
-                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short}}".concat('.'+type)+"'></pre></details></div>";
+                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{ 'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}".concat('.'+type)+"'></pre></details></div>";
             }
             document.addEventListener('DOMContentLoaded', function () {
                 getCode('java');
@@ -42,11 +42,11 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="{{site.url}}">Home</a>
+            <a href="{{- site.url -}}">Home</a>
             {%- for post in site.pages -%}
                 {%- if post.title -%}
-                    <a href="{{ post.url }}">
-                        {{ post.title }}
+                    <a href="{{- post.url -}}">
+                        {{- post.title -}}
                     </a>
                 {%- endif -%}
             {%- endfor -%}
@@ -54,7 +54,7 @@
                 {%- assign cat = category[0] -%}
                 <div class="dropdown">
                     <button class="dropbtn">
-                        {{ cat | upcase }}</button>
+                        {{- cat | upcase -}}</button>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
                         {%- if cat=="USACO" -%}
@@ -74,11 +74,9 @@
                                                 <div class="dropdown-content">
                                                     {%- for post in site.categories[cat] -%}
                                                         {%- if post.chapter==chapter and post.section==section -%}
-                                                            <a href="{{ post.url }}">
-                                                                {%- if post.short -%}
-                                                                    {{post.short}} -
-                                                                {%- endif -%}
-                                                                {{post.title}}
+                                                            <a href="{{- post.url -}}">
+                                                                {%- if post.short -%}{{- post.short }} - {% endif -%}
+                                                                {{- post.title -}}
                                                             </a>
                                                         {%- endif -%}
                                                     {%- endfor -%}
@@ -92,11 +90,11 @@
                             {%- endfor -%}
                             {%- else -%}
                             {%- for post in site.categories[cat] -%}
-                                <a href="{{ post.url }}">
+                                <a href="{{- post.url -}}">
                                     {%- if post.short -%}
-                                        {{post.short}} -
+                                        {{- post.short -}} -
                                     {%- endif -%}
-                                    {{post.title}}
+                                    {{- post.title -}}
                                 </a>
                             {%- endfor -%}
                         {%- endif -%}
@@ -107,7 +105,7 @@
         <header class="page-header" role="banner">
             {%- if page.title and page.categories -%}
                 <h1 class="project-name">
-                    {{ page.title }}</h1>
+                    {{- page.title -}}</h1>
                     <div class="post-categories">
                   {%- if post -%}
                     {%- assign categories = post.categories -%}
@@ -115,28 +113,28 @@
                     {%- assign categories = page.categories -%}
                   {%- endif -%}
                   {%- for category in categories -%}
-                  <h2><a href="{{site.url}}#{{category|slugize}}">{{category | upcase}}</a></h2>
+                  <h2><a href="{{- site.url -}}#{{- category|slugize -}}">{{ category | upcase }}</a></h2>
                   {%- unless forloop.last -%} {%- endunless -%}
                   {%- endfor -%}
                 </div>
                 {%- if page.description -%}
                     <h2 class="project-tagline">
-                        {{ page.description }}</h2>
+                        {{- page.description -}}</h2>
                 {%- endif -%}
                 {%- if page.chapter and page.section -%}
-                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}" class="btn">Code on GitHub</a><br>
+                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' }}" class="btn">Code on GitHub</a><br>
                 {%- endif -%}
                 <a href="{{ 'https://github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
                 
                 {%- else -%}
                 <h1 class="project-name">
-                    {{ site.title }}</h1>
+                    {{- site.title -}}</h1>
                 <h2 class="project-tagline">
-                    {{ site.description }}</h2>
-                <a href="{{ site.github_url }}" class="btn">View on GitHub</a>
-                <a href="{{ site.linkedin_url }}" class="btn">
+                    {{- site.description -}}</h2>
+                <a href="{{- site.github_url -}}" class="btn">View on GitHub</a>
+                <a href="{{- site.linkedin_url -}}" class="btn">
                     LinkedIn</a>
-                <a href="{{ site.khan_url }}" class="btn">
+                <a href="{{- site.khan_url -}}" class="btn">
                     Khan Academy</a>
             {%- endif -%}
         </header>
@@ -150,17 +148,19 @@
                 <br>
                 <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 {%- endif -%}
-                {{ content }}
+                {{- content -}}
             {%- if page.chapter and page.section -%}
                 <div id="code"></div>
-                <script src="{{'/assets/js/prism.js' | relative_url}}"></script>
-                {%- ifhascontent analysis -%}
+                <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
                 <br>
                 <div id="analysis">
                     <h2>ANALYSIS</h2>
-                    {%- contentblock analysis -%}
+                    {%- if page.no_analysis -%}
+                    {%- else -%}
+                    {%- capture my_include -%}{%- include {{ page.path | remove: "_posts/" }} -%}{%- endcapture -%}
+                    {{- my_include | markdownify -}}
+                    {%- endif -%}
                 </div>
-                {%- endifhascontent -%}
                 <br>
                 <a id="skip-to-main" href="#content">Back to top</a>
             {%- endif -%}
@@ -170,34 +170,34 @@
                     {%- if page.categories -%}
                         <span class="site-footer-owner">
                             {%- if page.link -%}
-                            <a href="{{ page.link }}">
+                            <a href="{{- page.link -}}">
                             {%- else -%}
-                            <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
+                            <a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
                             {%- endif -%}
-                                {{ page.categories[0] }} - {{ page.short }}</a>
+                                {{ page.categories[0] }} - {{ page.short -}}</a>
                             is created by
-                            <a href="{{ site.github.owner_url }}">
+                            <a href="{{- site.github.owner_url -}}">
                                 {{ site.github.owner_name }}</a>
                             .
                         </span>
                     {%- else -%}
                         <span class="site-footer-owner">
                             {%- if page.link -%}
-                            <a href="{{ page.link }}">
+                            <a href="{{- page.link -}}">
                             {%- else -%}
-                            <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java'  }}">
+                            <a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
                             {%- endif -%}
                                 {{ page.short }}</a>
                             is created by
-                            <a href="{{ site.github.owner_url }}">
-                                {{site.github.owner_name }}</a>
+                            <a href="{{- site.github.owner_url -}}">
+                                {{- site.github.owner_name -}}</a>
                             .
                         </span>
                     {%- endif -%}
                 </footer>
                 {%- else -%}
                 <footer class="site-footer realcontent">
-                    <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+                    <span class="site-footer-owner"><a href="{{- site.github.repository_url -}}">{{- site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url -}}">{{- site.github.owner_name -}}</a></span>
                 </footer>
             {%- endif -%}
         </main>

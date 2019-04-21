@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io/" rel="alternate" type="text/html" /><updated>2019-04-19T20:20:04-07:00</updated><id>https://jvonk.github.io/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Beef McNuggets</title><link href="https://jvonk.github.io/usaco/2019/01/28/nuggets.html" rel="alternate" type="text/html" title="Beef McNuggets" /><published>2019-01-28T17:00:00-08:00</published><updated>2019-01-28T17:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/28/nuggets</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/28/nuggets.html">&lt;p&gt;Farmer Brown’s cows are up in arms, having heard that McDonalds is considering the introduction of a new product: Beef McNuggets. The cows are trying to find any possible way to put such a product in a negative light.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://jvonk.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jvonk.github.io/" rel="alternate" type="text/html" /><updated>2019-04-20T17:52:41-07:00</updated><id>https://jvonk.github.io/feed.xml</id><title type="html">Johan Vonk’s Website</title><subtitle>My personal static website created using Github Pages, Markdown, and Jekyll</subtitle><entry><title type="html">Beef McNuggets</title><link href="https://jvonk.github.io/usaco/2019/01/28/nuggets.html" rel="alternate" type="text/html" title="Beef McNuggets" /><published>2019-01-28T17:00:00-08:00</published><updated>2019-01-28T17:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2019/01/28/nuggets</id><content type="html" xml:base="https://jvonk.github.io/usaco/2019/01/28/nuggets.html">&lt;p&gt;Farmer Brown’s cows are up in arms, having heard that McDonalds is considering the introduction of a new product: Beef McNuggets. The cows are trying to find any possible way to put such a product in a negative light.&lt;/p&gt;
 
 &lt;p&gt;One strategy the cows are pursuing is that of ‘inferior packaging’. “Look,” say the cows, “if you have Beef McNuggets in boxes of 3, 6, and 10, you can not satisfy a customer who wants 1, 2, 4, 5, 7, 8, 11, 14, or 17 McNuggets. Bad packaging: bad product.”&lt;/p&gt;
 
@@ -245,7 +245,48 @@ Knight 1: A3 - B5 (1 move)
 Knight 2: A8 - C7 - B5 (2 moves)
 Knight 3: H1 - G3 - F5 - D4 (picking up king) - B5 (4 moves)
 Knight 4: H8 - F7 - D6 - B5 (3 moves)
-1 + 2 + 4 + 3 = 10 moves.&lt;/p&gt;</content><author><name></name></author><summary type="html">Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io/usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
+1 + 2 + 4 + 3 = 10 moves.&lt;/p&gt;</content><author><name></name></author><summary type="html">Centuries ago, King Arthur and the Knights of the Round Table used to meet every year on New Year’s Day to celebrate their fellowship. In remembrance of these events, we consider a board game for one player, on which one chesspiece king and several knight pieces are placed on squares, no two knights on the same square.</summary></entry><entry><title type="html">Home on the Range</title><link href="https://jvonk.github.io/usaco/2018/12/20/range.html" rel="alternate" type="text/html" title="Home on the Range" /><published>2018-12-20T17:00:00-08:00</published><updated>2018-12-20T17:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/range</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/range.html">&lt;p&gt;Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).&lt;/p&gt;
+
+&lt;p&gt;Your task is to count up all the various square grazing areas within the supplied dataset and report the number of square grazing areas (of sizes &amp;gt;= 2x2) remaining. Of course, grazing areas may overlap for purposes of this report.&lt;/p&gt;
+
+&lt;h3 id=&quot;program-name-range&quot;&gt;PROGRAM NAME: range&lt;/h3&gt;
+
+&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N, the number of miles on each side of the field.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N characters with no spaces. 0 represents “ravaged for that block; 1 represents “ready to eat”.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;sample-input-file-rangein&quot;&gt;SAMPLE INPUT (file range.in)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;6
+101111
+001111
+111111
+001111
+101101
+111001
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
+
+&lt;p&gt;Potentially several lines with the size of the square and the number of such squares that exist. Order them in ascending order from smallest to largest size.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-output-file-rangeout&quot;&gt;SAMPLE OUTPUT (file range.out)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;2 10
+3 4
+4 1
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io/usaco/2018/12/20/shopping.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/shopping</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/shopping.html">&lt;p&gt;In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.&lt;/p&gt;
 
 &lt;p&gt;A special offer consists of one or more product items together for a reduced price, also an integer. Examples:&lt;/p&gt;
 
@@ -297,48 +338,7 @@ Knight 4: H8 - F7 - D6 - B5 (3 moves)
 &lt;h3 id=&quot;sample-output-file-shoppingout&quot;&gt;SAMPLE OUTPUT (file shopping.out)&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;14
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Shopping Offers</title><link href="https://jvonk.github.io/usaco/2018/12/20/range.html" rel="alternate" type="text/html" title="Shopping Offers" /><published>2018-12-20T16:00:00-08:00</published><updated>2018-12-20T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/20/range</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/20/range.html">&lt;p&gt;Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).&lt;/p&gt;
-
-&lt;p&gt;Your task is to count up all the various square grazing areas within the supplied dataset and report the number of square grazing areas (of sizes &amp;gt;= 2x2) remaining. Of course, grazing areas may overlap for purposes of this report.&lt;/p&gt;
-
-&lt;h3 id=&quot;program-name-range&quot;&gt;PROGRAM NAME: range&lt;/h3&gt;
-
-&lt;h3 id=&quot;input-format&quot;&gt;INPUT FORMAT&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N, the number of miles on each side of the field.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Line 2..N+1:&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;N characters with no spaces. 0 represents “ravaged for that block; 1 represents “ready to eat”.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;sample-input-file-rangein&quot;&gt;SAMPLE INPUT (file range.in)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;6
-101111
-001111
-111111
-001111
-101101
-111001
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;output-format&quot;&gt;OUTPUT FORMAT&lt;/h3&gt;
-
-&lt;p&gt;Potentially several lines with the size of the square and the number of such squares that exist. Order them in ascending order from smallest to largest size.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-output-file-rangeout&quot;&gt;SAMPLE OUTPUT (file range.out)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;2 10
-3 4
-4 1
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">Farmer John grazes his cows on a large, square field N (2 &amp;lt;= N &amp;lt;= 250) miles on a side (because, for some reason, his cows will only graze on precisely square land segments). Regrettably, the cows have ravaged some of the land (always in 1 mile square increments). FJ needs to map the remaining squares (at least 2x2 on a side) on which his cows can graze (in these larger squares, no 1x1 mile segments are ravaged).</summary></entry><entry><title type="html">Riding the Fences</title><link href="https://jvonk.github.io/usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/12/fence</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">In a certain shop, each kind of product has an integer price. For example, the price of a flower is 2 zorkmids (z) and the price of a vase is 5z. In order to attract more customers, the shop introduces some special offers.</summary></entry><entry><title type="html">Riding the Fences</title><link href="https://jvonk.github.io/usaco/2018/12/12/fence.html" rel="alternate" type="text/html" title="Riding the Fences" /><published>2018-12-12T16:00:00-08:00</published><updated>2018-12-12T16:00:00-08:00</updated><id>https://jvonk.github.io/usaco/2018/12/12/fence</id><content type="html" xml:base="https://jvonk.github.io/usaco/2018/12/12/fence.html">&lt;p&gt;Farmer John owns a large number of fences that must be repaired annually. He traverses the fences by riding a horse along each and every one of them (and nowhere else) and fixing the broken parts.&lt;/p&gt;
 
 &lt;p&gt;Farmer John is as lazy as the next farmer and hates to ride the same fence twice. Your program must read in a description of a network of fences and tell Farmer John a path to traverse each fence length exactly once, if possible. Farmer J can, if he wishes, start and finish at any fence intersection.&lt;/p&gt;
 

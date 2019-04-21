@@ -1,0 +1,106 @@
+<details>
+<summary>
+Hal Burch
+</summary>
+
+This is probably the easiest problem in the entire set of lessons. An 'ad hoc' problem, no particular algorithms or tricks are needed save one: one must be careful to get the input without processing the newline on the end!
+
+Here is a prototype solution:
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int
+hash(char *s)
+{
+	int i, h;
+
+	h = 1;
+	for(i=0; s[i] && isalpha(s[i]); i++)
+		h = ((s[i]-'A'+1)*h) % 47;
+	return h;
+}
+
+void
+main(void)
+{
+	FILE *in, *out;
+	char comet[100], group[100];  /* bigger than necessary, room for newline */
+
+	in = fopen("input.txt", "r");
+	out = fopen("output.txt", "w");
+
+	fgets(comet, sizeof comet, in);
+	fgets(group, sizeof group, in);
+
+	if(hash(comet) == hash(group))
+		fprintf(out, "GO\n");
+	else
+		fprintf(out, "STAY\n");
+	exit (0);
+}
+```
+Solutions generally run in under 0.01 seconds.
+
+</details>
+
+
+<details>
+<summary>
+Iain Found
+</summary>
+
+Canada's Iain Found created this straightforward solution (which has been slightly modified to make the highest quality presentation here):
+
+```python
+with open('ride.in', 'r') as fin:
+    comet1 = fin.readline().strip()
+    comet2 = fin.readline().strip()
+prod1, prod2 = 1, 1
+for c in comet1: prod1 *= ord(c) - ord('A') + 1
+for c in comet2: prod2 *= ord(c) - ord('A') + 1
+with open('ride.out', 'w') as fout:
+    if prod1 % 47 == prod2 % 47: fout.write('GO\n')
+    else: fout.write('STAY\n')
+```
+
+Note that a couple important features are included:
+
+* Newlines are removed.
+* The with construct automatically closes files upon the block exit.
+
+</details>
+
+
+<details>
+<summary>
+Tyler Adams
+</summary>
+
+USACO alumnus Tyler Adams created this more functional-programming-oriented solution:
+
+```python
+def char_to_num(c):
+    return ord(c) - ord('A') + 1
+
+def line_to_code(s):
+    nums = map(char_to_num, s) 
+    code = reduce(lambda x,y: x*y, nums) % 47 
+    return code
+
+with open("ride.in", "r") as input_file:
+    raw_lines = input_file.readlines()
+lines = map(lambda s: s.strip(), raw_lines)
+codes = map(line_to_code, lines)
+should_go = codes[0] == codes[1]
+
+with open("ride.out", "w") as output_file:
+    if should_go: output_file.write("GO\n") 
+    else: output_file.write("STAY\n")
+```
+
+Note the good choice of variable names in both of these Python solutions. Don't miss that even though some lines could be combined, that compression is not performed in interest of creating a program that is debuggable and maintainable.
+
+</details>
+

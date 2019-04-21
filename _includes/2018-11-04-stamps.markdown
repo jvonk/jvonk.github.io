@@ -1,0 +1,64 @@
+<details>
+<summary>
+Alex Schwendner
+</summary>
+
+This problem is simply begging for a DP solution. We keep an array "minstamps" such that minstamps[i] is the minimum number of stamps needed to make i cents. For each stamp type, we try adding one stamp of that type to each number of cents that we have already made. After we have found the minimum number of stamps needed to make any given number of cents, we find the smallest number of cents that we cannot make with the given number of stamps, and then we output one less then that.
+
+```cpp
+#include <fstream.h>
+
+const int BIG = 10000;
+
+short   minstamps[10000 * (200 + 3) + 3];
+int     stamps;
+int     value[200];
+int     number;
+
+
+int 
+main ()
+{
+
+    ifstream filein ("stamps.in");
+    filein >> number >> stamps;
+    int     biggest = -1;
+    for (int i = 0; i < stamps; ++i) {
+	filein >> value[i];
+	if (biggest < value[i]) {
+	    biggest = value[i];
+	}
+    }
+    filein.close ();
+
+    for (int i = 0; i <= biggest * number + 3; ++i) {
+	minstamps[i] = BIG;
+    }
+
+    minstamps[0] = 0;
+    for (int i = 0; i < stamps; ++i) {
+	for (int j = 0; j <= biggest * number; ++j) {
+	    if (minstamps[j] < number) {
+		if (minstamps[j + value[i]] > 1 + minstamps[j]) {
+		    minstamps[j + value[i]] = 1 + minstamps[j];
+		}
+	    }
+	}
+    }
+
+
+    int     string = 0;
+    while (minstamps[string + 1] <= number) {
+	++string;
+    }
+
+    ofstream fileout ("stamps.out");
+    fileout << string << endl;
+    fileout.close ();
+
+    return (0);
+}
+```
+
+</details>
+
