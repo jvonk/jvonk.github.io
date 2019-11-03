@@ -17,7 +17,12 @@
                 getCode('cpp');
                 getCode('pas');
             });
-        </script><meta charset="UTF-8"><!-- Begin Jekyll SEO tag v2.5.0 -->
+        </script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+            <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+            <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+            <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+        <meta charset="UTF-8"><!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Magic Squares | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Magic Squares" />
@@ -30,7 +35,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-11T16:00:00-08:00" />
 <script type="application/ld+json">
-{"url":"https://jvonk.github.io/usaco/2018/12/11/butter.html","headline":"Magic Squares","dateModified":"2018-12-11T16:00:00-08:00","datePublished":"2018-12-11T16:00:00-08:00","description":"Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/12/11/butter.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/12/11/butter.html"},"url":"https://jvonk.github.io/usaco/2018/12/11/butter.html","headline":"Magic Squares","dateModified":"2018-12-11T16:00:00-08:00","datePublished":"2018-12-11T16:00:00-08:00","description":"Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,96 +51,101 @@
                                     <button class="dropbtn">CHAPTER 1<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-
-        <div class="navbar"><div class="dropdown">
-                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/09/26/beads.html">beads - Broken Necklace</a><a href="/usaco/2018/09/25/friday.html">friday - Friday the 13th</a><a href="/usaco/2018/09/25/gift1.html">gift1 - Greedy Gift Givers</a><a href="/usaco/2018/09/25/ride.html">ride - Your Ride Is Here</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/09/28/dualpal.html">dualpal - Dual Palindromes</a><a href="/usaco/2018/09/28/palsquare.html">palsquare - Palindromic Squares</a><a href="/usaco/2018/09/28/namenum.html">namenum - Name That Number</a><a href="/usaco/2018/09/28/transform.html">transform - Transformations</a><a href="/usaco/2018/09/27/milk2.html">milk2 - Milking Cows</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/09/30/skidesign.html">skidesign - Ski Course Design</a><a href="/usaco/2018/09/29/wormhole.html">wormhole - Wormholes</a><a href="/usaco/2018/09/29/combo.html">combo - Combination Lock</a><a href="/usaco/2018/09/29/crypt1.html">crypt1 - Prime Cryptarithm</a><a href="/usaco/2018/09/28/milk.html">milk - Mixing Milk</a><a href="/usaco/2018/09/28/barn1.html">barn1 - Barn Repair</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 5<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/02/milk3.html">milk3 - Mother's Milk</a><a href="/usaco/2018/10/01/ariprog.html">ariprog - Arithmetic Progressions</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/04/pprime.html">pprime - Prime Palindromes</a><a href="/usaco/2018/10/03/sprime.html">sprime - Superprime Rib</a><a href="/usaco/2018/10/03/numtri.html">numtri - Number Triangles</a></div>
-                                            </div></div>
+                                        <div class="navbar"><div class="dropdown">
+                                                    <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/09/26/beads.html">beads - Broken Necklace</a><a href="/usaco/2018/09/25/friday.html">friday - Friday the 13th</a><a href="/usaco/2018/09/25/gift1.html">gift1 - Greedy Gift Givers</a><a href="/usaco/2018/09/25/ride.html">ride - Your Ride Is Here</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/09/28/dualpal.html">dualpal - Dual Palindromes</a><a href="/usaco/2018/09/28/palsquare.html">palsquare - Palindromic Squares</a><a href="/usaco/2018/09/28/namenum.html">namenum - Name That Number</a><a href="/usaco/2018/09/28/transform.html">transform - Transformations</a><a href="/usaco/2018/09/27/milk2.html">milk2 - Milking Cows</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/09/30/skidesign.html">skidesign - Ski Course Design</a><a href="/usaco/2018/09/29/wormhole.html">wormhole - Wormholes</a><a href="/usaco/2018/09/29/combo.html">combo - Combination Lock</a><a href="/usaco/2018/09/29/crypt1.html">crypt1 - Prime Cryptarithm</a><a href="/usaco/2018/09/28/milk.html">milk - Mixing Milk</a><a href="/usaco/2018/09/28/barn1.html">barn1 - Barn Repair</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 5<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/02/milk3.html">milk3 - Mother's Milk</a><a href="/usaco/2018/10/01/ariprog.html">ariprog - Arithmetic Progressions</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 6<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/04/pprime.html">pprime - Prime Palindromes</a><a href="/usaco/2018/10/03/sprime.html">sprime - Superprime Rib</a><a href="/usaco/2018/10/03/numtri.html">numtri - Number Triangles</a></div>
+                                                </div></div>
                                     </div>
                                 </div><div class="dropdown">
                                     <button class="dropbtn">CHAPTER 2<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-
-        <div class="navbar"><div class="dropdown">
-                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/10/holstein.html">holstein - Healthy Holsteins</a><a href="/usaco/2018/10/09/hamming.html">hamming - Hamming Codes</a><a href="/usaco/2018/10/08/sort3.html">sort3 - Sorting a Three-Valued Sequence</a><a href="/usaco/2018/10/08/castle.html">castle - The Castle</a><a href="/usaco/2018/10/05/frac1.html">frac1 - Ordered Fractions</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/12/lamps.html">lamps - Party Lamps</a><a href="/usaco/2018/10/12/runround.html">runround - Runaround Numbers</a><a href="/usaco/2018/10/11/subset.html">subset - Subset Sums</a><a href="/usaco/2018/10/10/preface.html">preface - Preface Numbering</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/17/concom.html">concom - Controlling Companies</a><a href="/usaco/2018/10/17/money.html">money - Money Systems</a><a href="/usaco/2018/10/15/zerosum.html">zerosum - Zero Sum</a><a href="/usaco/2018/10/15/nocows.html">nocows - Cow Pedigrees</a><a href="/usaco/2018/10/15/prefix.html">prefix - Longest Prefix</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/10/31/fracdec.html">fracdec - Fractions to Decimals</a><a href="/usaco/2018/10/31/cowtour.html">cowtour - Cow Tours</a><a href="/usaco/2018/10/27/comehome.html">comehome - Bessie Come Home</a><a href="/usaco/2018/10/22/maze1.html">maze1 - Overfencing</a><a href="/usaco/2018/10/22/ttwo.html">ttwo - The Tamworth Two</a></div>
-                                            </div></div>
+                                        <div class="navbar"><div class="dropdown">
+                                                    <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/10/holstein.html">holstein - Healthy Holsteins</a><a href="/usaco/2018/10/09/hamming.html">hamming - Hamming Codes</a><a href="/usaco/2018/10/08/sort3.html">sort3 - Sorting a Three-Valued Sequence</a><a href="/usaco/2018/10/08/castle.html">castle - The Castle</a><a href="/usaco/2018/10/05/frac1.html">frac1 - Ordered Fractions</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/12/lamps.html">lamps - Party Lamps</a><a href="/usaco/2018/10/12/runround.html">runround - Runaround Numbers</a><a href="/usaco/2018/10/11/subset.html">subset - Subset Sums</a><a href="/usaco/2018/10/10/preface.html">preface - Preface Numbering</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/17/concom.html">concom - Controlling Companies</a><a href="/usaco/2018/10/17/money.html">money - Money Systems</a><a href="/usaco/2018/10/15/zerosum.html">zerosum - Zero Sum</a><a href="/usaco/2018/10/15/nocows.html">nocows - Cow Pedigrees</a><a href="/usaco/2018/10/15/prefix.html">prefix - Longest Prefix</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/10/31/fracdec.html">fracdec - Fractions to Decimals</a><a href="/usaco/2018/10/31/cowtour.html">cowtour - Cow Tours</a><a href="/usaco/2018/10/27/comehome.html">comehome - Bessie Come Home</a><a href="/usaco/2018/10/22/maze1.html">maze1 - Overfencing</a><a href="/usaco/2018/10/22/ttwo.html">ttwo - The Tamworth Two</a></div>
+                                                </div></div>
                                     </div>
                                 </div><div class="dropdown">
                                     <button class="dropbtn">CHAPTER 3<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-
-        <div class="navbar"><div class="dropdown">
-                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/11/06/inflate.html">inflate - Score Inflation</a><a href="/usaco/2018/11/05/contact.html">contact - Contact</a><a href="/usaco/2018/11/05/humble.html">humble - Humble Numbers</a><a href="/usaco/2018/11/03/stamps.html">stamps - Stamps</a><a href="/usaco/2018/11/01/agrinet.html">agrinet - Agri-Net</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2018/12/11/msquare.html">msquare - Magic Squares</a><a href="/usaco/2018/12/11/butter.html">butter - Magic Squares</a><a href="/usaco/2018/11/15/spin.html">spin - Spinning Wheels</a><a href="/usaco/2018/11/14/ratios.html">ratios - Feed Ratios</a><a href="/usaco/2018/11/07/kimbits.html">kimbits - Stringsobits</a><a href="/usaco/2018/11/07/fact4.html">fact4 - Factorials</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2019/01/14/game1.html">game1 - A Game</a><a href="/usaco/2019/01/12/camelot.html">camelot - Camelot</a><a href="/usaco/2018/12/20/range.html">range - Home on the Range</a><a href="/usaco/2018/12/20/shopping.html">shopping - Shopping Offers</a><a href="/usaco/2018/12/12/fence.html">fence - Riding the Fences</a></div>
-                                            </div><div class="dropdown">
-                                                <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2019/01/28/rockers.html">rockers - Raucous Rockers</a><a href="/usaco/2019/01/22/fence9.html">fence9 - Electric Fence</a><a href="/usaco/2019/01/16/heritage.html">heritage - American Heritage</a></div>
-                                            </div></div>
+                                        <div class="navbar"><div class="dropdown">
+                                                    <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/11/06/inflate.html">inflate - Score Inflation</a><a href="/usaco/2018/11/05/contact.html">contact - Contact</a><a href="/usaco/2018/11/05/humble.html">humble - Humble Numbers</a><a href="/usaco/2018/11/03/stamps.html">stamps - Stamps</a><a href="/usaco/2018/11/01/agrinet.html">agrinet - Agri-Net</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 2<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2018/12/11/msquare.html">msquare - Magic Squares</a><a href="/usaco/2018/12/11/butter.html">butter - Magic Squares</a><a href="/usaco/2018/11/15/spin.html">spin - Spinning Wheels</a><a href="/usaco/2018/11/14/ratios.html">ratios - Feed Ratios</a><a href="/usaco/2018/11/07/kimbits.html">kimbits - Stringsobits</a><a href="/usaco/2018/11/07/fact4.html">fact4 - Factorials</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 3<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2019/01/14/game1.html">game1 - A Game</a><a href="/usaco/2019/01/12/camelot.html">camelot - Camelot</a><a href="/usaco/2018/12/20/range.html">range - Home on the Range</a><a href="/usaco/2018/12/20/shopping.html">shopping - Shopping Offers</a><a href="/usaco/2018/12/12/fence.html">fence - Riding the Fences</a></div>
+                                                </div><div class="dropdown">
+                                                    <button class="dropbtn">Section 4<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2019/01/28/rockers.html">rockers - Raucous Rockers</a><a href="/usaco/2019/01/22/fence9.html">fence9 - Electric Fence</a><a href="/usaco/2019/01/16/heritage.html">heritage - American Heritage</a></div>
+                                                </div></div>
                                     </div>
                                 </div><div class="dropdown">
                                     <button class="dropbtn">CHAPTER 4<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-
-        <div class="navbar"><div class="dropdown">
-                                                <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content"><a href="/usaco/2019/01/28/nuggets.html">nuggets - Beef McNuggets</a></div>
-                                            </div></div>
+                                        <div class="navbar"><div class="dropdown">
+                                                    <button class="dropbtn">Section 1<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content"><a href="/usaco/2019/01/28/nuggets.html">nuggets - Beef McNuggets</a></div>
+                                                </div></div>
                                     </div>
                                 </div></div>
                 </div><div class="dropdown">
                     <button class="dropbtn">PORTFOLIO</button>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content"><a href="/portfolio/2018/11/23/overview.html">Overview</a></div>
-                </div></div>
+                </div><div id="tipue_search_wrapper" style="float:right;display: table-cell;vertical-align: middle;height: 50px;">
+                <form action="/search">
+                    <div class="tipue_search_left"><svg class="tipue_search_icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
+                    <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" autocomplete=off required></div>
+                    <div style="clear: both;"></div>
+                </form>
+            </div>
+        </div>
         <header class="page-header" role="banner"><h1 class="project-name">Magic Squares</h1>
                     <div class="post-categories"><h2><a href="https://jvonk.github.io#USACO">USACO</a></h2></div><h2 class="project-tagline">Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.</h2><a href="https://github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java" class="btn">Code on GitHub</a><br><a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-12-04-butter.markdown" class="btn">Current Page on GitHub</a></header>
         <main id="content" class="main-content" role="main">
-            <div class="realcontent"><a id="skip-to-content" href="#code">Skip to code</a><br><br>
+            <div class="realcontent"><a id="skip-to-content" href="#code">Skip to code</a><br>
+                <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
+                <br>
                 <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em><p>Farmer John has discovered the secret to making the sweetest butter in all of Wisconsin: sugar. By placing a sugar cube out in the pastures, he knows the N (1 &lt;= N &lt;= 500) cows will lick it and thus will produce super-sweet butter which can be marketed at better prices. Of course, he spends the extra money on luxuries for the cows.</p>
 
 <p>FJ is a sly farmer. Like Pavlov of old, he knows he can train the cows to go to a certain pasture when they hear a bell. He intends to put the sugar there and then ring the bell in the middle of the afternoon so that the evening’s milking produces perfect milk.</p>
@@ -207,10 +217,10 @@ P1 @--1--@ C1
 <p>Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
 units; cow 3 walks 0 units – a total of 8.</p>
 <div id="code"></div>
-                <script src="/assets/js/prism.js"></script>
-                <br>
-                <div id="analysis">
-                    <h2>ANALYSIS</h2><details>
+                    <script src="/assets/js/prism.js"></script>
+                    <br>
+                    <br>
+                    <div id="analysis"><h2>ANALYSIS</h2><details>
   <summary>
     <p>Alex Schwendner</p>
   </summary>
@@ -389,10 +399,10 @@ int main(){
 </details>
 
 </div>
-                <br>
-                <a id="skip-to-main" href="#content">Back to top</a></div><footer class="site-footer realcontent"><span class="site-footer-owner"><a href="https://github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java">USACO - butter</a>
+                    <br>
+                    <a id="skip-to-main" href="#content">Back to top</a></div><footer class="site-footer realcontent"><span class="site-footer-owner"><a href="https://github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java">USACO - butter</a>
                             is created by
-                            <a href="http://github.com/jvonk">
+                            <a href="https://github.com/jvonk">
                                 jvonk</a>
                             .
                         </span></footer></main>

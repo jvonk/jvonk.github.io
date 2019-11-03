@@ -34,6 +34,11 @@
             });
         </script>
         {%- endif -%}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="{{ '/assets/tipuesearch/tipuesearch_content.js' | relative_url }}"></script>
+            <link rel="stylesheet" href="{{ '/assets/tipuesearch/css/tipuesearch.css' | relative_url }}">
+            <script src="{{ '/assets/tipuesearch/tipuesearch_set.js' | relative_url }}"></script>
+            <script src="{{ '/assets/tipuesearch/tipuesearch.min.js' | relative_url }}"></script>
         <meta charset="UTF-8"> {%- seo -%}
         <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,13 +56,13 @@
                 {%- endif -%}
             {%- endfor -%}
             {%- for category in site.categories -%}
-                {%- assign cat = category[0] -%}
+                {%- assign subject = category[0] -%}
                 <div class="dropdown">
                     <button class="dropbtn">
-                        {{- cat | upcase -}}</button>
+                        {{- subject | upcase -}}</button>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        {%- if cat=="USACO" -%}
+                        {%- if subject=="USACO" -%}
                         {%- assign starts = "2 1 1 1" | split: " " -%}
                         {%- assign ends = "6 4 4 1" | split: " " -%}
                             {%- for chapter in (1..starts.size) -%}
@@ -65,31 +70,29 @@
                                     <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
                                     </button>
                                     <div class="dropdown-content">
-
-        <div class="navbar">{%- assign chapterInArr = chapter | minus: 1 -%}
-                                        {%- for section in (starts[chapterInArr]..ends[chapterInArr]) -%}
-                                            <div class="dropdown">
-                                                <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content">
-                                                    {%- for post in site.categories[cat] -%}
-                                                        {%- if post.chapter==chapter and post.section==section -%}
-                                                            <a href="{{- post.url -}}">
-                                                                {%- if post.short -%}{{- post.short }} - {% endif -%}
-                                                                {{- post.title -}}
-                                                            </a>
-                                                        {%- endif -%}
-                                                    {%- endfor -%}
+                                        <div class="navbar">{%- assign chapterInArr = chapter | minus: 1 -%}
+                                            {%- for section in (starts[chapterInArr]..ends[chapterInArr]) -%}
+                                                <div class="dropdown">
+                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div class="dropdown-content">
+                                                        {%- for post in site.categories[subject] -%}
+                                                            {%- if post.chapter==chapter and post.section==section -%}
+                                                                <a href="{{- post.url -}}">
+                                                                    {%- if post.short -%}{{- post.short }} - {% endif -%}
+                                                                    {{- post.title -}}
+                                                                </a>
+                                                            {%- endif -%}
+                                                        {%- endfor -%}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        {%- endfor -%}
-
-                                    </div>
+                                            {%- endfor -%}
+                                        </div>
                                     </div>
                                 </div>
                             {%- endfor -%}
                             {%- else -%}
-                            {%- for post in site.categories[cat] -%}
+                            {%- for post in site.categories[subject] -%}
                                 <a href="{{- post.url -}}">
                                     {%- if post.short -%}
                                         {{- post.short -}} -
@@ -101,6 +104,13 @@
                     </div>
                 </div>
             {%- endfor -%}
+            <div id="tipue_search_wrapper" style="float:right;display: table-cell;vertical-align: middle;height: 50px;">
+                <form action="{{ '/search' | relative_url }}">
+                    <div class="tipue_search_left"><svg class="tipue_search_icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
+                    <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" autocomplete=off required></div>
+                    <div style="clear: both;"></div>
+                </form>
+            </div>
         </div>
         <header class="page-header" role="banner">
             {%- if page.title and page.categories -%}
@@ -147,21 +157,22 @@
                 <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
                 {%- endif -%}
                 {{- content -}}
-            {%- if page.chapter and page.section -%}
-                <div id="code"></div>
-                <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
-                <br>
-                <div id="analysis">
-                    <h2>ANALYSIS</h2>
-                    {%- if page.no_analysis -%}
-                    {%- else -%}
-                    {%- capture my_include -%}{%- include {{ page.path | remove: "_posts/" }} -%}{%- endcapture -%}
-                    {{- my_include | markdownify -}}
-                    {%- endif -%}
-                </div>
-                <br>
-                <a id="skip-to-main" href="#content">Back to top</a>
-            {%- endif -%}
+                {%- if page.chapter and page.section -%}
+                    <div id="code"></div>
+                    <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
+                    <br>
+                    <br>
+                    <div id="analysis">
+                        {%- if page.no_analysis -%}
+                        {%- else -%}
+                        <h2>ANALYSIS</h2>
+                        {%- capture my_include -%}{%- include {{ page.path | remove: "_posts/" }} -%}{%- endcapture -%}
+                        {{- my_include | markdownify -}}
+                        {%- endif -%}
+                    </div>
+                    <br>
+                    <a id="skip-to-main" href="#content">Back to top</a>
+                {%- endif -%}
             </div>
             {%- if page.short -%}
                 <footer class="site-footer realcontent">

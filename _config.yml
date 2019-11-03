@@ -54,3 +54,7 @@ kramdown:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+tipue_search:
+  include:
+    pages: true

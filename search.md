@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /search
+tipue_search_active: true
+exclude_from_search: true
+---
+
+
+<div id="tipue_search_content"></div>
+
+<script>
+$(document).ready(function() {
+  $('#tipue_search_input').tipuesearch({
+    showURL:false,
+    wholeWords:false,
+    show:10000
+  });
+});
+</script>
