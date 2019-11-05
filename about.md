@@ -5,8 +5,6 @@ permalink: /about/
 ---
 
 
-This is me: 
+![picture of me](/img/me3.jpg)
 
-![deny everything](img/me.jpg)
-
-I enjoy many things such as ....
+I am a student at Mountain View High School who enjoys coding, running, science, math, and engineering.  

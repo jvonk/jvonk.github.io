@@ -305,7 +305,7 @@ var tipuesearch = {"pages": [{
     "url": "/404.html"
   },{
     "title": "About",
-    "text": "This is me: I enjoy many things such as ….",
+    "text": "I am a student at Mountain View High School who enjoys coding, running, science, math, and engineering.",
     "tags": "",
     "url": "/about/"
   },{
