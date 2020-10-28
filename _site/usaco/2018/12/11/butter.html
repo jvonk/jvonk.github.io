@@ -1,27 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
-        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css"><script type="text/javascript">
-            let typeToName = {
-                'pas': 'Pascal',
-                'cpp': 'C++',
-                'java': 'Java'
-            }
-            function getCode (type) {
-                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_3/butter/butter".concat('.'+type)+"'></pre></details></div>";
-            }
-            document.addEventListener('DOMContentLoaded', function () {
-                getCode('java');
-                getCode('cpp');
-                getCode('pas');
-            });
-        </script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
-            <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
-            <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
-            <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
         <meta charset="UTF-8"><!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Magic Squares | Johan Vonk’s Website</title>
 <meta name="generator" content="Jekyll v3.7.4" />
@@ -29,22 +8,26 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible." />
 <meta property="og:description" content="Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible." />
-<link rel="canonical" href="https://jvonk.github.io/usaco/2018/12/11/butter.html" />
-<meta property="og:url" content="https://jvonk.github.io/usaco/2018/12/11/butter.html" />
+<link rel="canonical" href="http://localhost:4000/usaco/2018/12/11/butter.html" />
+<meta property="og:url" content="http://localhost:4000/usaco/2018/12/11/butter.html" />
 <meta property="og:site_name" content="Johan Vonk’s Website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-11T16:00:00-08:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jvonk.github.io/usaco/2018/12/11/butter.html"},"url":"https://jvonk.github.io/usaco/2018/12/11/butter.html","headline":"Magic Squares","dateModified":"2018-12-11T16:00:00-08:00","datePublished":"2018-12-11T16:00:00-08:00","description":"Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/usaco/2018/12/11/butter.html","headline":"Magic Squares","dateModified":"2018-12-11T16:00:00-08:00","datePublished":"2018-12-11T16:00:00-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/usaco/2018/12/11/butter.html"},"description":"Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#157878">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    </head>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700"/>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/prism.css">
+        <link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css"></head>
     <body>
         <div class="navbar">
-            <a href="https://jvonk.github.io">Home</a><a href="/about/">About</a><div class="dropdown">
+            <a href="http://localhost:4000">Home</a><a href="/about/">About</a><div class="dropdown">
                     <button class="dropbtn">USACO</button>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content"><div class="dropdown">
@@ -141,7 +124,7 @@
             </div>
         </div>
         <header class="page-header" role="banner"><h1 class="project-name">Magic Squares</h1>
-                    <div class="post-categories"><h2><a href="https://jvonk.github.io#USACO">USACO</a></h2></div><h2 class="project-tagline">Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.</h2><a href="https://github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java" class="btn">Code on GitHub</a><br><a href="https://github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-12-04-butter.markdown" class="btn">Current Page on GitHub</a></header>
+                    <div class="post-categories"><h2><a href="http://localhost:4000#USACO">USACO</a></h2></div><h2 class="project-tagline">Given the pasture location of the cows and a description of the paths that connect the pastures, find the pasture in which to place the sugar cube so that the total distance walked by the cows when FJ rings the bell is minimized. FJ knows the fields are connected well enough that some solution is always possible.</h2><a href="//github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java" class="btn">Code on GitHub</a><br><a href="//github.com/jvonk/jvonk.github.io/blob/master/_posts/2018-12-04-butter.markdown" class="btn">Current Page on GitHub</a></header>
         <main id="content" class="main-content" role="main">
             <div class="realcontent"><a id="skip-to-content" href="#code">Skip to code</a><br>
                 <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
@@ -216,8 +199,28 @@ P1 @--1--@ C1
 
 <p>Putting the cube in pasture 4 means: cow 1 walks 3 units; cow 2 walks 5
 units; cow 3 walks 0 units – a total of 8.</p>
-<div id="code"></div>
-                    <script src="/assets/js/prism.js"></script>
+<div id="code">
+                        <div><br>
+                            <h2>CODE</h2>
+                            <details>
+                                <summary>Java</summary>
+                                <pre class="line-numbers language-java" data-src="//raw.githubusercontent.com/jvonk/USACO/master/Chapter_3/butter/butter.java"></pre>
+                            </details>
+                        </div>
+                        <div><br>
+                            <details>
+                                <summary>C++</summary>
+                                <pre class="line-numbers language-cpp" data-src="//raw.githubusercontent.com/jvonk/USACO/master/Chapter_3/butter/butter.cpp"></pre>
+                            </details>
+                        </div>
+                        <div><br>
+                            <details>
+                                <summary>Pascal</summary>
+                                <pre class="line-numbers language-pascal"
+                                    data-src="//raw.githubusercontent.com/jvonk/USACO/master/Chapter_3/butter/butter.pas"></pre>
+                            </details>
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <div id="analysis"><h2>ANALYSIS</h2><details>
@@ -400,11 +403,16 @@ int main(){
 
 </div>
                     <br>
-                    <a id="skip-to-main" href="#content">Back to top</a></div><footer class="site-footer realcontent"><span class="site-footer-owner"><a href="https://github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java">USACO - butter</a>
+                    <a id="skip-to-main" href="#content">Back to top</a></div><footer class="site-footer realcontent"><span class="site-footer-owner"><a href="//github.com/jvonk/USACO/blob/master/Chapter_3/butter/butter.java">USACO - butter</a>
                             is created by
                             <a href="https://github.com/jvonk">
                                 jvonk</a>
                             .
                         </span></footer></main>
+        <script src="/assets/js/prism.js"></script>
+        <script async="async" type="text/javascript" src="/assets/tipuesearch/tipuesearch_content.js"></script>
+        <script async="async" type="text/javascript" src="/assets/tipuesearch/tipuesearch_set.js"></script>
+        <script async="async" type="text/javascript" src="/assets/tipuesearch/tipuesearch.min.js"></script>
+        <script async="async" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     </body>
 </html>

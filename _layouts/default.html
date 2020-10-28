@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <meta charset="UTF-8"> {%- seo -%}
+        <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#157878">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700"/>
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/site.css' | relative_url }}">
         <link rel="stylesheet" type="text/css" href="{{ '/assets/css/prism.css' | relative_url }}">
-
+        <link rel="stylesheet" href="{{ '/assets/tipuesearch/css/tipuesearch.css' | relative_url }}">
         {%- if site.google_analytics -%}
-            <script async="async" src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-            <script>
+            <script async="async" src="//www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+            <script async="async">
                 window.dataLayer = window.dataLayer || [];
                 function gtag() {
                     dataLayer.push(arguments);
@@ -16,34 +22,6 @@
                 gtag('config', '{{ site.google_analytics }}');
             </script>
         {%- endif -%}
-        {%- if page.chapter and page.section -%}
-
-        <script type="text/javascript">
-            let typeToName = {
-                'pas': 'Pascal',
-                'cpp': 'C++',
-                'java': 'Java'
-            }
-            function getCode (type) {
-                document.getElementById('code').innerHTML+="<div><br>"+(type=='java'?"<h2>CODE</h2>":"")+"<details><summary>"+typeToName[type]+"</summary><pre class = 'line-numbers language-" + (type=='pas'?'pascal':type) +"' data-src='"+"{{ 'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}".concat('.'+type)+"'></pre></details></div>";
-            }
-            document.addEventListener('DOMContentLoaded', function () {
-                getCode('java');
-                getCode('cpp');
-                getCode('pas');
-            });
-        </script>
-        {%- endif -%}
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="{{ '/assets/tipuesearch/tipuesearch_content.js' | relative_url }}"></script>
-            <link rel="stylesheet" href="{{ '/assets/tipuesearch/css/tipuesearch.css' | relative_url }}">
-            <script src="{{ '/assets/tipuesearch/tipuesearch_set.js' | relative_url }}"></script>
-            <script src="{{ '/assets/tipuesearch/tipuesearch.min.js' | relative_url }}"></script>
-        <meta charset="UTF-8"> {%- seo -%}
-        <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#157878">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     </head>
     <body>
         <div class="navbar">
@@ -132,9 +110,9 @@
                         {{- page.description -}}</h2>
                 {%- endif -%}
                 {%- if page.chapter and page.section -%}
-                <a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' }}" class="btn">Code on GitHub</a><br>
+                <a href="{{ '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' }}" class="btn">Code on GitHub</a><br>
                 {%- endif -%}
-                <a href="{{ 'https://github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
+                <a href="{{ '//github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
                 
                 {%- else -%}
                 <h1 class="project-name">
@@ -158,8 +136,28 @@
                 {%- endif -%}
                 {{- content -}}
                 {%- if page.chapter and page.section -%}
-                    <div id="code"></div>
-                    <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
+                    <div id="code">
+                        <div><br>
+                            <h2>CODE</h2>
+                            <details>
+                                <summary>Java</summary>
+                                <pre class="line-numbers language-java" data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.java"></pre>
+                            </details>
+                        </div>
+                        <div><br>
+                            <details>
+                                <summary>C++</summary>
+                                <pre class="line-numbers language-cpp" data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.cpp"></pre>
+                            </details>
+                        </div>
+                        <div><br>
+                            <details>
+                                <summary>Pascal</summary>
+                                <pre class="line-numbers language-pascal"
+                                    data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.pas"></pre>
+                            </details>
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <div id="analysis">
@@ -181,7 +179,7 @@
                             {%- if page.link -%}
                             <a href="{{- page.link -}}">
                             {%- else -%}
-                            <a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
+                            <a href="{{- '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
                             {%- endif -%}
                                 {{ page.categories[0] }} - {{ page.short -}}</a>
                             is created by
@@ -194,7 +192,7 @@
                             {%- if page.link -%}
                             <a href="{{- page.link -}}">
                             {%- else -%}
-                            <a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
+                            <a href="{{- '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
                             {%- endif -%}
                                 {{ page.short }}</a>
                             is created by
@@ -210,5 +208,10 @@
                 </footer>
             {%- endif -%}
         </main>
+        <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
+        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch_content.js' | relative_url }}"></script>
+        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch_set.js' | relative_url }}"></script>
+        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch.min.js' | relative_url }}"></script>
+        <script async="async" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     </body>
 </html>
