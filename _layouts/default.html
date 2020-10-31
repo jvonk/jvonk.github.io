@@ -1,217 +1,201 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8"> {%- seo -%}
-        <meta name="google-site-verification" content="a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#157878">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700"/>
-        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
-        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/site.css' | relative_url }}">
-        <link rel="stylesheet" type="text/css" href="{{ '/assets/css/prism.css' | relative_url }}">
-        <link rel="stylesheet" href="{{ '/assets/tipuesearch/css/tipuesearch.css' | relative_url }}">
-        {%- if site.google_analytics -%}
-            <script async="async" src="//www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-            <script async="async">
-                window.dataLayer = window.dataLayer || [];
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-                gtag('config', '{{ site.google_analytics }}');
-            </script>
-        {%- endif -%}
-    </head>
-    <body>
-        <div class="navbar">
-            <a href="{{- site.url -}}">Home</a>
-            {%- for post in site.pages -%}
-                {%- if post.title -%}
-                    <a href="{{- post.url -}}">
-                        {{- post.title -}}
-                    </a>
-                {%- endif -%}
-            {%- endfor -%}
-            {%- for category in site.categories -%}
-                {%- assign subject = category[0] -%}
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        {{- subject | upcase -}}</button>
-                    <i class="fa fa-caret-down"></i>
-                    <div class="dropdown-content">
-                        {%- if subject=="USACO" -%}
-                        {%- assign starts = "2 1 1 1" | split: " " -%}
-                        {%- assign ends = "6 4 4 1" | split: " " -%}
-                            {%- for chapter in (1..starts.size) -%}
-                                <div class="dropdown">
-                                    <button class="dropbtn">CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
-                                    </button>
-                                    <div class="dropdown-content">
-                                        <div class="navbar">{%- assign chapterInArr = chapter | minus: 1 -%}
-                                            {%- for section in (starts[chapterInArr]..ends[chapterInArr]) -%}
-                                                <div class="dropdown">
-                                                    <button class="dropbtn">Section {{ section }}<i class="fa fa-caret-down"></i>
-                                                    </button>
-                                                    <div class="dropdown-content">
-                                                        {%- for post in site.categories[subject] -%}
-                                                            {%- if post.chapter==chapter and post.section==section -%}
-                                                                <a href="{{- post.url -}}">
-                                                                    {%- if post.short -%}{{- post.short }} - {% endif -%}
-                                                                    {{- post.title -}}
-                                                                </a>
-                                                            {%- endif -%}
-                                                        {%- endfor -%}
-                                                    </div>
-                                                </div>
-                                            {%- endfor -%}
-                                        </div>
-                                    </div>
-                                </div>
-                            {%- endfor -%}
-                            {%- else -%}
-                            {%- for post in site.categories[subject] -%}
-                                <a href="{{- post.url -}}">
-                                    {%- if post.short -%}
-                                        {{- post.short -}} -
-                                    {%- endif -%}
-                                    {{- post.title -}}
-                                </a>
-                            {%- endfor -%}
-                        {%- endif -%}
-                    </div>
-                </div>
-            {%- endfor -%}
-            <div id="tipue_search_wrapper" style="float:right;display: table-cell;vertical-align: middle;height: 50px;">
-                <form action="{{ '/search' | relative_url }}">
-                    <div class="tipue_search_left"><svg class="tipue_search_icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
-                    <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" placeholder="Search" autocomplete=off required></div>
-                    <div style="clear: both;"></div>
-                </form>
-            </div>
-        </div>
-        <header class="page-header" role="banner">
-            {%- if page.title and page.categories -%}
-                <h1 class="project-name">
-                    {{- page.title -}}</h1>
-                    <div class="post-categories">
-                  {%- if post -%}
-                    {%- assign categories = post.categories -%}
-                  {%- else -%}
-                    {%- assign categories = page.categories -%}
-                  {%- endif -%}
-                  {%- for category in categories -%}
-                  <h2><a href="{{- site.url -}}#{{- category|slugize -}}">{{ category | upcase }}</a></h2>
-                  {%- unless forloop.last -%} {%- endunless -%}
-                  {%- endfor -%}
-                </div>
-                {%- if page.description -%}
-                    <h2 class="project-tagline">
-                        {{- page.description -}}</h2>
-                {%- endif -%}
-                {%- if page.chapter and page.section -%}
-                <a href="{{ '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' }}" class="btn">Code on GitHub</a><br>
-                {%- endif -%}
-                <a href="{{ '//github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class="btn">Current Page on GitHub</a>
-                
-                {%- else -%}
-                <h1 class="project-name">
-                    {{- site.title -}}</h1>
-                <h2 class="project-tagline">
-                    {{- site.description -}}</h2>
-                <a href="{{- site.github_url -}}" class="btn">View on GitHub</a>
-                <a href="{{- site.linkedin_url -}}" class="btn">
-                    LinkedIn</a>
-                <a href="{{- site.khan_url -}}" class="btn">
-                    Khan Academy</a>
-            {%- endif -%}
-        </header>
-        <main id="content" class="main-content" role="main">
-            <div class="realcontent">
-                {%- if page.chapter and page.section -%}
-                <a id="skip-to-content" href="#code">Skip to code</a><br>
-                <a id="skip-to-content2" href="#analysis">Skip to analysis</a><br>
-                <br>
-                <em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
-                {%- endif -%}
-                {{- content -}}
-                {%- if page.chapter and page.section -%}
-                    <div id="code">
-                        <div><br>
-                            <h2>CODE</h2>
-                            <details>
-                                <summary>Java</summary>
-                                <pre class="line-numbers language-java" data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.java"></pre>
-                            </details>
-                        </div>
-                        <div><br>
-                            <details>
-                                <summary>C++</summary>
-                                <pre class="line-numbers language-cpp" data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.cpp"></pre>
-                            </details>
-                        </div>
-                        <div><br>
-                            <details>
-                                <summary>Pascal</summary>
-                                <pre class="line-numbers language-pascal"
-                                    data-src="{{ '//raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.pas"></pre>
-                            </details>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div id="analysis">
-                        {%- if page.no_analysis -%}
-                        {%- else -%}
-                        <h2>ANALYSIS</h2>
-                        {%- capture my_include -%}{%- include {{ page.path | remove: "_posts/" }} -%}{%- endcapture -%}
-                        {{- my_include | markdownify -}}
-                        {%- endif -%}
-                    </div>
-                    <br>
-                    <a id="skip-to-main" href="#content">Back to top</a>
-                {%- endif -%}
-            </div>
-            {%- if page.short -%}
-                <footer class="site-footer realcontent">
-                    {%- if page.categories -%}
-                        <span class="site-footer-owner">
-                            {%- if page.link -%}
-                            <a href="{{- page.link -}}">
-                            {%- else -%}
-                            <a href="{{- '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
-                            {%- endif -%}
-                                {{ page.categories[0] }} - {{ page.short -}}</a>
-                            is created by
-                            <a href="{{- site.github.owner_url -}}">
-                                {{ site.github.owner_name }}</a>
-                            .
-                        </span>
-                    {%- else -%}
-                        <span class="site-footer-owner">
-                            {%- if page.link -%}
-                            <a href="{{- page.link -}}">
-                            {%- else -%}
-                            <a href="{{- '//github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
-                            {%- endif -%}
-                                {{ page.short }}</a>
-                            is created by
-                            <a href="{{- site.github.owner_url -}}">
-                                {{- site.github.owner_name -}}</a>
-                            .
-                        </span>
-                    {%- endif -%}
-                </footer>
-                {%- else -%}
-                <footer class="site-footer realcontent">
-                    <span class="site-footer-owner"><a href="{{- site.github.repository_url -}}">{{- site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url -}}">{{- site.github.owner_name -}}</a></span>
-                </footer>
-            {%- endif -%}
-        </main>
-        <script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
-        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch_content.js' | relative_url }}"></script>
-        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch_set.js' | relative_url }}"></script>
-        <script async="async" type="text/javascript" src="{{ '/assets/tipuesearch/tipuesearch.min.js' | relative_url }}"></script>
-        <script async="async" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    </body>
+<html lang=en-US>
+<head>
+<meta charset=UTF-8> {%- seo -%}
+<meta name=google-site-verification content=a_1tMrUlVNqdFzDGwh_T1IpHoH9qeFrNoVkUBOmi9j0 />
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name=theme-color content=#157878>
+<meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+<link rel=stylesheet href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="preload" as="style" href="{{ '/assets/css/prism.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/prism.css' | relative_url }}"></noscript>
+<script async=async src=https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js></script>
+<script async=async src=https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js></script>
+{%- if site.google_analytics -%}
+<script async=async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script async=async>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','{{ site.google_analytics }}');</script>
+{%- endif -%}
+</head>
+<body>
+<div class=navbar>
+<a href="{{- site.url -}}">Home</a>
+{%- for post in site.pages -%}
+{%- if post.title -%}
+<a href="{{- post.url -}}">
+{{- post.title -}}
+</a>
+{%- endif -%}
+{%- endfor -%}
+{%- for category in site.categories -%}
+{%- assign subject = category[0] -%}
+<div class=dropdown>
+<button class=dropbtn>
+{{- subject | upcase -}}</button>
+<i class="fa fa-caret-down"></i>
+<div class=dropdown-content>
+{%- if subject=="USACO" -%}
+{%- assign starts = "2 1 1 1" | split: " " -%}
+{%- assign ends = "6 4 4 1" | split: " " -%}
+{%- for chapter in (1..starts.size) -%}
+<div class=dropdown>
+<button class=dropbtn>CHAPTER {{ chapter }}<i class="fa fa-caret-down"></i>
+</button>
+<div class=dropdown-content>
+<div class=navbar>{%- assign chapterInArr = chapter | minus: 1 -%}
+{%- for section in (starts[chapterInArr]..ends[chapterInArr]) -%}
+<div class=dropdown>
+<button class=dropbtn>Section {{ section }}<i class="fa fa-caret-down"></i>
+</button>
+<div class=dropdown-content>
+{%- for post in site.categories[subject] -%}
+{%- if post.chapter==chapter and post.section==section -%}
+<a href="{{- post.url -}}">
+{%- if post.short -%}{{- post.short }} - {% endif -%}
+{{- post.title -}}
+</a>
+{%- endif -%}
+{%- endfor -%}
+</div>
+</div>
+{%- endfor -%}
+</div>
+</div>
+</div>
+{%- endfor -%}
+{%- else -%}
+{%- for post in site.categories[subject] -%}
+<a href="{{- post.url -}}">
+{%- if post.short -%}
+{{- post.short -}} -
+{%- endif -%}
+{{- post.title -}}
+</a>
+{%- endfor -%}
+{%- endif -%}
+</div>
+</div>
+{%- endfor -%}
+<div id=search-box style=float:right;display:table-cell;vertical-align:middle;height:50px></div>
+</div>
+<header class=page-header role=banner>
+{%- if page.title and page.categories -%}
+<h1 class=project-name>
+{{- page.title -}}</h1>
+<div class=post-categories>
+{%- if post -%}
+{%- assign categories = post.categories -%}
+{%- else -%}
+{%- assign categories = page.categories -%}
+{%- endif -%}
+{%- for category in categories -%}
+<h2><a href="{{- site.url -}}#{{- category|slugize -}}">{{ category | upcase }}</a></h2>
+{%- unless forloop.last -%} {%- endunless -%}
+{%- endfor -%}
+</div>
+{%- if page.description -%}
+<h2 class=project-tagline>
+{{- page.description -}}</h2>
+{%- endif -%}
+{%- if page.chapter and page.section -%}
+<a href="{{ 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' }}" class=btn>Code on GitHub</a><br>
+{%- endif -%}
+<a href="{{ 'https://github.com/jvonk/jvonk.github.io/blob/master/' | append: page.path }}" class=btn>Current Page on GitHub</a>
+{%- else -%}
+<h1 class=project-name>
+{{- site.title -}}</h1>
+<h2 class=project-tagline>
+{{- site.description -}}</h2>
+<a href="{{- site.github_url -}}" class=btn>View on GitHub</a>
+<a href="{{- site.linkedin_url -}}" class=btn>
+LinkedIn</a>
+<a href="{{- site.khan_url -}}" class=btn>
+Khan Academy</a>
+{%- endif -%}
+</header>
+<main id=content class=main-content role=main>
+<div class=realcontent>
+<div id=hits></div>
+<script>window.addEventListener('load', function () {const search=instantsearch({indexName:'jekyll',routing:true,searchClient:algoliasearch('6Q0Q3C57UM','21f93f3c42d4abe47a9ebc58e4c73534'),searchFunction(helper){const container=document.querySelector('#hits');container.style.display=helper.state.query===''?'none':'';helper.search();}});search.addWidget(instantsearch.widgets.searchBox({container:'#search-box',placeholder:'Search',showSubmit:false,showReset:false,showLoadingIndicator:false,cssClasses:{submit:"search-submit",reset:"search-reset",input:"search-input",root:"search-root",form:"search-form",},}));search.addWidgets([instantsearch.widgets.configure({attributesToSnippet:['title','short','description:25'],})]);search.addWidget(instantsearch.widgets.infiniteHits({container:'#hits',templates:{empty:(results)=>`<div style="text-align: center">No results found for "${results.query}".</div>`,item:(hit)=>`<article><a href="${hit.url}"><h2>${instantsearch.highlight({attribute:'title',hit})}${hit.short?`(${instantsearch.snippet({attribute:'short',hit})})`:''} <small>${new Date(hit.date*1000).toLocaleDateString()}</small></h2>${hit.short?`<p>${instantsearch.snippet({attribute:'description',hit})}</p>`:''}</a></article>`}}));search.start();},false)</script>
+{%- if page.chapter and page.section -%}
+<a id=skip-to-content href=#code>Skip to code</a><br>
+<a id=skip-to-content2 href=#analysis>Skip to analysis</a><br>
+<br>
+<em>This is a explanation of this problem from USACO's training website. I have converted it to markdown. Please do not just copy code; you will not learn anything; at least type it out and understand so you can do it yourself in the future!</em>
+{%- endif -%}
+{{- content -}}
+{%- if page.chapter and page.section -%}
+<div id=code>
+<div><br>
+<h2>CODE</h2>
+<script src="{{- '/assets/js/prism.js' | relative_url -}}"></script>
+<details>
+<summary>Java</summary>
+<pre class="line-numbers language-java" data-src="{{ 'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.java"></pre>
+</details>
+</div>
+<div><br>
+<details>
+<summary>C++</summary>
+<pre class="line-numbers language-cpp" data-src="{{ 'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.cpp"></pre>
+</details>
+</div>
+<div><br>
+<details>
+<summary>Pascal</summary>
+<pre class="line-numbers language-pascal" data-src="{{ 'https://raw.githubusercontent.com/jvonk/USACO/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short }}.pas"></pre>
+</details>
+</div>
+</div>
+<br>
+<br>
+<div id=analysis>
+{%- if page.no_analysis -%}
+{%- else -%}
+<h2>ANALYSIS</h2>
+{%- capture my_include -%}{%- include {{ page.path | remove: "_posts/" }} -%}{%- endcapture -%}
+{{- my_include | markdownify -}}
+{%- endif -%}
+</div>
+<br>
+<a id=skip-to-main href=#content>Back to top</a>
+{%- endif -%}
+</div>
+{%- if page.short -%}
+<footer class="site-footer realcontent">
+{%- if page.categories -%}
+<span class=site-footer-owner>
+{%- if page.link -%}
+<a href="{{- page.link -}}">
+{%- else -%}
+<a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
+{%- endif -%}
+{{ page.categories[0] }} - {{ page.short -}}</a>
+is created by
+<a href="{{- site.github.owner_url -}}">
+{{ site.github.owner_name }}</a>
+.
+</span>
+{%- else -%}
+<span class=site-footer-owner>
+{%- if page.link -%}
+<a href="{{- page.link -}}">
+{%- else -%}
+<a href="{{- 'https://github.com/jvonk/USACO/blob/master/Chapter_' | append: page.chapter | append: '/'  | append: page.short | append: '/' | append: page.short | append: '.java' -}}">
+{%- endif -%}
+{{ page.short }}</a>
+is created by
+<a href="{{- site.github.owner_url -}}">
+{{- site.github.owner_name -}}</a>
+.
+</span>
+{%- endif -%}
+</footer>
+{%- else -%}
+<footer class="site-footer realcontent">
+<span class=site-footer-owner><a href="{{- site.github.repository_url -}}">{{- site.github.repository_name }}</a> is created by <a href="{{ site.github.owner_url -}}">{{- site.github.owner_name -}}</a></span>
+</footer>
+{%- endif -%}
+</main>
+</body>
 </html>

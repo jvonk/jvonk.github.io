@@ -15,16 +15,16 @@ permalink: /index.html
 {{ tag | first | upcase }}</h2>
 <ul class="tags-expo-posts">
 {% for post in tag[1] %}
-<a class="post-title" href="{{ site.url }}{{ post.url }}">
 <li>
+<a class="post-title no-link" href="{{ site.url }}{{ post.url }}">
 {% if post.short %}
 {{post.short}}:
 {% endif %}
 {{post.title}}
 <small class="post-date">
 {{ post.date | date_to_string }}</small>
-</li>
 </a>
+</li>
 {% endfor %}
 </ul>
 {% endfor %}
